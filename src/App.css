@@ -119,6 +119,13 @@ html, body {
   color: #626262;
 }
 
+.sign-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
 .headersection {
   display: flex;
   justify-content: space-around;
