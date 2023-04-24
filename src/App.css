@@ -53,10 +53,16 @@ html, body {
 .headersection {
   display: flex;
   justify-content: space-around;
+  margin-top: 5px;
 }
-.headersection .menuicon {
-  margin-top: 6px;
+.headersection .menu .menu-items {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  background-color: darkblue;
+  transition: left 0.5s ease;
 }
-.headersection .shoppingicon {
-  margin-top: 6px;
+.headersection .menu .menu-items.open {
+  left: 0;
 }

@@ -12,14 +12,11 @@ const SideMenu = ({ icon }) => {
       <div className="menuicon">
         <i className={icon}></i>
       </div>
-      <div className={isActive ? "triggermenu" : null}>
-        <h1>contact us</h1>
-        <ul className="menu-items">
-          <li href="#">location</li>
-          <li href="#">number</li>
-          <li href="#">social security number</li>
-        </ul>
-      </div>
+      <ul className={!isActive ? "menu-items" : "menu-items.open"}>
+        <li href="#">location</li>
+        <li href="#">number</li>
+        <li href="#">email</li>
+      </ul>
     </div>
   );
 };
