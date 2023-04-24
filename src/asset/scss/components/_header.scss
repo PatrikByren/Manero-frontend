@@ -1,13 +1,29 @@
-.headersection{
-    display: flex;
-    justify-content: space-around;
-    
-    .menuicon{
-        margin-top: 6px;
+.headersection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+
+  .menu {
+    position: relative;
+
+    .icon {
+      cursor: pointer;
     }
 
-    .shoppingicon{
-        margin-top: 6px;
+    .triggermenu {
+        display: none;
+      .menu-items {
+        position: absolute;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        background-color: #f1f1f1;
+        transition: left 0.3s ease;
+      }
+
+      .triggermenu.open {
+        left: 0;
+      }
     }
-    
+  }
 }
