@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+@import './varibles';
 @import './base';
+
+//Components
+@import './components/getStartedHowView';
+@import './components/getStartedWelcome';
 @import './header';

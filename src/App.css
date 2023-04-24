@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
+html, body {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.get-started-root {
+  background-color: #DBE3F5;
+}
+.get-started-root .get-started {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.get-started-root .get-started .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.get-started-root .get-started .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.get-started-root .get-started img {
+  position: absolute;
+}
+
+.get-started-welcome {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100dvh;
+}
