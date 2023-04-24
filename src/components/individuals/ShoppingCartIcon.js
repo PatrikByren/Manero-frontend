@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ShoppingCartIcon = () => {
   return (
-    <div>ShoppingCartIcon</div>
-  )
-}
+    <div className="shoppingicon">
+      <i className="fal fa-shopping-bag"></i>
+    </div>
+  );
+};
 
-export default ShoppingCartIcon
+export default ShoppingCartIcon;

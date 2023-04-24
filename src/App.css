@@ -42,3 +42,14 @@ html, body {
   align-items: end;
   height: 100dvh;
 }
+
+.headersection {
+  display: flex;
+  justify-content: space-around;
+}
+.headersection .menuicon {
+  margin-top: 6px;
+}
+.headersection .shoppingicon {
+  margin-top: 6px;
+}

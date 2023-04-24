@@ -6,7 +6,7 @@ import Middle from "../individuals/Middle";
 const Header = () => {
   return (
     <section className="headersection">
-      <SideMenu icon={""} />
+      <SideMenu icon={"fa-sharp fa-light fa-bars"}/>
       <Middle title={"MANERO"} />
       <ShoppingCartIcon />
     </section>
