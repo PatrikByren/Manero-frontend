@@ -1,10 +1,10 @@
 import React from "react";
+import Header from "../components/sections/Header";
 
 const HomeView = () => {
   return (
-    <div>
-      Sisten som ser detta får berätta för Oz att han inte får vara med i våran
-      grupp!
+    <div id="home">
+      <Header/>
     </div>
   );
 };
