@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const SideMenu = ({icon}) => {
+const SideMenu = ({ icon }) => {
   return (
-    <div>SideMenu</div>
-  )
-}
+    <div className="menuicon">
+      <i className={icon}></i>
+    </div>
+  );
+};
 
-export default SideMenu
+export default SideMenu;
