@@ -1,11 +1,14 @@
-import './App.css';
-import HomeView from './views/HomeView';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomeView from "./views/HomeView";
 
 function App() {
   return (
-    <div className='container'>
-      <HomeView/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
