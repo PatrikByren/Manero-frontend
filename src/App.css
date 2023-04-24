@@ -42,3 +42,10 @@ html, body {
   align-items: end;
   height: 100dvh;
 }
+
+.sign-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
