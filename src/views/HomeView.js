@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const HomeView = () => {
   return (
-    <div>HomeView</div>
-  )
-}
+    <div>
+      Sisten som ser detta får berätta för Oz att han inte får vara med i våran
+      grupp!
+    </div>
+  );
+};
 
-export default HomeView
+export default HomeView;
