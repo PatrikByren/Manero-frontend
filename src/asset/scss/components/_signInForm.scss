@@ -1,7 +1,32 @@
 .sign-in-form{
+    margin: 30px 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100dvh;
 
+.arrowicon{
+    display: flex;
+    margin: 20px 15px 40px 15px;
+    .arrow{
+        justify-content: start;
+        align-items: center;
+
+    }
+    .content{
+        flex: 2;
+        text-align: center;
+        margin-right: 10px;
+        
+    }
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    .rememberme{
+       margin-right: 15px; 
+    }
+}
+.guest{
+    display: flex;
+}
 }

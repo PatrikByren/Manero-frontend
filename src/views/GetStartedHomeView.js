@@ -3,14 +3,17 @@ import Image from "../asset/images/logo.png";
 import { Link } from 'react-router-dom';
 
 const GetStartedHomeView = () => {
+  setTimeout(function(){
+    window.location.href = "/GetStartedWelcome";
+}, 3000);
   return (
     <div className="get-started-root">
       <div className="container">
-        <Link to="/getstartedwelcome" className="get-started">
+        <div className="get-started">
           <div className="inner-circle"></div>
           <div className="outer-circle"></div>
           <img src={Image}></img>
-        </Link>
+        </div>
       </div>
     </div>
   );
