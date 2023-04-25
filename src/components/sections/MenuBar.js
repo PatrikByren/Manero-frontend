@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const MenuBar = () => {
   return (
@@ -8,11 +9,21 @@ const MenuBar = () => {
           <hr></hr>
         </div>
         <div className="menu-icons">
-          <a><i class="fa-regular fa-house fa-lg"></i></a>
-          <a><i class="fa-light fa-magnifying-glass fa-lg"></i></a>
-          <a><i className="fal fa-shopping-bag fa-lg"></i></a>
-          <a><i class="fa-light fa-heart fa-lg"></i></a>
-          <a><i class="fa-light fa-circle-user fa-lg"></i></a>
+          <NavLink to="/" className="menu-link">
+            <i class="fa-light fa-house fa-lg"></i>
+          </NavLink>
+          <NavLink to="/search" className="menu-link">
+            <i class="fa-light fa-magnifying-glass fa-lg"></i>
+          </NavLink>
+          <NavLink to="/cart" className="menu-link">
+            <i className="fal fa-shopping-bag fa-lg"></i>
+          </NavLink>
+          <NavLink to="/wishlist" className="menu-link">
+            <i class="fa-light fa-heart fa-lg"></i>
+          </NavLink>
+          <NavLink to="/profile" className="menu-link">
+            <i class="fa-light fa-circle-user fa-lg"></i>
+          </NavLink>
         </div>
       </div>
     </section>

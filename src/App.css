@@ -139,9 +139,20 @@ html, body {
 .menubarsection .container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 .menubarsection .menu-icons {
   display: flex;
   justify-content: space-around;
-  float: left;
+  align-items: center;
+  width: 100%;
+}
+.menubarsection .menu-icons .menu-link {
+  text-decoration: none;
+  color: #111111;
+  padding: 8px;
+}
+.menubarsection .menu-icons .active {
+  border-radius: 50%;
+  background-color: lightgray;
 }

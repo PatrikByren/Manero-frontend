@@ -7,7 +7,7 @@ const HomeView = () => {
   return (
     <div>
       <Header/>
-      <ProductCarousel height={400} width={500} nameOfClass={""}/>
+      <ProductCarousel/>
       <MenuBar/>
     </div>
   );

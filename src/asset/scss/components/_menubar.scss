@@ -6,10 +6,23 @@
     .container{
         display: flex;
         flex-direction: column;
+        margin-bottom: 15px;
     }
     .menu-icons{
         display: flex;
         justify-content: space-around;
-        float: left;
+        align-items: center;
+        width: 100%;
+        .menu-link{
+            text-decoration: none;
+            color: $color-black;
+            padding: 8px;
+        }
+        .active{
+            border-radius: 50%;
+            background-color: lightgray
+        }
+
+        
     }
 }
