@@ -349,3 +349,21 @@ html, body {
   width: 200px;
   height: 250px;
 }
+
+.account-created {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+.account-created .user-image {
+  margin-top: 40px;
+}
+.account-created .title-1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.account-created .basebtn {
+  min-width: 335px;
+}
