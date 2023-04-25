@@ -11,6 +11,12 @@ html, body {
   font-size: 32px;
 }
 
+.title-2 {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 22px;
+}
+
 .basebtn {
   background: #111111;
   color: white;
@@ -281,6 +287,10 @@ html, body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: white;
+}
+.menubarsection hr {
+  width: 100%;
 }
 .menubarsection .container {
   display: flex;
@@ -306,34 +316,66 @@ html, body {
 .showcasesection {
   display: flex;
   flex-direction: column;
-}
-.showcasesection .showcases {
+  background-color: white;
   background-color: #DBE3F5;
-  height: 300px;
+}
+.showcasesection .container .showcases {
+  height: 330px;
   position: relative;
 }
-.showcasesection .showcases .showcase-text {
-  color: white;
+.showcasesection .container .showcases .showcase-text {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin-bottom: 30px;
+  color: white;
 }
-.showcasesection .showcases .showcase-text h1 {
+.showcasesection .container .showcases .showcase-text h1 {
+  color: white;
   font-weight: 900;
 }
-
-.bestSellerCarousel {
-  height: 368px;
-  overflow: hidden;
+.showcasesection .displaywelcome {
+  display: none;
+}
+.showcasesection .carouselbtn {
+  display: none;
+}
+.showcasesection .carousel-indicators {
+  background-color: white;
+  margin: 0;
+}
+.showcasesection .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.showcasesection .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
 }
 
-.featuredCarousel {
-  height: 288;
-  overflow: hidden;
+.arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.carouselContainer {
-  width: 2680px;
+.forgotpassword {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.forgotpassword .content {
+  color: #626262;
 }
 
 .card-1 {

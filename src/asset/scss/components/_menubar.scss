@@ -2,7 +2,10 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-   
+    background-color: white;
+    hr{
+        width: 100%;
+    }
     .container{
         display: flex;
         flex-direction: column;
