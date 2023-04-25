@@ -5,9 +5,6 @@ const MenuBar = () => {
   return (
     <section className="menubarsection">
       <div className="container">
-        <div className="line">
-          <hr></hr>
-        </div>
         <div className="menu-icons">
           <NavLink to="/" className="menu-link">
             <i class="fa-light fa-house fa-lg"></i>

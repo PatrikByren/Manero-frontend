@@ -6,6 +6,8 @@ import GetStartedWelcome from "./views/GetStartedWelcome";
 import SignInView from "./views/signInSignUpViews/SignInView";
 import ForgotPasswordView from "./views/signInSignUpViews/ForgotPasswordView";
 import ForgotPasswordSendEmailView from "./views/signInSignUpViews/ForgotPasswordSendEmailView";
+import SignUpView from "./views/signInSignUpViews/SignUpView";
+import AccountCreatedView from "./views/signInSignUpViews/AccountCreatedView";
 
 function App() {
   return (
@@ -15,8 +17,13 @@ function App() {
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
         <Route path="/signin" element={<SignInView />} />
+        <Route path="/signup" element={<SignUpView />} />
+        <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView/>} />
+        <Route
+          path="/forgotpasswordemail"
+          element={<ForgotPasswordSendEmailView />}
+        />
       </Routes>
     </BrowserRouter>
   );

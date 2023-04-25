@@ -11,6 +11,12 @@ html, body {
   font-size: 32px;
 }
 
+.title-2 {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 22px;
+}
+
 .basebtn {
   background: #111111;
   color: white;
@@ -175,7 +181,13 @@ html, body {
   margin-right: 15px;
 }
 .sign-in-form .guest {
-  display: flex;
+  color: #8D94A6;
+}
+.sign-in-form .imagecontainer {
+  margin-top: 10px;
+}
+.sign-in-form .imagecontainer img {
+  margin: 15px 8px;
 }
 
 .headersection {
@@ -183,6 +195,7 @@ html, body {
   justify-content: space-around;
   margin-top: 5px;
 }
+
 .get-started-welcome {
   position: relative;
   display: flex;
@@ -274,11 +287,16 @@ html, body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: white;
+  border-top: 1px solid #DBE3F5;
+}
+.menubarsection hr {
+  width: 100%;
 }
 .menubarsection .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 .menubarsection .menu-icons {
   display: flex;
@@ -293,26 +311,49 @@ html, body {
 }
 .menubarsection .menu-icons .active {
   border-radius: 50%;
-  background-color: lightgray;
+  background-color: #DBE3F5;
 }
 
 .showcasesection {
   display: flex;
   flex-direction: column;
-}
-.showcasesection .showcases {
+  background-color: white;
   background-color: #DBE3F5;
-  height: 300px;
+}
+.showcasesection .container .showcases {
+  height: 330px;
   position: relative;
 }
-.showcasesection .showcases .showcase-text {
-  color: white;
+.showcasesection .container .showcases .showcase-text {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin-bottom: 30px;
+  color: white;
 }
-.showcasesection .showcases .showcase-text h1 {
+.showcasesection .container .showcases .showcase-text h1 {
+  color: white;
   font-weight: 900;
+}
+.showcasesection .displaywelcome {
+  display: none;
+}
+.showcasesection .carouselbtn {
+  display: none;
+}
+.showcasesection .carousel-indicators {
+  background-color: white;
+  margin: 0;
+}
+.showcasesection .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.showcasesection .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
 }
 
 .bestSellerCarousel {
@@ -354,28 +395,100 @@ html, body {
   color: #626262;
 }
 
+.account-created {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+.account-created .user-image {
+  margin-top: 40px;
+}
+.account-created .title-1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.account-created .basebtn {
+  min-width: 335px;
 .price {
   height: 20px;
   font-size: 14px;
   color: #111111;
 }
 
+.arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
 .priceWas {
   text-decoration: line-through;
   color: #626262;
   margin-right: 10px;
 }
 
+.forgotpassword {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.forgotpassword .content {
+  color: #626262;
 .priceIs {
   color: #F4303C;
 }
 
+.passwordbyemail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.passwordbyemail .lineup30 {
+  margin: 15px;
+}
+.passwordbyemail .title-2 {
+  margin: 0 20%;
+}
+.passwordbyemail .content {
+  margin: 10px 15%;
+}
+.passwordbyemail .basebtn {
+  padding-left: 35%;
+  padding-right: 35%;
 .card-1 {
   height: 330px;
   width: 200px;
 }
-.card-1 .picture {
+.card-1 .discountshowcase {
   background-color: #DBE3F5;
-  width: 200px;
-  height: 250px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 150px;
+}
+.discountshowcase .items {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.discountshowcase .items p {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+}
+.discountshowcase .items .shopbtn {
+  background: white;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
 }
