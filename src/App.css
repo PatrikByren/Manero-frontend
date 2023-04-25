@@ -274,6 +274,10 @@ html, body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: white;
+}
+.menubarsection hr {
+  width: 100%;
 }
 .menubarsection .container {
   display: flex;
@@ -299,48 +303,43 @@ html, body {
 .showcasesection {
   display: flex;
   flex-direction: column;
-}
-.showcasesection .showcases {
+  background-color: white;
   background-color: #DBE3F5;
-  height: 300px;
+}
+.showcasesection .container .showcases {
+  height: 330px;
   position: relative;
 }
-.showcasesection .showcases .showcase-text {
-  color: white;
+.showcasesection .container .showcases .showcase-text {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin-bottom: 30px;
+  color: white;
 }
-.showcasesection .showcases .showcase-text h1 {
+.showcasesection .container .showcases .showcase-text h1 {
+  color: white;
   font-weight: 900;
 }
-
-.bestSellerCarousel {
-  height: 368px;
-  overflow: hidden;
+.showcasesection .displaywelcome {
+  display: none;
 }
-
-.featuredCarousel {
-  height: 288;
-  overflow: hidden;
+.showcasesection .carouselbtn {
+  display: none;
 }
-
-.carouselContainer {
-  width: 2680px;
+.showcasesection .carousel-indicators {
+  background-color: white;
+  margin: 0;
 }
-
-.card-1 {
-  color: white;
-  font-size: 20px;
-  height: 310px;
-  width: 200px;
-  background-color: red;
+.showcasesection .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
-
-.picture {
-  background-color: #DBE3F5;
-  width: 200px;
-  height: 250px;
+.showcasesection .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
 }
 
 .bestSellerCarousel {
