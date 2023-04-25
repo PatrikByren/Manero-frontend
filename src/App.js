@@ -8,6 +8,8 @@ import ForgotPasswordView from "./views/signInSignUpViews/ForgotPasswordView";
 import ForgotPasswordSendEmailView from "./views/signInSignUpViews/ForgotPasswordSendEmailView";
 import SignUpView from "./views/signInSignUpViews/SignUpView";
 import AccountCreatedView from "./views/signInSignUpViews/AccountCreatedView";
+import ConfirmNumberView from "./views/ConfirmNumberView";
+import VerifyNumberView from "./views/VerifyNumberView";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           path="/forgotpasswordemail"
           element={<ForgotPasswordSendEmailView />}
         />
+        <Route path="/confirmnumber" element={<ConfirmNumberView />} />
+        <Route path="/verifynumber" element={<VerifyNumberView />} />
       </Routes>
     </BrowserRouter>
   );

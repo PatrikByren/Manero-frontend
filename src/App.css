@@ -443,3 +443,35 @@ html, body {
   padding-left: 35%;
   padding-right: 35%;
 }
+
+.confirm-number {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.confirm-number .message {
+  margin: 0px 0px 20px 15px;
+}
+.confirm-number .inputcontainer .text-center {
+  width: 355px;
+}
+
+.verify-number {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.verify-number input {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.verify-number input:valid {
+  background-color: #DBE3F5;
+}
+.verify-number input:invalid {
+  background-color: white;
+}
+.verify-number .basebtn {
+  min-width: 335px;
+}
