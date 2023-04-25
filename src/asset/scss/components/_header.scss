@@ -1,0 +1,21 @@
+.headersection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+
+  .menu{
+
+
+    .menu-items{
+        position: absolute;
+        top: 0;
+        left: -200px;
+        width:200px;
+        background-color: darkblue;
+        transition: left 0.5s ease;
+    }
+    .menu-items.open{
+        left: 0;
+    }
+  }
+}

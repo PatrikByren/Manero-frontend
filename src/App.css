@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
+html, body {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.title-1 {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.basebtn {
+  background: #111111;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 70px;
+  border-radius: 50px;
+  margin: 30px;
+}
+
+.nav-link {
+  background-color: transparent;
+  color: transparent;
+  border: 5px solid black;
+  padding: 0;
+  margin: 7px;
+}
+
+.nav-pills .nav-link.active {
+  padding: 3px 11px;
+  background-color: white;
+  border-radius: 50px;
+  border: 3px solid black;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.pills-line {
+  width: 134px;
+  height: 5px;
+  background-color: #111111;
+  border-radius: 10px;
+  margin: 30px 0 10px 0;
+}
+
+.lineup30 {
+  height: 30px;
+  width: 1px;
+  background-color: #111111;
+}
+
+.get-started-root {
+  background-color: #DBE3F5;
+}
+.get-started-root .get-started {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.get-started-root .get-started .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.get-started-root .get-started .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.get-started-root .get-started img {
+  position: absolute;
+}
+
+.get-started-root .container {
+  overflow: hidden;
+}
+
+.get-started-welcome {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100dvh;
+  z-index: 0;
+}
+.get-started-welcome .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -15px;
+}
+.get-started-welcome .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 475px;
+  height: 475px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -45px;
+}
+.get-started-welcome .content {
+  color: #626262;
+}
+
+.sign-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.headersection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+.headersection .menu .menu-items {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  background-color: darkblue;
+  transition: left 0.5s ease;
+}
+.headersection .menu .menu-items.open {
+  left: 0;
+}
