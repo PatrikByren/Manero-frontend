@@ -302,3 +302,78 @@ html, body {
   border-radius: 50%;
   background-color: lightgray;
 }
+
+.showcasesection {
+  display: flex;
+  flex-direction: column;
+}
+.showcasesection .showcases {
+  background-color: #DBE3F5;
+  height: 300px;
+  position: relative;
+}
+.showcasesection .showcases .showcase-text {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+}
+.showcasesection .showcases .showcase-text h1 {
+  font-weight: 900;
+}
+
+.bestSellerCarousel {
+  height: 368px;
+  overflow: hidden;
+}
+
+.featuredCarousel {
+  height: 288;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  width: 2680px;
+}
+
+.card-1 {
+  color: white;
+  font-size: 20px;
+  height: 310px;
+  width: 200px;
+  background-color: red;
+}
+
+.picture {
+  background-color: #DBE3F5;
+  width: 200px;
+  height: 250px;
+}
+
+.bestSellerCarousel {
+  height: 368px;
+  overflow: hidden;
+}
+
+.featuredCarousel {
+  height: 288;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  width: 2680px;
+}
+
+.card-1 {
+  color: white;
+  font-size: 20px;
+  height: 310px;
+  width: 200px;
+  background-color: red;
+}
+
+.picture {
+  background-color: #DBE3F5;
+  width: 200px;
+  height: 250px;
+}
