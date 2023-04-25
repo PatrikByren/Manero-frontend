@@ -3,7 +3,7 @@ import image from '../../asset/images/headerlogo.png'
 
 const Middle = ({title}) => {
   return (
-    <div><h3>MANERO</h3></div>
+    <div><h3>{title}</h3></div>
   )
 }
 
