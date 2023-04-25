@@ -18,34 +18,31 @@ html, body {
     margin: 30px;
 }
 
-.nav-link{
-    background-color: transparent;
-    color: transparent;
-    border: 5px solid black;
-    padding: 0;
-    margin: 7px;
-}
-.nav-pills .nav-link.active{
-    padding: 3px 11px;
-    background-color: white;
-    border-radius: 50px;
-    border: 3px solid black;
-}
-.nav-item{
+.inputcontainer{
     display: flex;
-    align-items: center;
-    
-    
-}
-.pills-line{
-width: 134px;
-height: 5px;
-background-color: $color-black;
-border-radius: 10px;
-margin: 30px 0 10px 0;
-}
-.lineup30{
-    height: 30px;
-    width: 1px;
-    background-color: $color-black;
+    justify-content: center;
+    flex-direction: column;
+    .text-center{
+        width: 375px;
+        position: relative;
+        .baselabel{
+        position: absolute;
+        font-size: 12px;
+        background-color: white;
+        padding: 5px;
+        left: 40px;
+        }
+        .baseinput{
+            margin: 10px;
+            min-width: 335px;
+            border: 2px solid $color-background;
+            border-radius: 50px;
+            padding: 10px 20px;
+            z-index: -1;
+        }
+        .basebtn{
+            margin: 20px 0 0 0;
+            width: 335px;
+        }
+    }
 }

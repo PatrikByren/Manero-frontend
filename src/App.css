@@ -21,6 +21,229 @@ html, body {
   margin: 30px;
 }
 
+.inputcontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputcontainer .text-center {
+  width: 375px;
+  position: relative;
+}
+.inputcontainer .text-center .baselabel {
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 40px;
+}
+.inputcontainer .text-center .baseinput {
+  margin: 10px;
+  min-width: 335px;
+  border: 2px solid #DBE3F5;
+  border-radius: 50px;
+  padding: 10px 20px;
+  z-index: -1;
+}
+.inputcontainer .text-center .basebtn {
+  margin: 20px 0 0 0;
+  width: 335px;
+}
+
+.get-started-root {
+  background-color: #DBE3F5;
+}
+.get-started-root .get-started {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  animation: moveDown 3s ease-in-out forwards;
+}
+.get-started-root .get-started .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: pulse 3.5s ease-in-out infinite;
+}
+.get-started-root .get-started .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  animation: pulse 3.5s ease-in-out infinite;
+}
+.get-started-root .get-started img {
+  position: absolute;
+  animation: pulse 3.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(23vh);
+  }
+}
+
+/*.get-started-root{
+    .container{
+        overflow: hidden;
+    }
+}
+.get-started-welcome{
+    display: inline;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100dvh;
+    z-index: 0;
+
+    .inner-circle{
+        position: absolute;
+        background-color: white;
+        width: 415px;
+        height: 415px;
+        border-radius: 50%;
+        z-index: -1;
+        bottom: -15px;
+    }
+
+    .outer-circle{
+        position: absolute;
+        border: 5px solid white;
+        width: 475px;
+        height: 475px;
+        border-radius: 50%;
+        z-index: -1;
+        bottom: -45px;
+    }
+    .content{
+        color: $color-textsecondary;
+    }
+}*/
+.sign-in-form {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.sign-in-form .arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.sign-in-form .arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.sign-in-form .arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
+}
+.sign-in-form .remember {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+.sign-in-form .remember .rememberme {
+  margin-right: 15px;
+}
+.sign-in-form .guest {
+  display: flex;
+}
+
+.headersection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+.get-started-welcome {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  height: 100dvh;
+  background-color: #DBE3F5;
+}
+
+.carouselroot {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100dvh;
+  z-index: -2;
+  background-color: #DBE3F5;
+}
+.carouselroot .carouselbtn {
+  display: none;
+}
+.carouselroot .basebtn {
+  margin-bottom: 50px;
+}
+.carouselroot .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -15px;
+}
+.carouselroot .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 475px;
+  height: 475px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -45px;
+}
+.carouselroot .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.carouselroot .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
+}
+.carouselroot .displaypages {
+  display: none;
+}
+
+.welcomecontent {
+  display: none;
+}
+
 .nav-link {
   background-color: transparent;
   color: transparent;
@@ -41,96 +264,12 @@ html, body {
   align-items: center;
 }
 
-.pills-line {
-  width: 134px;
-  height: 5px;
-  background-color: #111111;
-  border-radius: 10px;
-  margin: 30px 0 10px 0;
-}
-
 .lineup30 {
   height: 30px;
   width: 1px;
   background-color: #111111;
 }
 
-.get-started-root {
-  background-color: #DBE3F5;
-}
-.get-started-root .get-started {
-  display: inline;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-}
-.get-started-root .get-started .inner-circle {
-  position: absolute;
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.get-started-root .get-started .outer-circle {
-  position: absolute;
-  border: 5px solid white;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-}
-.get-started-root .get-started img {
-  position: absolute;
-}
-
-.get-started-root .container {
-  overflow: hidden;
-}
-
-.get-started-welcome {
-  display: inline;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  height: 100dvh;
-  z-index: 0;
-}
-.get-started-welcome .inner-circle {
-  position: absolute;
-  background-color: white;
-  width: 415px;
-  height: 415px;
-  border-radius: 50%;
-  z-index: -1;
-  bottom: -15px;
-}
-.get-started-welcome .outer-circle {
-  position: absolute;
-  border: 5px solid white;
-  width: 475px;
-  height: 475px;
-  border-radius: 50%;
-  z-index: -1;
-  bottom: -45px;
-}
-.get-started-welcome .content {
-  color: #626262;
-}
-
-.sign-in-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-}
-
-.headersection {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5px;
-}
 .menubarsection {
   position: fixed;
   bottom: 0;
