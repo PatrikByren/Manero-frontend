@@ -355,27 +355,18 @@ html, body {
   border-radius: 50px;
 }
 
-.arrowicon {
-  display: flex;
-  margin: 20px 15px 40px 15px;
-}
-.arrowicon .arrow {
-  justify-content: start;
-  align-items: center;
-}
-.arrowicon .content {
-  flex: 2;
-  text-align: center;
-  margin-right: 10px;
+.bestSellerCarousel {
+  height: 368px;
+  overflow: hidden;
 }
 
-.forgotpassword {
-  margin: 30px 0px;
-  display: flex;
-  justify-content: center;
+.featuredCarousel {
+  height: 288;
+  overflow: hidden;
 }
-.forgotpassword .content {
-  color: #626262;
+
+.carouselContainer {
+  width: 2680px;
 }
 
 .card-1 {
@@ -408,4 +399,47 @@ html, body {
 }
 .account-created .basebtn {
   min-width: 335px;
+}
+
+.arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.forgotpassword {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.forgotpassword .content {
+  color: #626262;
+}
+
+.passwordbyemail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.passwordbyemail .lineup30 {
+  margin: 15px;
+}
+.passwordbyemail .title-2 {
+  margin: 0 20%;
+}
+.passwordbyemail .content {
+  margin: 10px 15%;
+}
+.passwordbyemail .basebtn {
+  padding-left: 35%;
+  padding-right: 35%;
 }
