@@ -142,3 +142,31 @@ html, body {
 .headersection .menu .menu-items.open {
   left: 0;
 }
+
+.bestSellerCarousel {
+  height: 368px;
+  overflow: hidden;
+}
+
+.featuredCarousel {
+  height: 288;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  width: 2680px;
+}
+
+.card-1 {
+  color: white;
+  font-size: 20px;
+  height: 310px;
+  width: 200px;
+  background-color: red;
+}
+
+.picture {
+  background-color: #DBE3F5;
+  width: 200px;
+  height: 250px;
+}

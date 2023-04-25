@@ -6,7 +6,14 @@ const HomeView = () => {
   return (
     <div>
       <Header/>
-      <ProductCarousel height={400} width={500} nameOfClass={}/>
+      <ProductCarousel  carouselClass="bestSellerCarousel" 
+                        cardClass="card-1"
+                        title="BestSellers" 
+                        />
+
+      <ProductCarousel  carouselClass="featuredCarousel"
+                        cardClass="card-1"
+                        title="Featured products"/>
     </div>
   );
 };
