@@ -5,24 +5,32 @@ import twittericon from "../../asset/images/twittericon.png";
 import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 
-const SignInForm = () => {
+const SignUpForm = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const handleSubmit = () => {
     console.log("hej");
   };
   return (
     <div className="container sign-in-form">
       <div>
-        <BackArrowMiddleHead content="Sign in" />
+        <BackArrowMiddleHead content="Sign up" />
         <div className="d-flex justify-content-center mt-3">
           <div className="lineup30"></div>
         </div>
-        <div className="title-1 text-center">Welcome Back!</div>
-        <div className="text-center mb-4">Sign in to continue</div>
+        <div className="title-1 text-center mb-3">Sign Up</div>
         <form onSubmit={handleSubmit}>
           <div className="inputcontainer">
             <div className="text-center">
+              <InputSingel
+                placeholder="Full name"
+                nameid="name"
+                name="NAME"
+                value={name}
+                setValue={setName}
+              />
               <InputSingel
                 placeholder="name@domain.com"
                 nameid="email"
@@ -36,30 +44,20 @@ const SignInForm = () => {
                 value={password}
                 setValue={setPassword}
               />
-              <div className="remember">
-                <div>
-                  <input
-                    className="rememberme"
-                    type="checkbox"
-                    text="Remember me"
-                    id="rememberme"
-                  />
-                  <label htmlFor="rememberme">Remember me</label>
-                </div>
-                <href>Forgot password?</href>
-              </div>
-
+              <InputSingel
+                nameid="confirm-password"
+                name="CONFIRM PASSWORD"
+                value={confirmPassword}
+                setValue={setConfirmPassword}
+              />
               <button className="basebtn" type="submit">
-                SIGN IN
+                SIGN UP
               </button>
             </div>
           </div>
         </form>
         <div className="text-center mt-3">
-          Don't have an account? <href>Sign up.</href>
-        </div>
-        <div className="d-flex justify-content-center">
-          <href className="guest">Or explore as guest</href>
+          Already have an account? <href>Sign in.</href>
         </div>
         <div className="d-flex justify-content-center imagecontainer">
           <img src={fbicon} alt="facebook icon" />
@@ -71,4 +69,4 @@ const SignInForm = () => {
   );
 };
 
-export default SignInForm;
+export default SignUpForm;
