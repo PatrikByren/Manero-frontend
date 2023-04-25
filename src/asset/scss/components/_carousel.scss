@@ -1,0 +1,90 @@
+.get-started-welcome{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    height: 100dvh;
+    background-color: $color-background;
+}
+.carouselroot{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100dvh;
+    z-index: -2;
+    background-color: $color-background;
+    .carouselbtn{
+        display: none;
+    }
+    .basebtn{
+        margin-bottom: 50px;
+    }
+    .inner-circle{
+        position: absolute;
+        background-color: white;
+        width: 415px;
+        height: 415px;
+        border-radius: 50%;
+        z-index: -1;
+        bottom: -15px;
+    }
+
+    .outer-circle{
+        position: absolute;
+        border: 5px solid white;
+        width: 475px;
+        height: 475px;
+        border-radius: 50%;
+        z-index: -1;
+        bottom: -45px;
+    
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        bottom: 0px;
+        background-color: black;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .carousel-indicators .active {
+    width: 20px;
+    border-radius: 50px;
+    }
+    .displaypages{
+        display: none;
+    }
+}
+.welcomecontent{
+    display: none;
+}
+
+
+
+
+.nav-link{
+    background-color: transparent;
+    color: transparent;
+    border: 5px solid black;
+    padding: 0;
+    margin: 7px;
+}
+.nav-pills .nav-link.active{
+    padding: 3px 11px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.lineup30{
+    height: 30px;
+    width: 1px;
+    background-color: $color-black;
+}
