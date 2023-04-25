@@ -318,54 +318,63 @@ html, body {
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .carouselContainer {
   width: 2680px;
 }
 
-.card-1 {
-  color: white;
+.carouselTitle {
   font-size: 20px;
-  height: 310px;
-  width: 200px;
-  background-color: red;
+  font-weight: 700;
 }
 
-.picture {
-  background-color: #DBE3F5;
-  width: 200px;
-  height: 250px;
+.carouselLink {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #111111;
 }
 
-.bestSellerCarousel {
-  height: 368px;
-  overflow: hidden;
+.rating {
+  height: 15px;
+  margin-top: 10px;
 }
 
-.featuredCarousel {
-  height: 288;
-  overflow: hidden;
+.productName {
+  height: 20px;
+  font-size: 14px;
+  color: #626262;
 }
 
-.carouselContainer {
-  width: 2680px;
+.price {
+  height: 20px;
+  font-size: 14px;
+  color: #111111;
+}
+
+.priceWas {
+  text-decoration: line-through;
+  color: #626262;
+  margin-right: 10px;
+}
+
+.priceIs {
+  color: #F4303C;
 }
 
 .card-1 {
-  color: white;
-  font-size: 20px;
-  height: 310px;
+  height: 330px;
   width: 200px;
-  background-color: red;
 }
-
-.picture {
+.card-1 .picture {
   background-color: #DBE3F5;
   width: 200px;
   height: 250px;

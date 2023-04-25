@@ -9,16 +9,15 @@ const HomeView = () => {
     <div>
       <Header/>
       <Showcase/>
-      <ProductCarousel/>
-      <MenuBar/>
       <ProductCarousel  carouselClass="bestSellerCarousel" 
                         cardClass="card-1"
-                        title="BestSellers" 
+                        title="Best Sellers" 
                         />
 
       <ProductCarousel  carouselClass="featuredCarousel"
                         cardClass="card-1"
                         title="Featured products"/>
+      <MenuBar/>
     </div>
   );
 };
