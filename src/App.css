@@ -156,3 +156,22 @@ html, body {
   border-radius: 50%;
   background-color: lightgray;
 }
+
+.showcasesection {
+  display: flex;
+  flex-direction: column;
+}
+.showcasesection .showcases {
+  background-color: #DBE3F5;
+  height: 300px;
+  position: relative;
+}
+.showcasesection .showcases .showcase-text {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+}
+.showcasesection .showcases .showcase-text h1 {
+  font-weight: 900;
+}

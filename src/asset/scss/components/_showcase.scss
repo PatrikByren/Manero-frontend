@@ -1,0 +1,22 @@
+.showcasesection{
+    display: flex;
+    flex-direction: column;
+    .showcases{
+        background-color: $color-background;
+        height: 300px;
+        position: relative;
+        .showcase-text{
+            color: white;
+            position: absolute;
+            bottom: 0;
+            margin: 10px;
+            h1{
+                font-weight: 900;
+            }
+        }
+     
+    }
+
+    
+    
+}
