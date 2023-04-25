@@ -1,14 +1,40 @@
-.card-1{
-    color: white;
-    font-size: 20px;
-    height: 310px;
-    width: 200px;
-    background-color: red;
+.rating{
+    height: 15px;
+    margin-top: 10px;
 }
 
-.picture {
-    background-color: $color-background;
-    width: 200px;
-    height: 250px;
+.productName{
+    height: 20px;
+    font-size: 14px;
+    color: $color-textsecondary;
 }
+
+.price{
+    height: 20px;
+    font-size: 14px;
+    color: $color-text;
+}
+
+.priceWas{
+    text-decoration: line-through;
+    color: $color-textsecondary;
+    margin-right: 10px;
+}
+
+.priceIs{
+    color: $color-red;
+}
+
+.card-1{
+    height: 330px;
+    width: 200px;
+
+    .picture {
+        background-color: $color-background;
+        width: 200px;
+        height: 250px;
+    }
+    
+}
+
 

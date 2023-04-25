@@ -3,50 +3,50 @@ import { NavLink } from "react-router-dom";
 
 const ProductCarousel = (props) => {
     return(
-        <div className={`container mt-1 g-0 ml-1 ${props.carouselClass}`}>
+        <div className={`container mt-5 g-0 ${props.carouselClass}`}>
             <div className="d-flex flex-column">
-                <div className="d-flex align-items-center justify-content-between">
-                    <h2>{props.title}</h2>
-                    <NavLink >View All</NavLink>
+                <div className="d-flex align-items-center justify-content-between mb-2">
+                    <h2 className="carouselTitle">{props.title}</h2>
+                    <NavLink className="carouselLink">view all <i class="fa-sharp fa-regular fa-chevron-right fa-xs"></i></NavLink>
                 </div>
             </div>
             <div className="carouselContainer ">
                 <div className="row">
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="1"/>
+                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="2"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="3"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="4"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="5"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="6"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="7"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="8"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="9"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="10"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="11"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     <div className="col ">
-                        <Product cardClass={props.cardClass} number="12"/>
+                        <Product cardClass={props.cardClass} />
                     </div>
                     
                 </div>

@@ -288,6 +288,7 @@ html, body {
   bottom: 0;
   width: 100%;
   background-color: white;
+  border-top: 1px solid #DBE3F5;
 }
 .menubarsection hr {
   width: 100%;
@@ -295,7 +296,7 @@ html, body {
 .menubarsection .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 .menubarsection .menu-icons {
   display: flex;
@@ -310,7 +311,10 @@ html, body {
 }
 .menubarsection .menu-icons .active {
   border-radius: 50%;
-  background-color: lightgray;
+  background-color: #DBE3F5;
+}
+.menubarsection .menu-icons .menu-icons {
+  margin-left: 10px;
 }
 
 .showcasesection {
@@ -358,26 +362,63 @@ html, body {
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .carouselContainer {
   width: 2680px;
 }
 
-.card-1 {
-  color: white;
+.carouselTitle {
   font-size: 20px;
-  height: 310px;
-  width: 200px;
-  background-color: red;
+  font-weight: 700;
 }
 
-.picture {
+.carouselLink {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #111111;
+}
+
+.rating {
+  height: 15px;
+  margin-top: 10px;
+}
+
+.productName {
+  height: 20px;
+  font-size: 14px;
+  color: #626262;
+}
+
+.price {
+  height: 20px;
+  font-size: 14px;
+  color: #111111;
+}
+
+.priceWas {
+  text-decoration: line-through;
+  color: #626262;
+  margin-right: 10px;
+}
+
+.priceIs {
+  color: #F4303C;
+}
+
+.card-1 {
+  height: 330px;
+  width: 200px;
+}
+.card-1 .picture {
   background-color: #DBE3F5;
   width: 200px;
   height: 250px;
@@ -474,4 +515,29 @@ html, body {
 }
 .verify-number .basebtn {
   min-width: 335px;
+}
+
+.discountshowcase {
+  background-color: #DBE3F5;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 150px;
+}
+.discountshowcase .items {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.discountshowcase .items p {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+}
+.discountshowcase .items .shopbtn {
+  background: white;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
 }
