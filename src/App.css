@@ -131,14 +131,17 @@ html, body {
   justify-content: space-around;
   margin-top: 5px;
 }
-.headersection .menu .menu-items {
-  position: absolute;
-  top: 0;
-  left: -200px;
-  width: 200px;
-  background-color: darkblue;
-  transition: left 0.5s ease;
+.menubarsection {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-.headersection .menu .menu-items.open {
-  left: 0;
+.menubarsection .container {
+  display: flex;
+  flex-direction: column;
+}
+.menubarsection .menu-icons {
+  display: flex;
+  justify-content: space-around;
+  float: left;
 }
