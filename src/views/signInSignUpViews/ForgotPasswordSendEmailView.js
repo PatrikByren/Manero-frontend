@@ -4,7 +4,7 @@ import Carousel from '../../components/sections/Carousel'
 
 const ForgotPasswordSendEmailView = () => {
   return (
-    <Carousel/>
+    <></>
   )
 }
 

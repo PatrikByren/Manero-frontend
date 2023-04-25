@@ -175,7 +175,13 @@ html, body {
   margin-right: 15px;
 }
 .sign-in-form .guest {
-  display: flex;
+  color: #8D94A6;
+}
+.sign-in-form .imagecontainer {
+  margin-top: 10px;
+}
+.sign-in-form .imagecontainer img {
+  margin: 15px 8px;
 }
 
 .headersection {
@@ -183,6 +189,7 @@ html, body {
   justify-content: space-around;
   margin-top: 5px;
 }
+
 .get-started-welcome {
   position: relative;
   display: flex;

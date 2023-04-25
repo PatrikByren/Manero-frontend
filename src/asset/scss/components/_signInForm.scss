@@ -27,6 +27,10 @@
     }
 }
 .guest{
-    display: flex;
+        color: $color-backgroundsecondary;
+}
+.imagecontainer{
+    margin-top: 10px;
+    img{ margin: 15px 8px;}
 }
 }

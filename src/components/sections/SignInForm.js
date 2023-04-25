@@ -38,8 +38,8 @@ const SignInForm = () => {
           </div>
         </form>
         <div className="text-center mt-3">Don't have an account? <href>Sign up.</href></div>
-        <href className="guest">Or explore as guest</href>
-        <div className="imagecontainer"><img src={fbicon} alt="facebook icon" /><img src={twittericon} alt="twitter icon" />
+        <div className="d-flex justify-content-center"><href className="guest">Or explore as guest</href></div>
+        <div className="d-flex justify-content-center imagecontainer"><img src={fbicon} alt="facebook icon" /><img src={twittericon} alt="twitter icon" />
           <img src={googleicon} alt="google icon" /></div>
       </div>
     </div>
