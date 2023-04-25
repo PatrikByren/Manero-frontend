@@ -11,6 +11,12 @@ html, body {
   font-size: 32px;
 }
 
+.title-2 {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 22px;
+}
+
 .basebtn {
   background: #111111;
   color: white;
@@ -175,7 +181,13 @@ html, body {
   margin-right: 15px;
 }
 .sign-in-form .guest {
-  display: flex;
+  color: #8D94A6;
+}
+.sign-in-form .imagecontainer {
+  margin-top: 10px;
+}
+.sign-in-form .imagecontainer img {
+  margin: 15px 8px;
 }
 
 .headersection {
@@ -183,6 +195,7 @@ html, body {
   justify-content: space-around;
   margin-top: 5px;
 }
+
 .get-started-welcome {
   position: relative;
   display: flex;
@@ -342,30 +355,45 @@ html, body {
   border-radius: 50px;
 }
 
-.bestSellerCarousel {
-  height: 368px;
-  overflow: hidden;
+.arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.featuredCarousel {
-  height: 288;
-  overflow: hidden;
+.forgotpassword {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.forgotpassword .content {
+  color: #626262;
 }
 
-.carouselContainer {
-  width: 2680px;
+.passwordbyemail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
-.card-1 {
-  color: white;
-  font-size: 20px;
-  height: 310px;
-  width: 200px;
-  background-color: red;
+.passwordbyemail .lineup30 {
+  margin: 15px;
 }
-
-.picture {
-  background-color: #DBE3F5;
-  width: 200px;
-  height: 250px;
+.passwordbyemail .title-2 {
+  margin: 0 20%;
+}
+.passwordbyemail .content {
+  margin: 10px 15%;
+}
+.passwordbyemail .basebtn {
+  padding-left: 35%;
+  padding-right: 35%;
 }

@@ -1,0 +1,16 @@
+
+
+.arrowicon{
+    display: flex;
+    margin: 20px 15px 40px 15px;
+    .arrow{
+        justify-content: start;
+        align-items: center;
+    }
+    .content{
+        flex: 2;
+        text-align: center;
+        margin-right: 10px;
+        
+    }
+}
