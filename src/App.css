@@ -310,7 +310,7 @@ html, body {
 }
 .menubarsection .menu-icons .active {
   border-radius: 50%;
-  background-color: lightgray;
+  background-color: #DBE3F5;
 }
 
 .showcasesection {
