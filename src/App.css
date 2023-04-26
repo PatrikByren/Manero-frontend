@@ -449,6 +449,11 @@ html, body {
 .account-created .basebtn {
   min-width: 335px;
 }
+.price {
+  height: 20px;
+  font-size: 14px;
+  color: #111111;
+}
 
 .arrowicon {
   display: flex;
@@ -463,6 +468,11 @@ html, body {
   text-align: center;
   margin-right: 10px;
 }
+.priceWas {
+  text-decoration: line-through;
+  color: #626262;
+  margin-right: 10px;
+}
 
 .forgotpassword {
   margin: 30px 0px;
@@ -471,6 +481,9 @@ html, body {
 }
 .forgotpassword .content {
   color: #626262;
+}
+.priceIs {
+  color: #F4303C;
 }
 
 .passwordbyemail {
