@@ -9,7 +9,7 @@ const AccountCreated = () => {
         <Header title="MANERO" />
       </div>
       <div className="user-image">
-        <img src={Image} alt="User image"></img>
+        <img src={Image} alt="User"></img>
       </div>
       <div className="d-flex justify-content-center mt-3">
         <div className="lineup30"></div>

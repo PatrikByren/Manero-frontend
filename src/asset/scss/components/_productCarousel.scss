@@ -1,18 +1,25 @@
 .bestSellerCarousel{
     height: 368px;
     overflow: hidden;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .featuredCarousel{
     height: 288;
     overflow: hidden;
-    margin-left: 20px;
+    padding-left: 20px;
+
+    .carouselContainer{
+        width: 2000px;
+        margin-bottom: 60px;
+    }
+
 }
 
 .carouselContainer{
     width: 2680px;
 }
+
 
 .carouselTitle {
     font-size: 20px;

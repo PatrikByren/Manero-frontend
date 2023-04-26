@@ -3,6 +3,7 @@ html, body {
   font-family: "Mulish";
   font-weight: 400;
   font-size: 16px;
+  height: 100dvh;
 }
 
 .title-1 {
@@ -241,7 +242,7 @@ html, body {
 .carouselroot {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   height: 100dvh;
   z-index: -2;
   background-color: #DBE3F5;
@@ -394,13 +395,17 @@ html, body {
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
-  margin-left: 20px;
+  padding-left: 20px;
+}
+.featuredCarousel .carouselContainer {
+  width: 2000px;
+  margin-bottom: 60px;
 }
 
 .carouselContainer {
