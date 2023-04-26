@@ -16,7 +16,7 @@ const HomeView = () => {
                         />
       <DiscountShowcase/>
       <ProductCarousel  carouselClass="featuredCarousel"
-                        cardClass="card-1"
+                        cardClass="card-2"
                         title="Featured products"/>
       <MenuBar/>
     </div>
