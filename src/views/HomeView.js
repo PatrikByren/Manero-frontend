@@ -8,7 +8,7 @@ import DiscountShowcase from "../components/sections/DiscountShowcase";
 const HomeView = () => {
   return (
     <div>
-      <Header/>
+      <Header icon={"fa-sharp fa-light fa-bars"} title={"MANERO"}/>
       <Showcase/>
       <ProductCarousel  carouselClass="bestSellerCarousel" 
                         cardClass="card-1"

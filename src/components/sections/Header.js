@@ -3,11 +3,11 @@ import SideMenu from "../individuals/SideMenu";
 import ShoppingCartIcon from "../individuals/ShoppingCartIcon";
 import Middle from "../individuals/Middle";
 
-const Header = () => {
+const Header = ({icon, title}) => {
   return (
     <section className="headersection">
-      <SideMenu icon={"fa-sharp fa-light fa-bars"}/>
-      <Middle title={"MANERO"} />
+      <SideMenu icon={icon}/>
+      <Middle title={title} />
       <ShoppingCartIcon />
     </section>
   );

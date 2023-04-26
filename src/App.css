@@ -195,6 +195,14 @@ html, body {
   justify-content: space-around;
   margin-top: 5px;
 }
+.headersection .middle {
+  display: flex;
+  flex-direction: column;
+}
+.headersection .middle h3 {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .get-started-welcome {
   position: relative;
@@ -570,4 +578,26 @@ html, body {
   padding: 15px 35px;
   border-radius: 50px;
   border: none;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #DBE3F5;
+  width: 100%;
+}
+.categories .consumercategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+.categories .consumercategory .consumerbtn {
+  background-color: white;
+  border: none;
+  margin: 0 10px;
+}
+.categories .consumercategory .consumerbtn .active {
+  border-radius: 50%;
+  background-color: #DBE3F5;
 }
