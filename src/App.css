@@ -634,18 +634,80 @@ html, body {
   border-top: 1px solid #DBE3F5;
   width: 100%;
 }
-.categories .consumercategory {
+.categories .consumercategories {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 10px;
 }
-.categories .consumercategory .consumerbtn {
+.categories .consumercategories .consumerbtn {
   background-color: white;
   border: none;
   margin: 0 10px;
 }
-.categories .consumercategory .consumerbtn .active {
+.categories .consumercategories .consumerbtn .active {
   border-radius: 50%;
   background-color: #DBE3F5;
+}
+.categories .productcategories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "dresses pants" "accessories accessories" "shoes t-shirts";
+  gap: 1px;
+  width: 100%;
+  height: 510px;
+}
+.categories .productcategories .dresses {
+  grid-area: dresses;
+  position: relative;
+  background-color: #8d94a6;
+}
+.categories .productcategories .dresses p {
+  position: absolute;
+  bottom: 0;
+}
+.categories .productcategories .pants {
+  grid-area: pants;
+  position: relative;
+  background-color: #8d94a6;
+}
+.categories .productcategories .pants p {
+  position: absolute;
+  bottom: 0;
+}
+.categories .productcategories .accessories {
+  grid-area: accessories;
+  grid-row: 2/3;
+  position: relative;
+  background-color: #8d94a6;
+}
+.categories .productcategories .accessories p {
+  position: absolute;
+  bottom: 0;
+}
+.categories .productcategories .shoes {
+  grid-area: shoes;
+  position: relative;
+  background-color: #8d94a6;
+}
+.categories .productcategories .shoes p {
+  position: absolute;
+  bottom: 0;
+}
+.categories .productcategories .t-shirts {
+  grid-area: t-shirts;
+  position: relative;
+  background-color: #8d94a6;
+}
+.categories .productcategories .t-shirts p {
+  position: absolute;
+  bottom: 0;
+}
+.categories .productcategories p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
