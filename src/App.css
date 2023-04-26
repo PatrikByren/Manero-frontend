@@ -398,3 +398,20 @@ html, body {
   padding-left: 35%;
   padding-right: 35%;
 }
+
+.field {
+  max-width: 380px;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #DBE3F5;
+  border-bottom: 1px solid #DBE3F5;
+}
+.field .fieldicon {
+  display: flex;
+  align-items: center;
+}
+.field .fieldicon p {
+  margin: 0 0px 0 30px;
+}

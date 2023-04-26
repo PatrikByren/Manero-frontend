@@ -1,0 +1,16 @@
+.field{
+    max-width: 380px;
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-background;
+    border-bottom: 1px solid $color-background;
+    .fieldicon{
+        display: flex;
+        align-items: center;
+        p{
+            margin: 0 0px 0 30px;
+        }
+    }
+  }

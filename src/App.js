@@ -7,6 +7,8 @@ import SignInView from "./views/signInSignUpViews/SignInView";
 import ForgotPasswordView from "./views/signInSignUpViews/ForgotPasswordView";
 import ForgotPasswordSendEmailView from "./views/signInSignUpViews/ForgotPasswordSendEmailView";
 import SignUpView from "./views/signInSignUpViews/SignUpView";
+import NewPasswordView from "./views/signInSignUpViews/NewPasswordView";
+import MyProfileView from "./views/profileViews/MyProfileView";
 
 function App() {
   return (
@@ -18,10 +20,9 @@ function App() {
         <Route path="/signin" element={<SignInView />} />
         <Route path="/signup" element={<SignUpView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route
-          path="/forgotpasswordemail"
-          element={<ForgotPasswordSendEmailView />}
-        />
+        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />} />
+        <Route path="/newpassword" element={<NewPasswordView/>} />
+        <Route path="/myprofile" element={<MyProfileView/>} />
       </Routes>
     </BrowserRouter>
   );
