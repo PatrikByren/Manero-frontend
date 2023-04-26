@@ -446,6 +446,19 @@ html, body {
   background-color: #DBE3F5;
   width: 200px;
   height: 250px;
+  position: relative;
+}
+.card-1 .picture .pictureIconsBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.card-1 .picture .pictureIconsBox .pictureIcons {
+  color: #626262;
+  font-size: 20px;
+}
+.card-1 .picture .pictureIconsBox .pictureIconBag {
+  margin-top: 10px;
 }
 
 .account-created {
