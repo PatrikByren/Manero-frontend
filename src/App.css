@@ -394,13 +394,13 @@ html, body {
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .carouselContainer {
@@ -446,27 +446,48 @@ html, body {
   color: #F4303C;
 }
 
+.picture {
+  background-color: #DBE3F5;
+  position: relative;
+}
+.picture .salesIcon {
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
+  height: 16px;
+  width: 33px;
+  background-color: #69864D;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.picture .pictureIconsBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.picture .pictureIconsBox .pictureIcons {
+  color: #626262;
+  font-size: 20px;
+}
+.picture .pictureIconsBox .pictureIconBag {
+  margin-top: 10px;
+}
+
 .card-1 {
   height: 330px;
   width: 200px;
 }
 .card-1 .picture {
-  background-color: #DBE3F5;
-  width: 200px;
   height: 250px;
-  position: relative;
 }
-.card-1 .picture .pictureIconsBox {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+
+.card-2 {
+  height: 245px;
+  width: 140px;
 }
-.card-1 .picture .pictureIconsBox .pictureIcons {
-  color: #626262;
-  font-size: 20px;
-}
-.card-1 .picture .pictureIconsBox .pictureIconBag {
-  margin-top: 10px;
+.card-2 .picture {
+  height: 170px;
 }
 
 .account-created {
@@ -475,6 +496,9 @@ html, body {
   align-items: center;
   flex-direction: column;
   height: 100dvh;
+}
+.account-created .shoppingicon {
+  display: none;
 }
 .account-created .user-image {
   margin-top: 40px;
