@@ -500,6 +500,8 @@ html, body {
 }
 .field .fieldicon p {
   margin: 0 0px 0 30px;
+}
+
 .confirm-number {
   margin: 30px 0px;
   display: flex;
