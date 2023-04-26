@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../../asset/images/headerlogo.png";
 
 const Middle = ({ title }) => {
   let isManero;

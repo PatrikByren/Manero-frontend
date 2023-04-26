@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-
 function ForgotPasswordForm({ placeholder, nameid, name, value, setValue }) {
-  // const [value, setValue] = useState("");
-
   return (
     <div className="text-center">
       <label className="baselabel" htmlFor={nameid}>
