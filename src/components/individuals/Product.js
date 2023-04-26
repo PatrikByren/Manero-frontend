@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from "react-router-dom";
 
 
 
@@ -7,7 +8,14 @@ const Product = (props) => {
 
     return (
         <div className={`d-flex flex-column ${props.cardClass}`}>
-            <div className="picture"></div>
+            <div className="picture">
+                <div className="pictureIconsBox d-flex flex-column align-items-center">
+
+                    {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
+                    <NavLink><i className="fa-light fa-heart pictureIcons"></i></NavLink>
+                    <NavLink><i className="fa-light fa-bag-shopping pictureIcons pictureIconBag"></i></NavLink>
+                </div>
+            </div>
             <div className="d-flex flex-column align-items-between">
                 <p className="rating mb-1">{props.rating}</p>
                 <p className="productName mb-1">{props.product}</p>

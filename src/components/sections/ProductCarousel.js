@@ -48,11 +48,8 @@ const ProductCarousel = (props) => {
                     <div className="col ">
                         <Product cardClass={props.cardClass} />
                     </div>
-                    
                 </div>
-                
             </div>
-            
         </div>
     );
 };

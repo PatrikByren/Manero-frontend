@@ -33,6 +33,23 @@
         background-color: $color-background;
         width: 200px;
         height: 250px;
+        position: relative;
+        
+
+        .pictureIconsBox{
+            position: absolute;
+            top: 12px;
+            right: 12px;
+
+            .pictureIcons{
+                color: $color-textsecondary;
+                font-size: 20px;
+            }
+
+            .pictureIconBag{
+                margin-top: 10px;
+            }
+        }
     }
     
 }
