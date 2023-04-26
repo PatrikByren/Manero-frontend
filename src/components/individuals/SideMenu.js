@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const SideMenu = ({ icon }) => {
+const SideMenu = ({ icon, onclick }) => {
   const [isActive, setIsActive] = new useState(false);
 
   const toggle = (e) => {
@@ -9,7 +9,7 @@ const SideMenu = ({ icon }) => {
     console.log(isActive);
   };
   return (
-    <div><i className={icon}></i></div>
+    <div><i className={icon} onClick={onclick}></i></div>
   );
 };
 
