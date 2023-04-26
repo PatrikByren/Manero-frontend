@@ -5,7 +5,7 @@ import Categories from "../components/sections/Categories";
 const SearchView = () => {
   return (
     <div id="search">
-      <Header />
+      <Header icon={"fa-sharp fa-light fa-bars"} onclick={onclick} title={"search"}/>
       <Categories/>
       <MenuBar />
     </div>

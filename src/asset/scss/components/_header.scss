@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 5px;
+  margin-bottom: 10px;
 
   .title-container {
     position: relative;
@@ -29,5 +30,18 @@
       top: 50%;
       transform: translate(-10%, -50%);
     }
+  }
+
+  .search{
+    
+
+    input{
+      border: none;
+      margin-left: 10px;
+    }
+  }
+
+  .hide{
+    display: none;
   }
 }
