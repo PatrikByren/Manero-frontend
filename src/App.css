@@ -468,6 +468,9 @@ html, body {
   flex-direction: column;
   height: 100dvh;
 }
+.account-created .shoppingicon {
+  display: none;
+}
 .account-created .user-image {
   margin-top: 40px;
 }

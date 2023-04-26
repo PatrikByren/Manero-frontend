@@ -1,12 +1,12 @@
 import React from "react";
-import Middle from "../individuals/Middle";
 import Image from "../../asset/images/userimg.png";
+import Header from "./Header";
 
 const AccountCreated = () => {
   return (
     <div className="container account-created">
       <div>
-        <Middle title={"MANERO"} />
+        <Header title="MANERO" />
       </div>
       <div className="user-image">
         <img src={Image} alt="User image"></img>
