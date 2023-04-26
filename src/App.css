@@ -287,11 +287,16 @@ html, body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: white;
+  border-top: 1px solid #DBE3F5;
+}
+.menubarsection hr {
+  width: 100%;
 }
 .menubarsection .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 .menubarsection .menu-icons {
   display: flex;
@@ -306,54 +311,135 @@ html, body {
 }
 .menubarsection .menu-icons .active {
   border-radius: 50%;
-  background-color: lightgray;
+  background-color: #DBE3F5;
+}
+.menubarsection .menu-icons .menu-icons {
+  margin-left: 10px;
 }
 
 .showcasesection {
   display: flex;
   flex-direction: column;
-}
-.showcasesection .showcases {
+  background-color: white;
   background-color: #DBE3F5;
-  height: 300px;
+}
+.showcasesection .container .showcases {
+  height: 330px;
   position: relative;
 }
-.showcasesection .showcases .showcase-text {
-  color: white;
+.showcasesection .container .showcases .showcase-text {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin-bottom: 30px;
+  color: white;
 }
-.showcasesection .showcases .showcase-text h1 {
+.showcasesection .container .showcases .showcase-text h1 {
+  color: white;
   font-weight: 900;
+}
+.showcasesection .displaywelcome {
+  display: none;
+}
+.showcasesection .carouselbtn {
+  display: none;
+}
+.showcasesection .carousel-indicators {
+  background-color: white;
+  margin: 0;
+}
+.showcasesection .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.showcasesection .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
 }
 
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .carouselContainer {
   width: 2680px;
 }
 
-.card-1 {
-  color: white;
+.carouselTitle {
   font-size: 20px;
-  height: 310px;
-  width: 200px;
-  background-color: red;
+  font-weight: 700;
 }
 
-.picture {
+.carouselLink {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #111111;
+}
+
+.rating {
+  height: 15px;
+  margin-top: 10px;
+}
+
+.productName {
+  height: 20px;
+  font-size: 14px;
+  color: #626262;
+}
+
+.price {
+  height: 20px;
+  font-size: 14px;
+  color: #111111;
+}
+
+.priceWas {
+  text-decoration: line-through;
+  color: #626262;
+  margin-right: 10px;
+}
+
+.priceIs {
+  color: #F4303C;
+}
+
+.card-1 {
+  height: 330px;
+  width: 200px;
+}
+.card-1 .picture {
   background-color: #DBE3F5;
   width: 200px;
   height: 250px;
+}
+
+.account-created {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+.account-created .user-image {
+  margin-top: 40px;
+}
+.account-created .title-1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.account-created .basebtn {
+  min-width: 335px;
 }
 
 .arrowicon {
@@ -414,4 +500,59 @@ html, body {
 }
 .field .fieldicon p {
   margin: 0 0px 0 30px;
+.confirm-number {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.confirm-number .message {
+  margin: 0px 0px 20px 15px;
+}
+.confirm-number .inputcontainer .text-center {
+  width: 355px;
+}
+
+.verify-number {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.verify-number input {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.verify-number input:valid {
+  background-color: #DBE3F5;
+}
+.verify-number input:invalid {
+  background-color: white;
+}
+.verify-number .basebtn {
+  min-width: 335px;
+}
+
+.discountshowcase {
+  background-color: #DBE3F5;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 150px;
+}
+.discountshowcase .items {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.discountshowcase .items p {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+}
+.discountshowcase .items .shopbtn {
+  background: white;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
 }

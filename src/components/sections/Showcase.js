@@ -1,18 +1,12 @@
 import React from "react";
+import Carousel from "./Carousel";
+import ShowcaseItem from "../individuals/ShowcaseItem";
+import CarouselsItem from "../individuals/CarouselsItem";
 
 const Showcase = () => {
   return (
     <section className="showcasesection">
-      <div className="showcases">
-        <div className="showcase-text">
-          <h1>Welcome To</h1>
-          <h1>Manero!</h1>
-          <h1>50% off</h1>
-        </div>
-      </div>
-      <div className="pillcontainer">
-        
-      </div>
+        <Carousel/>
     </section>
   );
 };
