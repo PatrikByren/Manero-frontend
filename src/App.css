@@ -411,6 +411,7 @@ html, body {
 }
 .account-created .basebtn {
   min-width: 335px;
+}
 .price {
   height: 20px;
   font-size: 14px;
@@ -429,6 +430,7 @@ html, body {
   flex: 2;
   text-align: center;
   margin-right: 10px;
+}
 .priceWas {
   text-decoration: line-through;
   color: #626262;
@@ -442,6 +444,7 @@ html, body {
 }
 .forgotpassword .content {
   color: #626262;
+}
 .priceIs {
   color: #F4303C;
 }
@@ -464,10 +467,21 @@ html, body {
 .passwordbyemail .basebtn {
   padding-left: 35%;
   padding-right: 35%;
-.card-1 {
+}
+.card-1{
   height: 330px;
   width: 200px;
+
+ 
+  
 }
+
+.card-1 .picture {
+  background-color: $color-background;
+  width: 200px;
+  height: 250px;
+}
+
 .card-1 .discountshowcase {
   background-color: #DBE3F5;
   margin-top: 10px;
