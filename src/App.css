@@ -386,13 +386,13 @@ html, body {
 .bestSellerCarousel {
   height: 368px;
   overflow: hidden;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .featuredCarousel {
   height: 288;
   overflow: hidden;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .carouselContainer {
