@@ -3,7 +3,6 @@ html, body {
   font-family: "Mulish";
   font-weight: 400;
   font-size: 16px;
-  height: 100dvh;
 }
 
 .title-1 {
@@ -715,4 +714,33 @@ html, body {
   color: white;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+@media (min-width: 1000px) {
+  .arrow {
+    display: none;
+  }
+  .media-border {
+    border: 1px solid #DBE3F5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 600px;
+    min-height: 600px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .media-border .inputcontainer {
+    display: flex;
+    align-items: center;
+  }
+  .lineup30 {
+    display: none;
+  }
+  .arrowicon .content {
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 44px;
+    margin-left: 10px;
+  }
 }

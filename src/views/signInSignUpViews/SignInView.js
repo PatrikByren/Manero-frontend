@@ -3,7 +3,7 @@ import SignInForm from "../../components/sections/SignInForm";
 
 const SignInView = () => {
   return (
-    <div>
+    <div className="container sign-in-view">
       <SignInForm />
     </div>
   );
