@@ -6,7 +6,7 @@ const AccountCreated = () => {
   return (
     <div className="container account-created">
       <div>
-        <Middle />
+        <Middle title={"MANERO"} />
       </div>
       <div className="user-image">
         <img src={Image} alt="User image"></img>

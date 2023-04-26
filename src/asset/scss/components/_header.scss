@@ -2,13 +2,32 @@
   display: flex;
   justify-content: space-around;
   margin-top: 5px;
-  .middle{
-    display: flex;
-    flex-direction: column;
-  
-  h3{
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+
+  .title-container {
+    position: relative;
+
+    h3 {
+      font-size: 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Add the border to the title */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15%;
+      height: 2px;
+      background-color: black;
+    }
+
+    /* Adjust the size and position of the border for the "MANERO" title */
+    &:nth-child(1)::before {
+      width: 20%;
+      top: 50%;
+      transform: translate(-10%, -50%);
+    }
   }
 }
