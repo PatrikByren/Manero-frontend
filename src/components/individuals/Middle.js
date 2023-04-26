@@ -1,15 +1,25 @@
-import React from 'react'
-import image from '../../asset/images/headerlogo.png'
+import React from "react";
+import image from "../../asset/images/headerlogo.png";
 
-const Middle = ({title}) => {
+const Middle = ({ title }) => {
   let isManero;
-  if(title === "MANERO"){
+  let isSearch;
+  if (title === "MANERO") {
     isManero = true;
+  } else if (title === "search") {
+    isSearch = true;
   }
   return (
-    <div className={isManero ? "title-container" : ""}>
-      <h3 className={isManero ? "title" : ""}>{title}</h3></div>
-  )
-}
+    <>
+      <div className={isManero ? "title-container" : "hide"}>
+        <h3 className={isManero ? "title" : ""}>{title}</h3>
+      </div>
+      <div className={isSearch ? "search" : "hide"}>
+        <i className="fa-light fa-magnifying-glass 2xs"></i>
+        <input type="text" placeholder="Search"></input>
+      </div>
+    </>
+  );
+};
 
-export default Middle
+export default Middle;

@@ -194,6 +194,7 @@ html, body {
   display: flex;
   justify-content: space-around;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 .headersection .title-container {
   position: relative;
@@ -218,6 +219,13 @@ html, body {
   width: 20%;
   top: 50%;
   transform: translate(-10%, -50%);
+}
+.headersection .search input {
+  border: none;
+  margin-left: 10px;
+}
+.headersection .hide {
+  display: none;
 }
 
 .get-started-welcome {
