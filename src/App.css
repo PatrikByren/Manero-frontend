@@ -242,7 +242,7 @@ html, body {
 .carouselroot {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   height: 100dvh;
   z-index: -2;
   background-color: #DBE3F5;
