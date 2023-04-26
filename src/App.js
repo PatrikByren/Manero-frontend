@@ -12,12 +12,14 @@ import MyProfileView from "./views/profileViews/MyProfileView";
 import AccountCreatedView from "./views/signInSignUpViews/AccountCreatedView";
 import ConfirmNumberView from "./views/ConfirmNumberView";
 import VerifyNumberView from "./views/VerifyNumberView";
+import SearchView from "./views/SearchView";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeView />} />
+        <Route path="/search" element={<SearchView />} />
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
         <Route path="/signin" element={<SignInView />} />
