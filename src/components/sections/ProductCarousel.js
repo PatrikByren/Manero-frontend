@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ProductCarousel = (props) => {
     return(
-        <div className={`container mt-5 g-0 ${props.carouselClass}`}>
+        <div className={`container g-0 ${props.carouselClass}`}>
             <div className="d-flex flex-column">
                 <div className="d-flex align-items-center justify-content-between mb-2">
                     <h2 className="carouselTitle">{props.title}</h2>
@@ -11,7 +11,7 @@ const ProductCarousel = (props) => {
                 </div>
             </div>
             <div className="carouselContainer ">
-                <div className="row">
+                <div className="row ">
                     <div className="col ">
                         <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
                     </div>
