@@ -7,10 +7,14 @@ const Product = (props) => {
    
 
     return (
+
+        //Ska ligga i en Navlink?
         <div className={`d-flex flex-column ${props.cardClass}`}>
             <div className="picture">
+                    {props.discountPrice && (
+                        <div className="salesIcon d-flex justify-content-center align-items-center">SALE</div>
+                    )}
                 <div className="pictureIconsBox d-flex flex-column align-items-center">
-
                     {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
                     <NavLink><i className="fa-light fa-heart pictureIcons"></i></NavLink>
                     <NavLink><i className="fa-light fa-bag-shopping pictureIcons pictureIconBag"></i></NavLink>

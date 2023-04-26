@@ -25,33 +25,54 @@
     color: $color-red;
 }
 
+.picture{
+    background-color: $color-background;
+    position: relative;
+
+    .salesIcon{
+        color:white;
+        font-size: 8px;
+        font-weight: 700;
+        height: 16px;
+        width: 33px;
+        background-color: $color-sale;
+        position:absolute;
+        top:0px;
+        left: 0px;
+    }
+
+    .pictureIconsBox{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+
+        .pictureIcons{
+            color: $color-textsecondary;
+            font-size: 20px;
+        }
+
+        .pictureIconBag{
+            margin-top: 10px;
+        }
+    }
+}
+
 .card-1{
     height: 330px;
     width: 200px;
 
     .picture {
-        background-color: $color-background;
-        width: 200px;
         height: 250px;
-        position: relative;
-        
-
-        .pictureIconsBox{
-            position: absolute;
-            top: 12px;
-            right: 12px;
-
-            .pictureIcons{
-                color: $color-textsecondary;
-                font-size: 20px;
-            }
-
-            .pictureIconBag{
-                margin-top: 10px;
-            }
-        }
     }
-    
+}
+
+.card-2{
+    height: 245px;
+    width: 140px;
+
+    .picture {
+        height: 170px;
+    }
 }
 
 
