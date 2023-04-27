@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const SideMenu = ({ icon }) => {
   let isSidebar = icon === "fa-sharp fa-light fa-bars";
   const [isOpen, setIsOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   const openMenu = () => {
     setIsOpen(!isOpen);
@@ -38,8 +39,23 @@ const SideMenu = ({ icon }) => {
             <p>+17 5123 1027</p>
           </div>
         </div>
-        <div className="trackorder"><p>Track your order</p>
-        <input className="inputtrackorder"></input>
+        <div className="trackorder">
+          <p>Track your order</p>
+          <div className="inputcontainer">
+            <label className="baselabel">ORDER NUMBER</label>
+            <div className="inputgroup">
+              <input
+                className="inputtrackorder"
+                type="number"
+                id={value}
+                value={value}
+                onChange={(event) => setValue(event.target.value)}
+              ></input>
+              <div className="arrowcontainer">
+                <i className="fa-duotone fa-circle-arrow-right fa-lg"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
     </>

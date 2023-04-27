@@ -216,12 +216,10 @@ html, body {
   margin-left: 40px;
 }
 .headersection .iconcontainer {
-  z-index: 1;
+  z-index: 6;
 }
 .headersection .title-container {
   position: relative;
-  /* Add the border to the title */
-  /* Adjust the size and position of the border for the "MANERO" title */
 }
 .headersection .title-container h3 {
   font-size: 20px;
@@ -269,6 +267,59 @@ html, body {
 .headersection .nav p {
   color: rgb(241, 241, 241);
 }
+.headersection .nav .trackorder {
+  position: absolute;
+  bottom: 0;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.headersection .nav .trackorder .inputcontainer {
+  width: 375px;
+  position: relative;
+}
+.headersection .nav .trackorder .inputcontainer p {
+  margin-left: 25px;
+}
+.headersection .nav .trackorder .inputcontainer .baselabel {
+  position: absolute;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
+  left: 40px;
+  top: -13px;
+  padding-bottom: 0;
+  background-color: #111111;
+  color: lightgray;
+  z-index: 1;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .inputtrackorder {
+  width: 200px;
+  border: 0.5px solid gray;
+  border-radius: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 30px;
+  background-color: #111111;
+  color: white;
+  text-align: center;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .arrowcontainer {
+  position: absolute;
+  display: flex;
+  left: 165px;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .arrowcontainer i {
+  color: lightgray;
+  font-size: 30px;
+}
 .headersection .nav-open {
   left: 0;
 }
@@ -287,6 +338,10 @@ html, body {
 }
 .headersection .info-item p {
   margin-left: 15px;
+}
+.headersection .info-item i {
+  margin-top: 10px;
+  color: lightgray;
 }
 .headersection .collection p {
   font-size: 18px;
