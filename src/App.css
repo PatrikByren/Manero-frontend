@@ -175,6 +175,7 @@ html, body {
 }
 .sign-in-form .arrowicon {
   display: flex;
+  flex-grow: 1;
   margin: 20px 15px 40px 15px;
 }
 .sign-in-form .arrowicon .arrow {
@@ -575,6 +576,7 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 .account-created .shoppingicon {
   display: none;
@@ -868,4 +870,33 @@ html, body {
 }
 .container-lg {
   min-width: 375px;
+}
+
+.myaddress {
+  margin: 50px 0px;
+}
+.myaddress .arrowicon {
+  display: flex;
+  margin: 20px 15px 40px 15px;
+}
+.myaddress .arrowicon .arrow {
+  justify-content: start;
+  align-items: center;
+}
+.myaddress .arrowicon .content {
+  flex: 2;
+  text-align: center;
+  margin-right: 10px;
+}
+.myaddress .media-border .field-content .sub-text {
+  font-size: 14px;
+}
+.myaddress .media-border .new-address-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.myaddress .media-border .new-address-box p {
+  margin-top: 10px;
 }

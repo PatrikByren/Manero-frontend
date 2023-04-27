@@ -14,6 +14,7 @@ import ConfirmNumberView from "./views/ConfirmNumberView";
 import VerifyNumberView from "./views/VerifyNumberView";
 import SearchView from "./views/SearchView";
 import ShopView from "./views/ShopView";
+import MyAddressView from "./views/profileViews/MyAddressView";
 
 function App() {
   return (
@@ -27,9 +28,13 @@ function App() {
         <Route path="/signup" element={<SignUpView />} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />} />
-        <Route path="/newpassword" element={<NewPasswordView/>} />
-        <Route path="/myprofile" element={<MyProfileView/>} />
+        <Route
+          path="/forgotpasswordemail"
+          element={<ForgotPasswordSendEmailView />}
+        />
+        <Route path="/newpassword" element={<NewPasswordView />} />
+        <Route path="/myprofile" element={<MyProfileView />} />
+        <Route path="/myaddress" element={<MyAddressView />} />
         <Route
           path="/forgotpasswordemail"
           element={<ForgotPasswordSendEmailView />}

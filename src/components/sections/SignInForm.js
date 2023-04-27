@@ -48,7 +48,9 @@ const SignInForm = () => {
                     />
                     <label htmlFor="rememberme">Remember me</label>
                   </div>
-                  <href>Forgot password?</href>
+                  <NavLink to="/forgotpassword" className="sign-up-link">
+                    Forgot password?
+                  </NavLink>
                 </div>
 
                 <button className="basebtn" type="submit">
