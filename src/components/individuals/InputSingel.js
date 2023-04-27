@@ -1,3 +1,5 @@
+import sweden from '../../asset/images/swedenflag.png'
+
 function ForgotPasswordForm({ placeholder, nameid, name, value, setValue }) {
   return (
     <div className="text-center">

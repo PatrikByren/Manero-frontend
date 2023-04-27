@@ -36,6 +36,9 @@ html, body {
   width: 375px;
   position: relative;
 }
+.inputcontainer .text-center .swedenflag {
+  background-image: url("/src/asset/images/swedenflag.png");
+}
 .inputcontainer .text-center .baselabel {
   position: absolute;
   font-size: 12px;
