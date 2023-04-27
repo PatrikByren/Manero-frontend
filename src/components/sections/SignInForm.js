@@ -59,7 +59,7 @@ const SignInForm = () => {
           </form>
           <div className="text-center mt-3">
             Don't have an account?{" "}
-            <NavLink to="/signup" className="sign-up-link">
+            <NavLink to="/signup" className="text-decoration-none">
               Sign up.
             </NavLink>
           </div>
