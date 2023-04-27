@@ -1,0 +1,65 @@
+@media (min-width: 1000px) {
+    .arrow{
+        display: none;
+    }
+
+    .media-border{
+        border: 1px solid $color-background;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        width: 600px;
+        min-height: 600px;
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .inputcontainer{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .lineup30{
+        display: none;
+    }
+
+    .arrowicon{
+
+        .content{
+            font-family: 'Mulish';
+            font-weight: 700;
+            font-size: 44px;
+            margin-left: 10px;
+        }
+    }
+    .headersection {
+        .title-container{
+            margin-top: 50px;
+            h3{
+                font-size: 44px;
+            }
+        }
+    }
+    .backtosigninbtn{
+      display: inline;
+      background-color: white;
+      color: $color-text;
+    }
+    .confirm-number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .message{
+            display: flex;
+            margin-top: 50px;
+        }
+        .media-border{
+            justify-content: flex-start;
+            
+        }
+    }
+}
+
+
+
+

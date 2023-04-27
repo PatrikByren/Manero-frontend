@@ -3,7 +3,6 @@ html, body {
   font-family: "Mulish";
   font-weight: 400;
   font-size: 16px;
-  height: 100dvh;
 }
 
 .title-1 {
@@ -43,18 +42,23 @@ html, body {
   background-color: white;
   padding: 5px;
   left: 40px;
+  top: -2px;
+  padding-bottom: 0;
 }
 .inputcontainer .text-center .baseinput {
   margin: 10px;
   min-width: 335px;
   border: 2px solid #DBE3F5;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   z-index: -1;
 }
 .inputcontainer .text-center .basebtn {
   margin: 20px 0 0 0;
   width: 335px;
+}
+.inputcontainer .color-grey {
+  color: #626262;
 }
 
 .get-started-root {
@@ -463,6 +467,8 @@ html, body {
 .carouselTitle {
   font-size: 20px;
   font-weight: 700;
+  text-decoration: none;
+  color: #111111;
 }
 
 .carouselLink {
@@ -548,19 +554,24 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100dvh;
 }
 .account-created .shoppingicon {
   display: none;
 }
-.account-created .user-image {
+.account-created .media-border {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.account-created .media-border .user-image {
   margin-top: 40px;
 }
-.account-created .title-1 {
+.account-created .media-border .title-1 {
   font-size: 22px;
   margin: 10px 0;
 }
-.account-created .basebtn {
+.account-created .media-border .basebtn {
   min-width: 335px;
 }
 
@@ -585,6 +596,19 @@ html, body {
 }
 .forgotpassword .content {
   color: #626262;
+}
+.forgotpassword .inputcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .forgotpassword .media-border .content {
+    text-align: center;
+  }
+}
+
+.backtosigninbtn {
+  display: none;
 }
 
 .passwordbyemail {
@@ -634,6 +658,12 @@ html, body {
 }
 .confirm-number .inputcontainer .text-center {
   width: 355px;
+}
+.confirm-number .media-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .verify-number {
@@ -763,4 +793,56 @@ html, body {
   color: white;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+@media (min-width: 1000px) {
+  .arrow {
+    display: none;
+  }
+  .media-border {
+    border: 1px solid #DBE3F5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 600px;
+    min-height: 600px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .media-border .inputcontainer {
+    display: flex;
+    align-items: center;
+  }
+  .lineup30 {
+    display: none;
+  }
+  .arrowicon .content {
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 44px;
+    margin-left: 10px;
+  }
+  .headersection .title-container {
+    margin-top: 50px;
+  }
+  .headersection .title-container h3 {
+    font-size: 44px;
+  }
+  .backtosigninbtn {
+    display: inline;
+    background-color: white;
+    color: #111111;
+  }
+  .confirm-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirm-number .message {
+    display: flex;
+    margin-top: 50px;
+  }
+  .confirm-number .media-border {
+    justify-content: flex-start;
+  }
 }

@@ -18,53 +18,55 @@ const SignInForm = () => {
         <div className="d-flex justify-content-center mt-3">
           <div className="lineup30"></div>
         </div>
-        <div className="title-1 text-center">Welcome Back!</div>
-        <div className="text-center mb-4">Sign in to continue</div>
-        <form onSubmit={handleSubmit}>
-          <div className="inputcontainer">
-            <div className="text-center">
-              <InputSingel
-                placeholder="name@domain.com"
-                nameid="email"
-                name="EMAIL"
-                value={email}
-                setValue={setEmail}
-              />
-              <InputSingel
-                nameid="password"
-                name="PASSWORD"
-                value={password}
-                setValue={setPassword}
-              />
-              <div className="remember">
-                <div>
-                  <input
-                    className="rememberme"
-                    type="checkbox"
-                    text="Remember me"
-                    id="rememberme"
-                  />
-                  <label htmlFor="rememberme">Remember me</label>
+        <div className="media-border">
+          <div className="title-1 text-center">Welcome Back!</div>
+          <div className="text-center mb-4">Sign in to continue</div>
+          <form onSubmit={handleSubmit}>
+            <div className="inputcontainer">
+              <div className="text-center">
+                <InputSingel
+                  placeholder="name@domain.com"
+                  nameid="email"
+                  name="EMAIL"
+                  value={email}
+                  setValue={setEmail}
+                />
+                <InputSingel
+                  nameid="password"
+                  name="PASSWORD"
+                  value={password}
+                  setValue={setPassword}
+                />
+                <div className="remember">
+                  <div>
+                    <input
+                      className="rememberme"
+                      type="checkbox"
+                      text="Remember me"
+                      id="rememberme"
+                    />
+                    <label htmlFor="rememberme">Remember me</label>
+                  </div>
+                  <href>Forgot password?</href>
                 </div>
-                <href>Forgot password?</href>
-              </div>
 
-              <button className="basebtn" type="submit">
-                SIGN IN
-              </button>
+                <button className="basebtn" type="submit">
+                  SIGN IN
+                </button>
+              </div>
             </div>
+          </form>
+          <div className="text-center mt-3">
+            Don't have an account? <href>Sign up.</href>
           </div>
-        </form>
-        <div className="text-center mt-3">
-          Don't have an account? <href>Sign up.</href>
-        </div>
-        <div className="d-flex justify-content-center">
-          <href className="guest">Or explore as guest</href>
-        </div>
-        <div className="d-flex justify-content-center imagecontainer">
-          <img src={fbicon} alt="facebook icon" />
-          <img src={twittericon} alt="twitter icon" />
-          <img src={googleicon} alt="google icon" />
+          <div className="d-flex justify-content-center">
+            <href className="guest">Or explore as guest</href>
+          </div>
+          <div className="d-flex justify-content-center imagecontainer">
+            <img src={fbicon} alt="facebook icon" />
+            <img src={twittericon} alt="twitter icon" />
+            <img src={googleicon} alt="google icon" />
+          </div>
         </div>
       </div>
     </div>

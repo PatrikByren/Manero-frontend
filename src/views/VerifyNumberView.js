@@ -3,7 +3,7 @@ import VerifyNumber from "../components/sections/VerifyNumber";
 
 const VerifyNumberView = () => {
   return (
-    <div>
+    <div className="container">
       <VerifyNumber />
     </div>
   );
