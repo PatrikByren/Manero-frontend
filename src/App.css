@@ -641,8 +641,7 @@ html, body {
   margin: 10px 15%;
 }
 .passwordbyemail .basebtn {
-  padding-left: 35%;
-  padding-right: 35%;
+  min-width: 335px;
 }
 
 .field {
