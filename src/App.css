@@ -552,6 +552,7 @@ html, body {
 .card-3 {
   height: 240px;
   width: 160px;
+  margin-bottom: 10px;
 }
 .card-3 .picture {
   height: 170px;
@@ -854,8 +855,6 @@ html, body {
     justify-content: flex-start;
   }
 }
-
-.containerShopView {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.container-lg {
+  min-width: 375px;
 }
