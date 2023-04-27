@@ -175,7 +175,6 @@ html, body {
 }
 .sign-in-form .arrowicon {
   display: flex;
-  flex-grow: 1;
   margin: 20px 15px 40px 15px;
 }
 .sign-in-form .arrowicon .arrow {
@@ -710,6 +709,7 @@ html, body {
 
 .field {
   max-width: 380px;
+  height: 70px;
   padding: 20px 20px 20px 30px;
   display: flex;
   justify-content: space-between;
@@ -922,6 +922,20 @@ html, body {
   .confirm-number .media-border {
     justify-content: flex-start;
   }
+  .myaddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myaddress .field {
+    min-width: 599px;
+    height: 120px;
+  }
+  .myaddress .media-border {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
 }
 .container-lg {
   min-width: 375px;
@@ -943,7 +957,15 @@ html, body {
   text-align: center;
   margin-right: 10px;
 }
-.myaddress .media-border .field-content .sub-text {
+.myaddress .media-border {
+  display: flex;
+  flex-direction: column;
+}
+.myaddress .media-border .field-box .field {
+  min-width: 380px;
+  max-width: none;
+}
+.myaddress .media-border .field-box .field .field-content .sub-text {
   font-size: 14px;
 }
 .myaddress .media-border .new-address-box {
