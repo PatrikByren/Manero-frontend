@@ -5,9 +5,9 @@ const GetStartedWelcome = () => {
   return (
     <div className="get-started-welcome">
       <div className="container carouselroot">
-                <div className="inner-circle"></div>
-                <div className="outer-circle"></div>
-      <Carousel />
+        <Carousel />
+        <div className="inner-circle"></div>
+        <div className="outer-circle"></div>
       </div>
     </div>
   );

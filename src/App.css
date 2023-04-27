@@ -36,6 +36,9 @@ html, body {
   width: 375px;
   position: relative;
 }
+.inputcontainer .text-center .swedenflag {
+  background-image: url("/src/asset/images/swedenflag.png");
+}
 .inputcontainer .text-center .baselabel {
   position: absolute;
   font-size: 12px;
@@ -68,6 +71,7 @@ html, body {
 
 .get-started-root {
   background-color: #DBE3F5;
+  overflow: hidden;
 }
 .get-started-root .get-started {
   display: inline;
@@ -351,6 +355,7 @@ html, body {
   z-index: 0;
   height: 100dvh;
   background-color: #DBE3F5;
+  overflow: hidden;
 }
 
 .carouselroot {
@@ -614,6 +619,7 @@ html, body {
 .card-3 {
   height: 240px;
   width: 160px;
+  margin-bottom: 10px;
 }
 .card-3 .picture {
   height: 170px;
@@ -697,8 +703,7 @@ html, body {
   margin: 10px 15%;
 }
 .passwordbyemail .basebtn {
-  padding-left: 35%;
-  padding-right: 35%;
+  min-width: 335px;
 }
 
 .field {
@@ -916,7 +921,6 @@ html, body {
     justify-content: flex-start;
   }
 }
-.containerShopView {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.container-lg {
+  min-width: 375px;
 }
