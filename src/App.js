@@ -13,6 +13,7 @@ import AccountCreatedView from "./views/signInSignUpViews/AccountCreatedView";
 import ConfirmNumberView from "./views/ConfirmNumberView";
 import VerifyNumberView from "./views/VerifyNumberView";
 import SearchView from "./views/SearchView";
+import ShopView from "./views/ShopView";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         />
         <Route path="/confirmnumber" element={<ConfirmNumberView />} />
         <Route path="/verifynumber" element={<VerifyNumberView />} />
+        <Route path="/shop" element={<ShopView />} />
       </Routes>
     </BrowserRouter>
   );
