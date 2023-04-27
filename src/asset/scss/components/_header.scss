@@ -4,12 +4,12 @@
   margin-top: 5px;
   margin-bottom: 10px;
 
-  .contactus{
+  .contactus {
     margin-left: 40px;
   }
 
-  .iconcontainer{
-    z-index: 1;
+  .iconcontainer {
+    z-index: 6;
   }
   .title-container {
     position: relative;
@@ -19,7 +19,6 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Add the border to the title */
     &::before {
       content: "";
       position: absolute;
@@ -31,7 +30,6 @@
       background-color: black;
     }
 
-    /* Adjust the size and position of the border for the "MANERO" title */
     &:nth-child(1)::before {
       width: 20%;
       top: 50%;
@@ -39,19 +37,17 @@
     }
   }
 
-  .search{
-    
-
-    input{
+  .search {
+    input {
       border: none;
       margin-left: 10px;
     }
   }
 
-  .hide{
+  .hide {
     display: none;
   }
-  .nav{
+  .nav {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -65,42 +61,97 @@
     transition: 0.5s;
     padding-top: 60px;
 
-    
-
-    h1{
+    h1 {
       color: white;
     }
-    p{
+    p {
       color: rgb(241, 241, 241);
     }
+
+    .trackorder {
+      position: absolute;
+      bottom: 0;
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .inputcontainer {
+        width: 375px;
+        position: relative;
+        p {
+          margin-left: 25px;
+        }
+        .baselabel {
+          position: absolute;
+          font-size: 12px;
+          padding-top: 5px;
+          padding-right: 2px;
+          padding-left: 2px;
+          left: 40px;
+          top: -13px;
+          padding-bottom: 0;
+          background-color: $color-black;
+          color: lightgray;
+          z-index: 1;
+        }
+        .inputgroup {
+          position: relative;
+          display: flex;
+          align-items: center;
+          .inputtrackorder {
+            width: 200px;
+            border: 0.5px solid gray;
+            border-radius: 50px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-right: 30px;
+            background-color: $color-black;
+            color: white;
+            text-align: center;
+          }
+          .arrowcontainer{
+            position: absolute;
+            display: flex;
+            left: 165px;
+            i{
+              color: lightgray;
+              font-size: 30px;
+            }
+          }
+        } 
+      }
+    }
   }
-  .nav-open{
+  .nav-open {
     left: 0;
   }
-  .nav-closed{
+  .nav-closed {
     left: -250px;
   }
 
-  .info-container{
+  .info-container {
     display: flex;
     flex-direction: column;
   }
 
-  .info-item{
+  .info-item {
     display: flex;
     flex-direction: row;
     margin: 10px;
     border-bottom: 1px solid lightgray;
 
-    p{
+    p {
       margin-left: 15px;
     }
-    
-    
+    i{
+      margin-top: 10px;
+      color: lightgray;
+    }
   }
 
-  .collection{
-    p{
+  .collection {
+    p {
       font-size: 18px;
       font-weight: 600;
     }

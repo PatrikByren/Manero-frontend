@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Field = ({icon, text, submitbutton}) => {
+const Field = ({ icon, text, subText, submitbutton }) => {
   return (
-    <div className='field'>
-       <div className='fieldicon'> 
+    <div className="field">
+      <div className="fieldicon">
         {icon}
-        <p>{text}</p>
-        </div> 
-        {submitbutton}
+        <div className="field-content">
+          <p className="head-text">{text}</p>
+          <p className="sub-text">{subText}</p>
+        </div>
+      </div>
+      {submitbutton}
     </div>
-  )
-}
+  );
+};
 
-export default Field
+export default Field;
