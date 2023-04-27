@@ -10,6 +10,8 @@ const ProductCarousel = (props) => {
                     <NavLink className="carouselLink">view all <i className="fa-sharp fa-regular fa-chevron-right fa-xs"></i></NavLink>
                 </div>
             </div>
+
+            {/* Pröva att skriva om detta nedan med d-flex flex-wrap */}
             <div className="carouselContainer ">
                 <div className="row ">
                     <div className="col ">

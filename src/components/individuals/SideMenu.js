@@ -38,6 +38,9 @@ const SideMenu = ({ icon }) => {
             <p>+17 5123 1027</p>
           </div>
         </div>
+        <div className="trackorder"><p>Track your order</p>
+        <input className="inputtrackorder"></input>
+        </div>
       </nav>
     </>
   );
