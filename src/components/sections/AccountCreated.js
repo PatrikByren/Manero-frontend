@@ -5,7 +5,7 @@ import Header from "./Header";
 const AccountCreated = () => {
   return (
     <div className="container account-created">
-      <div>
+      <div className="headerinaccount">
         <Header title="MANERO" />
       </div>
       <div className="media-border">

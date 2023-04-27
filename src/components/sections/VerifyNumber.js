@@ -11,6 +11,7 @@ const VerifyNumber = () => {
       <div>
         <BackArrowMiddleHead content="Verify your phone number" />
       </div>
+      <div className="media-border container">
       <div className="text-center">
         <p>Enter your OTP code here.</p>
       </div>
@@ -70,6 +71,7 @@ const VerifyNumber = () => {
             Verify
           </button>
         </form>
+      </div>
       </div>
     </div>
   );

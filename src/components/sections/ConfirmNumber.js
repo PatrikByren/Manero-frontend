@@ -12,7 +12,7 @@ const ConfirmNumber = () => {
       <div>
         <BackArrowMiddleHead content="Verify your phone number" />
       </div>
-      <div className="media-border container">
+      <div className="media-border">
       <div className="message">
         We have sent you an SMS with a code to number {number}
       </div>

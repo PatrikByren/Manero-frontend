@@ -38,13 +38,15 @@ html, body {
         background-color: white;
         padding: 5px;
         left: 40px;
+        top: -2px;
+        padding-bottom: 0;
         }
         .baseinput{
             margin: 10px;
             min-width: 335px;
             border: 2px solid $color-background;
             border-radius: 50px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             z-index: -1;
         }
         .basebtn{
