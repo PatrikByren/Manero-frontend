@@ -61,6 +61,11 @@ html, body {
   color: #626262;
 }
 
+.sign-up-link {
+  text-decoration: none;
+  color: #111111;
+}
+
 .get-started-root {
   background-color: #DBE3F5;
 }
@@ -184,10 +189,6 @@ html, body {
 }
 .sign-in-form .remember .rememberme {
   margin-right: 15px;
-}
-.sign-in-form .sign-up-link {
-  text-decoration: none;
-  color: #111111;
 }
 .sign-in-form .guest {
   color: #8D94A6;
