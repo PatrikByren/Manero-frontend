@@ -1,11 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 
-
-
 const Product = (props) => {
-   
-
     return (
 
         //Ska ligga i en Navlink?

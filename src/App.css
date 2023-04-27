@@ -499,6 +499,14 @@ html, body {
   height: 170px;
 }
 
+.card-3 {
+  height: 240px;
+  width: 160px;
+}
+.card-3 .picture {
+  height: 170px;
+}
+
 .account-created {
   margin: 30px 0px;
   display: flex;
@@ -774,4 +782,8 @@ html, body {
     font-size: 44px;
     margin-left: 10px;
   }
+}
+.containerShopView {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
