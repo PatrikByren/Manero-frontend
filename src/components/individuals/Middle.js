@@ -21,7 +21,7 @@ const Middle = ({ title }) => {
         <i className="fa-light fa-magnifying-glass 2xs"></i>
         <input type="text" placeholder="Search"></input>
       </div>
-      <div className={isCollection ? "collection" : "hide"}>{title}</div>
+      <div className={isCollection ? "collection" : "hide"}><p>{title}</p></div>
     </>
   );
 };

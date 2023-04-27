@@ -276,8 +276,9 @@ html, body {
 .headersection .info-item p {
   margin-left: 15px;
 }
-.headersection .collection {
+.headersection .collection p {
   font-size: 18px;
+  font-weight: 600;
 }
 
 .get-started-welcome {
