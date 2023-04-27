@@ -3,7 +3,7 @@ import AccountCreated from "../../components/sections/AccountCreated";
 
 const AccountCreatedView = () => {
   return (
-    <div>
+    <div className="container">
       <AccountCreated />
     </div>
   );

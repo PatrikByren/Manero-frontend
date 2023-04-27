@@ -3,7 +3,7 @@ import ConfirmNumber from "../components/sections/ConfirmNumber";
 
 const ConfirmNumberView = () => {
   return (
-    <div>
+    <div className="container">
       <ConfirmNumber />
     </div>
   );

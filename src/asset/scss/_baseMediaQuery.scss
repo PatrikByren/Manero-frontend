@@ -32,4 +32,34 @@
             margin-left: 10px;
         }
     }
+    .headersection {
+        .title-container{
+            margin-top: 50px;
+            h3{
+                font-size: 44px;
+            }
+        }
+    }
+    .backtosigninbtn{
+      display: inline;
+      background-color: white;
+      color: $color-text;
+    }
+    .confirm-number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .message{
+            display: flex;
+            margin-top: 50px;
+        }
+        .media-border{
+            justify-content: flex-start;
+            
+        }
+    }
 }
+
+
+
+
