@@ -71,6 +71,7 @@ html, body {
 
 .get-started-root {
   background-color: #DBE3F5;
+  overflow: hidden;
 }
 .get-started-root .get-started {
   display: inline;
@@ -299,6 +300,7 @@ html, body {
   z-index: 0;
   height: 100dvh;
   background-color: #DBE3F5;
+  overflow: hidden;
 }
 
 .carouselroot {
