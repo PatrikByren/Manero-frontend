@@ -26,8 +26,14 @@
        margin-right: 15px; 
     }
 }
+
+.sign-up-link{
+    text-decoration: none;
+    color: $color-black;
+}
 .guest{
         color: $color-backgroundsecondary;
+        text-decoration: none;
 }
 .imagecontainer{
     margin-top: 10px;
