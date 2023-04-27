@@ -4,6 +4,7 @@ import fbicon from "../../asset/images/fbicon.png";
 import twittericon from "../../asset/images/twittericon.png";
 import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
+import { NavLink } from "react-router-dom";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
@@ -57,10 +58,15 @@ const SignInForm = () => {
             </div>
           </form>
           <div className="text-center mt-3">
-            Don't have an account? <href>Sign up.</href>
+            Don't have an account?{" "}
+            <NavLink to="/signup" className="sign-up-link">
+              Sign up.
+            </NavLink>
           </div>
           <div className="d-flex justify-content-center">
-            <href className="guest">Or explore as guest</href>
+            <NavLink to="/" className="guest">
+              Or explore as guest
+            </NavLink>
           </div>
           <div className="d-flex justify-content-center imagecontainer">
             <img src={fbicon} alt="facebook icon" />
