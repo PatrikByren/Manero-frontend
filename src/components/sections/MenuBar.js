@@ -18,7 +18,7 @@ const MenuBar = () => {
           <NavLink to="/wishlist" className="menu-link">
             <i className="fa-light fa-heart fa-lg"></i>
           </NavLink>
-          <NavLink to="/profile" className="menu-link">
+          <NavLink to="/signin" className="menu-link">
             <i className="fa-light fa-circle-user fa-lg"></i>
           </NavLink>
         </div>

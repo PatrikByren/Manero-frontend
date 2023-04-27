@@ -936,9 +936,74 @@ html, body {
     justify-content: flex-start;
     padding-top: 0;
   }
+  .myprofile .media-border {
+    display: flex;
+    justify-content: center;
+  }
 }
 .container-lg {
   min-width: 375px;
+}
+
+.sortBy .form-select {
+  width: 150px;
+  height: 15px;
+  border: 0px;
+  box-shadow: none;
+  margin-bottom: 15px;
+  margin-left: -120px;
+  background-color: transparent;
+}
+.sortBy .form-select:active {
+  border: 0px;
+  box-shadow: none;
+}
+.sortBy .selectOption {
+  font-size: 15px;
+  font-family: "Mulish";
+  color: #626262;
+}
+
+.myprofile {
+  padding-top: 50px;
+  height: 100dvh;
+  overflow: hidden;
+}
+.myprofile .lineup30 {
+  margin: 10px;
+  margin-top: 30px;
+}
+.myprofile .media-border {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.myprofile .media-border .fieldcontainer {
+  margin-bottom: 115px;
+  margin-top: 50px;
+}
+.myprofile .profileintro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #DBE3F5;
+}
+.myprofile .profileintro .profileImage {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #DBE3F5;
+  border-radius: 50%;
+  position: relative;
+}
+.myprofile .profileintro .profileImage .fa-pen-line {
+  background-color: #DBE3F5;
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
 }
 
 .myaddress {
@@ -976,4 +1041,23 @@ html, body {
 }
 .myaddress .media-border .new-address-box p {
   margin-top: 10px;
+}
+
+.sortBy .form-select {
+  width: 150px;
+  height: 15px;
+  border: 0px;
+  box-shadow: none;
+  margin-bottom: 15px;
+  margin-left: -120px;
+  background-color: transparent;
+}
+.sortBy .form-select:active {
+  border: 0px;
+  box-shadow: none;
+}
+.sortBy .selectOption {
+  font-size: 15px;
+  font-family: "Mulish";
+  color: #626262;
 }
