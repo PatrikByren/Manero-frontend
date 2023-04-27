@@ -5,6 +5,7 @@ const VerifyNumber = () => {
   const handleSubmit = () => {
     console.log("hej");
   };
+  
 
   return (
     <div className="container verify-number">

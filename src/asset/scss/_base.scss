@@ -1,3 +1,5 @@
+
+
 html, body {
     font-family: 'Mulish';
     font-weight: 400;
@@ -30,6 +32,9 @@ html, body {
     justify-content: center;
     flex-direction: column;
     .text-center{
+        .swedenflag{
+            background-image: url('/src/asset/images/swedenflag.png');
+        }
         width: 375px;
         position: relative;
         .baselabel{

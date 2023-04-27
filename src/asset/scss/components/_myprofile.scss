@@ -1,0 +1,43 @@
+.myprofile{
+    padding-top: 50px;
+    height: 100dvh; 
+    overflow: hidden;
+    .lineup30{
+        margin: 10px;
+        margin-top: 30px;
+    }
+    .media-border{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .fieldcontainer{
+            margin-bottom: 115px;
+            margin-top: 50px;
+        }
+    }
+    .profileintro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid $color-background;
+        .profileImage{
+            width: 120px;
+            height: 120px;
+            border: 5px solid $color-background;
+            border-radius: 50%;
+            position: relative;
+            .fa-pen-line{
+                background-color: $color-background;
+                position: absolute;
+                padding: 10px;
+                border-radius: 50%;
+                bottom: 0;
+                right: 0;
+
+            }
+        }
+    }
+}
