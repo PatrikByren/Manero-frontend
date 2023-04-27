@@ -1,5 +1,6 @@
 .get-started-root{
     background-color: $color-background;
+    overflow: hidden;
 
     .get-started {
         display: inline;
@@ -9,6 +10,7 @@
         align-items: center;
         height: 100dvh;
         animation: moveDown 3s ease-in-out forwards;
+        
 
         .inner-circle{
             position: absolute;
