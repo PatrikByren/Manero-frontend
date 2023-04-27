@@ -61,6 +61,11 @@ html, body {
   color: #626262;
 }
 
+.sign-up-link {
+  text-decoration: none;
+  color: #111111;
+}
+
 .get-started-root {
   background-color: #DBE3F5;
 }
@@ -187,6 +192,7 @@ html, body {
 }
 .sign-in-form .guest {
   color: #8D94A6;
+  text-decoration: none;
 }
 .sign-in-form .imagecontainer {
   margin-top: 10px;
@@ -243,7 +249,7 @@ html, body {
   flex-direction: column;
   width: 250px;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   left: 0;
   background-color: #111111;
@@ -272,12 +278,14 @@ html, body {
   display: flex;
   flex-direction: row;
   margin: 10px;
+  border-bottom: 1px solid lightgray;
 }
 .headersection .info-item p {
   margin-left: 15px;
 }
-.headersection .collection {
+.headersection .collection p {
   font-size: 18px;
+  font-weight: 600;
 }
 
 .get-started-welcome {
@@ -430,7 +438,6 @@ html, body {
 .showcasesection .carousel-indicators {
   background-color: white;
   margin: 0;
-  z-index: 0;
 }
 .showcasesection .carousel-indicators [data-bs-target] {
   bottom: 0px;

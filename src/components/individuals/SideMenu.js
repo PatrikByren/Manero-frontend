@@ -4,14 +4,17 @@ const SideMenu = ({ icon }) => {
   let isSidebar = icon === "fa-sharp fa-light fa-bars";
   const [isOpen, setIsOpen] = useState(false);
 
-  const onClick = () => {
+  const openMenu = () => {
     setIsOpen(!isOpen);
     console.log(isSidebar);
   };
+  function goBack() {
+    window.history.back();
+  }
   return (
     <>
       <div className="iconcontainer">
-        <i className={icon} onClick={onClick}></i>
+        <i className={icon} onClick={isSidebar ? openMenu : goBack}></i>
       </div>
       <nav
         className={
@@ -34,6 +37,9 @@ const SideMenu = ({ icon }) => {
             <i className="fa-regular fa-phone-volume fa-lg"></i>
             <p>+17 5123 1027</p>
           </div>
+        </div>
+        <div className="trackorder"><p>Track your order</p>
+        <input className="inputtrackorder"></input>
         </div>
       </nav>
     </>

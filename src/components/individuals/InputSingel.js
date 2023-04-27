@@ -1,4 +1,4 @@
-function ForgotPasswordForm({ placeholder, nameid, name, value, setValue }) {
+function InputSingel({ placeholder, nameid, name, value, setValue }) {
   return (
     <div className="text-center">
       <label className="baselabel" htmlFor={nameid}>
@@ -16,4 +16,4 @@ function ForgotPasswordForm({ placeholder, nameid, name, value, setValue }) {
   );
 }
 
-export default ForgotPasswordForm;
+export default InputSingel;
