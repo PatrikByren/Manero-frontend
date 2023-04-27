@@ -6,12 +6,9 @@ import Showcase from "../components/sections/Showcase";
 import DiscountShowcase from "../components/sections/DiscountShowcase";
 
 const HomeView = () => {
-  const onclick = () =>{
-    console.log("snus");
-  }
   return (
     <div>
-      <Header icon={"fa-sharp fa-light fa-bars"} title={"MANERO"} onclick={onclick}/>
+      <Header icon={"fa-sharp fa-light fa-bars"} title={"Featured products"} />
       <Showcase/>
       <ProductCarousel  carouselClass="bestSellerCarousel" 
                         cardClass="card-1"

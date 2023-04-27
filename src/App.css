@@ -197,6 +197,12 @@ html, body {
   margin-top: 5px;
   margin-bottom: 10px;
 }
+.headersection .contactus {
+  margin-left: 40px;
+}
+.headersection .iconcontainer {
+  z-index: 1;
+}
 .headersection .title-container {
   position: relative;
   /* Add the border to the title */
@@ -227,6 +233,47 @@ html, body {
 }
 .headersection .hide {
   display: none;
+}
+.headersection .nav {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111111;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.headersection .nav h1 {
+  color: white;
+}
+.headersection .nav p {
+  color: rgb(241, 241, 241);
+}
+.headersection .nav-open {
+  left: 0;
+}
+.headersection .nav-closed {
+  left: -250px;
+}
+.headersection .info-container {
+  display: flex;
+  flex-direction: column;
+}
+.headersection .info-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.headersection .info-item p {
+  margin-left: 15px;
+}
+.headersection .collection {
+  font-size: 18px;
 }
 
 .get-started-welcome {
@@ -379,6 +426,7 @@ html, body {
 .showcasesection .carousel-indicators {
   background-color: white;
   margin: 0;
+  z-index: 0;
 }
 .showcasesection .carousel-indicators [data-bs-target] {
   bottom: 0px;

@@ -4,6 +4,13 @@
   margin-top: 5px;
   margin-bottom: 10px;
 
+  .contactus{
+    margin-left: 40px;
+  }
+
+  .iconcontainer{
+    z-index: 1;
+  }
   .title-container {
     position: relative;
 
@@ -43,5 +50,55 @@
 
   .hide{
     display: none;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $color-black;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    
+
+    h1{
+      color: white;
+    }
+    p{
+      color: rgb(241, 241, 241);
+    }
+  }
+  .nav-open{
+    left: 0;
+  }
+  .nav-closed{
+    left: -250px;
+  }
+
+  .info-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-item{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+    p{
+      margin-left: 15px;
+    }
+    
+    
+  }
+
+  .collection{
+    font-size: 18px;
   }
 }
