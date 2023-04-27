@@ -12,12 +12,12 @@ const NewPasswordView = () => {
     <div className="d-flex justify-content-center mt-5" >
     <form onSubmit={handleSubmit}>
       <BackArrowMiddleHead content="Reset password" />
-      <div>
+      <div className='media-border'>
         <div className="content text-center m-4">Enter new password and confirm.</div>
         <div className="inputcontainer">
           <div className="text-center">
             <InputSingel name="PASSWORD" nameid="password"  value={password} setValue={setPassword} />
-            <InputSingel name="NEW PASSWORD" nameid="password"  value={confirmPassword} setValue={setConfirmPassword} />
+            <InputSingel name="NEW PASSWORD" nameid="confirmpassword"  value={confirmPassword} setValue={setConfirmPassword} />
             <button className="basebtn" type="submit">SEND</button>
           </div>
         </div>
