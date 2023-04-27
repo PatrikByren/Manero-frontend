@@ -55,6 +55,9 @@ html, body {
   margin: 20px 0 0 0;
   width: 335px;
 }
+.inputcontainer .color-grey {
+  color: #626262;
+}
 
 .get-started-root {
   background-color: #DBE3F5;
@@ -414,6 +417,8 @@ html, body {
 .carouselTitle {
   font-size: 20px;
   font-weight: 700;
+  text-decoration: none;
+  color: #111111;
 }
 
 .carouselLink {

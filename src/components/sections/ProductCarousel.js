@@ -6,8 +6,8 @@ const ProductCarousel = (props) => {
         <div className={`container g-0 ${props.carouselClass}`}>
             <div className="d-flex flex-column">
                 <div className="d-flex align-items-center justify-content-between mb-2">
-                    <h2 className="carouselTitle">{props.title}</h2>
-                    <NavLink className="carouselLink">view all <i class="fa-sharp fa-regular fa-chevron-right fa-xs"></i></NavLink>
+                    <NavLink to="shop" state={{ from: `${props.title}` }} className="carouselTitle">{props.title}</NavLink>
+                    <NavLink className="carouselLink">view all <i className="fa-sharp fa-regular fa-chevron-right fa-xs"></i></NavLink>
                 </div>
             </div>
             <div className="carouselContainer ">
