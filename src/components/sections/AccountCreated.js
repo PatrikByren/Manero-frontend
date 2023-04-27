@@ -8,6 +8,7 @@ const AccountCreated = () => {
       <div>
         <Header title="MANERO" />
       </div>
+      <div className="media-border">
       <div className="user-image">
         <img src={Image} alt="User"></img>
       </div>
@@ -23,6 +24,7 @@ const AccountCreated = () => {
       <button className="basebtn" type="submit">
         SHOP NOW
       </button>
+      </div>
     </div>
   );
 };

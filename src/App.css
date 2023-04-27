@@ -504,14 +504,20 @@ html, body {
 .account-created .shoppingicon {
   display: none;
 }
-.account-created .user-image {
+.account-created .media-border {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.account-created .media-border .user-image {
   margin-top: 40px;
 }
-.account-created .title-1 {
+.account-created .media-border .title-1 {
   font-size: 22px;
   margin: 10px 0;
 }
-.account-created .basebtn {
+.account-created .media-border .basebtn {
   min-width: 335px;
 }
 
@@ -537,7 +543,27 @@ html, body {
 .forgotpassword .content {
   color: #626262;
 }
+.forgotpassword .inputcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .forgotpassword .media-border .content {
+    text-align: center;
+  }
+}
 
+.backtosigninbtn {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .backtosigninbtn {
+    display: inline;
+    background-color: white;
+    color: #111111;
+  }
+}
 .passwordbyemail {
   display: flex;
   justify-content: center;
