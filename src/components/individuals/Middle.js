@@ -4,6 +4,7 @@ const Middle = ({ title }) => {
   let isManero;
   let isSearch;
   let isCollection;
+  let isElse;
   if (title === "MANERO") {
     isManero = true;
   } else if (title === "search") {
@@ -11,6 +12,9 @@ const Middle = ({ title }) => {
   }
   else if(title === "Best Sellers" || title === "Featured products"){
    isCollection = true;
+  }
+  else{
+    isElse = true;
   }
   return (
     <>
@@ -22,6 +26,7 @@ const Middle = ({ title }) => {
         <input type="text" placeholder="Search"></input>
       </div>
       <div className={isCollection ? "collection" : "hide"}><p>{title}</p></div>
+      <div className={isElse ? "content" : "hide"}><p>{title}</p></div>
     </>
   );
 };
