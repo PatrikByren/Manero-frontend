@@ -865,3 +865,22 @@ html, body {
 .container-lg {
   min-width: 375px;
 }
+
+.sortBy .form-select {
+  width: 150px;
+  height: 15px;
+  border: 0px;
+  box-shadow: none;
+  margin-bottom: 15px;
+  margin-left: -120px;
+  background-color: transparent;
+}
+.sortBy .form-select:active {
+  border: 0px;
+  box-shadow: none;
+}
+.sortBy .selectOption {
+  font-size: 15px;
+  font-family: "Mulish";
+  color: #626262;
+}
