@@ -708,7 +708,8 @@ html, body {
 }
 
 .field {
-  max-width: 380px;
+  height: 70px;
+  min-width: 380px;
   height: 70px;
   padding: 20px 20px 20px 30px;
   display: flex;
@@ -1041,23 +1042,4 @@ html, body {
 }
 .myaddress .media-border .new-address-box p {
   margin-top: 10px;
-}
-
-.sortBy .form-select {
-  width: 150px;
-  height: 15px;
-  border: 0px;
-  box-shadow: none;
-  margin-bottom: 15px;
-  margin-left: -120px;
-  background-color: transparent;
-}
-.sortBy .form-select:active {
-  border: 0px;
-  box-shadow: none;
-}
-.sortBy .selectOption {
-  font-size: 15px;
-  font-family: "Mulish";
-  color: #626262;
 }
