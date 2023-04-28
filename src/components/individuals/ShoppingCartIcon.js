@@ -1,9 +1,9 @@
 import React from "react";
 
-const ShoppingCartIcon = () => {
+const ShoppingCartIcon = ({righticon}) => {
   return (
     <div className="shoppingicon">
-      <i className="fal fa-shopping-bag"></i>
+      <i className={righticon}></i>
     </div>
   );
 };

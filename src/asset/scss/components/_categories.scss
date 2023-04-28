@@ -13,12 +13,18 @@
     .consumerbtn {
       background-color: white;
       border: none;
+      width: 6rem;
+      height: 2rem;
       margin: 0 10px;
+    }
 
-      .active {
-        border-radius: 50%;
+    .consumerbtn-selected{
         background-color: $color-background;
-      }
+        border-radius: 25%;
+        border: none;
+        margin: 0 10px;
+        width: 6rem;
+        height: 2rem;
     }
   }
 
