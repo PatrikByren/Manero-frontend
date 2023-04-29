@@ -1,0 +1,18 @@
+.pricecheckstagssection{
+    margin-top: 40px;
+
+    .price-container{
+        display: flex;
+        flex-direction: column;
+
+        .pricetext{
+            margin-left: 18px;
+        }
+
+        .pricerange{
+            margin-left: 15px;
+            margin-right: 15px;
+            accent-color: black;
+        }
+    }
+}
