@@ -1,7 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import { NavLink } from "react-router-dom";
 
 const Product = (props) => {
+    const [addedToWishList, setaddedToWishList] = useState(false);
+    const [addedToCart, setAddedToCart] = useState(false);
+
+    const toggleClass = (icon) => {
+        if(icon === "heart"){
+            let toggle = !addedToWishList;
+            setaddedToWishList(toggle);
+            console.log("wishlist  "+ addedToWishList);
+            console.log("cart  "+ addedToCart);
+        } else{
+            let toggle = !addedToCart;
+            setAddedToCart(toggle);
+            console.log("wishlist  "+ addedToWishList);
+            console.log("cart  "+ addedToCart);
+        }
+    };
+
     return (
 
         //Ska ligga i en Navlink?
@@ -12,8 +29,8 @@ const Product = (props) => {
                     )}
                 <div className="pictureIconsBox d-flex flex-column align-items-center">
                     {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
-                    <NavLink><i className="fa-light fa-heart pictureIcons"></i></NavLink>
-                    <NavLink><i className="fa-light fa-bag-shopping pictureIcons pictureIconBag"></i></NavLink>
+                    <button onClick={() => toggleClass("heart")}><i className={addedToWishList ? "fa-solid fa-heart pictureIcons d-flex justify-content-center heartIcon" : "fa-light fa-heart pictureIcons d-flex justify-content-center"}></i></button>
+                    <button onClick={() => toggleClass("bag")}  className={addedToCart ? "bg-light d-flex justify-content-center align-items-center" : "d-flex justify-content-center align-items-center"}><i className={addedToCart ? "fa-light fa-bag-shopping pictureIcons bg-light" : "fa-light fa-bag-shopping pictureIcons"}></i></button>
                 </div>
             </div>
             <div className="d-flex flex-column align-items-between">

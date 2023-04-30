@@ -44,15 +44,24 @@
     .pictureIconsBox{
         position: absolute;
         top: 12px;
-        right: 12px;
-
-        .pictureIcons{
-            color: $color-textsecondary;
-            font-size: 20px;
+        right: 2px;
+        button{
+            border: 0px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: transparent;
+            padding-bottom: 2px;
         }
 
-        .pictureIconBag{
-            margin-top: 10px;
+        .pictureIcons{
+            color: $color-backgroundsecondary;
+            font-size: 20px;
+            
+        }
+
+        .heartIcon{
+            color: red;  
         }
     }
 }
@@ -69,7 +78,7 @@
 .card-2{
     height: 245px;
     width: 140px;
-
+    margin-right: -60px;
 
     .picture {
         height: 170px;
@@ -85,5 +94,3 @@
         height: 170px;
     }
 }
-
-

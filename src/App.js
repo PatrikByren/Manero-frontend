@@ -15,6 +15,7 @@ import VerifyNumberView from "./views/VerifyNumberView";
 import SearchView from "./views/SearchView";
 import ShopView from "./views/ShopView";
 import MyAddressView from "./views/profileViews/MyAddressView";
+import ProductView from "./views/ProductView";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/confirmnumber" element={<ConfirmNumberView />} />
         <Route path="/verifynumber" element={<VerifyNumberView />} />
         <Route path="/shop" element={<ShopView />} />
+        <Route path="/product" element={<ProductView />} />
       </Routes>
     </BrowserRouter>
   );

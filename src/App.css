@@ -512,7 +512,7 @@ html, body {
 }
 
 .bestSellerCarousel {
-  height: 368px;
+  height: 380px;
   overflow: hidden;
   padding-left: 20px;
 }
@@ -590,14 +590,22 @@ html, body {
 .picture .pictureIconsBox {
   position: absolute;
   top: 12px;
-  right: 12px;
+  right: 2px;
+}
+.picture .pictureIconsBox button {
+  border: 0px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  padding-bottom: 2px;
 }
 .picture .pictureIconsBox .pictureIcons {
-  color: #626262;
+  color: #8D94A6;
   font-size: 20px;
 }
-.picture .pictureIconsBox .pictureIconBag {
-  margin-top: 10px;
+.picture .pictureIconsBox .heartIcon {
+  color: red;
 }
 
 .card-1 {
@@ -611,6 +619,7 @@ html, body {
 .card-2 {
   height: 245px;
   width: 140px;
+  margin-right: -60px;
 }
 .card-2 .picture {
   height: 170px;
@@ -931,6 +940,25 @@ html, body {
   min-width: 375px;
 }
 
+.sortBy .form-select {
+  width: 150px;
+  height: 15px;
+  border: 0px;
+  box-shadow: none;
+  margin-bottom: 15px;
+  margin-left: -120px;
+  background-color: transparent;
+}
+.sortBy .form-select:active {
+  border: 0px;
+  box-shadow: none;
+}
+.sortBy .selectOption {
+  font-size: 15px;
+  font-family: "Mulish";
+  color: #626262;
+}
+
 .myprofile {
   padding-top: 50px;
   height: 100dvh;
@@ -1000,23 +1028,4 @@ html, body {
 }
 .myaddress .media-border .new-address-box p {
   margin-top: 10px;
-}
-
-.sortBy .form-select {
-  width: 150px;
-  height: 15px;
-  border: 0px;
-  box-shadow: none;
-  margin-bottom: 15px;
-  margin-left: -120px;
-  background-color: transparent;
-}
-.sortBy .form-select:active {
-  border: 0px;
-  box-shadow: none;
-}
-.sortBy .selectOption {
-  font-size: 15px;
-  font-family: "Mulish";
-  color: #626262;
 }
