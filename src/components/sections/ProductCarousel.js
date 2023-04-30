@@ -13,7 +13,7 @@ const ProductCarousel = (props) => {
                 </div>
             </div>
 
-            {props.carouselClass == "bestSellerCarousel" && (
+            {props.carouselClass === "bestSellerCarousel" && (
                 <Splide
                     options={ {
                         perPage: 2,
@@ -73,7 +73,7 @@ const ProductCarousel = (props) => {
                 </Splide>
             )}
 
-            {props.carouselClass == "featuredCarousel" && (
+            {props.carouselClass === "featuredCarousel" && (
                 <Splide
                 options={ {
                     perPage: 2,

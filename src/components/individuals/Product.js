@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { NavLink } from "react-router-dom";
 
 const Product = (props) => {
     const [addedToWishList, setaddedToWishList] = useState(false);
