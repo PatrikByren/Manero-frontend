@@ -3,7 +3,7 @@ import MyAddress from "../../components/sections/MyAddress";
 
 const MyAddressView = () => {
   return (
-    <div>
+    <div className="container p-0">
       <MyAddress />
     </div>
   );

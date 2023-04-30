@@ -58,6 +58,25 @@
             
         }
     }
+
+
+    .myaddress{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .field{
+            min-width: 599px;
+            height: 120px;
+        }
+
+        .media-border{
+            justify-content: flex-start;
+            padding-top: 0;
+            
+        }
+    }
     .myprofile{
         .media-border{
             display: flex;
@@ -66,6 +85,8 @@
     }
             
 }
+
+
 
 
 

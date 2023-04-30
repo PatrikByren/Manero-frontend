@@ -16,6 +16,7 @@ import SearchView from "./views/SearchView";
 import ShopView from "./views/ShopView";
 import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
+import FilterView from "./views/FilterView";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/verifynumber" element={<VerifyNumberView />} />
         <Route path="/shop" element={<ShopView />} />
         <Route path="/product" element={<ProductView />} />
+        <Route path="/shop/filter" element={<FilterView />} />
       </Routes>
     </BrowserRouter>
   );
