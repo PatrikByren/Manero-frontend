@@ -986,25 +986,6 @@ html, body {
   color: #626262;
 }
 
-.sortBy .form-select {
-  width: 150px;
-  height: 15px;
-  border: 0px;
-  box-shadow: none;
-  margin-bottom: 15px;
-  margin-left: -120px;
-  background-color: transparent;
-}
-.sortBy .form-select:active {
-  border: 0px;
-  box-shadow: none;
-}
-.sortBy .selectOption {
-  font-size: 15px;
-  font-family: "Mulish";
-  color: #626262;
-}
-
 .myprofile {
   padding-top: 50px;
   height: 100dvh;
@@ -1045,6 +1026,66 @@ html, body {
   border-radius: 50%;
   bottom: 0;
   right: 0;
+}
+.myprofile .signoutfield {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signoutmodal {
+  margin-top: 50%;
+  --bs-modal-border-radius: 50%;
+  --bs-modal-border-width: 200px;
+}
+#signoutmodal .lineup30 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+#signoutmodal .signutbtncontainer {
+  margin: 0;
+}
+#signoutmodal .modal-dialog {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signoutmodal .modal-content {
+  background-color: transparent;
+  border: 5px solid white;
+  width: 335px;
+  height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signoutmodal .modal-body {
+  flex-grow: 0;
+  padding: 0;
+  width: 290px;
+  height: 290px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#signoutmodal .modal-body p {
+  font-size: 20px;
+  font-weight: bold;
+}
+#signoutmodal .modal-body .basebtn {
+  margin: 0;
+}
+#signoutmodal .modal-body .btnsec {
+  background-color: transparent;
+  border: none;
+  color: #111111;
 }
 
 .myaddress {

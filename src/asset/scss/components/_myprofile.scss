@@ -40,4 +40,64 @@
             }
         }
     }
+    .signoutfield{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+#signoutmodal{
+    margin-top: 50%;
+    --bs-modal-border-radius: 50%;
+    --bs-modal-border-width: 200px;
+    .lineup30{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .signutbtncontainer{
+        margin: 0;
+    }
+    .modal-dialog{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content{
+        background-color: transparent;
+        border: 5px solid white;
+        width: 335px;
+        height: 335px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-body{
+        flex-grow: 0;
+        padding: 0;
+        width: 290px;
+        height: 290px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .basebtn{
+            margin: 0;
+        }
+        .btnsec{
+            background-color: transparent;
+            border: none;
+            color: $color-text;
+        }
+
+    }
 }
