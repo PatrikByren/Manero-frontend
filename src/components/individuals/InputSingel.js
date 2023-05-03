@@ -1,3 +1,4 @@
+// InputSingel måste ligga i en = <div className='inputcontainer'>
 function InputSingel({ placeholder, nameid, name, value, setValue }) {
   return (
     <div className="text-center">

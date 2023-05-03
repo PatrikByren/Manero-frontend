@@ -17,6 +17,7 @@ import ShopView from "./views/ShopView";
 import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
 import FilterView from "./views/FilterView";
+import EditProfile from "./views/profileViews/EditProfile";
 
 function App() {
   return (
@@ -30,22 +31,17 @@ function App() {
         <Route path="/signup" element={<SignUpView />} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route
-          path="/forgotpasswordemail"
-          element={<ForgotPasswordSendEmailView />}
-        />
+        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />}/>
         <Route path="/newpassword" element={<NewPasswordView />} />
         <Route path="/myprofile" element={<MyProfileView />} />
         <Route path="/myaddress" element={<MyAddressView />} />
-        <Route
-          path="/forgotpasswordemail"
-          element={<ForgotPasswordSendEmailView />}
-        />
+        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />} />
         <Route path="/confirmnumber" element={<ConfirmNumberView />} />
         <Route path="/verifynumber" element={<VerifyNumberView />} />
         <Route path="/shop" element={<ShopView />} />
         <Route path="/product" element={<ProductView />} />
         <Route path="/shop/filter" element={<FilterView />} />
+        <Route path="/editprofile" element={<EditProfile/>} />
       </Routes>
     </BrowserRouter>
   );
