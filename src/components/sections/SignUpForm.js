@@ -7,7 +7,8 @@ import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 
 const SignUpForm = () => {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -27,12 +28,19 @@ const SignUpForm = () => {
             <div className="inputcontainer">
               <div className="text-center">
                 <InputSingel
-                  placeholder="Full name"
-                  nameid="name"
-                  name="NAME"
-                  value={name}
-                  setValue={setName}
-                />
+                  placeholder="First name"
+                  nameid="firstname"
+                  name="FIRST NAME"
+                  value={firstName}
+                  setValue={setFirstName}
+                />                
+                <InputSingel
+                placeholder="Last name"
+                nameid="lastname"
+                name="LAST NAME"
+                value={lastName}
+                setValue={setLastName}
+              />
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"
