@@ -1,13 +1,14 @@
-//import image from '../../asset/images/swedenflag.png'
+import { Link } from "react-router-dom";
 
-
-const ProfileIntro = ({ image }) => {
+const ProfileIntro = ({path, firstname, lastname, email, image }) => {
   return (
-    <div className="profileintro">
-      <div className="lineup30"></div>
-      {image ? (<div><img className="profileImage" src={image} alt="ProfileImages" /></div>) : (<div className="profileImage"><i className="fa-light fa-pen-line"></i></div>)}
-      <div className="title-2 text-center">Firstname Lastname</div>
-      <div className="text-center">name@domain.com</div>
+    <div className="myprofileintro">
+      <div className="profileintro">
+        <div className="lineup30"></div>
+        {image ? (<div className="profileImage" ><img src={image} alt="ProfileImages" /><Link to={path}><i className="fa-light fa-pen-line"></i></Link></div>) : (<div className="profileImage"><Link to={path}><i className="fa-light fa-pen-line"></i></Link></div>)}
+        <div className="title-2 text-center">{firstname} {lastname}</div>
+        <div className="text-center">{email}</div>
+      </div>
     </div>
   );
 };
