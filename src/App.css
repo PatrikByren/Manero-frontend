@@ -1224,6 +1224,30 @@ html, body {
   margin-right: 15px;
   accent-color: black;
 }
+.pricecheckstagssection .price-container .price-display {
+  margin-left: 15px;
+}
+.pricecheckstagssection .checkbox-container {
+  display: flex;
+  justify-content: space-around;
+}
+.pricecheckstagssection .check-box {
+  display: flex;
+  align-items: center;
+}
+.pricecheckstagssection .check-box p {
+  font-size: 10px;
+}
+.pricecheckstagssection .salesIcon {
+  color: white;
+  margin-top: 14px;
+  margin-left: 5px;
+  font-size: 8px;
+  font-weight: 700;
+  height: 16px;
+  width: 33px;
+  background-color: #69864D;
+}
 
 .editprofile {
   margin: 30px 0px;
