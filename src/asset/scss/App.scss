@@ -4,17 +4,17 @@
 @import './base';
 
 //Components
-@import './components/getStartedHowView';
-@import './components/getStartedWelcome';
-@import './components/signInForm';
-@import './components/header';
-@import './components/carousel';
-@import './components/menubar';
+@import './components/getstarted/getStartedHowView';
+@import './components/getstarted/getStartedWelcome';
+@import './components/forms/signInForm';
+@import './components/header/header';
+@import './components/shared_components/carousel';
+@import './components/shared_components/menubar';
 @import './components/showcase';
 
-@import './components/productCarousel';
-@import './components/productCard';
-@import './components/accountCreated';
+@import './components/product/productCarousel';
+@import './components/product/productCard';
+@import './components/account/accountCreated';
 @import './components/backarrowmiddlehead';
 @import './components/forgottPasswordView';
 @import './components/forgotpasswordsendemail';
@@ -22,7 +22,7 @@
 @import './components/confirmNumber';
 @import './components/verifyNumber';
 @import './components/discountShowcase';
-@import './components/categories';
+@import './components/product/categories';
 @import './baseMediaQuery';
 @import './components/containerShopView';
 @import './components/myprofile';
