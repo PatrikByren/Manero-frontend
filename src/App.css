@@ -986,25 +986,6 @@ html, body {
   color: #626262;
 }
 
-.sortBy .form-select {
-  width: 150px;
-  height: 15px;
-  border: 0px;
-  box-shadow: none;
-  margin-bottom: 15px;
-  margin-left: -120px;
-  background-color: transparent;
-}
-.sortBy .form-select:active {
-  border: 0px;
-  box-shadow: none;
-}
-.sortBy .selectOption {
-  font-size: 15px;
-  font-family: "Mulish";
-  color: #626262;
-}
-
 .myprofile {
   padding-top: 50px;
   height: 100dvh;
@@ -1158,4 +1139,28 @@ html, body {
   margin-left: 15px;
   margin-right: 15px;
   accent-color: black;
+}
+.pricecheckstagssection .price-container .price-display {
+  margin-left: 15px;
+}
+.pricecheckstagssection .checkbox-container {
+  display: flex;
+  justify-content: space-around;
+}
+.pricecheckstagssection .check-box {
+  display: flex;
+  align-items: center;
+}
+.pricecheckstagssection .check-box p {
+  font-size: 10px;
+}
+.pricecheckstagssection .salesIcon {
+  color: white;
+  margin-top: 14px;
+  margin-left: 5px;
+  font-size: 8px;
+  font-weight: 700;
+  height: 16px;
+  width: 33px;
+  background-color: #69864D;
 }
