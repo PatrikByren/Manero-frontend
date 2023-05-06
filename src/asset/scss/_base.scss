@@ -1,0 +1,97 @@
+
+
+html, body {
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.title-1{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 32px;
+}
+.title-2{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 22px;
+}
+.basebtn{
+    background: $color-black;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 12px 70px;
+    border-radius: 50px;
+    margin: 30px;
+}
+
+.inputcontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .text-center{
+        .swedenflag{
+            background-image: url('/src/asset/images/swedenflag.png');
+        }
+        width: 375px;
+        position: relative;
+        .baselabel{
+        position: absolute;
+        font-size: 12px;
+        background-color: white;
+        padding: 5px;
+        left: 40px;
+        top: -2px;
+        padding-bottom: 0;
+        }
+        .baseinput{
+            margin: 10px;
+            min-width: 335px;
+            border: 2px solid $color-background;
+            border-radius: 50px;
+            padding: 12px 20px;
+            z-index: -1;
+        }
+        .basebtn{
+            margin: 20px 0 0 0;
+            width: 335px;
+        }
+    }
+
+    .color-grey{
+        color:$color-textsecondary;
+    }
+}
+
+.sign-up-link{
+    text-decoration: none;
+    color: $color-black;
+}
+.myprofileintro{
+    overflow: hidden;
+    .profileintro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid $color-background;
+        .profileImage{
+            width: 120px;
+            height: 120px;
+            border: 5px solid $color-background;
+            border-radius: 50%;
+            position: relative;
+            .fa-pen-line{
+                background-color: $color-background;
+                position: absolute;
+                padding: 10px;
+                border-radius: 50%;
+                bottom: 0;
+                right: 0;
+
+            }
+        }
+    }
+}

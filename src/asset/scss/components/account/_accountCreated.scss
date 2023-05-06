@@ -1,0 +1,29 @@
+.account-created{
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    .shoppingicon{
+        display: none;
+    }
+    .media-border{
+        margin: 30px 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+        .user-image{
+            margin-top: 40px;
+        }
+    
+        .title-1{
+            font-size: 22px;
+            margin: 10px 0;
+        }
+    
+        .basebtn{
+            min-width: 335px;
+        }
+    }
+}

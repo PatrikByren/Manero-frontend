@@ -1,0 +1,52 @@
+.myaddress{
+    margin: 50px 0px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    .arrowicon{
+        display: flex;
+        margin: 20px 15px 40px 15px;
+        .arrow{
+            justify-content: start;
+            align-items: center;
+    
+        }
+        .content{
+            flex: 2;
+            text-align: center;
+            margin-right: 10px;
+            
+        }
+    }
+
+    .media-border{
+        display: flex;
+        flex-direction: column; 
+
+        .field-box{
+            .field{
+                min-width: 380px;
+                max-width: none;
+                .field-content{
+        
+                    .sub-text{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        
+        .new-address-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+}

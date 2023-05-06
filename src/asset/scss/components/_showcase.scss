@@ -1,0 +1,49 @@
+.showcasesection {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-color: $color-background;
+  .container {
+    .showcases {
+        height: 330px;
+        position: relative;
+    
+        .showcase-text {
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 30px;
+          color: white;
+          
+          h1{
+            color: white;
+            font-weight: 900;
+          }
+        }
+  }
+  
+  }
+  .displaywelcome {
+    display: none;
+  }
+  .carouselbtn {
+    display: none;
+  }
+  .carousel-indicators{
+    background-color: white;
+    margin: 0;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    bottom: 0px;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .carousel-indicators .active {
+    width: 20px;
+    border-radius: 50px;
+  }
+ 
+}

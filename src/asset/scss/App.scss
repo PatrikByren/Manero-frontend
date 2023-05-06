@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+@import './varibles';
+@import './base';
+
+//Components
+@import './components/getstarted/getStartedHowView';
+@import './components/getstarted/getStartedWelcome';
+@import './components/forms/signInForm';
+@import './components/header/header';
+@import './components/shared_components/carousel';
+@import './components/shared_components/menubar';
+@import './components/showcase';
+
+@import './components/product/productCarousel';
+@import './components/product/productCard';
+@import './components/account/accountCreated';
+@import './components/backarrowmiddlehead';
+@import './components/forgottPasswordView';
+@import './components/forgotpasswordsendemail';
+@import './components/field';
+@import './components/confirmNumber';
+@import './components/verifyNumber';
+@import './components/discountShowcase';
+@import './components/product/categories';
+@import './baseMediaQuery';
+@import './components/containerShopView';
+@import './components/myprofile';
+@import './components/myAddress';
+@import './components/sizeandcolor';
+@import './components/pricecheckstags';
+@import './components/editprofile';
+

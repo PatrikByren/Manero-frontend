@@ -1,0 +1,96 @@
+.rating{
+    height: 15px;
+    margin-top: 10px;
+}
+
+.productName{
+    height: 20px;
+    font-size: 14px;
+    color: $color-textsecondary;
+}
+
+.price{
+    height: 20px;
+    font-size: 14px;
+    color: $color-text;
+}
+
+.priceWas{
+    text-decoration: line-through;
+    color: $color-textsecondary;
+    margin-right: 10px;
+}
+
+.priceIs{
+    color: $color-red;
+}
+
+.picture{
+    background-color: $color-background;
+    position: relative;
+
+    .salesIcon{
+        color:white;
+        font-size: 8px;
+        font-weight: 700;
+        height: 16px;
+        width: 33px;
+        background-color: $color-sale;
+        position:absolute;
+        top:0px;
+        left: 0px;
+    }
+
+    .pictureIconsBox{
+        position: absolute;
+        top: 12px;
+        right: 2px;
+        button{
+            border: 0px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: transparent;
+            padding-bottom: 2px;
+        }
+
+        .pictureIcons{
+            color: $color-backgroundsecondary;
+            font-size: 20px;
+            
+        }
+
+        .heartIcon{
+            color: red;  
+        }
+    }
+}
+
+.card-1{
+    height: 330px;
+    width: 200px;
+
+    .picture {
+        height: 250px;
+    }
+}
+
+.card-2{
+    height: 245px;
+    width: 140px;
+    margin-right: -60px;
+
+    .picture {
+        height: 170px;
+    }
+}
+
+.card-3{
+    height: 240px;
+    width: 160px;
+    margin-bottom: 10px;
+
+    .picture{
+        height: 170px;
+    }
+}

@@ -1,0 +1,19 @@
+.confirm-number{
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+
+    .message{
+        margin: 0px 0px 20px 15px;
+    }
+
+    .inputcontainer .text-center{
+        width: 355px;
+    }
+    .media-border{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
