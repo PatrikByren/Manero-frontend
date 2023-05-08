@@ -1,10 +1,10 @@
 import React from "react";
 import SignUpForm from "../../components/sections/SignUpForm";
 
-const SignUpView = () => {
+const SignUpView = ({apiRoute}) => {
   return (
     <div className="container">
-      <SignUpForm />
+      <SignUpForm apiRoute={apiRoute}/>
     </div>
   );
 };

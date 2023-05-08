@@ -20,6 +20,7 @@ import FilterView from "./views/FilterView";
 import EditProfile from "./views/profileViews/EditProfile";
 
 function App() {
+  const apiRoute = 'https://manero.azurewebsites.net'
   return (
     <BrowserRouter>
       <Routes>
@@ -28,7 +29,7 @@ function App() {
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
         <Route path="/signin" element={<SignInView />} />
-        <Route path="/signup" element={<SignUpView />} />
+        <Route path="/signup" element={<SignUpView apiRoute={apiRoute}/>} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
         <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />}/>
