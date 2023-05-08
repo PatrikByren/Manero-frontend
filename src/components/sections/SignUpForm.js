@@ -10,7 +10,7 @@ const SignUpForm = ({apiRoute}) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNummber, setPhoneNummeer] = useState("");
+  const [phoneNummber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -20,6 +20,7 @@ const SignUpForm = ({apiRoute}) => {
       Password:password,ConfirmPassword:confirmPassword,Email:email}
     console.log(data);
     console.log(apiRoute);
+    setPhoneNumber="";
     try {
       const response = await fetch(apiRoute+'/api/register', {
         method: 'POST',
