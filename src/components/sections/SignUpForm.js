@@ -10,7 +10,8 @@ const SignUpForm = ({apiRoute}) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNummber, setPhoneNumber] = useState("");
+  //const [phoneNummber, setPhoneNumber] = useState("");
+  const phoneNummber = "0739448454"
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
