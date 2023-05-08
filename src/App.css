@@ -69,6 +69,32 @@ html, body {
   color: #111111;
 }
 
+.myprofileintro {
+  overflow: hidden;
+}
+.myprofileintro .profileintro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #DBE3F5;
+}
+.myprofileintro .profileintro .profileImage {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #DBE3F5;
+  border-radius: 50%;
+  position: relative;
+}
+.myprofileintro .profileintro .profileImage .fa-pen-line {
+  background-color: #DBE3F5;
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+}
+
 .get-started-root {
   background-color: #DBE3F5;
   overflow: hidden;
@@ -958,9 +984,29 @@ html, body {
     justify-content: flex-start;
     padding-top: 0;
   }
-  .myprofile .media-border {
+  .myprofile {
     display: flex;
     justify-content: center;
+  }
+  .myprofile .headersection {
+    max-width: 600px;
+  }
+  .myprofile .headersection p {
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 32px;
+  }
+  .myprofile .profileImage {
+    margin-top: 50px;
+  }
+  .myprofile form {
+    margin-bottom: 50px;
+  }
+  .myprofile form .media-border {
+    padding-top: 0;
+  }
+  .myprofile form .media-border .profileintro {
+    margin-bottom: 50px;
   }
 }
 .container-lg {
@@ -989,11 +1035,6 @@ html, body {
 .myprofile {
   padding-top: 50px;
   height: 100dvh;
-  overflow: hidden;
-}
-.myprofile .lineup30 {
-  margin: 10px;
-  margin-top: 30px;
 }
 .myprofile .media-border {
   display: flex;
@@ -1005,27 +1046,70 @@ html, body {
   margin-bottom: 115px;
   margin-top: 50px;
 }
-.myprofile .profileintro {
+.myprofile .signoutfield {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid #DBE3F5;
 }
-.myprofile .profileintro .profileImage {
-  width: 120px;
-  height: 120px;
-  border: 5px solid #DBE3F5;
-  border-radius: 50%;
-  position: relative;
+
+#signoutmodal {
+  margin-top: 50%;
+  --bs-modal-border-radius: 50%;
+  --bs-modal-border-width: 200px;
 }
-.myprofile .profileintro .profileImage .fa-pen-line {
-  background-color: #DBE3F5;
-  position: absolute;
-  padding: 10px;
+#signoutmodal .lineup30 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+#signoutmodal .signutbtncontainer {
+  margin: 0;
+}
+#signoutmodal .modal-dialog {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signoutmodal .modal-content {
+  background-color: transparent;
+  border: 5px solid white;
+  width: 335px;
+  height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signoutmodal .modal-body {
+  flex-grow: 0;
+  padding: 0;
+  width: 290px;
+  height: 290px;
+  background-color: white;
   border-radius: 50%;
-  bottom: 0;
-  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#signoutmodal .modal-body p {
+  font-size: 20px;
+  font-weight: bold;
+}
+#signoutmodal .modal-body .basebtn {
+  margin: 0;
+}
+#signoutmodal .modal-body .btnsec {
+  background-color: transparent;
+  border: none;
+  color: #111111;
+}
+
+.editprofile {
+  padding-top: 50px;
+  height: 100dvh;
 }
 
 .myaddress {
@@ -1139,4 +1223,34 @@ html, body {
   margin-left: 15px;
   margin-right: 15px;
   accent-color: black;
+}
+.pricecheckstagssection .price-container .price-display {
+  margin-left: 15px;
+}
+.pricecheckstagssection .checkbox-container {
+  display: flex;
+  justify-content: space-around;
+}
+.pricecheckstagssection .check-box {
+  display: flex;
+  align-items: center;
+}
+.pricecheckstagssection .check-box p {
+  font-size: 10px;
+}
+.pricecheckstagssection .salesIcon {
+  color: white;
+  margin-top: 14px;
+  margin-left: 5px;
+  font-size: 8px;
+  font-weight: 700;
+  height: 16px;
+  width: 33px;
+  background-color: #69864D;
+}
+
+.editprofile {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
 }

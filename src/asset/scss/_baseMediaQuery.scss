@@ -78,10 +78,28 @@
         }
     }
     .myprofile{
-        .media-border{
-            display: flex;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
+        .headersection{
+            max-width: 600px;
+            p{
+                font-family: 'Mulish';
+                font-weight: 700;
+                font-size: 32px;
+            }
         }
+        .profileImage{
+            margin-top: 50px;
+        }
+        form{
+            margin-bottom: 50px;
+        .media-border{
+            padding-top: 0;
+            .profileintro{
+                margin-bottom: 50px;
+            }
+        }
+    }
     }
             
 }
