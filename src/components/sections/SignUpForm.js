@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
