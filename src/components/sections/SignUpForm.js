@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import fbicon from "../../asset/images/fbicon.png";
 import twittericon from "../../asset/images/twittericon.png";
@@ -7,6 +7,7 @@ import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 
 const SignUpForm = ({apiRoute}) => {
+  const [responsData, setResponsData] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,9 +15,13 @@ const SignUpForm = ({apiRoute}) => {
   const phoneNummber = "0739448454"
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorsApi, setErrorsApi] =useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(firstName==="" || lastName ===""){
+      console.log("Måste fylla i")
+    }
     const data = {FirstName:firstName,LastName:lastName,
       PhoneNumber:phoneNummber,
       Password:password,ConfirmPassword:confirmPassword,Email:email}
@@ -24,14 +29,21 @@ const SignUpForm = ({apiRoute}) => {
     //apiRoute = 'https://localhost:7285/swagger'
     console.log(apiRoute);
     try {
-      const response = await fetch(apiRoute+'/api/register', {
+      const response = await fetch('https://localhost:7285/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      console.log('Success:', response )
+      setResponsData(await response.json());
+      console.log('ok:',responsData)
+      console.log('ok1:', responsData.errors);
+Object.keys(responsData.errors).forEach((key) => {
+  setErrorsApi([...errorsApi + " | "+ key + ": " + responsData.errors[key]])
+  console.log(key + ": " + responsData.errors[key]);
+});
+      
     }
     catch (error) {
       console.log(error);
@@ -89,6 +101,7 @@ const SignUpForm = ({apiRoute}) => {
                   value={confirmPassword}
                   setValue={setConfirmPassword}
                 />
+                <div className="text-danger">{responsData.errorMessage}</div>
                 <button className="basebtn" type="submit" onClick={handleSubmit}>
                   SIGN UP
                 </button>
