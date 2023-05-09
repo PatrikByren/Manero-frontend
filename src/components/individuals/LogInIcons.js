@@ -9,6 +9,7 @@ const LogInIcons = () => {
             <img src={fbicon} alt="facebook icon" />
             <img src={twittericon} alt="twitter icon" />
             <img src={googleicon} alt="google icon" />
+            
         </div>
     )
 }
