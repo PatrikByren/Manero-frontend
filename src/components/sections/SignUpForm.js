@@ -17,9 +17,11 @@ const SignUpForm = ({apiRoute}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {FirstName:firstName,LastName:lastName,PhoneNumber:phoneNummber,
+    const data = {FirstName:firstName,LastName:lastName,
+      PhoneNumber:phoneNummber,
       Password:password,ConfirmPassword:confirmPassword,Email:email}
     console.log(data);
+    //apiRoute = 'https://localhost:7285/swagger'
     console.log(apiRoute);
     try {
       const response = await fetch(apiRoute+'/api/register', {
@@ -68,18 +70,21 @@ const SignUpForm = ({apiRoute}) => {
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"
+                  type="email"
                   name="EMAIL"
                   value={email}
                   setValue={setEmail}
                 />
                 <InputSingel
                   nameid="password"
+                  type="password"
                   name="PASSWORD"
                   value={password}
                   setValue={setPassword}
                 />
                 <InputSingel
-                  nameid="password"
+                  nameid="confirmpassword"
+                  type="password"
                   name="CONFIRM PASSWORD"
                   value={confirmPassword}
                   setValue={setConfirmPassword}
