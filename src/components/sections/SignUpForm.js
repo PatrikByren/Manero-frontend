@@ -6,7 +6,7 @@ import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 
-const SignUpForm = ({apiRoute}) => {
+const SignUpForm = ({ apiRoute }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,27 +17,29 @@ const SignUpForm = ({apiRoute}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {FirstName:firstName,LastName:lastName,PhoneNumber:phoneNummber,
-      Password:password,ConfirmPassword:confirmPassword,Email:email}
+    const data = {
+      FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+      Password: password, ConfirmPassword: confirmPassword, Email: email
+    }
     console.log(data);
     console.log(apiRoute);
     try {
-      const response = await fetch(apiRoute+'/api/register', {
+      const response = await fetch(apiRoute + '/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      console.log('Success:', response )
+      console.log('Success:', response)
     }
     catch (error) {
       console.log(error);
     }
-  
 
 
-    
+
+
   };
   return (
     <div className="container sign-in-form">
@@ -57,14 +59,14 @@ const SignUpForm = ({apiRoute}) => {
                   name="FIRST NAME"
                   value={firstName}
                   setValue={setFirstName}
-                />                
+                />
                 <InputSingel
-                placeholder="Last name"
-                nameid="lastname"
-                name="LAST NAME"
-                value={lastName}
-                setValue={setLastName}
-              />
+                  placeholder="Last name"
+                  nameid="lastname"
+                  name="LAST NAME"
+                  value={lastName}
+                  setValue={setLastName}
+                />
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"

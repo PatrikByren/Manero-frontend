@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../../components/sections/Header';
 import card3 from "../../asset/images/card3.png";
-import Field from "../../components/individuals/Field";
 
 const AddNewCardView = () => {
     return (
