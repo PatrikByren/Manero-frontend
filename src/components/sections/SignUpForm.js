@@ -24,10 +24,10 @@ const SignUpForm = ({apiRoute}) => {
       PhoneNumber:phoneNummber,
       Password:password,ConfirmPassword:confirmPassword,Email:email}
     console.log(data);
-    //apiRoute = 'https://localhost:7285/swagger'
+    //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
     try {
-      const response = await fetch('https://localhost:7285/api/register', {
+      const response = await fetch(apiRoute+'/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
