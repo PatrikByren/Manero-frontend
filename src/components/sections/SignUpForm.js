@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import InputSingel from "../individuals/InputSingel";
-import fbicon from "../../asset/images/fbicon.png";
-import twittericon from "../../asset/images/twittericon.png";
-import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
+import LogInIcons from "../individuals/LogInIcons";
 
 const SignUpForm = ({apiRoute}) => {
   const [responsData, setResponsData] = useState("");
@@ -114,11 +112,7 @@ Object.keys(responsData.errors).forEach((key) => {
               Sign in.
             </NavLink>
           </div>
-          <div className="d-flex justify-content-center imagecontainer">
-            <img src={fbicon} alt="facebook icon" />
-            <img src={twittericon} alt="twitter icon" />
-            <img src={googleicon} alt="google icon" />
-          </div>
+          <LogInIcons />
         </div>
       </div>
     </div>
