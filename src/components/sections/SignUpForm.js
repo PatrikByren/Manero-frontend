@@ -21,19 +21,16 @@ const SignUpForm = ({apiRoute}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
     const data = {
       FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
       Password: password, ConfirmPassword: confirmPassword, Email: email
     }
-=======
     if(firstName==="" || lastName ===""){
       console.log("Måste fylla i")
     }
     const data = {FirstName:firstName,LastName:lastName,
       PhoneNumber:phoneNummber,
       Password:password,ConfirmPassword:confirmPassword,Email:email}
->>>>>>> e1118e48973f3ea50036e0a3fa9c26639711a1ab
     console.log(data);
     //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
@@ -45,9 +42,7 @@ const SignUpForm = ({apiRoute}) => {
         },
         body: JSON.stringify(data)
       })
-<<<<<<< HEAD
       console.log('Success:', response)
-=======
       setResponsData(await response.json());
       console.log('ok:',responsData)
       console.log('ok1:', responsData.errors);
@@ -56,7 +51,6 @@ Object.keys(responsData.errors).forEach((key) => {
   console.log(key + ": " + responsData.errors[key]);
 });
       
->>>>>>> e1118e48973f3ea50036e0a3fa9c26639711a1ab
     }
     catch (error) {
       console.log(error);
