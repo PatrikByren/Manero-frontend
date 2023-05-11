@@ -1346,12 +1346,22 @@ html, body {
   margin: 15px;
 }
 
-/* .LineUp30 {
-  margin: 0;
-  margin-bottom: 20px;
-  margin: 15px;
-  height: 30px;
-  width: 1px;
-  background-color: #111111;
-} */
+.ecart{
+  margin-top: 20px;
+}
+.cartimg{
+  margin-top: 30px;
+}
 
+.success-fail{
+  margin-top: 100px;
+}
+.continueshop{
+  color: #111111;
+  text-decoration: none;
+}
+
+/* .border-top{
+  border-top: 2px solid #DBE3F5;
+  border-color: #DBE3F5;
+} */
