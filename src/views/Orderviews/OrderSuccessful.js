@@ -6,7 +6,7 @@ import successful from '../../asset/images/successful.png';
 const OrderSuccessful = () => {
   return (
     <div>
-        <div className="text-center ecart">
+        <div className="text-center ecart media-border">
             <img src={successful} alt="order bra" className='success-fail'/>
             <div className="line">|</div>
             <div className="title-2">

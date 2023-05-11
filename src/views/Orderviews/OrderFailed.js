@@ -6,7 +6,7 @@ import fail from '../../asset/images/fail.png';
 const OrderFailed = () => {
   return (
     <div>
-        <div className="text-center ecart">
+        <div className="text-center ecart media-border">
             <img src={fail} alt="order nej" className='success-fail'/>
             <div className="line">|</div>
             <div className="title-2">
