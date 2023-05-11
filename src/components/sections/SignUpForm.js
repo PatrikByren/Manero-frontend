@@ -4,8 +4,12 @@ import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import LogInIcons from "../individuals/LogInIcons";
 
+<<<<<<< HEAD
+const SignUpForm = ({ apiRoute }) => {
+=======
 const SignUpForm = ({apiRoute}) => {
   const [responsData, setResponsData] = useState("");
+>>>>>>> e1118e48973f3ea50036e0a3fa9c26639711a1ab
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,6 +21,10 @@ const SignUpForm = ({apiRoute}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const data = {
+      FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+      Password: password, ConfirmPassword: confirmPassword, Email: email
+    }
     if(firstName==="" || lastName ===""){
       console.log("Måste fylla i")
     }
@@ -30,13 +38,14 @@ const SignUpForm = ({apiRoute}) => {
     //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
     try {
-      const response = await fetch(apiRoute+'/api/register', {
+      const response = await fetch(apiRoute + '/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
+      console.log('Success:', response)
       setResponsData(await response.json());
       console.log('ok:',responsData)
       console.log('ok1:', responsData.errors);
@@ -49,10 +58,10 @@ Object.keys(responsData.errors).forEach((key) => {
     catch (error) {
       console.log(error);
     }
-  
 
 
-    
+
+
   };
   return (
     <div className="container sign-in-form">
@@ -72,14 +81,14 @@ Object.keys(responsData.errors).forEach((key) => {
                   name="FIRST NAME"
                   value={firstName}
                   setValue={setFirstName}
-                />                
+                />
                 <InputSingel
-                placeholder="Last name"
-                nameid="lastname"
-                name="LAST NAME"
-                value={lastName}
-                setValue={setLastName}
-              />
+                  placeholder="Last name"
+                  nameid="lastname"
+                  name="LAST NAME"
+                  value={lastName}
+                  setValue={setLastName}
+                />
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"

@@ -18,7 +18,9 @@ import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
 import FilterView from "./views/FilterView";
 import EditProfile from "./views/profileViews/EditProfile";
-import Paymentmethod from "./views/Paymentstuff/PaymentmethodView";
+import Paymentmethod from "./views/Paymentstuff/PaymentMethodView";
+import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
+import SpecificProductView from "./views/signInSignUpViews/SpecificProductView";
 
 function App() {
   const apiRoute = 'https://manero.azurewebsites.net'
@@ -45,6 +47,8 @@ function App() {
         <Route path="/shop/filter" element={<FilterView />} />
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/paymentmethod" element={<Paymentmethod />} />
+        <Route path="/AddNewCardView" element={<AddNewCardView />} />
+        <Route path="/SpecificProductView" element={<SpecificProductView />} />
       </Routes>
     </BrowserRouter>
   );
