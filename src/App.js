@@ -18,7 +18,7 @@ import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
 import FilterView from "./views/FilterView";
 import EditProfile from "./views/profileViews/EditProfile";
-import Paymentmethod from "./views/Paymentstuff/PaymentMethodView";
+import Paymentmethod from "./views/Paymentstuff/PaymentmethodView";
 import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
 import SpecificProductView from "./views/signInSignUpViews/SpecificProductView";
 
