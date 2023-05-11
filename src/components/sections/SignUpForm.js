@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import InputSingel from "../individuals/InputSingel";
-import fbicon from "../../asset/images/fbicon.png";
-import twittericon from "../../asset/images/twittericon.png";
-import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
+import LogInIcons from "../individuals/LogInIcons";
+
 
 const SignUpForm = ({apiRoute}) => {
+  const [responsData, setResponsData] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,32 +14,48 @@ const SignUpForm = ({apiRoute}) => {
   const phoneNummber = "0739448454"
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorsApi, setErrorsApi] =useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {FirstName:firstName,LastName:lastName,
-      PhoneNumber:phoneNummber,
-      Password:password,ConfirmPassword:confirmPassword,Email:email}
+    const data = {
+      FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+      Password: password, ConfirmPassword: confirmPassword, Email: email
+    }
+    if(firstName==="" || lastName ===""){
+      console.log("Måste fylla i")
+    }
+
+
+      
     console.log(data);
-    //apiRoute = 'https://localhost:7285/swagger'
+    //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
     try {
-      const response = await fetch(apiRoute+'/api/register', {
+      const response = await fetch(apiRoute + '/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      console.log('Success:', response )
+      console.log('Success:', response)
+      setResponsData(await response.json());
+      console.log('ok:',responsData)
+      console.log('ok1:', responsData.errors);
+Object.keys(responsData.errors).forEach((key) => {
+  setErrorsApi([...errorsApi + " | "+ key + ": " + responsData.errors[key]])
+  console.log(key + ": " + responsData.errors[key]); 
+});
+      
     }
     catch (error) {
       console.log(error);
     }
-  
 
 
-    
+
+
   };
   return (
     <div className="container sign-in-form">
@@ -59,14 +75,14 @@ const SignUpForm = ({apiRoute}) => {
                   name="FIRST NAME"
                   value={firstName}
                   setValue={setFirstName}
-                />                
+                />
                 <InputSingel
-                placeholder="Last name"
-                nameid="lastname"
-                name="LAST NAME"
-                value={lastName}
-                setValue={setLastName}
-              />
+                  placeholder="Last name"
+                  nameid="lastname"
+                  name="LAST NAME"
+                  value={lastName}
+                  setValue={setLastName}
+                />
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"
@@ -89,6 +105,7 @@ const SignUpForm = ({apiRoute}) => {
                   value={confirmPassword}
                   setValue={setConfirmPassword}
                 />
+                <div className="text-danger">{responsData.errorMessage}</div>
                 <button className="basebtn" type="submit" onClick={handleSubmit}>
                   SIGN UP
                 </button>
@@ -101,11 +118,7 @@ const SignUpForm = ({apiRoute}) => {
               Sign in.
             </NavLink>
           </div>
-          <div className="d-flex justify-content-center imagecontainer">
-            <img src={fbicon} alt="facebook icon" />
-            <img src={twittericon} alt="twitter icon" />
-            <img src={googleicon} alt="google icon" />
-          </div>
+          <LogInIcons />
         </div>
       </div>
     </div>

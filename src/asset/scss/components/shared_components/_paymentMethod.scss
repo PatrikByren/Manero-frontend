@@ -1,10 +1,13 @@
 .paymentTest {
-    display: inline;
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .paymentTeste {
-    display: inline;
+    margin-right: 30px;
     font-size: 12px;
 }
 
