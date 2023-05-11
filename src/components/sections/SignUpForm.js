@@ -15,20 +15,20 @@ const SignUpForm = ({apiRoute}) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorsApi, setErrorsApi] =useState([]);
+  const [validPassword, setValidPassword] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const [validFirstName, setValidFirstName] = useState(false);
+  const [validLastName, setValidLastName] = useState(false);
+  const [showErrorOnSubmit, setShowErrorOnSubmit] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(validPassword && validEmail && validFirstName && validLastName&&password===confirmPassword)
+    {
     const data = {
       FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
       Password: password, ConfirmPassword: confirmPassword, Email: email
     }
-    if(firstName==="" || lastName ===""){
-      console.log("Måste fylla i")
-    }
-
-
-      
-    console.log(data);
     //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
     try {
@@ -52,10 +52,13 @@ Object.keys(responsData.errors).forEach((key) => {
     catch (error) {
       console.log(error);
     }
-
-
-
-
+  }
+  else{
+    setShowErrorOnSubmit(true)
+    if(password!=confirmPassword){
+      setValidPassword(false)
+    }
+  }
   };
   return (
     <div className="container sign-in-form">
@@ -66,7 +69,7 @@ Object.keys(responsData.errors).forEach((key) => {
         </div>
         <div className="media-border">
           <div className="title-1 text-center mb-3">Sign Up</div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} noValidate>
             <div className="inputcontainer">
               <div className="text-center">
                 <InputSingel
@@ -75,6 +78,11 @@ Object.keys(responsData.errors).forEach((key) => {
                   name="FIRST NAME"
                   value={firstName}
                   setValue={setFirstName}
+                  type="text"
+                  valid={validFirstName}
+                  setValid={setValidFirstName}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <InputSingel
                   placeholder="Last name"
@@ -82,6 +90,11 @@ Object.keys(responsData.errors).forEach((key) => {
                   name="LAST NAME"
                   value={lastName}
                   setValue={setLastName}
+                  type="text"
+                  valid={validLastName}
+                  setValid={setValidLastName}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <InputSingel
                   placeholder="name@domain.com"
@@ -90,6 +103,10 @@ Object.keys(responsData.errors).forEach((key) => {
                   name="EMAIL"
                   value={email}
                   setValue={setEmail}
+                  valid={validEmail}
+                  setValid={setValidEmail}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <InputSingel
                   nameid="password"
@@ -97,6 +114,10 @@ Object.keys(responsData.errors).forEach((key) => {
                   name="PASSWORD"
                   value={password}
                   setValue={setPassword}
+                  valid={validPassword}
+                  setValid={setValidPassword}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <InputSingel
                   nameid="confirmpassword"

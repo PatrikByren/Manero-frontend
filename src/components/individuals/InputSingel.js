@@ -1,29 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 
-function InputSingel({ placeholder, type, nameid, name, value, setValue }) {
-  const [valid, setValid] = useState(true);
+// InputSingel måste ligga i en = <div className='inputcontainer'>
+function InputSingel({ placeholder, type, nameid, name, value, setValue, valid, setValid,showError,setShowError }) {
+const [errorText, setErrorText] = useState("");
 
-//useEffect ? 
 
-  const valueChangeHandler = (event) => {
-    console.log(event)
-    const newValue = event.target.value;
-    console.log('value'+newValue)
-    setValue(newValue);
-    if(value==='')
+  useEffect(() => {
+      checkValid()
+  }, [value]);
+
+  const checkValid = () => {
+    if(valid != null)
     {
-      console.log('tom string')
-      setValid(true)
-    }
-    else{
-      setValid(validateHandler(newValue));
+    setValid(validateHandler());
     }
   };
-  const validateHandler = (value) => {
-    if(type === 'password')
+  const validateHandler = () => {
+    console.log(value + " valid "+valid+showError)
+    if(nameid === 'password')
     {
+      setErrorText("Fel lösenord, inte säkert nog eller så matchar dem inte!")
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       return passwordRegex.test(value);
+    }
+    if(nameid === 'firstname' || nameid === 'lastname')
+    {
+      setErrorText("Felaktigt namn!")
+      const regexNoSpecialSignNoNumber = /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+      return regexNoSpecialSignNoNumber.test(value);
+    }
+    if(nameid === 'email')
+    {
+      setErrorText("Felaktigt email, example@domain.com")
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(value);
+    }
+    if(valid)
+    {
+      setShowError(false)
     }
   };
   return (
@@ -37,9 +51,9 @@ function InputSingel({ placeholder, type, nameid, name, value, setValue }) {
         id={nameid}
         value={value}
         placeholder={placeholder}
-        onChange={valueChangeHandler}
+        onChange={(event) => setValue(event.target.value)}
       />
-      {!valid && <p className="small text-danger">Lösenordet ska innehålla  8 tecken en stor bokstav, en liten bokstav, ett nummer och ett specialtecken.</p>}
+      {showError && !valid &&(<p className="small text-danger">{errorText}</p>)}
     </div>
   );
 }
