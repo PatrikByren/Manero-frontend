@@ -23,6 +23,9 @@ const SignUpForm = ({apiRoute}) => {
     const data = {FirstName:firstName,LastName:lastName,
       PhoneNumber:phoneNummber,
       Password:password,ConfirmPassword:confirmPassword,Email:email}
+
+
+      
     console.log(data);
     //apiRoute = 'https://localhost:7285'
     console.log(apiRoute);
@@ -39,7 +42,7 @@ const SignUpForm = ({apiRoute}) => {
       console.log('ok1:', responsData.errors);
 Object.keys(responsData.errors).forEach((key) => {
   setErrorsApi([...errorsApi + " | "+ key + ": " + responsData.errors[key]])
-  console.log(key + ": " + responsData.errors[key]);
+  console.log(key + ": " + responsData.errors[key]); 
 });
       
     }
