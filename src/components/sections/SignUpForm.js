@@ -4,12 +4,9 @@ import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import LogInIcons from "../individuals/LogInIcons";
 
-<<<<<<< HEAD
-const SignUpForm = ({ apiRoute }) => {
-=======
+
 const SignUpForm = ({apiRoute}) => {
   const [responsData, setResponsData] = useState("");
->>>>>>> e1118e48973f3ea50036e0a3fa9c26639711a1ab
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,9 +25,6 @@ const SignUpForm = ({apiRoute}) => {
     if(firstName==="" || lastName ===""){
       console.log("Måste fylla i")
     }
-    const data = {FirstName:firstName,LastName:lastName,
-      PhoneNumber:phoneNummber,
-      Password:password,ConfirmPassword:confirmPassword,Email:email}
 
 
       
