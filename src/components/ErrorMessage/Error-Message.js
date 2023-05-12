@@ -1,16 +1,8 @@
-import React, { useState } from "react";
-
-function ErrorComponent({ errormessage }) {
-  const [showError, setShowError] = useState(false);
-
-  function handleClick() {
-    setShowError(true);
-  }
-
+function ErrorComponent({ errormessage, showError, setShowError }) {
   return (
     <div className="error-message">
-      <button onClick={handleClick}>Visa felmeddelande</button>
-      {showError && <div>{errormessage}</div>}
+      {!showError && <p className="error-message">{errormessage}</p>}
     </div>
   );
 }
+export default ErrorComponent;

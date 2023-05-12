@@ -8,7 +8,7 @@ const EmptyCartView = () => {
     return (
         <div className="text-center ecart">
             <Header icon={"fa-sharp fa-light fa-bars"} title={"Cart"} />
-            <div className='border-top media-border'>
+            <div className='testarquery'>
                 <img src={EmptyCart} alt="tom order" className='cartimg' />
                 <div className="line">|</div>
                 <div className="title-2 text-center">
@@ -28,5 +28,6 @@ const EmptyCartView = () => {
         </div>
     );
 };
+
 
 export default EmptyCartView;

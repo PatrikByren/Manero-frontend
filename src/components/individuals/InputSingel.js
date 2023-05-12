@@ -1,3 +1,4 @@
+import ErrorMessage from '../ErrorMessage/Error-Message'
 import { useState, useEffect  } from "react";
 
 // InputSingel måste ligga i en = <div className='inputcontainer'>
@@ -16,7 +17,6 @@ const [errorText, setErrorText] = useState("");
     }
   };
   const validateHandler = () => {
-    console.log(value + " valid "+valid+showError)
     if(nameid === 'password')
     {
       setErrorText("Fel lösenord, inte säkert nog eller så matchar dem inte!")
@@ -53,7 +53,7 @@ const [errorText, setErrorText] = useState("");
         placeholder={placeholder}
         onChange={(event) => setValue(event.target.value)}
       />
-      {showError && !valid &&(<p className="small text-danger">{errorText}</p>)}
+      {showError && !valid &&(<div className="small text-danger"> <ErrorMessage errormessage={errorText}/> </div>)}
     </div>
   );
 }
