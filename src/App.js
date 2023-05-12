@@ -54,10 +54,10 @@ function App() {
         <Route path="/paymentmethod" element={<Paymentmethod />} />
         <Route path="/cart" element={<EmptyCartView/>}/>
         <Route path="/orderview" element={<ShoppingCartView/>} />
-        <Route path="/AddNewCardView" element={<AddNewCardView />} />
-        <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessful/>} />
         <Route path="/orderfail" element={<OrderFailed/>} />
+        <Route path="/AddNewCardView" element={<AddNewCardView />} />
+        <Route path="/SpecificProductView" element={<SpecificProductView />} />
 
       </Routes>
     </BrowserRouter>

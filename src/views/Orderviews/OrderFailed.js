@@ -6,7 +6,8 @@ import fail from '../../asset/images/fail.png';
 const OrderFailed = () => {
   return (
     <div>
-        <div className="text-center ecart media-border">
+            <br/>
+        <div className="text-center ecart media-border-i">
             <img src={fail} alt="order nej" className='success-fail'/>
             <div className="line">|</div>
             <div className="title-2">
@@ -21,9 +22,9 @@ const OrderFailed = () => {
                 </button>
             </NavLink>
 
-            <NavLink to="/myprofile">
-            <div className="content continue">
-                CONTINUE SCHOPPING
+            <NavLink to="/">
+            <div className="content continueshop">
+                CONTINUE SHOPPING
             </div>
             </NavLink>
             
