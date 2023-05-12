@@ -4,7 +4,7 @@ function ErrorComponent({ errormessage, showError, setShowError }) {
 
   return (
     <div className="error-message">
-      {!showError && <div>{errormessage}</div>}
+      {!showError && <p className="error-message">{errormessage}</p>}
     </div>
   );
 }

@@ -17,7 +17,6 @@ const [errorText, setErrorText] = useState("");
     }
   };
   const validateHandler = () => {
-    console.log(value + " valid "+valid+showError)
     if(nameid === 'password')
     {
       setErrorText("Fel lösenord, inte säkert nog eller så matchar dem inte!")
@@ -54,7 +53,7 @@ const [errorText, setErrorText] = useState("");
         placeholder={placeholder}
         onChange={(event) => setValue(event.target.value)}
       />
-      {showError && !valid &&(<p className="small text-danger"> <ErrorMessage errormessage={errorText}/> </p>)}
+      {showError && !valid &&(<div className="small text-danger"> <ErrorMessage errormessage={errorText}/> </div>)}
     </div>
   );
 }
