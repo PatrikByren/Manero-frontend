@@ -501,6 +501,18 @@ html, body {
   margin-left: 10px;
 }
 
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.paymentHeader {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
 .paymentTest {
   display: flex;
   justify-content: space-between;
@@ -515,13 +527,13 @@ html, body {
 }
 
 .paymentPlus {
+  align-items: end;
   margin-left: 10px;
 }
 
 .paymentCardsPics {
   display: flex;
-  justify-content: space-between;
-  margin-left: 50px;
+  justify-content: center;
 }
 
 .paymentCardsPicsMargin {
@@ -529,9 +541,17 @@ html, body {
 }
 
 .inputPayment {
-  border-radius: 25px;
-  width: 375px;
+  border-style: none;
   height: 40px;
+}
+
+.paymentForm {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  margin-top: 20px;
 }
 
 .heroprodukt {
