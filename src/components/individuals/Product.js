@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+
 const Product = (props) => {
     const [addedToWishList, setaddedToWishList] = useState(false);
     const [addedToCart, setAddedToCart] = useState(false);
@@ -35,6 +36,7 @@ const Product = (props) => {
             <div className="d-flex flex-column align-items-between">
                 <p className="rating mb-1">{props.rating}</p>
                 <p className="productName mb-1">{props.product}</p>
+              
                 {props.discountPrice && (
                     <div className="d-flex">
                         <p className="price priceWas mb-1">${props.price}</p>
