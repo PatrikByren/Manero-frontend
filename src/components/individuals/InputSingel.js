@@ -1,3 +1,4 @@
+import ErrorMessage from '../ErrorMessage/Error-Message'
 import { useState, useEffect  } from "react";
 
 // InputSingel måste ligga i en = <div className='inputcontainer'>
@@ -53,7 +54,7 @@ const [errorText, setErrorText] = useState("");
         placeholder={placeholder}
         onChange={(event) => setValue(event.target.value)}
       />
-      {showError && !valid &&(<p className="small text-danger">{errorText}</p>)}
+      {showError && !valid &&(<p className="small text-danger"> <ErrorMessage errormessage={errorText}/> </p>)}
     </div>
   );
 }
