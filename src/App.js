@@ -18,9 +18,14 @@ import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
 import FilterView from "./views/FilterView";
 import EditProfile from "./views/profileViews/EditProfile";
-import Paymentmethod from "./views/Paymentstuff/PaymentMethodView";
+import Paymentmethod from "./views/Paymentstuff/PaymentmethodView";
+import EmptyCartView from "./views/Orderviews/EmptyCartView";
+import ShoppingCartView from "./views/Orderviews/ShoppingCartView";
 import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
 import SpecificProductView from "./views/signInSignUpViews/SpecificProductView";
+import OrderSuccessful from "./views/Orderviews/OrderSuccessful";
+import OrderFailed from "./views/Orderviews/OrderFailed";
+
 
 function App() {
   const apiRoute = 'https://manero.azurewebsites.net'
@@ -47,8 +52,13 @@ function App() {
         <Route path="/shop/filter" element={<FilterView />} />
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/paymentmethod" element={<Paymentmethod />} />
+        <Route path="/cart" element={<EmptyCartView/>}/>
+        <Route path="/orderview" element={<ShoppingCartView/>} />
         <Route path="/AddNewCardView" element={<AddNewCardView />} />
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
+        <Route path="/ordersuccessful" element={<OrderSuccessful/>} />
+        <Route path="/orderfail" element={<OrderFailed/>} />
+
       </Routes>
     </BrowserRouter>
   );
