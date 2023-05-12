@@ -1369,8 +1369,6 @@ html, body {
   padding: 10px;
 }
 .error-message .hidden {
-<<<<<<< HEAD
-=======
   display: none;
 }
 
@@ -1418,7 +1416,6 @@ html, body {
   padding: 10px;
 }
 .error-message .hidden {
->>>>>>> 31dbf7fea8d65dba71b722ee38d3c0bb74488736
   display: none;
 }
 
@@ -1437,6 +1434,7 @@ html, body {
 
 .success-fail {
   margin-top: 100px;
+  margin-top: 90px;
 }
 
 .continueshop {
@@ -1446,6 +1444,7 @@ html, body {
 
 @media (min-width: 1000px) {
   .media-border-i {
+  .ilonasmedia {
     border: 1px solid #DBE3F5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -1468,3 +1467,4 @@ html, body {
 .error-message .hidden {
   display: none;
 }/*# sourceMappingURL=App.css.map */
+}

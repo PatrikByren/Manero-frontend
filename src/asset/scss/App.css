@@ -1419,7 +1419,7 @@ html, body {
 }
 
 .success-fail {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .continueshop {
@@ -1428,7 +1428,7 @@ html, body {
 }
 
 @media (min-width: 1000px) {
-  .testarquery {
+  .ilonasmedia { 
     border: 1px solid #DBE3F5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
