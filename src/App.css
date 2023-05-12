@@ -1351,38 +1351,3 @@ html, body {
 .hidden {
   display: none;
 }
-.line {
-  font-size: 30px;
-  margin: 15px;
-}
-
-.ecart{
-  margin-top: 25px;
-}
-.cartimg{
-  margin-top: 50px;
-}
-
-.success-fail{
-  margin-top: 100px;
-}
-.continueshop{
-  color: #111111;
-  text-decoration: none;
-}
-
-@media (min-width: 1000px) {
-  .media-border-i{
-    border: 1px solid #DBE3F5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
-    padding-top: 0px;
-    padding-bottom: 50px;
-    max-width: 600px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-}

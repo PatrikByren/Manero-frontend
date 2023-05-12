@@ -33,6 +33,4 @@
 @import './components/pricecheckstags';
 @import './components/editprofile';
 @import './components/errormessage/ErrorMessage.scss';
-@import './views/Orderviews/EmptyCart';
-@import './views/Orderviews/OrderSuccessful';
-@import './views/Orderviews/OrderFail';
+@import './components/shared_components/orderstuff';
