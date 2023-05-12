@@ -51,6 +51,13 @@ function App() {
         <Route path="/product" element={<ProductView />} />
         <Route path="/shop/filter" element={<FilterView />} />
         <Route path="/editprofile" element={<EditProfile />} />
+        <Route path="/paymentmethod" element={<Paymentmethod />} />
+        <Route path="/cart" element={<EmptyCartView/>}/>
+        <Route path="/orderview" element={<ShoppingCartView/>} />
+        <Route path="/ordersuccessful" element={<OrderSuccessful/>} />
+        <Route path="/orderfail" element={<OrderFailed/>} />
+        <Route path="/AddNewCardView" element={<AddNewCardView />} />
+        <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/paymentmethod" element={<PaymentMethodView />} />
         <Route path="/cart" element={<EmptyCartView />} />
         <Route path="/orderview" element={<ShoppingCartView />} />
@@ -58,7 +65,6 @@ function App() {
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessful />} />
         <Route path="/orderfail" element={<OrderFailed />} />
-
       </Routes>
     </BrowserRouter>
   );
