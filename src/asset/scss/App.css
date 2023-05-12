@@ -554,22 +554,17 @@ html, body {
 }
 
 .paymentTeste {
-  margin-right: 30px;
+  margin-right: 20px;
   font-size: 12px;
 }
 
 .paymentPlus {
-  align-items: end;
   margin-left: 10px;
 }
 
 .paymentCardsPics {
   display: flex;
   justify-content: center;
-}
-
-.paymentCardsPicsMargin {
-  margin-left: 20px;
 }
 
 .inputPayment {
@@ -1406,8 +1401,7 @@ html, body {
   color: #ff0000;
   padding: 10px;
 }
-
-.hidden {
+.error-message .hidden {
   display: none;
 }
 
@@ -1447,4 +1441,13 @@ html, body {
     align-items: center;
     margin: auto;
   }
+}
+.error-message {
+  background-color: #ffe6e6;
+  border: 1px solid #ff8080;
+  color: #ff0000;
+  padding: 10px;
+}
+.error-message .hidden {
+  display: none;
 }/*# sourceMappingURL=App.css.map */
