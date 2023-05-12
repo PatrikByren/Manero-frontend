@@ -7,7 +7,7 @@ const OrderSuccessful = () => {
   return (
     <div>
         <br/>
-        <div className="text-center ecart media-border-i">
+        <div className="text-center ecart ilonasmedia">
             <img src={successful} alt="order bra" className='success-fail'/>
             <div className="line">|</div>
             <div className="title-2">

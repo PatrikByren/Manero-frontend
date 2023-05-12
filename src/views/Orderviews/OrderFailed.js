@@ -7,7 +7,7 @@ const OrderFailed = () => {
   return (
     <div>
             <br/>
-        <div className="text-center ecart media-border-i">
+        <div className="text-center ecart ilonasmedia">
             <img src={fail} alt="order nej" className='success-fail'/>
             <div className="line">|</div>
             <div className="title-2">
