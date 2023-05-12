@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import LogInIcons from "../individuals/LogInIcons";
 
 
-const SignUpForm = ({apiRoute}) => {
+const SignUpForm = ({ apiRoute }) => {
   const [responsData, setResponsData] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,7 +14,7 @@ const SignUpForm = ({apiRoute}) => {
   const phoneNummber = "0739448454"
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errorsApi, setErrorsApi] =useState([]);
+  const [errorsApi, setErrorsApi] = useState([]);
   const [validPassword, setValidPassword] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validFirstName, setValidFirstName] = useState(false);
@@ -23,42 +23,41 @@ const SignUpForm = ({apiRoute}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(validPassword && validEmail && validFirstName && validLastName&&password===confirmPassword)
-    {
-    const data = {
-      FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
-      Password: password, ConfirmPassword: confirmPassword, Email: email
+    if (validPassword && validEmail && validFirstName && validLastName && password === confirmPassword) {
+      const data = {
+        FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+        Password: password, ConfirmPassword: confirmPassword, Email: email
+      }
+      //apiRoute = 'https://localhost:7285'
+      console.log(apiRoute);
+      try {
+        const response = await fetch(apiRoute + '/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        console.log('Success:', response)
+        setResponsData(await response.json());
+        console.log('ok:', responsData)
+        console.log('ok1:', responsData.errors);
+        Object.keys(responsData.errors).forEach((key) => {
+          setErrorsApi([...errorsApi + " | " + key + ": " + responsData.errors[key]])
+          console.log(key + ": " + responsData.errors[key]);
+        });
+
+      }
+      catch (error) {
+        console.log(error);
+      }
     }
-    //apiRoute = 'https://localhost:7285'
-    console.log(apiRoute);
-    try {
-      const response = await fetch(apiRoute + '/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      console.log('Success:', response)
-      setResponsData(await response.json());
-      console.log('ok:',responsData)
-      console.log('ok1:', responsData.errors);
-Object.keys(responsData.errors).forEach((key) => {
-  setErrorsApi([...errorsApi + " | "+ key + ": " + responsData.errors[key]])
-  console.log(key + ": " + responsData.errors[key]); 
-});
-      
+    else {
+      setShowErrorOnSubmit(true)
+      if (password != confirmPassword) {
+        setValidPassword(false)
+      }
     }
-    catch (error) {
-      console.log(error);
-    }
-  }
-  else{
-    setShowErrorOnSubmit(true)
-    if(password!=confirmPassword){
-      setValidPassword(false)
-    }
-  }
   };
   return (
     <div className="container sign-in-form">
@@ -139,11 +138,9 @@ Object.keys(responsData.errors).forEach((key) => {
               Sign in.
             </NavLink>
           </div>
-          <LogInIcons />
         </div>
       </div>
-    </div>
+      /</div>
   );
 };
-
 export default SignUpForm;

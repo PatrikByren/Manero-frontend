@@ -1,38 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Header from '../../components/sections/Header'
 import card1 from "../../asset/images/card1.png";
 import card2 from "../../asset/images/card2.png";
-import Field from "../../components/individuals/Field";
 
 const PaymentMethods = () => {
+
+    const [payment, setPayment] = useState('');
+
+    const handlePaymentChange = (event) => {
+        setPayment(event.target.value);
+    };
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Handle form submission here
+    };
+
     return (
-        <div className='media-border'>
-            <Header icon={"fa-solid fa-chevron-left"} title="Payment Method" />
-            <div className='paymentTest'>Cards
-                <div className='paymentTeste'>Add a new card  <i className='paymentPlus fa fa-plus' aria-hidden="true"></i></div>
-            </div>
-            <div className='paymentCardsPics'>
-                <img src={card1} alt="visakort" />
-                <div className='paymentCardsPicsMargin'>
-                    <img src={card2} alt="visakort" />
+        <div className="d-flex justify-content-center align-items-center vh-100">
+            <form onSubmit={handleSubmit} className="card shadow col-11 col-lg-4" noValidate>
+                <div className='paymentHeader'>
+                    <Header icon={"fa-solid fa-chevron-left"} title="Payment Method" />
                 </div>
-            </div>
-            <div className="media-border mx-auto d-flex">
-                <div className="field-box">
-                    <Field
-                        text="Apple Pay"
-                        submitbutton={<i className="fa-light fa-pen-line fa-xs"></i>}
-                    />
-                    <Field
-                        text="Pay Pal"
-                        submitbutton={<i className="fa-light fa-pen-line fa-xs "></i>}
-                    />
-                    <Field
-                        text="Payoneer"
-                        submitbutton={<i className='paymentPlus fa fa-plus' aria-hidden="true"></i>}
-                    />
+                <div className='paymentTest'>Cards
+                    <div className='paymentTeste'>Add a new card <i className='paymentPlus fa fa-plus' aria-hidden="true"></i></div>
                 </div>
-            </div>
+                <div className='paymentCardsPics'>
+                    <img src={card1} alt="visakort" />
+                </div>
+                <div className="card-body px-5 py-4">
+                    <div className="mb-3 small text-danger text-center">
+                    </div>
+
+                    <div className="mb-3">
+                        <label className="form-label">Apple Pay</label>
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="email" className="form-control" />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Pay Pal</label>
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Payoneer</label>
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
+                    </div>
+                </div>
+            </form>
         </div>
     )
 }
