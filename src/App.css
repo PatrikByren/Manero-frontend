@@ -528,6 +528,12 @@ html, body {
   margin-left: 20px;
 }
 
+.inputPayment {
+  border-radius: 25px;
+  width: 375px;
+  height: 40px;
+}
+
 .heroprodukt {
   max-width: 1920px;
   height: auto;
@@ -1340,28 +1346,3 @@ html, body {
   display: flex;
   justify-content: center;
 }
-
-.line {
-  font-size: 30px;
-  margin: 15px;
-}
-
-.ecart{
-  margin-top: 20px;
-}
-.cartimg{
-  margin-top: 30px;
-}
-
-.success-fail{
-  margin-top: 100px;
-}
-.continueshop{
-  color: #111111;
-  text-decoration: none;
-}
-
-/* .border-top{
-  border-top: 2px solid #DBE3F5;
-  border-color: #DBE3F5;
-} */

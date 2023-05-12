@@ -18,7 +18,7 @@ import MyAddressView from "./views/profileViews/MyAddressView";
 import ProductView from "./views/ProductView";
 import FilterView from "./views/FilterView";
 import EditProfile from "./views/profileViews/EditProfile";
-import Paymentmethod from "./views/Paymentstuff/PaymentmethodView";
+import PaymentMethodView from "./views/Paymentstuff/PaymentMethodView";
 import EmptyCartView from "./views/Orderviews/EmptyCartView";
 import ShoppingCartView from "./views/Orderviews/ShoppingCartView";
 import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
@@ -51,13 +51,13 @@ function App() {
         <Route path="/product" element={<ProductView />} />
         <Route path="/shop/filter" element={<FilterView />} />
         <Route path="/editprofile" element={<EditProfile />} />
-        <Route path="/paymentmethod" element={<Paymentmethod />} />
-        <Route path="/cart" element={<EmptyCartView/>}/>
-        <Route path="/orderview" element={<ShoppingCartView/>} />
+        <Route path="/paymentmethod" element={<PaymentMethodView />} />
+        <Route path="/cart" element={<EmptyCartView />} />
+        <Route path="/orderview" element={<ShoppingCartView />} />
         <Route path="/AddNewCardView" element={<AddNewCardView />} />
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
-        <Route path="/ordersuccessful" element={<OrderSuccessful/>} />
-        <Route path="/orderfail" element={<OrderFailed/>} />
+        <Route path="/ordersuccessful" element={<OrderSuccessful />} />
+        <Route path="/orderfail" element={<OrderFailed />} />
 
       </Routes>
     </BrowserRouter>
