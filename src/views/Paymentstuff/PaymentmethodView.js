@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Header from '../../components/sections/Header'
 import card1 from "../../asset/images/card1.png";
 import card2 from "../../asset/images/card2.png";
-import Field from "../../components/individuals/Field";
 
 const PaymentMethods = () => {
+
+    const [payment, setPayment] = useState('');
+
+    const handlePaymentChange = (event) => {
+        setPayment(event.target.value);
+    };
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Handle form submission here
+    };
+
     return (
         <div className='media-border'>
             <Header icon={"fa-solid fa-chevron-left"} title="Payment Method" />
@@ -17,22 +29,21 @@ const PaymentMethods = () => {
                     <img src={card2} alt="visakort" />
                 </div>
             </div>
-            <div className="media-border mx-auto d-flex">
-                <div className="field-box">
-                    <Field
-                        text="Apple Pay"
-                        submitbutton={<i className="fa-light fa-pen-line fa-xs"></i>}
-                    />
-                    <Field
-                        text="Pay Pal"
-                        submitbutton={<i className="fa-light fa-pen-line fa-xs "></i>}
-                    />
-                    <Field
-                        text="Payoneer"
-                        submitbutton={<i className='paymentPlus fa fa-plus' aria-hidden="true"></i>}
-                    />
-                </div>
-            </div>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Apple Payment
+                    <input type="text" value={payment} onChange={handlePaymentChange} className='inputPayment' />
+                </label>
+                <label>
+                    Pay Payl
+                    <input type="etext" value={payment} onChange={handlePaymentChange} className='inputPayment' />
+                </label>
+                <label>
+                    Apple Payment
+                    <input type="etext" value={payment} onChange={handlePaymentChange} className='inputPayment' />
+                </label>
+                <button className='formBtn' type="submit">Sign in</button>
+            </form>
         </div>
     )
 }

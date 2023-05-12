@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
+import card1 from "../../asset/images/card1.png";
 
 const SpecificProductView = () => {
     return (
-        <div class="heroprodukt">
-            <div class="heroprodcontain">
-                <div class="firstprodsect">
+        <section className='heroprodukt'>
+            <div className="heroprodcontain">
+                <div className="firstprodsect">
                     <picture>
-                        <img src="images/Left side.png" alt="lul" />
+                        <img src={card1} alt="lul" />
                     </picture>
                 </div>
-                <div class="prodcontent">
-                    <div class="titles">
-                        <p class="prodp">Young Star Smart Shoe in Fashion</p>
-                        <p class="prodp2">Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                <div className="prodcontent">
+                    <div className="titles">
+                        <p className="prodp">Young Star Smart Shoe in Fashion</p>
+                        <p className="prodp2">Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                             voluptua. At vero eos et
                             accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
                             Lorem ipsum dolor sit amet.
@@ -25,14 +26,14 @@ const SpecificProductView = () => {
                         <p>Category: Apple Watch Lamp Wow Poggers</p>
                     </div>
                 </div>
-                <div class="prodknappar">
+                <div className="prodknappar">
                     <button>description</button>
                     <button>additional info</button>
                     <button>reviews</button>
                     <button>shipping & delivery</button>
                     <button>design</button>
                 </div>
-                <div class="prodalotoftext">
+                <div className="prodalotoftext">
                     Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo
@@ -56,7 +57,7 @@ const SpecificProductView = () => {
                     gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }
