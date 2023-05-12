@@ -501,6 +501,18 @@ html, body {
   margin-left: 10px;
 }
 
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.paymentHeader {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
 .paymentTest {
   display: flex;
   justify-content: space-between;
@@ -510,7 +522,7 @@ html, body {
 }
 
 .paymentTeste {
-  margin-right: 30px;
+  margin-right: 20px;
   font-size: 12px;
 }
 
@@ -520,12 +532,21 @@ html, body {
 
 .paymentCardsPics {
   display: flex;
-  justify-content: space-between;
-  margin-left: 50px;
+  justify-content: center;
 }
 
-.paymentCardsPicsMargin {
-  margin-left: 20px;
+.inputPayment {
+  border-style: none;
+  height: 40px;
+}
+
+.paymentForm {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  margin-top: 20px;
 }
 
 .heroprodukt {
@@ -1350,4 +1371,8 @@ html, body {
 
 .hidden {
   display: none;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f44d98dd100c8ca4ce894b2acba37377de13caa9
