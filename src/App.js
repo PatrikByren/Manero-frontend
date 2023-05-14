@@ -25,6 +25,7 @@ import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
 import SpecificProductView from "./views/signInSignUpViews/SpecificProductView";
 import OrderSuccessful from "./views/Orderviews/OrderSuccessful";
 import OrderFailed from "./views/Orderviews/OrderFailed";
+import SendReview from "./views/Review/SendReview";
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessful />} />
         <Route path="/orderfail" element={<OrderFailed />} />
+        <Route path="/sendreview" element={<SendReview/>}/>
       </Routes>
     </BrowserRouter>
   );
