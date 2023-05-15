@@ -15,8 +15,8 @@ const checkValid = () => {
 
 
 useEffect(() => {
-    checkValid();
-}, [value]);
+  checkValid();
+}, [value, checkValid]);
 
 
   const validateHandler = () => {
@@ -29,7 +29,7 @@ useEffect(() => {
     if(nameid === 'firstname' || nameid === 'lastname')
     {
       setErrorText("Felaktigt namn!")
-      const regexNoSpecialSignNoNumber = /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+      const regexNoSpecialSignNoNumber = /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
       return regexNoSpecialSignNoNumber.test(value);
     }
     if(nameid === 'email')

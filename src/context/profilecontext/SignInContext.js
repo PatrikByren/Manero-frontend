@@ -16,7 +16,7 @@ export const SignInProvider = ({children}) => {
 
     const getProfile = () => {
         //var token = sessionStorage.getItem
-        //setProfile(JSON.parse(sessionStorage.getItem('profile')))
+        setProfile('token')
     }
 
     const signIn = async (email, password) => {
