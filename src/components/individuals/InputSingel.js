@@ -7,7 +7,7 @@ const [errorText, setErrorText] = useState("");
 
 
   useEffect(() => {
-      checkValid()
+      checkValid();
   }, [value]);
 
   const checkValid = () => {
