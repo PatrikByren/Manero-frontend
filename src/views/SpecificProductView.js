@@ -37,24 +37,42 @@ const SpecificProductView = () => {
                 <p>Reviews (23)</p>
                 <p>View All <i className="fa-solid fa-chevron-right"></i></p>
             </div>
-            <div className='d-flex justify-content-center align-items-center'>
-                <div className='highlvlstyling2'>
-                    <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+            <div className='asdf'>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div className='row'>
+                        <div className='col-10'>
+                            <p>Anette Black</p>
+                        </div>
+                        <div className='col'>
+                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
+                        </div>
+                        <div className='col-3'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className='d-flex justify-content-center align-items-center'>
-                <div className='highlvlstyling2'>
-                    <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+            <div className='asdf'>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div className='row'>
+                        <div className='col-10'>
+                            <p>Anette Black</p>
+                        </div>
+                        <div className='col'>
+                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
+                        </div>
+                        <div className='col-3'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
