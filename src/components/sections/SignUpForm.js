@@ -31,7 +31,7 @@ const SignUpForm = ({ apiRoute }) => {
       //apiRoute = 'https://localhost:7285'
       console.log(apiRoute);
       try {
-        const response = await fetch(apiRoute + '/api/register', {
+        const response = await fetch('https://localhost:7285/api/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ const SignUpForm = ({ apiRoute }) => {
           </div>
         </div>
       </div>
-      /</div>
+      </div>
   );
 };
 export default SignUpForm;
