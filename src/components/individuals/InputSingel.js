@@ -6,16 +6,19 @@ function InputSingel({ placeholder, type, nameid, name, value, setValue, valid, 
 const [errorText, setErrorText] = useState("");
 
 
-  useEffect(() => {
-      checkValid();
-  }, [value]);
-
-  const checkValid = () => {
-    if(valid != null)
-    {
+const checkValid = () => {
+  if(valid != null)
+  {
     setValid(validateHandler());
-    }
-  };
+  }
+};
+
+
+useEffect(() => {
+    checkValid();
+}, [value]);
+
+
   const validateHandler = () => {
     if(nameid === 'password')
     {

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import fbicon from "../../asset/images/fbicon.png";
 import twittericon from "../../asset/images/twittericon.png";
