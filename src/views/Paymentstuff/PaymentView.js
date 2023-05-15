@@ -24,7 +24,7 @@ const PaymentMethods = () => {
                     <Header icon={"fa-solid fa-chevron-left"} title="Payment Method" />
                 </div>
                 <div className='paymentTest'>Cards
-                    <div className='paymentTeste'>Add a new card <i className='paymentPlus fa fa-plus' aria-hidden="true"></i></div>
+                    <div className='paymentTeste'>Add a new card<i className='paymentPlus fa fa-plus' aria-hidden="true"></i></div>
                 </div>
                 <div className='paymentCardsPics'>
                     <img src={card1} alt="visakort" />

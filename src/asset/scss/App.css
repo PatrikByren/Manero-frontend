@@ -612,6 +612,114 @@ body {
   margin-left: 10px;
 }
 
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.paymentHeader {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.paymentTest {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.paymentTeste {
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+.paymentPlus {
+  margin-left: 10px;
+}
+
+.paymentCardsPics {
+  display: flex;
+  justify-content: center;
+}
+
+.inputPayment {
+  border-style: none;
+  height: 40px;
+}
+
+.paymentForm {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  margin-top: 20px;
+}
+
+.heroprodukt {
+  max-width: 1920px;
+  height: auto;
+  margin-top: 70px;
+}
+
+.heroprodcontain {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+.heroprodukt .heroprodcontain {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.heroprodukt .heroprodcontain .prodcontent {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  margin-left: 50px;
+}
+
+.heroprodukt .heroprodcontain .prodcontent .prodp .prodp2 {
+  margin-right: 5px;
+}
+
+.heroprodukt .heroprodcontain .firstprodsect img {
+  flex: 1;
+  width: auto;
+  height: auto;
+}
+
+.prodp {
+  font-size: 24px;
+  font-weight: medium;
+}
+
+.prodp2 {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+.prodknappar {
+  margin-top: 50px;
+}
+
+.prodalotoftext {
+  margin-top: 50px;
+  display: flex;
+  justify-content: left;
+}
+
 .showcasesection {
   display: flex;
   flex-direction: column;
@@ -1481,6 +1589,66 @@ body {
   margin: 30px 0px;
   display: flex;
   justify-content: center;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  border: 1px solid #ff8080;
+  color: #ff0000;
+  padding: 10px;
+}
+
+.error-message .hidden {
+  display: none;
+}
+
+.line {
+  font-size: 30px;
+  margin: 15px;
+}
+
+.ecart {
+  margin-top: 25px;
+}
+
+.cartimg {
+  margin-top: 50px;
+}
+
+.success-fail {
+  margin-top: 70px;
+}
+
+.continueshop {
+  color: #111111;
+  text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+  .ilonasmedia { 
+    border: 1px solid #DBE3F5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  border: 1px solid #ff8080;
+  color: #ff0000;
+  padding: 10px;
+}
+
+.error-message .hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=App.css.map */
