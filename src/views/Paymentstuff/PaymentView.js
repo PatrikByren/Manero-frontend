@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/sections/Header'
 import card1 from "../../asset/images/card1.png";
-import card2 from "../../asset/images/card2.png";
 
 const PaymentMethods = () => {
 
