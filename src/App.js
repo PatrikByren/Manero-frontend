@@ -22,7 +22,7 @@ import PaymentView from "./views/Paymentstuff/PaymentView";
 import EmptyCartView from "./views/Orderviews/EmptyCartView";
 import ShoppingCartView from "./views/Orderviews/ShoppingCartView";
 import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
-import SpecificProductView from "./views/signInSignUpViews/SpecificProductView";
+import SpecificProductView from "./views/SpecificProductView";
 import OrderSuccessful from "./views/Orderviews/OrderSuccessful";
 import OrderFailed from "./views/Orderviews/OrderFailed";
 import SendReview from "./views/Review/SendReview";
@@ -65,7 +65,7 @@ function App() {
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessful />} />
         <Route path="/orderfail" element={<OrderFailed />} />
-        <Route path="/sendreview" element={<SendReview/>}/>
+        <Route path="/sendreview" element={<SendReview />} />
       </Routes>
     </BrowserRouter>
   );
