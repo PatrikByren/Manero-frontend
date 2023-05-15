@@ -33,6 +33,15 @@ const SpecificProductView = () => {
             <div className="d-flex justify-content-center align-items-center">
                 <button className='basebtn'>+ ADD TO CART</button>
             </div>
+            <div className='proddes'>
+                <p>Reviews (23)</p>
+                <p>View All <i className="fa-solid fa-chevron-right"></i></p>
+            </div>
+            <div className='d-flex justify-content-center align-items-center'>
+                <div>
+                    <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
+                </div>
+            </div>
         </div>
     )
 }

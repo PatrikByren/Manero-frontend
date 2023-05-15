@@ -6,16 +6,19 @@ function InputSingel({ placeholder, type, nameid, name, value, setValue, valid, 
 const [errorText, setErrorText] = useState("");
 
 
-  useEffect(() => {
-      checkValid();
-  }, [value]);
-
-  const checkValid = () => {
-    if(valid != null)
-    {
+const checkValid = () => {
+  if(valid != null)
+  {
     setValid(validateHandler());
-    }
-  };
+  }
+};
+
+
+useEffect(() => {
+  checkValid();
+}, [value, checkValid]);
+
+
   const validateHandler = () => {
     if(nameid === 'password')
     {
@@ -26,7 +29,7 @@ const [errorText, setErrorText] = useState("");
     if(nameid === 'firstname' || nameid === 'lastname')
     {
       setErrorText("Felaktigt namn!")
-      const regexNoSpecialSignNoNumber = /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+      const regexNoSpecialSignNoNumber = /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
       return regexNoSpecialSignNoNumber.test(value);
     }
     if(nameid === 'email')

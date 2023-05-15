@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
-import LogInIcons from "../individuals/LogInIcons";
 
 
 const SignUpForm = ({ apiRoute }) => {
@@ -54,7 +53,7 @@ const SignUpForm = ({ apiRoute }) => {
     }
     else {
       setShowErrorOnSubmit(true)
-      if (password != confirmPassword) {
+      if (password !== confirmPassword) {
         setValidPassword(false)
       }
     }
