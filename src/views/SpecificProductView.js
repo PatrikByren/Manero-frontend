@@ -14,8 +14,24 @@ const SpecificProductView = () => {
                 <p>Knitted summer top</p>
                 <i class="fa-thin fa-heart"></i>
             </div>
+            <div className='highlvlstyling'>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span>(23)</span>
+                <p>$37.88</p>
+            </div>
             <div>
                 <SizeAndColor />
+            </div>
+            <div className='proddescrip'>
+                Description
+                <p className='insideproddescrip'>Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.</p>
+            </div>
+            <div className="d-flex justify-content-center align-items-center">
+                <button className='basebtn'>+ ADD TO CART</button>
             </div>
         </div>
     )

@@ -556,6 +556,28 @@ html, body {
   font-weight: bold;
 }
 
+.checked {
+  color: orange;
+}
+
+.highlvlstyling {
+  margin-bottom: 20px;
+}
+
+.proddescrip {
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.insideproddescrip {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
 .showcasesection {
   display: flex;
   flex-direction: column;
