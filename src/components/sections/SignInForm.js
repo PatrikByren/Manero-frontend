@@ -9,8 +9,26 @@ import { NavLink } from "react-router-dom";
 const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = () => {
-    console.log("hej");
+  const [responsData, setResponsData] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://localhost:7285/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({Email: email, Password:password})
+      })
+      console.log('Success:', response)
+      setResponsData(await response.text());
+      console.log('ok resp:', responsData)
+      console.log('ok errors:', responsData.errors);
+
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="container sign-in-form">
@@ -35,6 +53,7 @@ const SignInForm = () => {
                 <InputSingel
                   nameid="password"
                   name="PASSWORD"
+                  type="password"
                   value={password}
                   setValue={setPassword}
                 />
