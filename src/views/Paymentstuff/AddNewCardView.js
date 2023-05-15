@@ -29,15 +29,21 @@ const AddNewCardView = () => {
 
                     <div className="mb-3">
                         <label className="form-label">Name</label>
-                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="email" className="form-control" />
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="text" className="form-control" />
                     </div>
                     <div className="mb-3">
                         <label className="form-label">Card Number</label>
-                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="text" className="form-control" />
                     </div>
-                    <div className="mb-3">
-                        <label className="form-label">MM/YY CVV</label>
-                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
+                    <div className='row'>
+                        <div className="col">
+                            <label className="form-label">MM/YY</label>
+                            <input value={payment} onChange={(e) => setPayment(e.target.value)} type="text" className="form-control" />
+                        </div>
+                        <div className="col-3">
+                            <label className="form-label">CVV</label>
+                            <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
+                        </div>
                     </div>
                 </div>
                 <button className='basebtn'>SAVE CARD</button>
