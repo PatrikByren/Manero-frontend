@@ -27,6 +27,7 @@ export const UserProvider = ({children}) => {
 
     const IsSignedIn = (url) => {
         var result = sessionStorage.getItem('token')
+        console.log("IsSignedIn")
         if(url != "/signin"){
             if(result === null)
                 {window.location.replace('/signin')}
@@ -81,29 +82,32 @@ export const UserProvider = ({children}) => {
         }
     }
 
-    // const UpdateProfile = async ( firstName, lastName, phoneNumber, location ) => {
-        
-    //     try {
-    //         const response = await fetch('https://localhost:7285/api/user/update', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({Email: email, Password: password})
-    //         })
-    //         console.log(response)
-    //         setToken(await response.text());
-    //         if(response.status === 200){
-    //             {window.location.replace('/')}
-    //         }
-    //     }
-    //     catch (error) {
-    //         console.log(error);
-    //         return error;
-    //     }
-    // }
+    const UpdateProfile = async ( firstName, lastName, phoneNumber, location ) => {
+        var storageToken = sessionStorage.getItem('token');
+        console.log(storageToken)
+        //console.log(storageToken)
+        try {
+            const responses = await fetch('https://localhost:7285/api/user/update', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${storageToken}`
+            },
+            body: JSON.stringify({FirstName: firstName, LastName: lastName, PhoneNumber: phoneNumber, Location: location })
+            })
+            
+            console.log(responses)
+            
+            return responses
+        }
+        catch (error) {
+            console.log(error);
+            
+            return error;
+        }
+    }
 
-    return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut }}>
+    return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile }}>
         {children}
     </UserContext.Provider>
 }
