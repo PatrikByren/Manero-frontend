@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react"
+/*import { createContext, useContext, useState } from "react"
+
 
 const SignInContext = createContext();
 
@@ -16,7 +17,8 @@ export const SignInProvider = ({children}) => {
 
     const getProfile = () => {
         //var token = sessionStorage.getItem
-        setProfile('token')
+        //console.log(jwt.decode(sessionStorage.getItem('token')))
+        //setProfile('token')
     }
 
     const signIn = async (email, password) => {
@@ -44,4 +46,4 @@ export const SignInProvider = ({children}) => {
     return <SignInContext.Provider value = {{ handleResponse, getProfile, signIn, profile }}>
         {children}
     </SignInContext.Provider>
-}
+}*/

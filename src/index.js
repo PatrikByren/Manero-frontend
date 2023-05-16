@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { SignInProvider } from './context/profilecontext/SignInContext';
+import { UserProvider } from './context/profilecontext/UserContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SignInProvider>
+    <UserProvider>
       <App />
-    </SignInProvider>
+    </UserProvider>
   </React.StrictMode>
 );
 

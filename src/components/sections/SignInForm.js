@@ -5,17 +5,16 @@ import twittericon from "../../asset/images/twittericon.png";
 import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
-import { useSignInContext } from "../../context/profilecontext/SignInContext";
+import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { profile, signIn } = useSignInContext();
+  const { SignIn } = useUserContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    signIn(email, password);
-    console.log(profile);
+    SignIn(email, password);
   };
   return (
     <div className="container sign-in-form">
