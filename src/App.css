@@ -574,8 +574,21 @@ html, body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.prodrev {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
   margin-bottom: 50px;
   font-weight: 400;
+}
+
+.asdf {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .showcasesection {
@@ -1377,6 +1390,10 @@ html, body {
     flex-direction: column;
     align-items: center;
     margin: auto;
+  }
+  .inputcontainer {
+    display: flex;
+    align-items: center;
   }
 }
 .error-message {

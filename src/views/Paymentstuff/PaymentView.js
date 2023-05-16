@@ -34,7 +34,7 @@ const PaymentMethods = () => {
 
                     <div className="mb-3">
                         <label className="form-label">Apple Pay</label>
-                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="email" className="form-control" />
+                        <input value={payment} onChange={(e) => setPayment(e.target.value)} type="password" className="form-control" />
                     </div>
                     <div className="mb-3">
                         <label className="form-label">Pay Pal</label>
