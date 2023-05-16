@@ -35,9 +35,24 @@
         margin: auto;
     }
 
-    .inputcontainer{
+    .inputcontainer {
         display: flex;
         align-items: center;
     }
 }
 
+.shoppingcart {
+    margin-bottom: 15px;
+
+    .subtotal {
+        border-top: #DBE3F5;
+        border-bottom: #DBE3F5;
+    }
+
+}
+
+.orderproductimg {
+    margin-top: 15px;
+
+    flex-direction: column;
+}
