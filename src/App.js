@@ -23,10 +23,10 @@ import EmptyCartView from "./views/Orderviews/EmptyCartView";
 import ShoppingCartView from "./views/Orderviews/ShoppingCartView";
 import AddNewCardView from "./views/Paymentstuff/AddNewCardView";
 import SpecificProductView from "./views/SpecificProductView";
-import OrderSuccessful from "./views/Orderviews/OrderSuccessful";
-import OrderFailed from "./views/Orderviews/OrderFailed";
-import SendReview from "./views/Review/SendReview";
-import Reviews from "./views/Review/Reviews";
+import OrderSuccessfulView from "./views/Orderviews/OrderSuccessfulView";
+import OrderFailedView from "./views/Orderviews/OrderFailedView";
+import SendReviewView from "./views/Review/SendReviewView";
+import ReviewsView from "./views/Review/ReviewsView";
 
 
 function App() {
@@ -55,19 +55,13 @@ function App() {
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/cart" element={<EmptyCartView />} />
         <Route path="/orderview" element={<ShoppingCartView />} />
-        <Route path="/ordersuccessful" element={<OrderSuccessful />} />
-        <Route path="/orderfail" element={<OrderFailed />} />
-        <Route path="/AddNewCardView" element={<AddNewCardView />} />
-        <Route path="/SpecificProductView" element={<SpecificProductView />} />
+        <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
+        <Route path="/orderfail" element={<OrderFailedView />} />
         <Route path="/paymentmethod" element={<PaymentView />} />
-        <Route path="/cart" element={<EmptyCartView />} />
-        <Route path="/orderview" element={<ShoppingCartView />} />
         <Route path="/AddNewCardView" element={<AddNewCardView />} />
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
-        <Route path="/ordersuccessful" element={<OrderSuccessful />} />
-        <Route path="/orderfail" element={<OrderFailed />} />
-        <Route path="/sendreview" element={<SendReview />} />
-        <Route path="/reviews" element={<Reviews/>} />
+        <Route path="/sendreview" element={<SendReviewView />} />
+        <Route path="/reviews" element={<ReviewsView/>} />
 
       </Routes>
     </BrowserRouter>
