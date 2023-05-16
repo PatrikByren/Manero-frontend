@@ -21,14 +21,14 @@ export const UserProvider = ({children}) => {
 
     const getProfile = () => {
         
-        var decoded = sessionStorage.getItem('profile')
+        var decoded = jwtDecode(sessionStorage.getItem('token'));
+        
         setProfile(decoded)
 
     }
 
     const IsSignedIn = () => {
         var result = sessionStorage.getItem('token')
-        console.log(result)
         if(result === null)
         {window.location.replace('/signin')}
         else{getProfile();}
