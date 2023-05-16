@@ -15,6 +15,8 @@ const SignInForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     SignIn(email, password);
+    setEmail("")
+    setPassword("")
   };
   return (
     <div className="container sign-in-form">

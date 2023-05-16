@@ -7,13 +7,16 @@ import { useUserContext } from "../../context/profilecontext/UserContext";
 import { redirect } from "react-router-dom";
 
 const MyProfileView = () => {
-  const { profile, getProfile, IsSignedIn } = useUserContext();
+  const { profile, getProfile, IsSignedIn, SignOut } = useUserContext();
   useEffect(() => {
     IsSignedIn()
     getProfile()
   }, [])
 
-
+  const handleClick = () => {
+    console.log("HEEEEJ")
+    SignOut()
+  }
 
   return (
     <div className="myprofile">
@@ -35,7 +38,7 @@ const MyProfileView = () => {
                   <div className="modal-body text-center">
                     <div className="lineup30"></div>
                     <p>Are you sure you want <br /> to sign out?</p>
-                    <button type="button" className="basebtn">Sure</button>
+                    <button type="button" className="basebtn" onClick={handleClick}>Sure</button>
                     <div className="signutbtncontainer">
                       <button type="button" className="basebtn btnsec" data-bs-dismiss="modal">Cancel</button>
                     </div>

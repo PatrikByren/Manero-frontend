@@ -12,43 +12,52 @@ export const useUserContext = () => {
 export const UserProvider = ({children}) => {
     const [profile, setProfile] = useState({})
     const [token, setToken] = useState("");
-
+    useEffect(() => {
+        TokenDecoder()
+    },[token]);
+    
     const handleResponse = () => {
         sessionStorage.setItem('token', token)
-        
-        //sessionStorage.setItem('profile', JSON.stringify(profile))
     }
 
     const getProfile = () => {
-        
         var decoded = jwtDecode(sessionStorage.getItem('token'));
-        
         setProfile(decoded)
-
     }
 
-    const IsSignedIn = () => {
+    const IsSignedIn = (url) => {
         var result = sessionStorage.getItem('token')
-        if(result === null)
-        {window.location.replace('/signin')}
-        else{getProfile();}
+        if(url != "/signin"){
+            if(result === null)
+                {window.location.replace('/signin')}
+            else{
+                getProfile()
+                return true
+            }
+        } else{
+            if(result != null){
+                {window.location.replace('/myprofile')}
+            }
+        }
     }
 
     const IsAdminSignedIn = () => {
     }
+
+    const SignOut = () => {
+        sessionStorage.clear()
+        window.location.replace('/')
+    }
+
     const TokenDecoder = () => {
         try{
+            // gör denna kod samma som den i getProfile?
             var decoded = jwtDecode(token)
             setProfile(decoded)
             handleResponse()
-
-        }        catch (error) {
-
-        }
+        } catch (error) {}
     }
-    useEffect(() => {
-        TokenDecoder()
-    },[token]);
+  
     
     const SignIn = async (email, password) => {
         
@@ -62,7 +71,9 @@ export const UserProvider = ({children}) => {
             })
             console.log(response)
             setToken(await response.text());
-            
+            if(response.status === 200){
+                {window.location.replace('/')}
+            }
         }
         catch (error) {
             console.log(error);
@@ -70,7 +81,29 @@ export const UserProvider = ({children}) => {
         }
     }
 
-    return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile }}>
+    // const UpdateProfile = async ( firstName, lastName, phoneNumber, location ) => {
+        
+    //     try {
+    //         const response = await fetch('https://localhost:7285/api/user/update', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({Email: email, Password: password})
+    //         })
+    //         console.log(response)
+    //         setToken(await response.text());
+    //         if(response.status === 200){
+    //             {window.location.replace('/')}
+    //         }
+    //     }
+    //     catch (error) {
+    //         console.log(error);
+    //         return error;
+    //     }
+    // }
+
+    return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut }}>
         {children}
     </UserContext.Provider>
 }
