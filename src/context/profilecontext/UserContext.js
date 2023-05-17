@@ -97,13 +97,14 @@ export const UserProvider = ({children}) => {
             })
             
             console.log(responses)
-            
-            return responses
+            setToken(await responses.text());
+            if(responses.status === 200){
+                {window.location.replace('/myprofile')}
+            }
         }
         catch (error) {
             console.log(error);
             
-            return error;
         }
     }
 

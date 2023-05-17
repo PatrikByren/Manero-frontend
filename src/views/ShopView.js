@@ -2,8 +2,21 @@ import { useLocation } from "react-router-dom";
 import Header from "../components/sections/Header";
 import Product from "../components/individuals/Product";
 import MenuBar from "../components/sections/MenuBar";
-
+import axios from 'axios';
+import {useState, useEffect} from 'react';
 const ShopView = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+      axios.get('https://manero.azurewebsites.net/api/product')
+          .then(response => {
+              console.log(response.data);  // för att se vad response.data innehåller
+              setProducts(response.data.data);
+          })
+          .catch(error => {
+              console.error('There was an error!', error);
+          });
+  }, []);
   const location = useLocation();
   const { from } = location.state;
   var tag = from;
@@ -32,102 +45,16 @@ const ShopView = () => {
           </div>
         </div>
         <div className="d-flex flex-wrap justify-content-between">
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
-          <Product
-            cardClass="card-3"
-            price="40.50"
-            discountPrice="30.50"
-            product="Black Sneakers"
-          />
+          {products.map(product => {
+            return(
+              <Product
+              cardClass="card-3"
+              product={product}
+              key={product.id}
+              />
+              
+            )
+          })}
         </div>
         <MenuBar />
       </div>

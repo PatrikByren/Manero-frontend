@@ -27,10 +27,10 @@ import OrderSuccessfulView from "./views/Orderviews/OrderSuccessfulView";
 import OrderFailedView from "./views/Orderviews/OrderFailedView";
 import SendReviewView from "./views/Review/SendReviewView";
 import ReviewsView from "./views/Review/ReviewsView";
-
+import MyPromoCodeView from "./views/PromoCodeViews/MyPromoCodeView";
 
 function App() {
-  const apiRoute = 'https://manero.azurewebsites.net'
+  const apiRoute = "https://manero.azurewebsites.net";
   return (
     <BrowserRouter>
       <Routes>
@@ -42,11 +42,17 @@ function App() {
         <Route path="/signup" element={<SignUpView apiRoute={apiRoute} />} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />} />
+        <Route
+          path="/forgotpasswordemail"
+          element={<ForgotPasswordSendEmailView />}
+        />
         <Route path="/newpassword" element={<NewPasswordView />} />
         <Route path="/myprofile" element={<MyProfileView />} />
         <Route path="/myaddress" element={<MyAddressView />} />
-        <Route path="/forgotpasswordemail" element={<ForgotPasswordSendEmailView />} />
+        <Route
+          path="/forgotpasswordemail"
+          element={<ForgotPasswordSendEmailView />}
+        />
         <Route path="/confirmnumber" element={<ConfirmNumberView />} />
         <Route path="/verifynumber" element={<VerifyNumberView />} />
         <Route path="/shop" element={<ShopView />} />
@@ -61,8 +67,8 @@ function App() {
         <Route path="/AddNewCardView" element={<AddNewCardView />} />
         <Route path="/SpecificProductView" element={<SpecificProductView />} />
         <Route path="/sendreview" element={<SendReviewView />} />
-        <Route path="/reviews" element={<ReviewsView/>} />
-
+        <Route path="/reviews" element={<ReviewsView />} />
+        <Route path="/promocode" element={<MyPromoCodeView />} />
       </Routes>
     </BrowserRouter>
   );

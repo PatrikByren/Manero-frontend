@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 
-const Product = (props) => {
+const Product = ({cardClass, product, discountPrice}) => {
     const [addedToWishList, setaddedToWishList] = useState(false);
     const [addedToCart, setAddedToCart] = useState(false);
 
@@ -22,11 +22,12 @@ const Product = (props) => {
     return (
 
         //Ska ligga i en Navlink?
-        <div className={`d-flex flex-column ${props.cardClass}`}>
+        <div className={`d-flex flex-column ${cardClass}`}>
             <div className="picture">
-                    {props.discountPrice && (
+                    {discountPrice && (
                         <div className="salesIcon d-flex justify-content-center align-items-center">SALE</div>
                     )}
+                    <img src={product.variants[0].imageName}></img>
                 <div className="pictureIconsBox d-flex flex-column align-items-center">
                     {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
                     <button onClick={() => toggleClass("heart")}><i className={addedToWishList ? "fa-solid fa-heart pictureIcons d-flex justify-content-center heartIcon" : "fa-light fa-heart pictureIcons d-flex justify-content-center"}></i></button>
@@ -34,18 +35,18 @@ const Product = (props) => {
                 </div>
             </div>
             <div className="d-flex flex-column align-items-between">
-                <p className="rating mb-1">{props.rating}</p>
-                <p className="productName mb-1">{props.product}</p>
-              
-                {props.discountPrice && (
+                {/* <p className="rating mb-1">{product.rating}</p> */}
+                <p className="productName mb-1">{product.name}</p>
+                <p className="price mb-1">${product.variants[0].price}</p>
+                {/* {discountPrice && (
                     <div className="d-flex">
-                        <p className="price priceWas mb-1">${props.price}</p>
-                        <p className="price priceIs mb-1">${props.discountPrice}</p>
+                        <p className="price priceWas mb-1">${product.variants[0].price}</p>
+                        { <p className="price priceIs mb-1">${props.discountPrice}</p> }
                     </div>
-                )}
-                {!props.discountPrice && (
-                    <p className="price mb-1"></p>
-                )}
+                )} */}
+                {/* {!discountPrice && (
+                    <p className="price mb-1">${product.variants[0].price}</p>
+                )} */}
             </div>
         </div>
     );

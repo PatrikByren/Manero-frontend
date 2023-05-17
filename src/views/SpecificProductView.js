@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/sections/Header';
 import Showcase from '../components/sections/Showcase';
 import SizeAndColor from '../components/sections/SizeAndColor'
+import profilimg from "../asset/images/profilimg.png";
 
 const SpecificProductView = () => {
     return (
@@ -40,18 +41,21 @@ const SpecificProductView = () => {
             <div className='asdf'>
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='row'>
-                        <div className='col-10'>
+                        <div className='col-2'>
+                            <img src={profilimg} alt="asdf" />
+                        </div>
+                        <div className='col-4'>
                             <p>Anette Black</p>
                         </div>
-                        <div className='col'>
-                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
-                        </div>
-                        <div className='col-3'>
+                        <div className='col-6'>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
+                        </div>
+                        <div className='col'>
+                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
                         </div>
                     </div>
                 </div>
@@ -59,11 +63,8 @@ const SpecificProductView = () => {
             <div className='asdf'>
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='row'>
-                        <div className='col-10'>
+                        <div className='col-9'>
                             <p>Anette Black</p>
-                        </div>
-                        <div className='col'>
-                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
                         </div>
                         <div className='col-3'>
                             <span class="fa fa-star checked"></span>
@@ -71,6 +72,28 @@ const SpecificProductView = () => {
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
+                        </div>
+                        <div className='col'>
+                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='asdf'>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div className='row'>
+                        <div className='col-9'>
+                            <p>Anette Black</p>
+                        </div>
+                        <div className='col-3'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div className='col'>
+                            <p>Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.</p>
                         </div>
                     </div>
                 </div>
