@@ -1443,8 +1443,6 @@ html, body {
 }
 
 .error-message {
-  background-color: #ffe6e6;
-  border: 1px solid #ff8080;
   color: #ff0000;
   padding: 10px;
 }
