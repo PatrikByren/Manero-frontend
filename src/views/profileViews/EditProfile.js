@@ -15,10 +15,10 @@ const EditProfile = () => {
         e.preventDefault()
         await UpdateProfile(firstName, lastName,phoneNumber,location);
     }
-    // useEffect(() => {
-    //     IsSignedIn()
-    //     getProfile()
-    //   }, [])
+    useEffect(() => {
+        IsSignedIn()
+        getProfile()
+      }, [])
     return (
         <div className='myprofile'>
             <form onSubmit={UpdateProfileHandler} noValidate>
