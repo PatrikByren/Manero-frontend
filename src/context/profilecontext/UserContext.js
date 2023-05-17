@@ -90,8 +90,8 @@ export const UserProvider = ({children}) => {
             const responses = await fetch('https://localhost:7285/api/user/update', {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${storageToken}`
+                Authorization: `Bearer ${storageToken}`,
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({FirstName: firstName, LastName: lastName, PhoneNumber: phoneNumber, Location: location })
             })
