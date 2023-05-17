@@ -698,6 +698,10 @@ html, body {
   background-color: #DBE3F5;
   position: relative;
 }
+.picture img {
+  width: 100%;
+  height: 100%;
+}
 .picture .salesIcon {
   color: white;
   font-size: 8px;
