@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MenuBar from "../components/sections/MenuBar";
 import Header from "../components/sections/Header";
 import Categories from "../components/sections/Categories";
+import { useProductContext } from "../context/Productcontext/ProductContext";
 const SearchView = () => {
   return (
     <div id="search">

@@ -34,42 +34,13 @@ const ProductCarousel = (props) => {
                     } }
                     aria-label="My Favorite Images"
                 >
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
+                {props.products.map((product) => {
+                    return( <SplideSlide key={product.id}>
+                        <Product cardClass={props.cardClass} product={product} />
                     </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                    </SplideSlide>
+                    )
+                })}
+                    
                 </Splide>
             )}
 
@@ -94,42 +65,12 @@ const ProductCarousel = (props) => {
                 } }
                 aria-label="My Favorite Images"
             >
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
+             {props.products.map((product) => {
+                return( <SplideSlide key={product.id}>
+                    <Product cardClass={props.cardClass} product={product} />
                 </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
-                <SplideSlide>
-                    <Product cardClass={props.cardClass} price="40.50" discountPrice="30.50" product="Black Sneakers"/>
-                </SplideSlide>
+                )
+             })}
             </Splide>
             )}
         </div>
