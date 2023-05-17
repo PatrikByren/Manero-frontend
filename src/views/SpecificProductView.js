@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/sections/Header';
 import Showcase from '../components/sections/Showcase';
 import SizeAndColor from '../components/sections/SizeAndColor'
-import hej from "../../asset/images/profilcepiclul.png";
+import profilimg from "../asset/images/profilimg.png";
 
 const SpecificProductView = () => {
     return (
@@ -41,11 +41,13 @@ const SpecificProductView = () => {
             <div className='asdf'>
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='row'>
-                        <div className='col-9'>
-                            <img src={hej} alt="asdf" />
+                        <div className='col-2'>
+                            <img src={profilimg} alt="asdf" />
+                        </div>
+                        <div className='col-4'>
                             <p>Anette Black</p>
                         </div>
-                        <div className='col-3'>
+                        <div className='col-6'>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
