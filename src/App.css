@@ -1405,7 +1405,8 @@ html, body {
 
 .error-message {
   color: #ec0909;
-  padding: 5px;
+  padding: 0px;
+  margin: 0px;
 }
 .error-message .hidden {
   display: none;
