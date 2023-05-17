@@ -1411,3 +1411,25 @@ html, body {
 .error-message .hidden {
   display: none;
 }
+
+.baseroundpicture .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.baseroundpicture .content img {
+  height: 200px;
+  width: 200px;
+}
+.baseroundpicture .content .lineup30 {
+  margin: 30px 0;
+}
+.baseroundpicture .content .title-2 {
+  width: 160px;
+  margin-bottom: 65px;
+}
+.baseroundpicture .content .basebtn {
+  min-width: 335px;
+  margin-top: 10px;
+}
