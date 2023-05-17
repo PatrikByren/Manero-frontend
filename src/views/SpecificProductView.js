@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/sections/Header';
 import Showcase from '../components/sections/Showcase';
 import SizeAndColor from '../components/sections/SizeAndColor'
+import hej from "../../asset/images/profilcepiclul.png";
 
 const SpecificProductView = () => {
     return (
@@ -41,6 +42,7 @@ const SpecificProductView = () => {
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='row'>
                         <div className='col-9'>
+                            <img src={hej} alt="asdf" />
                             <p>Anette Black</p>
                         </div>
                         <div className='col-3'>
