@@ -501,13 +501,6 @@ html, body {
   margin-left: 10px;
 }
 
-.paymentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-
 .paymentHeader {
   margin-top: 20px;
   font-size: 18px;
@@ -533,20 +526,6 @@ html, body {
 .paymentCardsPics {
   display: flex;
   justify-content: center;
-}
-
-.inputPayment {
-  border-style: none;
-  height: 40px;
-}
-
-.paymentForm {
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  border-style: none;
-  margin-top: 20px;
 }
 
 .proddes {
