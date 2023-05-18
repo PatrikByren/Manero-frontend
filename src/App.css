@@ -533,13 +533,6 @@ html, body {
   margin-left: 10px;
 }
 
-.paymentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-
 .paymentHeader {
   margin-top: 20px;
   font-size: 18px;

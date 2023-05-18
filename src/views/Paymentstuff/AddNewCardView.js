@@ -17,16 +17,13 @@ const AddNewCardView = () => {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
             <form onSubmit={handleSubmit} className="card shadow col-11 col-lg-4" noValidate>
-                <div className='paymentHeader'>
-                    <Header icon={"fa-solid fa-chevron-left"} title="Add a new card" />
-                </div>
+                <Header icon={"fa-solid fa-chevron-left"} title="Add a new card" />
                 <div className='paymentCardsPics'>
                     <img src={card3} alt="visakort" />
                 </div>
                 <div className="card-body px-5 py-4">
                     <div className="mb-3 small text-danger text-center">
                     </div>
-
                     <div className="mb-3">
                         <label className="form-label">Name</label>
                         <input value={payment} onChange={(e) => setPayment(e.target.value)} type="text" className="form-control" />
