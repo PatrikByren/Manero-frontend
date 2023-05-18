@@ -106,7 +106,8 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  animation: moveDown 3s ease-in-out forwards;
+  -webkit-animation: moveDown 3s ease-in-out forwards;
+          animation: moveDown 3s ease-in-out forwards;
 }
 .get-started-root .get-started .inner-circle {
   position: absolute;
@@ -114,7 +115,8 @@ html, body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started .outer-circle {
   position: absolute;
@@ -122,11 +124,33 @@ html, body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started img {
   position: absolute;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
 }
 @keyframes pulse {
   0% {
@@ -146,6 +170,14 @@ html, body {
   }
   100% {
     transform: scale(3);
+  }
+}
+@-webkit-keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(23vh);
   }
 }
 @keyframes moveDown {
@@ -541,6 +573,7 @@ html, body {
 }
 
 .paymentForm {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -1378,7 +1411,7 @@ html, body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-top: 50px;
     padding-top: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -1396,11 +1429,6 @@ html, body {
 .shoppingcart .subtotal {
   border-top: #DBE3F5;
   border-bottom: #DBE3F5;
-}
-
-.orderproductimg {
-  margin-top: 15px;
-  flex-direction: column;
 }
 
 .error-message {
