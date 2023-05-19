@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/sections/Header";
 import ProductCarousel from "../components/sections/ProductCarousel";
 import MenuBar from "../components/sections/MenuBar";
@@ -8,7 +8,10 @@ import { useProductContext } from "../context/Productcontext/ProductContext";
 
 const HomeView = () => {
   const{products, getProducts} = useProductContext();
-  getProducts();
+  useEffect(() => {
+    getProducts();
+  },[])
+  
   return (
     <div>
       <Header icon={"fa-sharp fa-light fa-bars"} title={"MANERO"} righticon={"fal fa-shopping-bag"} />
