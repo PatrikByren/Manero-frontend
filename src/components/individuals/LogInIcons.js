@@ -6,15 +6,19 @@ import { LoginSocialFacebook } from 'reactjs-social-login';
 import {useUserContext} from "../../context/profilecontext/UserContext"
 import { FacebookLoginButton } from 'react-social-login-buttons';
 
-const LogInIcons = () => {
-    const { faceBookResponse } = useUserContext();
+const LogInIcons = ({value}) => {
+    const { externalSignInResponse, externalSignUpResponse } = useUserContext();
 
     return (
         <div className="d-flex justify-content-center imagecontainer">
             <LoginSocialFacebook appId='272597805210592'
             onResolve={(response) => {
                 console.log(response)
-                faceBookResponse(response)
+                if (value === "signin") {
+                externalSignInResponse(response)} 
+                else{
+                    externalSignUpResponse(response)
+                }
             }}>
                 <FacebookLoginButton>
 

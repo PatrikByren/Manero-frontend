@@ -78,7 +78,7 @@ const SignInForm = () => {
               Or explore as guest
             </NavLink>
           </div>
-          <LogInIcons/>
+          <LogInIcons value="signin"/>
         </div>
       </div>
     </div>
