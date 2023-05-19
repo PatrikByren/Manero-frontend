@@ -71,7 +71,8 @@ export const UserProvider = ({children}) => {
             body: JSON.stringify({Email: email, Password: password})
             })
             console.log(response)
-            setToken(await response.text());
+            const respnsData = await response.json();
+            setToken(await respnsData.token);
             if(response.status === 200){
                 {window.location.replace('/')}
             }
