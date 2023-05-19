@@ -7,6 +7,7 @@ import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/profilecontext/UserContext";
 import LogInIcons from "../individuals/LogInIcons";
+import ErrorModal from "../ErrorMessage/ErrorModal";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
@@ -81,6 +82,7 @@ const SignInForm = () => {
           <LogInIcons value="signin"/>
         </div>
       </div>
+      <ErrorModal headline="ERRORS:" content={"MESSAGE"}/>
     </div>
   );
 };
