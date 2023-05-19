@@ -26,12 +26,12 @@ const SignUpForm = ({ apiRoute }) => {
     if (validPassword && validEmail && validFirstName && validLastName && password === confirmPassword) {
       const data = {
         FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
-        Password: password, ConfirmPassword: confirmPassword, Email: email
+        Password: password, ConfirmPassword: confirmPassword, Email: email, CreatedBy: "MANERO"
       }
       //apiRoute = 'https://localhost:7285'
       console.log(apiRoute);
       try {
-        const response = await fetch('https://localhost:7285/api/auth', {
+        const response = await fetch('https://localhost:7285/api/auth/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

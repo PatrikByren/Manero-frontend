@@ -24,7 +24,7 @@ const EditProfile = () => {
             <form onSubmit={UpdateProfileHandler} noValidate>
                 <Header icon={"fa-solid fa-chevron-left"} title="Edit profile" />
                 <div className="media-border mx-auto d-flex justify-content-center">
-                    <ProfileIntro />
+                    <ProfileIntro image={profile.ImageUrl}/>
                     <div className='inputcontainer'>
                         <InputSingel placeholder={profile.given_name} nameid="name" name="FIRST NAME" setValue={setFirstName} value={firstName}/>
                         <InputSingel placeholder={profile.family_name} nameid="name" name="LAST NAME" setValue={setLastName} value={lastName}/>

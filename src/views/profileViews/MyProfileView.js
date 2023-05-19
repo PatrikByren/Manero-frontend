@@ -23,7 +23,7 @@ const MyProfileView = () => {
       <div>
         <Header icon={"fa-sharp fa-light fa-bars"} title={"My profile"} />
         <div className="media-border mx-auto d-flex justify-content-center">
-          <ProfileIntro firstname={profile.given_name} lastname={profile.family_name}  email={profile.email}  path="/editprofile" />
+          <ProfileIntro firstname={profile.given_name} lastname={profile.family_name}  email={profile.email}  path="/editprofile" image={profile.ImageUrl}/>
           <div className="fieldcontainer">
             <Field linkTo="/orderhistory" icon={<i className="fa-light fa-calendar"></i>} text="Order history" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
             <Field linkTo="/payments" icon={<i className="fa-regular fa-credit-card"></i>} text="Payment method" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />

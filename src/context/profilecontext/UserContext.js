@@ -118,7 +118,7 @@ export const UserProvider = ({children}) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({Email: request.data.email, Issuer: request.provider})
+            body: JSON.stringify({Email: request.data.email, CreatedBy: request.provider})
             })
             console.log(response)
             const respnsData = await response.json();
@@ -139,11 +139,17 @@ export const UserProvider = ({children}) => {
               headers: {
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify({Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, Issuer: request.provider, ImageUrl: request.data.picture.data.url})
+              body: JSON.stringify({Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, CreatedBy: request.provider, ImageUrl: request.data.picture.data.url})
             })
             console.log('Success:', response)
              const respnsData = await response.json();
             setToken(await respnsData.token);
+            if(response.status === 200){
+                {window.location.replace('/')}
+            }
+            if(response.status === 201){
+                {window.location.replace('/')}
+            }
             }catch (error) {
                 console.log(error);
                 return error;
