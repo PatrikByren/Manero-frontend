@@ -6,6 +6,7 @@ import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/profilecontext/UserContext";
+import LogInIcons from "../individuals/LogInIcons";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
@@ -77,11 +78,7 @@ const SignInForm = () => {
               Or explore as guest
             </NavLink>
           </div>
-          <div className="d-flex justify-content-center imagecontainer">
-            <img src={fbicon} alt="facebook icon" />
-            <img src={twittericon} alt="twitter icon" />
-            <img src={googleicon} alt="google icon" />
-          </div>
+          <LogInIcons/>
         </div>
       </div>
     </div>
