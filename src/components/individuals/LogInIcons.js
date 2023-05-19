@@ -15,9 +15,10 @@ const LogInIcons = ({value}) => {
             onResolve={(response) => {
                 console.log(response)
                 if (value === "signin") {
-                externalSignInResponse(response)} 
-                else{
                     externalSignUpResponse(response)
+                }
+                else{
+                    externalSignInResponse(response) 
                 }
             }}>
                 <FacebookLoginButton>

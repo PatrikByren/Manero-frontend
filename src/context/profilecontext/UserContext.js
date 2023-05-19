@@ -111,14 +111,14 @@ export const UserProvider = ({children}) => {
 
     //EXTERNAL 
     const externalSignInResponse = async (request) =>{
-               console.log(request) 
+               console.log(request)
         try {
             const response = await fetch('https://localhost:7285/api/auth/login/external', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({})
+            body: JSON.stringify({Email: request.data.email, Issuer: request.provider})
             })
             console.log(response)
             const respnsData = await response.json();
@@ -132,8 +132,22 @@ export const UserProvider = ({children}) => {
             return error;
         }
     }
-    const externalSignUpResponse = async () => {
-        console.log("hej")
+    const externalSignUpResponse = async (request) => {
+        try {
+            const response = await fetch('https://localhost:7285/api/auth/create/external', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, Issuer: request.provider, ImageUrl: request.data.picture.data.url})
+            })
+            console.log('Success:', response)
+             const respnsData = await response.json();
+            setToken(await respnsData.token);
+            }catch (error) {
+                console.log(error);
+                return error;
+            };
     }
 
     return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
