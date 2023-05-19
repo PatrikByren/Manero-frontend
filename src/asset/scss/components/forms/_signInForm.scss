@@ -26,7 +26,6 @@
        margin-right: 15px; 
     }
 }
-
 .guest{
         color: $color-backgroundsecondary;
         text-decoration: none;
@@ -35,4 +34,18 @@
     margin-top: 10px;
     img{ margin: 15px 8px;}
 }
+}
+
+.signupform{
+    .imagecontainer{
+        margin-top: 0px;
+    }
+    .externalicons{
+        margin-top: 10px;
+        .externalbtn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
 }

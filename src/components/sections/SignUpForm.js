@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
+import LogInIcons from "../individuals/LogInIcons";
 
 
 const SignUpForm = ({ apiRoute }) => {
@@ -59,7 +60,7 @@ const SignUpForm = ({ apiRoute }) => {
     }
   };
   return (
-    <div className="container sign-in-form">
+    <div className="container sign-in-form signupform">
       <div>
         <BackArrowMiddleHead content="Sign up" />
         <div className="d-flex justify-content-center mt-3">
@@ -136,6 +137,10 @@ const SignUpForm = ({ apiRoute }) => {
             <NavLink to="/signin" className="sign-up-link">
               Sign in.
             </NavLink>
+          </div>
+          <div className="text-center externalicons">
+          Sign up with: 
+          <LogInIcons value="signup"/>
           </div>
         </div>
       </div>

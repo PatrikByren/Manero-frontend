@@ -21,7 +21,7 @@ const LogInIcons = ({value}) => {
                     externalSignInResponse(response) 
                 }
             }}>
-                <FacebookLoginButton>
+                <FacebookLoginButton className='externalbtn'>
 
                 </FacebookLoginButton>
             </LoginSocialFacebook>
