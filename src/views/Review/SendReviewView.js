@@ -27,6 +27,13 @@ const SendReview = () => {
                 <div className="title-2 text-center">
                     Please rate the quality of <br /> service for the order!
                 </div>
+                <div className='m-3'>
+                    <i class="fa-regular fa-star fa-2xl"></i>
+                    <i class="fa-regular fa-star fa-2xl"></i>
+                    <i class="fa-regular fa-star fa-2xl"></i>
+                    <i class="fa-regular fa-star fa-2xl"></i>
+                    <i class="fa-regular fa-star fa-2xl"></i>
+                </div>
 
                 <div className="content text-center">
                     Your comments and suggestions help us <br /> improve the service quality better!
@@ -34,19 +41,19 @@ const SendReview = () => {
                 <br />
 
                 {/* <form onSubmit={handleSubmit}> */}
-                    <div className='inputcontainer leave-comment'>
-                        <div className='text-center' >
-                            <InputSingel
-                                placeholder="Enter your comment"
-                                nameid="review"
-                                name="COMMENT"
-                                type="text"
-                                // onChange={handleChange}
-                                // value={inputReview}
-                                // setValue={setInputReview} 
-                                />
-                        </div>
+                <div className='inputcontainer leave-comment'>
+                    <div className='text-center' >
+                        <InputSingel
+                            placeholder="Enter your comment"
+                            nameid="review"
+                            name="COMMENT"
+                            type="text"
+                        // onChange={handleChange}
+                        // value={inputReview}
+                        // setValue={setInputReview} 
+                        />
                     </div>
+                </div>
 
                 <button type="submit" className='basebtn '>
                     SUBMIT
