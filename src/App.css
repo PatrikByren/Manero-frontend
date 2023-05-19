@@ -237,11 +237,6 @@ html, body {
 .signupform .externalicons {
   margin-top: 10px;
 }
-.signupform .externalicons .externalbtn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
 
 .headersection {
   display: flex;
