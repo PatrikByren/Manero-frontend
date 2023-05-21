@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
 html, body {
   font-family: "Mulish";
@@ -1428,19 +1429,25 @@ html, body {
     margin: auto;
   }
 }
-.history {
-  margin: 0px 35px;
+.one-order {
+  margin: 0px 35px 20px 35px;
   border-bottom: #DBE3F5;
 }
-.history .flex-container {
+.one-order .flex-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.history .flex-container .shippinggul {
+.one-order .flex-container .shippinggul {
   color: #ffcc33;
 }
-.history .flex-container .summa {
+.one-order .flex-container .deliveredgrön {
+  color: green;
+}
+.one-order .flex-container .canceledröd {
+  color: red;
+}
+.one-order .flex-container .summa {
   font-weight: bold;
 }
 

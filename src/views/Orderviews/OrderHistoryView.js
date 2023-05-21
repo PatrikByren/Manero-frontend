@@ -8,8 +8,8 @@ const OrderHistoryView = () => {
       <br />
       <div className='ilonasmedia2'>
         <BackArrowMiddleHead content="Orderhistory" />
-        <div className='history'>
-
+        {/* raden börjar här */}
+        <div className='one-order border-bottom'>
           <div className='flex-container'>
             <div className='oderinfo'>
               #10001
@@ -23,12 +23,53 @@ const OrderHistoryView = () => {
             <div className='oderinfo'>
               Datum och tid
             </div>
-            <div className='summa'>
-              Summa
+            <div>
+             <b>Summa</b>
             </div>
-
           </div>
         </div>
+        {/* slutar här */}
+
+        <div className='one-order border-bottom'>
+          <div className='flex-container'>
+            <div>
+              #10002
+            </div>
+            <div className='deliveredgrön'>
+              Delivered <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+
+          <div className='flex-container'>
+            <div>
+              Datum och tid
+            </div>
+            <div>
+             <b>Summa</b>
+            </div>
+          </div>
+        </div>
+
+        <div className='one-order border-bottom'>
+          <div className='flex-container'>
+            <div>
+              #10003
+            </div>
+            <div className='canceledröd'>
+              Canceled <i class="fa-regular fa-xmark"></i>
+            </div>
+          </div>
+
+          <div className='flex-container'>
+            <div>
+              Datum och tid
+            </div>
+            <div>
+             <b>Summa</b>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

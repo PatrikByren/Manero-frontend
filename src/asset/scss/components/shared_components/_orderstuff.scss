@@ -65,8 +65,8 @@
 
 }
 
-.history {
-    margin: 0px 35px;
+.one-order {
+    margin: 0px 35px 20px 35px;
     border-bottom: #DBE3F5;
     .flex-container {
         display: flex;
@@ -75,6 +75,14 @@
         
         .shippinggul {
             color: #ffcc33;
+        }
+
+        .deliveredgrön{
+            color: green;
+        }
+
+        .canceledröd{
+            color: red;
         }
         
         .summa{
