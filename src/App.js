@@ -29,6 +29,7 @@ import SendReviewView from "./views/Review/SendReviewView";
 import ReviewsView from "./views/Review/ReviewsView";
 import MyPromoCodeView from "./views/PromoCodeViews/MyPromoCodeView";
 import OrderHistoryView from "./views/Orderviews/OrderHistoryView";
+import NewAddressView from "./views/profileViews/NewAddressView";
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -71,6 +72,7 @@ function App() {
         <Route path="/reviews" element={<ReviewsView />} />
         <Route path="/promocode" element={<MyPromoCodeView />} />
         <Route path="/orderhistory" element={<OrderHistoryView />} />
+        <Route path="/myaddress/new" element={<NewAddressView />} />
 
       </Routes>
     </BrowserRouter>
