@@ -12,7 +12,7 @@ const MenuBar = () => {
           <NavLink to="/search" className="menu-link">
             <i className="fa-light fa-magnifying-glass fa-lg"></i>
           </NavLink>
-          <NavLink to="/emptycart" className="menu-link">
+          <NavLink to="/cart" className="menu-link">
             <i className="fal fa-shopping-bag fa-lg"></i>
           </NavLink>
           <NavLink to="/wishlist" className="menu-link">

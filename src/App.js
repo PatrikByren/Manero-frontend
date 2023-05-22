@@ -30,6 +30,7 @@ import ReviewsView from "./views/Review/ReviewsView";
 import MyPromoCodeView from "./views/PromoCodeViews/MyPromoCodeView";
 import OrderHistoryView from "./views/Orderviews/OrderHistoryView";
 import NewAddressView from "./views/profileViews/NewAddressView";
+import CartView from "./views/Orderviews/CartView";
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -62,6 +63,7 @@ function App() {
         <Route path="/shop/filter" element={<FilterView />} />
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/emptycart" element={<EmptyCartView />} />
+        <Route path="/cart" element={<CartView />} />
         <Route path="/orderview" element={<ShoppingCartView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
         <Route path="/orderfail" element={<OrderFailedView />} />
