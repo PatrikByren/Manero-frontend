@@ -150,7 +150,7 @@ export const UserProvider = ({children}) => {
         try {
             const response = await fetch('https://localhost:7285/api/auth/create/external', {
               method: 'POST',
-              headers: {
+              headers: {    
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, CreatedBy: request.provider, ImageUrl: request.data.picture.data.url})
