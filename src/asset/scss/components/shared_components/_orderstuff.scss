@@ -51,3 +51,43 @@
 
 }
 
+@media (min-width: 1000px) {
+    .ilonasmedia2 {
+        border: 1px solid #DBE3F5;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 50px;
+        padding-top: 0px;
+        padding-bottom: 40px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+}
+
+.one-order {
+    margin: 0px 35px 20px 35px;
+    border-bottom: #DBE3F5;
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .shippinggul {
+            color: #ffcc33;
+        }
+
+        .deliveredgrön{
+            color: green;
+        }
+
+        .canceledröd{
+            color: red;
+        }
+        
+        .summa{
+            font-weight: bold;
+        }
+    }
+    
+}
