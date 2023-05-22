@@ -15,13 +15,20 @@ export const CartProvider = ({children}) => {
     const [items, setItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     
-    const handleIncrement = (product) => {
-        let cartItem = items.find((item) => item.id === product.id)
-        setItems(items.map((item) =>
-        item.id === cartItem.id ? { ...item, quantity: item.quantity + 1 } : item
-      ))
-      setTotalPrice(totalPrice + product.price);
-    }
+    // const plusOne = (product) => {
+    //     let updatedItems = items.map((item) =>
+    //     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+    //   );
+    //   setItems(updatedItems);
+      
+    //   setTotalPrice(totalPrice + product.price);
+    // }
+
+    // const plusOne = (product) => {
+    //     setItems(items.map((item) => 
+    //     item.id === product.id ? {...item, quantity: item.quantity + 1 } : item
+    //     ))
+    // }
 
     const addToCart = (product) => {
         console.log(typeof items);
@@ -47,10 +54,11 @@ export const CartProvider = ({children}) => {
         let cartItem = items.find((item) => item.id === product.id);
         if (cartItem) {
           setItems(items.filter((item) => item.id !== cartItem.id));
+          setTotalPrice(totalPrice - product.price);
         }
       };
 
-    return <CartContext.Provider value={ { addToCart, subtractFromCart, items, totalPrice, handleIncrement } }>
+    return <CartContext.Provider value={ { addToCart, subtractFromCart, items, totalPrice } }>
         {children}
     </CartContext.Provider>
 }
