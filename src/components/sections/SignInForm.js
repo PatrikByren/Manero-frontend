@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InputSingel from "../individuals/InputSingel";
 import fbicon from "../../asset/images/fbicon.png";
 import twittericon from "../../asset/images/twittericon.png";
@@ -8,20 +8,27 @@ import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/profilecontext/UserContext";
 import LogInIcons from "../individuals/LogInIcons";
 import ErrorModal from "../ErrorMessage/ErrorModal";
+import Spinners from "../ErrorMessage/Spinners";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { SignIn } = useUserContext();
+  const { SignIn, errorMsg } = useUserContext();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    setIsLoading(true)
     e.preventDefault();
     SignIn(email, password);
     setEmail("")
     setPassword("")
   };
+  useEffect(() => {
+    setIsLoading(false);
+  }, [errorMsg]);
   return (
     <div className="container sign-in-form">
+      
       <div>
         <BackArrowMiddleHead content="Sign in" />
         <div className="d-flex justify-content-center mt-3">
@@ -62,9 +69,10 @@ const SignInForm = () => {
                   </NavLink>
                 </div>
 
-                <button className="basebtn" type="submit">
+                {!isLoading ? (<button className="basebtn" type="submit">
                   SIGN IN
-                </button>
+                </button>) : (
+                <Spinners/>)}
               </div>
             </div>
           </form>
@@ -82,7 +90,7 @@ const SignInForm = () => {
           <LogInIcons value="signin"/>
         </div>
       </div>
-      <ErrorModal headline="ERRORS:" content={"MESSAGE"}/>
+      <ErrorModal headline="ERRORS:" content={errorMsg}/>
     </div>
   );
 };

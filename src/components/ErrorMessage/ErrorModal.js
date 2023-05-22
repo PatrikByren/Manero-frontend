@@ -1,36 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
-const ErrorModal = ({headline, content}) => {
+const ErrorModal = ({ headline, content }) => {
+  const [showModal, setShowModal] = useState(false);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
-    if(content != "")
-    {}
-    
-   
+  useEffect(() => {
+    if (isFirstRender) {
+      setIsFirstRender(false);
+    } else {
+      setShowModal(true);
+    }
+  }, [content]);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    /*<div><button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>*/
-  
- 
-  <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div className="modal-dialog modal-dialog-centered">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h1 className="modal-title fs-5 text-danger" id="exampleModalLabel">{headline}</h1>
-          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div>
+      {showModal && (
+        <div className="modal fade show" style={{ display: 'block' }}>
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5 text-danger">{headline}</h1>
+                <button type="button" className="btn-close" onClick={closeModal} aria-label="Close"></button>
+              </div>
+              <div className="modal-body">{content}</div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={closeModal}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="modal-body">
-          {content}
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-     
-        </div>
-      </div>
+      )}
     </div>
-  </div>
-  )
-}
+  );
+};
 
-
-export default ErrorModal
+export default ErrorModal;

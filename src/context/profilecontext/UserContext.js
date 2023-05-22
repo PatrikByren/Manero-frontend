@@ -11,6 +11,7 @@ export const useUserContext = () => {
 
 export const UserProvider = ({children}) => {
     const [profile, setProfile] = useState({})
+    const [errorMsg, setErrorMsg] = useState("Unexpected Error")
     const [token, setToken] = useState("");
     useEffect(() => {
         TokenDecoder()
@@ -70,11 +71,24 @@ export const UserProvider = ({children}) => {
             },
             body: JSON.stringify({Email: email, Password: password})
             })
-            console.log(response)
             const respnsData = await response.json();
+            console.log(respnsData)
             setToken(await respnsData.token);
             if(response.status === 200){
                 {window.location.replace('/')}
+            }
+            else if(response.status === 400){
+                setErrorMsg("")
+                console.log(respnsData.title)
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined){
+                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
+            else{
+                console.log(respnsData.statusMessage)
+                setErrorMsg(respnsData.statusMessage)
             }
         }
         catch (error) {
@@ -156,7 +170,7 @@ export const UserProvider = ({children}) => {
             };
     }
 
-    return <UserContext.Provider value = {{ IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
+    return <UserContext.Provider value = {{errorMsg, IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>
 }
