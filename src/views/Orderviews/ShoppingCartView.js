@@ -59,4 +59,4 @@ const ShoppingCartView = () => {
   );
 };
 
-export default ShoppingCartView
+export default ShoppingCartView;
