@@ -28,7 +28,7 @@ import OrderFailedView from "./views/Orderviews/OrderFailedView";
 import SendReviewView from "./views/Review/SendReviewView";
 import ReviewsView from "./views/Review/ReviewsView";
 import MyPromoCodeView from "./views/PromoCodeViews/MyPromoCodeView";
-import OrderHistory from "./views/Orderviews/OrderHistory";
+import OrderHistoryView from "./views/Orderviews/OrderHistoryView";
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -70,7 +70,7 @@ function App() {
         <Route path="/sendreview" element={<SendReviewView />} />
         <Route path="/reviews" element={<ReviewsView />} />
         <Route path="/promocode" element={<MyPromoCodeView />} />
-        <Route path="/orderhistory" element={<OrderHistory />} />
+        <Route path="/orderhistory" element={<OrderHistoryView />} />
 
       </Routes>
     </BrowserRouter>

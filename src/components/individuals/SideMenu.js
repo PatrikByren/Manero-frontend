@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import axios from 'axios';
 
 const SideMenu = ({ icon }) => {
   let isSidebar = icon === "fa-sharp fa-light fa-bars";
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [orderId, setOrderId] = useState("");
+  
+  const onSubmit = async() => {
+    await axios.get(`https://manero.azurewebsites.net/api/Order/id?id=${orderId}`)
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error('There was an error!', error);
+        });;
+  }
 
   const openMenu = () => {
     setIsOpen(!isOpen);
@@ -47,12 +58,11 @@ const SideMenu = ({ icon }) => {
               <input
                 className="inputtrackorder"
                 type="number"
-                id={value}
-                value={value}
-                onChange={(event) => setValue(event.target.value)}
+                id={orderId}
+                onChange={(event) => setOrderId(event.target.value)}
               ></input>
               <div className="arrowcontainer">
-                <i className="fa-duotone fa-circle-arrow-right fa-lg"></i>
+                <i className="fa-duotone fa-circle-arrow-right fa-lg" onClick={onSubmit}></i>
               </div>
             </div>
           </div>

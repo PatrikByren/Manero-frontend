@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap");
 html, body {
   font-family: "Mulish";
@@ -1384,6 +1385,40 @@ html, body {
   border-bottom: #DBE3F5;
 }
 
+@media (min-width: 1000px) {
+  .ilonasmedia2 {
+    border: 1px solid #DBE3F5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: auto;
+  }
+}
+.one-order {
+  margin: 0px 35px 20px 35px;
+  border-bottom: #DBE3F5;
+}
+.one-order .flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.one-order .flex-container .shippinggul {
+  color: #ffcc33;
+}
+.one-order .flex-container .deliveredgrön {
+  color: green;
+}
+.one-order .flex-container .canceledröd {
+  color: red;
+}
+.one-order .flex-container .summa {
+  font-weight: bold;
+}
+
 .error-message {
   color: #ec0909;
   padding: 0px;
@@ -1413,4 +1448,9 @@ html, body {
 .baseroundpicture .content .basebtn {
   min-width: 335px;
   margin-top: 10px;
+}
+
+.checkshoppingcart {
+  color: green;
+  margin-left: 5px;
 }
