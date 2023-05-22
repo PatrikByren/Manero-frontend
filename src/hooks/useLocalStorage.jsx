@@ -5,12 +5,18 @@ const useLocalStorage = (key, initialValue) => {
     try {
       const localValue = window.localStorage.getItem(key);
       return localValue ? JSON.parse(localValue) : initialValue;
-    } catch {
+    } catch (error) {
+      console.error(`Error parsing localStorage key '${key}':`, error);
       return initialValue;
     }
   });
+
   useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error(`Error saving to localStorage key '${key}':`, error);
+    }
   }, [key, value]);
 
   return [value, setValue];
