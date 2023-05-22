@@ -1,9 +1,11 @@
 import React, { useState } from "react"
+import { useCartContext } from "../../context/Shoppingcartcontext/CartContext";
 
 
 const Product = ({cardClass, product, discountPrice}) => {
     const [addedToWishList, setaddedToWishList] = useState(false);
     const [addedToCart, setAddedToCart] = useState(false);
+    const {items, addToCart, subtractFromCart} = useCartContext();
 
     const toggleClass = (icon) => {
         if(icon === "heart"){
@@ -19,6 +21,14 @@ const Product = ({cardClass, product, discountPrice}) => {
         }
     };
 
+    const handleClick = (icon, item) => {
+        toggleClass(icon);
+        if(!addedToCart) addToCart(item.product.variants[0]);
+        subtractFromCart(item.product.variants[0]);
+        console.log(items);
+        console.log(item.product.variants[0]);
+    }
+
     return (
 
         //Ska ligga i en Navlink?
@@ -31,7 +41,7 @@ const Product = ({cardClass, product, discountPrice}) => {
                 <div className="pictureIconsBox d-flex flex-column align-items-center">
                     {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
                     <button onClick={() => toggleClass("heart")}><i className={addedToWishList ? "fa-solid fa-heart pictureIcons d-flex justify-content-center heartIcon" : "fa-light fa-heart pictureIcons d-flex justify-content-center"}></i></button>
-                    <button onClick={() => toggleClass("bag")}  className={addedToCart ? "bg-light d-flex justify-content-center align-items-center" : "d-flex justify-content-center align-items-center"}><i className={addedToCart ? "fa-light fa-bag-shopping pictureIcons bg-light" : "fa-light fa-bag-shopping pictureIcons"}></i></button>
+                    <button onClick={() => handleClick("bag", {product})}  className={addedToCart ? "bg-light d-flex justify-content-center align-items-center" : "d-flex justify-content-center align-items-center"}><i className={addedToCart ? "fa-light fa-bag-shopping pictureIcons bg-light" : "fa-light fa-bag-shopping pictureIcons"}></i></button>
                 </div>
             </div>
             <div className="d-flex flex-column align-items-between">
