@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const ErrorModal = ({ headline, content }) => {
+const ErrorModal = ({ headline, content, setErrorMsg }) => {
   const [showModal, setShowModal] = useState(false);
-  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    if (isFirstRender) {
-      setIsFirstRender(false);
-    } else {
+    if (content !==""){
       setShowModal(true);
     }
+
   }, [content]);
 
   const closeModal = () => {
+    setErrorMsg("")
     setShowModal(false);
   };
 

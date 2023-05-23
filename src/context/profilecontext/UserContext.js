@@ -170,7 +170,7 @@ export const UserProvider = ({children}) => {
             };
     }
 
-    return <UserContext.Provider value = {{errorMsg, IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
+    return <UserContext.Provider value = {{errorMsg,setErrorMsg, IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>
 }

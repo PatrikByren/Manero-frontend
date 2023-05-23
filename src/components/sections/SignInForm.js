@@ -13,7 +13,7 @@ import Spinners from "../ErrorMessage/Spinners";
 const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { SignIn, errorMsg } = useUserContext();
+  const { SignIn, errorMsg, setErrorMsg } = useUserContext();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -90,7 +90,7 @@ const SignInForm = () => {
           <LogInIcons value="signin"/>
         </div>
       </div>
-      <ErrorModal headline="ERRORS:" content={errorMsg}/>
+      <ErrorModal headline="ERRORS:" content={errorMsg} setErrorMsg={setErrorMsg}/>
     </div>
   );
 };

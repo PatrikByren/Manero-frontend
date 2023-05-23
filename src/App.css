@@ -1454,3 +1454,21 @@ html, body {
   color: green;
   margin-left: 5px;
 }
+
+.NewAddressView {
+  display: flex;
+  flex-direction: column;
+}
+.NewAddressView form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.NewAddressView form .basebtn {
+  min-width: 335px;
+  max-width: 670px;
+}
+.NewAddressView form .form-check {
+  margin-left: 40px;
+}

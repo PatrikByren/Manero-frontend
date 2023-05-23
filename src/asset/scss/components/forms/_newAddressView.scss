@@ -1,0 +1,18 @@
+.NewAddressView{
+    display: flex;
+    flex-direction: column;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .basebtn{
+            min-width: 335px;
+            
+            max-width: 670px;
+        }
+        .form-check{
+            margin-left: 40px;
+        }
+    }
+}
