@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Field = ({ icon, text, subText, submitbutton, linkTo }) => {
+const Field = ({ icon, text, subText, submitbutton, linkTo, streetAddress, postalCode, city,deleteButton, submithandler, index }) => {
+
   return (
     <div className="field">
       <div className="fieldicon">
@@ -9,8 +10,13 @@ const Field = ({ icon, text, subText, submitbutton, linkTo }) => {
         <div className="field-content">
           <p className="head-text">{text}</p>
           <p className="sub-text">{subText}</p>
+          <p className="sub-text">{streetAddress}, {postalCode} {city}</p>
         </div>
-      </div><NavLink to={linkTo}>
+      </div>
+
+      <button onClick={() =>submithandler(index)} className="trashbtn">
+      {deleteButton}</button>
+      <NavLink to={linkTo}>
       {submitbutton}</NavLink>
     </div>
   );

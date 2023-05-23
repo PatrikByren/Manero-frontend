@@ -847,6 +847,11 @@ html, body {
 .field .fieldicon p {
   margin: 0 0px 0 30px;
 }
+.field .trashbtn {
+  color: #626262;
+  background-color: transparent;
+  border: none;
+}
 
 .confirm-number {
   margin: 30px 0px;

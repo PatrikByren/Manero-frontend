@@ -1,9 +1,24 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import Field from "../individuals/Field";
 import { NavLink } from "react-router-dom";
+import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const MyAddress = () => {
+  const {myAddressList, GetMyAddressesResponse} = useUserContext();
+  const submithandler = (streetAddress) => {
+    //e.preventDefault();
+    console.log(streetAddress)
+
+
+  }
+  
+
+  useEffect(()  => {
+    GetMyAddressesResponse();
+  }, []);
+
+
   return (
     <div className="myaddress">
       <div>
@@ -11,27 +26,27 @@ const MyAddress = () => {
       </div>
       <div className="media-border mx-auto d-flex">
         <div className="field-box">
-          <Field
-            icon={<i className="fa-light fa-house"></i>}
-            text="Hem"
-            subText="Nordkapsvägen 1, 136 57 Vega"
-            submitbutton={<i className="fa-light fa-pen-line fa-xs"></i>}
+        {myAddressList.map((addresses, index) =>(
+          <Field key={index}
+          icon={
+            addresses.billingAddress ? (
+              <i className="fa-light fa-truck"></i>
+            ) : (
+              <i className="fa-light fa-credit-card"></i>
+            )
+          }
+            text={addresses.tagName}
+            streetAddress={addresses.streetName}
+            postalCode={addresses.postalCode}
+            city={addresses.city}
+            deleteButton={<i className="fa-sharp fa-solid fa-trash"></i>}
+            submithandler={submithandler}
+            index={index}
           />
-          <Field
-            icon={<i className="fa-light fa-suitcase"></i>}
-            text="Stockholms kontoret"
-            subText="Nordkapsvägen 1, 136 57 Vega"
-            submitbutton={<i className="fa-light fa-pen-line fa-xs"></i>}
-          />
-          <Field
-            icon={<i className="fa-light fa-location-dot fa-lg"></i>}
-            text="Arboga kontoret"
-            subText="Nordkapsvägen 1, 136 57 Vega"
-            submitbutton={<i className="fa-light fa-pen-line fa-xs"></i>}
-          />
+        ))}
         </div>
         <div className="new-address-box">
-          <NavLink to="/newaddress" className="sign-up-link">
+          <NavLink to="/myaddress/new" className="sign-up-link">
             <i className="fa-sharp fa-light fa-plus"></i>
           </NavLink>
           <p>Add a new address</p>
