@@ -3,7 +3,11 @@ import InputSingel from '../../components/individuals/InputSingel';
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead';
 
 const NewAddressView = () => {
-    const [invoiceAddress, setInvoiceAddress] = useState(true)
+    const [invoiceAddress, setInvoiceAddress] = useState(true);
+    const [streetAddress, setStreetAddress] = useState("");
+    const [postalCode, setPostalCode] = useState("");
+    const [city, setCity] = useState("");
+    const [typeName, setTypeName]=useState();
 
     const handleInvoiceAddressChange = () => {
         setInvoiceAddress(!invoiceAddress);
@@ -18,10 +22,10 @@ const NewAddressView = () => {
             <BackArrowMiddleHead content="ADD NEW ADDRESS" />
             <form onSubmit={handleSubmit}>
                 <div className='inputcontainer'>
-                    <InputSingel name="GATADRESS" />
-                    <InputSingel name="POSTNUMMER" />
-                    <InputSingel name="STAD" />
-                    <InputSingel name="NAMN" placeholder="Hem adress/Landet" />
+                    <InputSingel name="GATADRESS" value={streetAddress} setValue={setStreetAddress} nameid="steetAddress"/>
+                    <InputSingel name="POSTNUMMER" value={postalCode} setValue={setPostalCode} nameid="postalCode" />
+                    <InputSingel name="STAD" value={city} setValue={setCity} nameid="city"/>
+                    <InputSingel name="NAMN" placeholder="Hem adress/Landet" value={typeName} setValue={setTypeName} nameid="typeName" />
                     <div className="form-check form-switch">
                         <label className="form-check-label" for="flexSwitchCheckChecked">Faktura adress</label>
                         <input className="form-check-input" onChange={handleInvoiceAddressChange} type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={invoiceAddress} />

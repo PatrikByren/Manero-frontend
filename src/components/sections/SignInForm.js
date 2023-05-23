@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import InputSingel from "../individuals/InputSingel";
-import fbicon from "../../asset/images/fbicon.png";
-import twittericon from "../../asset/images/twittericon.png";
-import googleicon from "../../asset/images/googleicon.png";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/profilecontext/UserContext";
