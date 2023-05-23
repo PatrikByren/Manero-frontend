@@ -9,18 +9,15 @@ import { NavLink } from "react-router-dom";
 import { Row, Col, Button } from "react-bootstrap";
 
 const CartView = () => {
-  const { items, totalPrice } = useCartContext();
-  const [count, setCount] = useState(1);
+  const { items, totalPrice, plusOne, minusOne } = useCartContext();
 
-  const handleIncrement = () => {
-    setCount(count + 1);
+  const handleIncrement = (product) => {
+    plusOne(product.item);
   };
 
 
-  const handleDecrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
+  const handleDecrement = (product) => {
+    minusOne(product.item);
   };
   
 
@@ -91,7 +88,7 @@ const CartView = () => {
                     <Button
                       variant="primary"
                       size="sm"
-                      onClick={handleIncrement}
+                      onClick={() => handleIncrement({item})}
                     >
                       +
                     </Button>
@@ -99,7 +96,7 @@ const CartView = () => {
                     <Button
                       variant="primary"
                       size="sm"
-                      onClick={handleDecrement}
+                      onClick={() => handleDecrement({item})}
                     >
                       -
                     </Button>

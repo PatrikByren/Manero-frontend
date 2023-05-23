@@ -5,7 +5,7 @@ import { useCartContext } from "../../context/Shoppingcartcontext/CartContext";
 const Product = ({cardClass, product, discountPrice}) => {
     const [addedToWishList, setaddedToWishList] = useState(false);
     const [addedToCart, setAddedToCart] = useState(false);
-    const {items, addToCart, subtractFromCart} = useCartContext();
+    const {items, addToCart, removeFromCart} = useCartContext();
 
     const toggleClass = (icon) => {
         if(icon === "heart"){
@@ -24,7 +24,7 @@ const Product = ({cardClass, product, discountPrice}) => {
     const handleClick = (icon, item) => {
         toggleClass(icon);
         if(!addedToCart) addToCart(item.product.variants[0]);
-        subtractFromCart(item.product.variants[0]);
+        removeFromCart(item.product.variants[0]);
         console.log(items);
         console.log(item.product.variants[0]);
     }

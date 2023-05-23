@@ -1,64 +1,91 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const CartContext = createContext();
 export const useCartContext = () => {
-    return useContext(CartContext)
-}
+  return useContext(CartContext);
+};
 // const initialCartState = {
 //     items: [],
 //     totalItems: 0,
 //     totalPrice: 0
 // }
 
-export const CartProvider = ({children}) => {
-    const [items, setItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
-    
-    // const plusOne = (product) => {
-    //     let updatedItems = items.map((item) =>
-    //     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-    //   );
-    //   setItems(updatedItems);
-      
-    //   setTotalPrice(totalPrice + product.price);
-    // }
+export const CartProvider = ({ children }) => {
+  const [items, setItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-    // const plusOne = (product) => {
-    //     setItems(items.map((item) => 
-    //     item.id === product.id ? {...item, quantity: item.quantity + 1 } : item
-    //     ))
-    // }
+  const plusOne = (product) => {
+    let updatedItems = items.map((item) =>
+      item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setItems(updatedItems);
 
-    const addToCart = (product) => {
-        console.log(typeof items);
-        let cartItem = items.find((item) => item.id === product.id);
-        if (cartItem) {
-          setItems(
-            items.map((item) =>
-              item.id === cartItem.id ? { ...item, quantity: item.quantity + 1 } : item
-            )
-          );
-          setTotalPrice(totalPrice + product.price);
-        } else {
-          setItems([
-            ...items,
-            { id: product.id, name: "testing", quantity: 1, price: product.price, image: product.imageName },
-          ]);
-          setTotalPrice(totalPrice + product.price);
-        }
-        console.log(items);
-      };
-    
-      const subtractFromCart = (product) => {
-        let cartItem = items.find((item) => item.id === product.id);
-        if (cartItem) {
-          setItems(items.filter((item) => item.id !== cartItem.id));
-          setTotalPrice(totalPrice - product.price);
-        }
-      };
+    setTotalPrice(totalPrice + product.price);
+  };
 
-    return <CartContext.Provider value={ { addToCart, subtractFromCart, items, totalPrice } }>
-        {children}
+  const minusOne = (product) => {
+    let cartItem = items.find((item) => item.id === product.id);
+    if (cartItem.quantity > 1) {
+      let updatedItems = items.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+      );
+      setItems(updatedItems);
+      setTotalPrice(totalPrice - product.price);
+    } else if (cartItem) {
+      setItems(items.filter((item) => item.id !== cartItem.id));
+      setTotalPrice(totalPrice - product.price);
+    }
+  };
+
+  const addToCart = (product) => {
+    console.log(typeof items);
+    let cartItem = items.find((item) => item.id === product.id);
+    if (cartItem) {
+      setItems(
+        items.map((item) =>
+          item.id === cartItem.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+      setTotalPrice(totalPrice + product.price);
+    } else {
+      setItems([
+        ...items,
+        {
+          id: product.id,
+          name: "testing",
+          quantity: 1,
+          price: product.price,
+          image: product.imageName,
+        },
+      ]);
+      setTotalPrice(totalPrice + product.price);
+    }
+    console.log(items);
+  };
+
+  const removeFromCart = (product) => {
+    let cartItem = items.find((item) => item.id === product.id);
+    if (cartItem) {
+      setItems(items.filter((item) => item.id !== cartItem.id));
+      setTotalPrice(totalPrice - product.price);
+    }
+  };
+
+  return (
+    <CartContext.Provider
+      value={{
+        addToCart,
+        removeFromCart,
+        items,
+        totalPrice,
+        plusOne,
+        minusOne,
+      }}
+    >
+      {children}
     </CartContext.Provider>
-}
+  );
+};
