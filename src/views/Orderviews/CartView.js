@@ -15,11 +15,9 @@ const CartView = () => {
     plusOne(product.item);
   };
 
-
   const handleDecrement = (product) => {
     minusOne(product.item);
   };
-  
 
   const url = "https://manero.azurewebsites.net/api/Order";
   const data = {
@@ -35,7 +33,12 @@ const CartView = () => {
     axios
       .post(url, data)
       .then((response) => {
-        console.log(response.data);
+        if (response.status === 201) {
+          const newData = response.data;
+          const params = new URLSearchParams();
+          params.append("data", JSON.stringify(newData)); // skicka med infon till nya window
+          window.location.replace(`/ordersuccessful?${params.toString()}`);
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -88,7 +91,7 @@ const CartView = () => {
                     <Button
                       variant="primary"
                       size="sm"
-                      onClick={() => handleIncrement({item})}
+                      onClick={() => handleIncrement({ item })}
                     >
                       +
                     </Button>
@@ -96,7 +99,7 @@ const CartView = () => {
                     <Button
                       variant="primary"
                       size="sm"
-                      onClick={() => handleDecrement({item})}
+                      onClick={() => handleDecrement({ item })}
                     >
                       -
                     </Button>
@@ -121,7 +124,9 @@ const CartView = () => {
             </div>
           </div>
           <div className="d-flex justify-content-center align-items-center">
-            <button className="basebtn" onClick={onSubmit}>PROCEED TO CHECKOUT</button>
+            <button className="basebtn" onClick={onSubmit}>
+              PROCEED TO CHECKOUT
+            </button>
           </div>
         </div>
       )}
