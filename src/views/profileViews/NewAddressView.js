@@ -27,7 +27,7 @@ const NewAddressView = () => {
                     <InputSingel name="STAD" value={city} setValue={setCity} nameid="city"/>
                     <InputSingel name="NAMN" placeholder="Hem adress/Landet" value={typeName} setValue={setTypeName} nameid="typeName" />
                     <div className="form-check form-switch">
-                        <label className="form-check-label" for="flexSwitchCheckChecked">Faktura adress</label>
+                        <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Faktura adress</label>
                         <input className="form-check-input" onChange={handleInvoiceAddressChange} type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={invoiceAddress} />
                     </div>
                 </div>
