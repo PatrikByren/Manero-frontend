@@ -1,18 +1,33 @@
 import React from 'react'
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead'
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 
 const OrderHistoryView = () => {
+  const[orders, setOrders] = useState([]);
+  useEffect(() => {
+    axios.get('https://manero.azurewebsites.net/api/Order/userId?id=usingtestidtotestorderhistory')
+        .then(response => {
+            console.log(response.data);  
+            setOrders(response.data);
+        })
+        .catch(error => {
+            console.error('There was an error!', error);
+        });
+}, []);
+
   return (
     <div>
       <br />
       <div className='ilonasmedia2'>
         <BackArrowMiddleHead content="Orderhistory" />
         {/* raden börjar här */}
-        <div className='one-order border-bottom'>
+        {orders.map((order) => {
+          return  <div className='one-order border-bottom'>
           <div className='flex-container'>
             <div className='oderinfo'>
-              #10001
+              #{order.id}
             </div>
             <div className='oderinfo shippinggul'>
               Shipping <i class="fa-regular fa-truck"></i>
@@ -21,16 +36,18 @@ const OrderHistoryView = () => {
 
           <div className='flex-container'>
             <div className='oderinfo'>
-              Datum och tid
+              {order.orderDate.substring(0, 10)}
             </div>
             <div>
-             <b>Summa</b>
+             <b>${order.totalPrice}</b>
             </div>
           </div>
         </div>
+        })}
+       
         {/* slutar här */}
 
-        <div className='one-order border-bottom'>
+        {/* <div className='one-order border-bottom'>
           <div className='flex-container'>
             <div>
               #10002
@@ -68,7 +85,7 @@ const OrderHistoryView = () => {
              <b>Summa</b>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </div>

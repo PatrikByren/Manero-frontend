@@ -21,9 +21,9 @@ const CartView = () => {
 
   const url = "https://manero.azurewebsites.net/api/Order";
   const data = {
-    userId: "testId",
-    customerFirstName: "testname",
-    customerLastName: "testName2",
+    userId: "usingtestidtotestorderhistory",
+    customerFirstName: "Lasse",
+    customerLastName: "Bandhagen",
     productItems: items,
     address: "testaddress",
     city: "stockholm",
@@ -33,11 +33,16 @@ const CartView = () => {
     axios
       .post(url, data)
       .then((response) => {
-        if (response.status === 201) {
+        if (response.status === 201) { // skicka med infon till nya window
           const newData = response.data;
           const params = new URLSearchParams();
-          params.append("data", JSON.stringify(newData)); // skicka med infon till nya window
+          params.append("data", JSON.stringify(newData)); 
           window.location.replace(`/ordersuccessful?${params.toString()}`);
+        } else {
+          const newData = response.data;
+          const params = new URLSearchParams();
+          params.append("data", JSON.stringify(newData)); 
+          window.location.replace(`/orderfail${params.toString()}`);
         }
       })
       .catch((error) => {
