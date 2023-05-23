@@ -203,8 +203,42 @@ export const UserProvider = ({children}) => {
                 return error;
             };
     }
-
-    return <UserContext.Provider value = {{GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
+    
+    const RemoveMyAddress = async (item,index) => {
+        var storageToken = sessionStorage.getItem('token');
+        try {
+            const response = await fetch('https://localhost:7285/api/Address', {
+              method: 'PUT',
+              headers: {
+                Authorization: `Bearer ${storageToken}`,    
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({TagName: item.tagName, StreetName: item.streetName, PostalCode: item.postalCode, City: item.city})
+            })
+            console.log('respons:', response)
+            const respnsData = await response.json();
+            if(response.status === 200){
+            setMyAddressList(myAddressList.filter((_, i) => i !== index));
+            }
+            if(response.status === 400){
+                setErrorMsg("")
+                console.log(respnsData.title)
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined){
+                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
+            //return myAddressList;
+            }catch (error) {
+                console.log(error);
+                setErrorMsg(error)
+                return error;
+            };
+    }
+    
+    return <UserContext.Provider value = {{RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
+    handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>
 }

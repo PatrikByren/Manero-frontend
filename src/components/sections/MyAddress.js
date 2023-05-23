@@ -5,12 +5,10 @@ import { NavLink } from "react-router-dom";
 import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const MyAddress = () => {
-  const {myAddressList, GetMyAddressesResponse} = useUserContext();
-  const submithandler = (streetAddress) => {
-    //e.preventDefault();
-    console.log(streetAddress)
-
-
+  const {myAddressList,RemoveMyAddress, GetMyAddressesResponse} = useUserContext();
+  const submithandler = (index) => {
+    
+    RemoveMyAddress(myAddressList[index], index);
   }
   
 
