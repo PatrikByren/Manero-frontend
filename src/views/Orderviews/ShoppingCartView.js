@@ -26,13 +26,13 @@ const ShoppingCartView = () => {
       <div className='asdf'>
         <div className='d-flex justify-content-center align-items-center'>
           <div className='row'>
-            <div className='col-4 text-center'>
+            <div className='col-4 text-start'>
               <img src={cartproductpic} alt="asdf" />
             </div>
             <div className='col-3 text-center'>
               <p>Handbag $15.98 Size:- Color: Black</p>
             </div>
-            <div className='col m-2'>
+            <div className='col m-3 text-end'>
               <Button variant="primary" size="sm" onClick={handleIncrement}>+</Button>
               <span className="mx-2">{count}</span>
               <Button variant="primary" size="sm" onClick={handleDecrement}>-</Button>
@@ -43,13 +43,13 @@ const ShoppingCartView = () => {
       <div className='asdf'>
         <div className='d-flex justify-content-center align-items-center'>
           <div className='row'>
-            <div className='col-4 text-center'>
+            <div className='col-4 text-start'>
               <img src={cartproductpic} alt="asdf" />
             </div>
             <div className='col-3 text-center'>
               <p>Summer dress $36.00 Size: M Color: Pink</p>
             </div>
-            <div className='col m-2'>
+            <div className='col m-3 text-end'>
               <Button variant="primary" size="sm" onClick={handleIncrement}>+</Button>
               <span className="mx-2">{count}</span>
               <Button variant="primary" size="sm" onClick={handleDecrement}>-</Button>
