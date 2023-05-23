@@ -2,8 +2,17 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import MenuBar from '../../components/sections/MenuBar'
 import successful from '../../asset/images/successful.png';
+import { useEffect } from 'react';
 
 const OrderSuccessful = () => {
+    useEffect(() => { // ta emot info från cartview
+        const urlParams = new URLSearchParams(window.location.search);
+        const data = urlParams.get('data');
+        if (data) {
+          const parsedData = JSON.parse(data);
+          console.log(parsedData);
+        }
+      }, []);
   return (
     <div>
         <br/>
