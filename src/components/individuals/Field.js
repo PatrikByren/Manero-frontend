@@ -10,7 +10,7 @@ const Field = ({ icon, text, subText, submitbutton, linkTo, streetAddress, posta
         <div className="field-content">
           <p className="head-text">{text}</p>
           <p className="sub-text">{subText}</p>
-          <p className="sub-text">{streetAddress}, {postalCode} {city}</p>
+          <p className="sub-text">{streetAddress} {postalCode} {city}</p>
         </div>
       </div>
 
