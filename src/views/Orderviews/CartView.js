@@ -53,7 +53,7 @@ const CartView = () => {
   return (
     <div>
       {items.length === 0 ? (
-        <div className="text-center ecart">
+        <div className="text-center">
           <Header icon={"fa-sharp fa-light fa-bars"} title={"Cart"} />
           <div className=" border-top ilonasmedia">
             <img src={EmptyCart} alt="tom order" className="cartimg" />

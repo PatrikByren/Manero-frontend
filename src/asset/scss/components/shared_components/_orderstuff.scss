@@ -3,10 +3,6 @@
     margin: 15px;
 }
 
-.ecart {
-    margin-top: 25px;
-}
-
 .cartimg {
     margin-top: 50px;
 }
@@ -25,9 +21,8 @@
         border: 1px solid #DBE3F5;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-top: 50px;
         padding-top: 0px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         max-width: 600px;
         display: flex;
         flex-direction: column;
@@ -56,7 +51,6 @@
         border: 1px solid #DBE3F5;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-top: 50px;
         padding-top: 0px;
         padding-bottom: 40px;
         max-width: 600px;
@@ -65,29 +59,45 @@
 
 }
 
+.checkbox {
+    margin-left: 40px;
+}
+
+.checkboxinput {
+    margin-right: 10px;
+}
+
 .one-order {
-    margin: 0px 35px 20px 35px;
+    margin: 0px 35px 18px 35px;
     border-bottom: #DBE3F5;
+
     .flex-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+
         .shippinggul {
             color: #ffcc33;
         }
 
-        .deliveredgrön{
+        .deliveredgrön {
             color: green;
         }
 
-        .canceledröd{
+        .canceledröd {
             color: red;
         }
-        
-        .summa{
+
+        .summa {
             font-weight: bold;
         }
     }
-    
+
+
+
+}
+
+.payment {
+    margin: 0px 35px 18px 35px;
+    background-color: #DBE3F5;
 }
