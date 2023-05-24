@@ -110,6 +110,13 @@ html, body {
   color: transparent;
 }
 
+.NewAddressView .form-check-input:checked {
+  background-color: #626262;
+}
+.NewAddressView .form-check-input:focus {
+  border-color: #DBE3F5;
+}
+
 .get-started-root {
   background-color: #DBE3F5;
   overflow: hidden;

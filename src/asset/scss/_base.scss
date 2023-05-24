@@ -110,3 +110,13 @@ html, body {
         }
     }
 }
+
+.NewAddressView{
+    .form-check-input:checked{
+        background-color: $color-icons;
+    }
+    .form-check-input:focus{
+        border-color: $color-background;
+    }
+}
+    
