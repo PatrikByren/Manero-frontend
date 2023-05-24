@@ -839,6 +839,7 @@ html, body {
   align-items: center;
   border-top: 1px solid #DBE3F5;
   border-bottom: 1px solid #DBE3F5;
+  width: 100%;
 }
 .field .fieldicon {
   display: flex;
@@ -851,6 +852,8 @@ html, body {
   color: #626262;
   background-color: transparent;
   border: none;
+  margin-left: auto;
+  margin-right: 0.6rem;
 }
 
 .confirm-number {

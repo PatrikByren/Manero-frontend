@@ -8,6 +8,7 @@
     align-items: center;
     border-top: 1px solid $color-background;
     border-bottom: 1px solid $color-background;
+    width: 100%;
     .fieldicon{
         display: flex;
         align-items: center;
@@ -19,5 +20,7 @@
         color: $color-icons;
         background-color: transparent;
         border: none;
-    }
+        margin-left: auto;
+        margin-right: 0.6rem;
   }
+}

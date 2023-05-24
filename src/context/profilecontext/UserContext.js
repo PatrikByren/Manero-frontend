@@ -11,7 +11,7 @@ export const useUserContext = () => {
 
 export const UserProvider = ({children}) => {
     const [profile, setProfile] = useState({})
-    const [errorMsg, setErrorMsg] = useState("Unexpected Error")
+    const [errorMsg, setErrorMsg] = useState("")
     const [token, setToken] = useState("");
     const [myAddressList, setMyAddressList] = useState([]);
     useEffect(() => {

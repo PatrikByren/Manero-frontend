@@ -10,6 +10,7 @@ const LogInIcons = ({value}) => {
     const { externalSignInResponse, externalSignUpResponse } = useUserContext();
 
     return (
+       <div>
         <div className="d-flex justify-content-center imagecontainer">
             <LoginSocialFacebook appId='272597805210592'
             onResolve={(response) => {
@@ -38,9 +39,9 @@ const LogInIcons = ({value}) => {
                 }}>
                 <GoogleLoginButton />
             </LoginSocialGoogle>
+            </div>
             <img src={twittericon} alt="twitter icon" />
             <img src={googleicon} alt="google icon" />
-            
         </div>
     )
 }
