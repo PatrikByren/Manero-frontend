@@ -19,7 +19,7 @@ const SendReview = () => {
     // };
 
     return (
-        <div className="text-center ecart">
+        <div className="text-center">
             <BackArrowMiddleHead content="Leave a review" />
             <div className='border-top ilonasmedia'>
                 <img src={Review} alt="review bild" className='cartimg' />
@@ -60,6 +60,8 @@ const SendReview = () => {
                 </button>
                 {/* </form> */}
             </div>
+            <br/>
+
         </div>
     )
 }

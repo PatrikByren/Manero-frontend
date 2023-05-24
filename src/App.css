@@ -128,7 +128,8 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  animation: moveDown 3s ease-in-out forwards;
+  -webkit-animation: moveDown 3s ease-in-out forwards;
+          animation: moveDown 3s ease-in-out forwards;
 }
 .get-started-root .get-started .inner-circle {
   position: absolute;
@@ -136,7 +137,8 @@ html, body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started .outer-circle {
   position: absolute;
@@ -144,11 +146,33 @@ html, body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started img {
   position: absolute;
-  animation: pulse 3.5s ease-in-out infinite;
+  -webkit-animation: pulse 3.5s ease-in-out infinite;
+          animation: pulse 3.5s ease-in-out infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
 }
 @keyframes pulse {
   0% {
@@ -168,6 +192,14 @@ html, body {
   }
   100% {
     transform: scale(3);
+  }
+}
+@-webkit-keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(23vh);
   }
 }
 @keyframes moveDown {
@@ -1370,10 +1402,6 @@ html, body {
   margin: 15px;
 }
 
-.ecart {
-  margin-top: 25px;
-}
-
 .cartimg {
   margin-top: 50px;
 }
@@ -1392,9 +1420,8 @@ html, body {
     border: 1px solid #DBE3F5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
     padding-top: 0px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -1419,15 +1446,22 @@ html, body {
     border: 1px solid #DBE3F5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
     padding-top: 0px;
     padding-bottom: 40px;
     max-width: 600px;
     margin: auto;
   }
 }
+.checkbox {
+  margin-left: 40px;
+}
+
+.checkboxinput {
+  margin-right: 10px;
+}
+
 .one-order {
-  margin: 0px 35px 20px 35px;
+  margin: 0px 35px 18px 35px;
   border-bottom: #DBE3F5;
 }
 .one-order .flex-container {
@@ -1446,6 +1480,11 @@ html, body {
 }
 .one-order .flex-container .summa {
   font-weight: bold;
+}
+
+.payment {
+  margin: 0px 35px 18px 35px;
+  background-color: #DBE3F5;
 }
 
 .error-message {
