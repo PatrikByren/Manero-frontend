@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 import InputSingel from '../../components/individuals/InputSingel';
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead';
+import { useUserContext } from '../../context/profilecontext/UserContext';
 
 const NewAddressView = () => {
+    const { CreateNewAddress } = useUserContext();
     const [invoiceAddress, setInvoiceAddress] = useState(true);
     const [streetAddress, setStreetAddress] = useState("");
     const [postalCode, setPostalCode] = useState("");
     const [city, setCity] = useState("");
-    const [typeName, setTypeName]=useState();
+    const [typeName, setTypeName]=useState("");
 
     const handleInvoiceAddressChange = () => {
         setInvoiceAddress(!invoiceAddress);
     };
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("hej");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+       await CreateNewAddress(typeName, streetAddress, postalCode, city, invoiceAddress)
+       setInvoiceAddress(true)
+       setStreetAddress("");
+       setPostalCode("");
+       setCity("");
+       setTypeName("");
     };
 
     return (

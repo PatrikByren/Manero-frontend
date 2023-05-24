@@ -237,7 +237,42 @@ export const UserProvider = ({children}) => {
             };
     }
     
-    return <UserContext.Provider value = {{RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
+    const CreateNewAddress = async (typeName, streetAddress, postalCode, city, invoiceAddress) => {
+        var storageToken = sessionStorage.getItem('token');
+        try {
+            const response = await fetch('https://localhost:7285/api/Address', {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${storageToken}`,    
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({TagName: typeName, StreetName: streetAddress, PostalCode: postalCode, City: city, BillingAddress: invoiceAddress})
+            })
+            console.log('respons:', response)
+            const respnsData = await response.json();
+            console.log(respnsData)
+            if(response.status === 200 || response.status === 201){
+            setMyAddressList();
+            console.log(respnsData)
+            }
+            if(response.status === 400){
+                setErrorMsg("")
+                console.log(respnsData.title)
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined){
+                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
+            //return myAddressList;
+            }catch (error) {
+                console.log(error);
+                setErrorMsg(error)
+                return error;
+            };
+    }
+
+    return <UserContext.Provider value = {{CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
     handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>
