@@ -248,12 +248,9 @@ export const UserProvider = ({children}) => {
               },
               body: JSON.stringify({TagName: typeName, StreetName: streetAddress, PostalCode: postalCode, City: city, BillingAddress: invoiceAddress})
             })
-            console.log('respons:', response)
             const respnsData = await response.json();
-            console.log(respnsData)
             if(response.status === 200 || response.status === 201){
             setMyAddressList();
-            console.log(respnsData)
             }
             if(response.status === 400){
                 setErrorMsg("")

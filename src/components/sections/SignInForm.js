@@ -12,7 +12,6 @@ const SignInForm = () => {
   const [password, setPassword] = useState("");
   const { SignIn, errorMsg, setErrorMsg } = useUserContext();
   const [isLoading, setIsLoading] = useState(false);
-console.log(errorMsg)
   const handleSubmit = async (e) => {
     setIsLoading(true)
     e.preventDefault();

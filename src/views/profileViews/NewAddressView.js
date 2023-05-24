@@ -3,9 +3,10 @@ import InputSingel from '../../components/individuals/InputSingel';
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead';
 import { useUserContext } from '../../context/profilecontext/UserContext';
 import Spinners from '../../components/ErrorMessage/Spinners';
+import ErrorModal from '../../components/ErrorMessage/ErrorModal';
 
 const NewAddressView = () => {
-    const { CreateNewAddress } = useUserContext();
+    const { CreateNewAddress,errorMsg,setErrorMsg } = useUserContext();
     const [invoiceAddress, setInvoiceAddress] = useState(true);
     const [streetAddress, setStreetAddress] = useState("");
     const [postalCode, setPostalCode] = useState("");
@@ -45,6 +46,7 @@ const NewAddressView = () => {
                 {!isLoading ? (<button className='basebtn' type="submit">Submit</button>) : (
                 <Spinners/>)}
             </form>
+            <ErrorModal headline="ERRORS:" content={errorMsg} setErrorMsg={setErrorMsg}/>
         </div>
     );
 };
