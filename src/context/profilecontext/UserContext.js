@@ -186,7 +186,7 @@ export const UserProvider = ({children}) => {
             const respnsData = await response.json();
             console.log(respnsData.addressList)
             setMyAddressList(await respnsData.addressList);
-
+            console.log(respnsData)
             if(response.status === 400){
                 setErrorMsg("")
                 console.log(respnsData.title)
