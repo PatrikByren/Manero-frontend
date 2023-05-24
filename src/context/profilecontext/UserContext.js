@@ -250,7 +250,7 @@ export const UserProvider = ({children}) => {
             })
             const respnsData = await response.json();
             if(response.status === 200 || response.status === 201){
-            setMyAddressList();
+            
             }
             if(response.status === 400){
                 setErrorMsg("")
