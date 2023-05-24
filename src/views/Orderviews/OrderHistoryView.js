@@ -24,7 +24,7 @@ const OrderHistoryView = () => {
         <BackArrowMiddleHead content="Orderhistory" />
         {/* raden börjar här */}
         {orders.map((order) => {
-          return  <div className='one-order border-bottom'>
+          return  <div className='one-order border-bottom' key={order.id}>
           <div className='flex-container'>
             <div>
               #{order.id}
