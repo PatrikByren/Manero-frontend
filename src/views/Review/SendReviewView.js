@@ -41,7 +41,7 @@ const SendReview = () => {
                 <br />
 
                 {/* <form onSubmit={handleSubmit}> */}
-                <div className='inputcontainer leave-comment'>
+                <div className='inputcontainer'>
                     <div className='text-center' >
                         <InputSingel
                             placeholder="Enter your comment"

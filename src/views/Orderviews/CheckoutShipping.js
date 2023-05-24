@@ -39,11 +39,8 @@ const CheckoutShipping = () => {
                     </div>
 
                     <div className='flex-container'>
-                        <div>
+                        <div className='undertitle'>
                             Stockholmsvägen 1, 12 345
-                        </div>
-                        <div>
-
                         </div>
                     </div>
                 </div>
@@ -64,7 +61,7 @@ const CheckoutShipping = () => {
                         </label>
                     </div>
                     <div className='flex-container'>
-                        <div>
+                        <div className='undertitle'>
                             Stockholmsvägen 1, 12 345
                         </div>
                     </div>

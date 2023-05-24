@@ -12,28 +12,35 @@ const CheckoutPayment = () => {
                 <div className='one-order'>
                     <div className='flex-container'>
                         <div>Credit Cards</div>
-                        <label>
-                            <input
-                                type="radio"
-                                name="option"
-                                value="option1"
-                            />
-                        </label>
                     </div>
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
-                <div className='payment'>
+                <div className='border' />
+                <div className='paymentmeth'>
                     <div className='flex-container'>
-                        <div>Credit Cards</div>
+                        <div>7741 **** **** 6644</div>
                     </div>
+                    <label>
+                        <input
+                            type="radio"
+                            name="option"
+                            value="option1"
+                        />
+                    </label>
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
-                <div className='payment'>
+                <div className='border' />
+                <div className='paymentmeth'>
                     <div className='flex-container'>
-                        <div>Credit Cards</div>
+                        <div>7674 **** **** 1884</div>
                     </div>
+                    <label>
+                        <input
+                            type="radio"
+                            name="option"
+                            value="option1"
+                        />
+                    </label>
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
+                <div className='border' />
 
                 <div className='one-order'>
                     <div className='flex-container'>
@@ -47,10 +54,10 @@ const CheckoutPayment = () => {
                         </label>
                     </div>
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
+                <div className='border' />
                 <div className='one-order'>
                     <div className='flex-container'>
-                        <div>Direkt Payment</div>
+                        <div>Direct Payment</div>
                         <label>
                             <input
                                 type="radio"
@@ -59,14 +66,12 @@ const CheckoutPayment = () => {
                             />
                         </label>
                     </div>
-
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
+
+                <div className='border' />
                 <div className='one-order'>
                     <div className='flex-container'>
-                        <div>
-                            Klarna
-                        </div>
+                        <div>Klarna</div>
                         <label>
                             <input
                                 type="radio"
@@ -76,7 +81,9 @@ const CheckoutPayment = () => {
                         </label>
                     </div>
                 </div>
-                <div className="flex-grow-1 border-top border-2 my-3" />
+                <div className='border' />
+                <br />
+
             </div>
         </div>
     )

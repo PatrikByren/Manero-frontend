@@ -34,6 +34,8 @@ import CartView from "./views/Orderviews/CartView";
 import WishlistView from "./views/WishlistView";
 import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
 import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
+import Checkout from "./views/Orderviews/Checkout";
+
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -73,6 +75,7 @@ function App() {
         <Route path="/orderhistory" element={<OrderHistoryView />} />
         <Route path="/checkout/shipping" element={<CheckoutShipping/>}/>
         <Route path="/checkout/payment" element={<CheckoutPayment/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/paymentmethod" element={<PaymentView />} />
         <Route path="/AddNewCard" element={<AddNewCardView />} />
         <Route path="/SpecificProduct" element={<SpecificProductView />} />
