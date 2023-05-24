@@ -11,6 +11,9 @@ const FilterView = () => {
       <SizeAndColor />
       <PriceChecksTags />
       <FilterComponent />
+      <div className='d-flex justify-content-center align-items-center'>
+        <button className='basebtn'>APPLY FILTERS</button>
+      </div>
     </div>
   )
 }
