@@ -12,18 +12,57 @@ const FilterComponent = () => {
         }
     };
 
+    const buttonStyle = {
+        backgroundColor: 'lightblue',
+        color: 'black',
+        padding: '5px 16px',
+        borderRadius: '10px',
+        fontSize: '14px',
+        margin: '5px',
+        border: 'none',
+    };
+
     return (
-        <div className='d-flex justify-content-center align-items-center'>
-            <Button variant={selectedFilters.includes('Option1') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option1')}>
-                Option 1
-            </Button>
-            <Button variant={selectedFilters.includes('Option2') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option2')}>
-                Option 2
-            </Button>
-            <Button variant={selectedFilters.includes('Option3') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
-                Option 3
-            </Button>
-            {/* Add more buttons for other filter options */}
+        <div className='text-center justify-content-center align-items-center m-2'>
+            <div>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option1') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option2') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option3') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option4') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+            </div>
+            <div>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option5') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option6') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option7') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option8') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+            </div>
+            <div>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option9') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option10') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+                <Button style={buttonStyle} variant={selectedFilters.includes('Option11') ? 'primary' : 'outline-primary'} size="sm" onClick={() => handleFilterClick('Option3')}>
+                    SPORT
+                </Button>
+            </div>
         </div>
     );
 };
