@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputSingel from '../../components/individuals/InputSingel';
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead';
 import { useUserContext } from '../../context/profilecontext/UserContext';
+import Spinners from '../../components/ErrorMessage/Spinners';
 
 const NewAddressView = () => {
     const { CreateNewAddress } = useUserContext();
@@ -10,18 +11,21 @@ const NewAddressView = () => {
     const [postalCode, setPostalCode] = useState("");
     const [city, setCity] = useState("");
     const [typeName, setTypeName]=useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleInvoiceAddressChange = () => {
         setInvoiceAddress(!invoiceAddress);
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true)
        await CreateNewAddress(typeName, streetAddress, postalCode, city, invoiceAddress)
        setInvoiceAddress(true)
        setStreetAddress("");
        setPostalCode("");
        setCity("");
        setTypeName("");
+       setIsLoading(false)
     };
 
     return (
@@ -38,7 +42,8 @@ const NewAddressView = () => {
                         <input className="form-check-input" onChange={handleInvoiceAddressChange} type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={invoiceAddress} />
                     </div>
                 </div>
-                <button className='basebtn' type="submit">Submit</button>
+                {!isLoading ? (<button className='basebtn' type="submit">Submit</button>) : (
+                <Spinners/>)}
             </form>
         </div>
     );

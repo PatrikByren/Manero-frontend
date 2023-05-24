@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InputSingel from "../individuals/InputSingel";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
@@ -16,13 +16,12 @@ console.log(errorMsg)
   const handleSubmit = async (e) => {
     setIsLoading(true)
     e.preventDefault();
-    SignIn(email, password);
+    await SignIn(email, password);
     setEmail("")
     setPassword("")
-  };
-  useEffect(() => {
     setIsLoading(false);
-  }, [errorMsg]);
+  };
+
   return (
     <div className="container sign-in-form">
       
