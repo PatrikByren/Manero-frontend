@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { createContext, useContext, useState } from "react";
+// import useLocalStorage from "../../hooks/useLocalStorage";
+// import { useEffect } from 'react';
 
 const CartContext = createContext();
 export const useCartContext = () => {
@@ -72,7 +73,7 @@ export const CartProvider = ({ children }) => {
         ...items,
         {
           id: product.id,
-          name: "testing",
+          name: product.name,
           quantity: 1,
           price: product.price,
           image: product.imageName,

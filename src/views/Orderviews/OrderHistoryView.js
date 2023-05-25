@@ -31,7 +31,7 @@ const OrderHistoryView = () => {
               #{order.id}
             </div>
             <div className='shippinggul'>
-              Shipping <i class="fa-regular fa-truck"></i>
+              Shipping <i className="fa-regular fa-truck"></i>
             </div>
           </div>
 

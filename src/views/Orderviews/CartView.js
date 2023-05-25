@@ -1,6 +1,5 @@
 import React from "react";
 import { useCartContext } from "../../context/Shoppingcartcontext/CartContext";
-import axios from "axios";
 import Header from "../../components/sections/Header";
 import MenuBar from "../../components/sections/MenuBar";
 import EmptyCart from "../../asset/images/emptycart.png";

@@ -10,7 +10,7 @@ import { useCartContext } from "../../context/Shoppingcartcontext/CartContext";
 const Checkout = () => {
   const { myAddressList, GetMyAddressesResponse } = useUserContext();
   const { items, setItems } = useCartContext();
-  const [isLoading, setIsLoading] = useState(false);
+  //const [isLoading, setIsLoading] = useState(false);
   const [shippingStreet, setShippingStreet] = useState("");
   const [shippingPostal, setShippingPostal] = useState("");
   const [shippingCity, setShippingCity] = useState("");
@@ -24,7 +24,7 @@ const Checkout = () => {
       console.log(parsedData);
       setItems(parsedData);
     }
-  }, []);
+  }, [setItems]);
   useEffect(() => {
     GetMyAddressesResponse();
   }, [renderone]);
@@ -49,7 +49,7 @@ const Checkout = () => {
     postalcode: shippingPostal,
   };
   const onSubmit = () => {
-    setIsLoading(true);
+   // setIsLoading(true);
     var storageToken = sessionStorage.getItem("token");
     console.log(shippingCity);
     axios
@@ -65,19 +65,19 @@ const Checkout = () => {
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData));
-          setIsLoading(false);
+          //setIsLoading(false);
           window.location.replace(`/ordersuccessful?${params.toString()}`);
         } else {
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData));
-          setIsLoading(false);
+          //setIsLoading(false);
           window.location.replace(`/orderfail${params.toString()}`);
         }
       })
       .catch((error) => {
         console.log(error);
-        setIsLoading(false);
+        //setIsLoading(false);
       });
   };
 
@@ -122,7 +122,7 @@ const Checkout = () => {
             <div>Shipping details</div>
             <NavLink to="/checkout/shipping">
               <i
-                class="fa-solid fa-chevron-right"
+                className="fa-solid fa-chevron-right"
                 style={{ color: "black" }}
               ></i>
             </NavLink>
@@ -142,7 +142,7 @@ const Checkout = () => {
             <div className="arrow-icon">
               <NavLink to="/checkout/payment">
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ color: "black" }}
                 ></i>
               </NavLink>
@@ -162,7 +162,7 @@ const Checkout = () => {
               nameid="review"
               name="COMMENT"
               type="text"
-              style="height: 140px;"
+              style={{height: 140}}
             />
           </div>
         </div>
