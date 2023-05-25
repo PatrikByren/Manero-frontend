@@ -94,15 +94,16 @@ const Checkout = () => {
         </div>
 
         <div className="border" />
+
         <div className="one-order orderstuff">
-          <div className="flex-container">
-            <div className="smallerletters">tröja</div>
-            <div className="smallerletters">1 x pris</div>
-          </div>
-          <div className="flex-container">
-            <div className="smallerletters">tröja</div>
-            <div className="smallerletters">1 x pris</div>
-          </div>
+          {items.map((item) => (
+            <div className="flex-container" key={item.id}>
+              <div className="smallerletters">{item.name}</div>
+              <div className="smallerletters">
+                {item.quantity} x ${item.price}
+              </div>
+            </div>
+          ))}
           <div className="flex-container">
             <div className="smallerletters">Discount</div>{" "}
             {/*om de finns promocode */}
