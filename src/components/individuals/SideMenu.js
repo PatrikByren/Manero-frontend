@@ -8,7 +8,7 @@ const SideMenu = ({ icon }) => {
   const [userId, setUserId] = useState("");
   
   const onSubmit = async() => {
-    await axios.get(`https://manero.azurewebsites.net/api/Order/orderid-userid?orderId=${orderId}&userId=usingtestidtotestorderhistory`)
+    await axios.get(`https://manero.azurewebsites.net/api/Order/orderid-userid?orderId=${orderId}`)
         .then(response => {
             console.log(response.data);
         })

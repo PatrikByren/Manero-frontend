@@ -22,9 +22,6 @@ const CartView = () => {
 
   const url = "https://manero.azurewebsites.net/api/Order";
   const data = {
-    userId: "usingtestidtotestorderhistory",
-    customerFirstName: "Lasse",
-    customerLastName: "Bandhagen",
     productItems: items,
     address: "testaddress",
     city: "stockholm",
