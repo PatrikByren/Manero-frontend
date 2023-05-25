@@ -8,7 +8,7 @@ const OrderHistoryView = () => {
   const[orders, setOrders] = useState([]);
   useEffect(() => {
     var storageToken = sessionStorage.getItem('token');
-    axios.get('https://manero.azurewebsites.net/api/Order/userId')
+    axios.get('https://manero.azurewebsites.net/api/Order/userId', {headers: { Authorization: `Bearer ${storageToken}`}})
         .then(response => {
             console.log(response.data);  
             setOrders(response.data);
