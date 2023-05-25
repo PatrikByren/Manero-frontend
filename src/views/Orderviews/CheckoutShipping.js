@@ -22,7 +22,8 @@ const CheckoutShipping = () => {
             <br />
             <div className='ilonasmedia2'>
                 <BackArrowMiddleHead content="Shipping details" />
-                <div className='one-order border-bottom'>
+                <div className='border'/>
+                <div className='one-order'>
                     <div className='flex-container'>
                         <div>
                             Hem
@@ -37,15 +38,15 @@ const CheckoutShipping = () => {
                             />
                         </label>
                     </div>
-
                     <div className='flex-container'>
                         <div className='undertitle'>
                             Stockholmsvägen 1, 12 345
                         </div>
                     </div>
                 </div>
+                <div className='border'/>
 
-                <div className='one-order border-bottom'>
+                <div className='one-order'>
                     <div className='flex-container'>
                         <div>
                             Kontoret
@@ -66,6 +67,8 @@ const CheckoutShipping = () => {
                         </div>
                     </div>
                 </div>
+                <div className='border'/>
+
                 <label className='checkbox'>
                     <input
                         className='checkboxinput'
