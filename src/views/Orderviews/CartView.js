@@ -20,40 +20,14 @@ const CartView = () => {
     minusOne(product.item);
   };
 
-  const url = 'https://manero.azurewebsites.net/api/Order';
-  const data = {
-    productItems: items,
-    address: "testaddress",
-    city: "stockholm",
-    postalcode: "12253",
-  };
   const onSubmit = () => {
-    setIsLoading(true)
-    var storageToken = sessionStorage.getItem('token');
-    console.log(storageToken);
-    axios
-      .post(url, data, { headers : { Authorization : `Bearer ${storageToken}`,
-      'Content-Type': 'application/json'} })
-      .then((response) => {
-        if (response.status === 201) { // skicka med infon till nya window
-          const newData = response.data;
+    const newData = items;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData)); 
           setIsLoading(false)
-          window.location.replace(`/ordersuccessful?${params.toString()}`);
-        } else {
-          const newData = response.data;
-          const params = new URLSearchParams();
-          params.append("data", JSON.stringify(newData)); 
-          setIsLoading(false)
-          window.location.replace(`/orderfail${params.toString()}`);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsLoading(false)
-      });
-  };
+          window.location.replace(`/checkout?${params.toString()}`);
+  }
+
 
   return (
     <div>
