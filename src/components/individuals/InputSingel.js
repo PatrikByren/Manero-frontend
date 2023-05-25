@@ -24,22 +24,47 @@ function InputSingel({
 
   const validateHandler = () => {
     if (nameid === "password") {
-      setErrorText("Wrong Password, not safe or do not match!");
+      setErrorText("Wrong Password, not good enough!");
       const passwordRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       return passwordRegex.test(value);
     }
-    if (nameid === "firstname" || nameid === "lastname") {
+    else if (nameid === "firstname" || nameid === "lastname") {
       setErrorText("Enter Name!");
       const regexNoSpecialSignNoNumber =
         /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
       return regexNoSpecialSignNoNumber.test(value);
     }
-    if (nameid === "email") {
+    else if (nameid ==="typename") {
+      setErrorText("Enter Type Name!");
+      console.log("type name")
+      const regexNoSpecialSignNoNumber =
+        /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
+      return regexNoSpecialSignNoNumber.test(value);
+    }
+    else if (nameid === "city") {
+      setErrorText("Enter a city!");
+      const regexNoSpecialSignNoNumber =
+        /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
+      return regexNoSpecialSignNoNumber.test(value);
+    }
+    else if (nameid === "email") {
       setErrorText("Enter Email, example@domain.com");
       const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
       return emailRegex.test(value);
     }
+    else if(nameid === "postalCode"){
+      setErrorText("A postalcode is 5 digits only numbers!");
+      const postalCodeRegex = /^\d{5}$/;
+      return postalCodeRegex.test(value);
+    }    
+    else if(nameid === "streetAddress"){
+      setErrorText("Enter a streetaddress");
+      const streetaddressRegex = /^[a-zA-Z0-9åäöÅÄÖ\s]+$/;
+      return streetaddressRegex.test(value);
+    }
+
+
     if (valid) {
       setShowError(false);
     }

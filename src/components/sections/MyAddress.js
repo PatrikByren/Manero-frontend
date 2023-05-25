@@ -27,10 +27,10 @@ const MyAddress = () => {
         {myAddressList.map((addresses, index) =>(
           <Field key={index}
           icon={
-            addresses.billingAddress ? (
-              <i className="fa-light fa-truck"></i>
-            ) : (
+            addresses.billingAddress  ? (
               <i className="fa-light fa-credit-card"></i>
+            ) : (
+              <i className="fa-light fa-truck"></i>
             )
           }
             text={addresses.tagName}
