@@ -5,10 +5,11 @@ const SideMenu = ({ icon }) => {
   let isSidebar = icon === "fa-sharp fa-light fa-bars";
   const [isOpen, setIsOpen] = useState(false);
   const [orderId, setOrderId] = useState("");
-  const [userId, setUserId] = useState("");
+
   
   const onSubmit = async() => {
-    await axios.get(`https://manero.azurewebsites.net/api/Order/orderid-userid?orderId=${orderId}&userId=usingtestidtotestorderhistory`)
+    var storageToken = sessionStorage.getItem('token');
+    await axios.get(`https://manero.azurewebsites.net/api/Order/orderid-userid?orderId=${orderId}`, {headers: { Authorization: `Bearer ${storageToken}`}})
         .then(response => {
             console.log(response.data);
         })

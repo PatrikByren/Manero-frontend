@@ -8,17 +8,27 @@ import ErrorModal from "../ErrorMessage/ErrorModal";
 import Spinners from "../ErrorMessage/Spinners";
 
 const SignInForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const { SignIn, errorMsg, setErrorMsg } = useUserContext();
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [validPassword, setValidPassword] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const [showErrorOnSubmit, setShowErrorOnSubmit] = useState(false)
+
+
   const handleSubmit = async (e) => {
-    setIsLoading(true)
     e.preventDefault();
-    await SignIn(email, password);
-    setEmail("")
-    setPassword("")
-    setIsLoading(false);
+    setIsLoading(true)
+    if (validPassword && validEmail){
+      await SignIn(email, password);
+      setIsLoading(false);
+    }
+    else {
+      setShowErrorOnSubmit(true)
+      setIsLoading(false)
+      setPassword("")
+    }
   };
 
   return (
@@ -38,16 +48,25 @@ const SignInForm = () => {
                 <InputSingel
                   placeholder="name@domain.com"
                   nameid="email"
+                  type="email"
                   name="EMAIL"
                   value={email}
                   setValue={setEmail}
+                  valid={validEmail}
+                  setValid={setValidEmail}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <InputSingel
                   nameid="password"
-                  name="PASSWORD"
                   type="password"
+                  name="PASSWORD"
                   value={password}
                   setValue={setPassword}
+                  valid={validPassword}
+                  setValid={setValidPassword}
+                  showError={showErrorOnSubmit}
+                  setShowError={setShowErrorOnSubmit}
                 />
                 <div className="remember">
                   <div>

@@ -1,6 +1,4 @@
 import React from 'react'
-import twittericon from "../../asset/images/twittericon.png";
-import googleicon from "../../asset/images/googleicon.png";
 import { LoginSocialFacebook, LoginSocialGoogle, LoginSocialTwitter } from 'reactjs-social-login';
 import {useUserContext} from "../../context/profilecontext/UserContext"
 import { FacebookLoginButton, GoogleLoginButton, TwitterLoginButton } from 'react-social-login-buttons';

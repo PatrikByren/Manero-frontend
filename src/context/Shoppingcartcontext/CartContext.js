@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const CartContext = createContext();
@@ -14,14 +14,30 @@ export const useCartContext = () => {
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [firstRendering, setFirstRendering] = useState(false)
+ 
+  useEffect(() => {
+    if(firstRendering === true) {
+      localStorage.setItem("product", JSON.stringify(items))
+      console.log("SET", items)
+    } else {
+      setFirstRendering(true)
+    }
+  },[items])
+
+  useEffect(() => {
+    setItems(JSON.parse(localStorage.getItem("product")))
+    console.log("ITEMS", items)
+  },[])
 
   const plusOne = (product) => {
     let updatedItems = items.map((item) =>
       item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
     );
     setItems(updatedItems);
-
+    
     setTotalPrice(totalPrice + product.price);
+    
   };
 
   const minusOne = (product) => {

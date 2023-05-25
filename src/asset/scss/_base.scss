@@ -80,9 +80,15 @@ html, body {
         .profileImage{
             width: 120px;
             height: 120px;
-            border: 5px solid $color-background;
+            //border: 5px solid $color-background;
             border-radius: 50%;
             position: relative;
+            img{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 5px solid $color-background;
+            }
             .fa-pen-line{
                 background-color: $color-background;
                 position: absolute;

@@ -8,9 +8,10 @@ import { useProductContext } from "../context/Productcontext/ProductContext";
 
 const HomeView = () => {
   const{products, getProducts} = useProductContext();
+  const oneRendering = "";
   useEffect(() => {
     getProducts();
-  },[])
+  },[oneRendering])
   
   return (
     <div>

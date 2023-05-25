@@ -30,7 +30,7 @@ export const UserProvider = ({children}) => {
     const IsSignedIn = (url) => {
         var result = sessionStorage.getItem('token')
         console.log("IsSignedIn")
-        if(url != "/signin"){
+        if(url !== "/signin"){
             if(result === null)
                 {window.location.replace('/signin')}
             else{
@@ -44,8 +44,7 @@ export const UserProvider = ({children}) => {
         }
     }
 
-    const IsAdminSignedIn = () => {
-    }
+
 
     const SignOut = () => {
         sessionStorage.clear()
@@ -94,6 +93,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -115,12 +115,12 @@ export const UserProvider = ({children}) => {
             console.log(responses)
             setToken(await responses.text());
             if(responses.status === 200){
-                {window.location.replace('/myprofile')}
+                window.location.replace('/myprofile')
             }
         }
         catch (error) {
             console.log(error);
-            
+            setErrorMsg(error)
         }
     }
 
@@ -139,11 +139,12 @@ export const UserProvider = ({children}) => {
             const respnsData = await response.json();
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/')}
+                window.location.replace('/')
             }
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -160,16 +161,60 @@ export const UserProvider = ({children}) => {
              const respnsData = await response.json();
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/')}
+                window.location.replace('/accountcreated')
             }
             if(response.status === 201){
-                {window.location.replace('/')}
+                window.location.replace('/accountcreated')
             }
             }catch (error) {
                 console.log(error);
+                setErrorMsg(error)
                 return error;
             };
     }
+
+    const signUpResponse = async (firstName,lastName,phoneNummber,password,confirmPassword,email) => {
+          const data = {
+            FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+            Password: password, ConfirmPassword: confirmPassword, Email: email, CreatedBy: "MANERO"}
+          try {
+            const response = await fetch('https://localhost:7285/api/auth/create', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            const respnsData = await response.json();
+            console.log(respnsData)
+            setToken(await respnsData.token);
+            if(response.status === 200){
+                window.location.replace('/accountcreated')
+            }
+            else if(response.status === 201){
+                window.location.replace('/accountcreated')
+            }
+            else if(response.status === 400){
+                setErrorMsg("")
+                console.log(respnsData.title)
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined){
+                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
+            else{
+                console.log(respnsData.statusMessage)
+                setErrorMsg(respnsData.statusMessage)
+            }
+        }
+        catch (error) {
+            console.log(error);
+            setErrorMsg(error)
+            return error;
+        }
+        }
+
     //ADDRESSES
     const GetMyAddressesResponse = async () => {
         var storageToken = sessionStorage.getItem('token');
@@ -186,20 +231,15 @@ export const UserProvider = ({children}) => {
             const respnsData = await response.json();
             console.log(respnsData.addressList)
             setMyAddressList(await respnsData.addressList);
-            console.log(respnsData)
             if(response.status === 400){
-                setErrorMsg("")
-                console.log(respnsData.title)
-                setErrorMsg(respnsData.title);
+                setMyAddressList([]);
                 if (respnsData.title === undefined){
-                    console.log(respnsData.statusMessage)
-                    setErrorMsg(respnsData.statusMessage)
+                    setMyAddressList([]);
                 }
             }
             return myAddressList;
             }catch (error) {
                 console.log(error);
-                setErrorMsg(error)
                 return error;
             };
     }
@@ -269,7 +309,7 @@ export const UserProvider = ({children}) => {
             };
     }
 
-    return <UserContext.Provider value = {{CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
+    return <UserContext.Provider value = {{signUpResponse,CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
     handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>

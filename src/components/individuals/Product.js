@@ -37,7 +37,7 @@ const Product = ({cardClass, product, discountPrice}) => {
                     {discountPrice && (
                         <div className="salesIcon d-flex justify-content-center align-items-center">SALE</div>
                     )}
-                    <img src={product.variants[0].imageName}></img>
+                    <img src={product.variants[0].imageName} alt="produkter"></img>
                 <div className="pictureIconsBox d-flex flex-column align-items-center">
                     {/* Ska inte vara en Navlink. Button? Ska styra att lägga till i wishlist och kundkorg */}
                     <button onClick={() => toggleClass("heart")}><i className={addedToWishList ? "fa-solid fa-heart pictureIcons d-flex justify-content-center heartIcon" : "fa-light fa-heart pictureIcons d-flex justify-content-center"}></i></button>

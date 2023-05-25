@@ -83,9 +83,14 @@ html, body {
 .myprofileintro .profileintro .profileImage {
   width: 120px;
   height: 120px;
-  border: 5px solid #DBE3F5;
   border-radius: 50%;
   position: relative;
+}
+.myprofileintro .profileintro .profileImage img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #DBE3F5;
 }
 .myprofileintro .profileintro .profileImage .fa-pen-line {
   background-color: #DBE3F5;
@@ -128,8 +133,7 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  -webkit-animation: moveDown 3s ease-in-out forwards;
-          animation: moveDown 3s ease-in-out forwards;
+  animation: moveDown 3s ease-in-out forwards;
 }
 .get-started-root .get-started .inner-circle {
   position: absolute;
@@ -137,8 +141,7 @@ html, body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  -webkit-animation: pulse 3.5s ease-in-out infinite;
-          animation: pulse 3.5s ease-in-out infinite;
+  animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started .outer-circle {
   position: absolute;
@@ -146,33 +149,11 @@ html, body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  -webkit-animation: pulse 3.5s ease-in-out infinite;
-          animation: pulse 3.5s ease-in-out infinite;
+  animation: pulse 3.5s ease-in-out infinite;
 }
 .get-started-root .get-started img {
   position: absolute;
-  -webkit-animation: pulse 3.5s ease-in-out infinite;
-          animation: pulse 3.5s ease-in-out infinite;
-}
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.2);
-  }
-  40% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(3);
-  }
+  animation: pulse 3.5s ease-in-out infinite;
 }
 @keyframes pulse {
   0% {
@@ -192,14 +173,6 @@ html, body {
   }
   100% {
     transform: scale(3);
-  }
-}
-@-webkit-keyframes moveDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(23vh);
   }
 }
 @keyframes moveDown {

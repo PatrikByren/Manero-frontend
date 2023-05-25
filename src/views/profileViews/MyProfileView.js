@@ -4,14 +4,16 @@ import Header from "../../components/sections/Header";
 import ProfileIntro from "../../components/individuals/ProfileIntro";
 import MenuBar from "../../components/sections/MenuBar";
 import { useUserContext } from "../../context/profilecontext/UserContext";
-import { redirect } from "react-router-dom";
+//import { redirect } from "react-router-dom";
+
 
 const MyProfileView = () => {
   const { profile, getProfile, IsSignedIn, SignOut } = useUserContext();
+  const oneRendering = "";
   useEffect(() => {
     IsSignedIn()
     getProfile()
-  }, [])
+  }, [oneRendering])
 
   const handleClick = () => {
     console.log("HEEEEJ")

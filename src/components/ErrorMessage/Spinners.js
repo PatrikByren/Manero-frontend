@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Spinners = ({ }) => {
+const Spinners = () => {
   return (
     <div>
         <button className="basebtn" type="button" disabled>
