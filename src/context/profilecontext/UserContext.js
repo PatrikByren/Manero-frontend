@@ -115,7 +115,7 @@ export const UserProvider = ({children}) => {
             console.log(responses)
             setToken(await responses.text());
             if(responses.status === 200){
-                {window.location.replace('/myprofile')}
+                window.location.replace('/myprofile')
             }
         }
         catch (error) {
@@ -139,7 +139,7 @@ export const UserProvider = ({children}) => {
             const respnsData = await response.json();
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/')}
+                window.location.replace('/')
             }
         }
         catch (error) {
@@ -161,10 +161,10 @@ export const UserProvider = ({children}) => {
              const respnsData = await response.json();
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/accountcreated')}
+                window.location.replace('/accountcreated')
             }
             if(response.status === 201){
-                {window.location.replace('/accountcreated')}
+                window.location.replace('/accountcreated')
             }
             }catch (error) {
                 console.log(error);
@@ -189,10 +189,10 @@ export const UserProvider = ({children}) => {
             console.log(respnsData)
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/accountcreated')}
+                window.location.replace('/accountcreated')
             }
             else if(response.status === 201){
-                {window.location.replace('/accountcreated')}
+                window.location.replace('/accountcreated')
             }
             else if(response.status === 400){
                 setErrorMsg("")

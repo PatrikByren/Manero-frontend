@@ -20,17 +20,15 @@ const CartView = () => {
     minusOne(product.item);
   };
 
-  const url = 'https://manero.azurewebsites.net/api/Order';
-  const data = {
-    productItems: items,
-    address: "testaddress",
-    city: "stockholm",
-    postalcode: "12253",
-  };
-  const onSubmit = () => {
-    setIsLoading(true)
-    var storageToken = sessionStorage.getItem('token');
-    console.log(storageToken);
+  const url = 'https://localhost:7285/api/Order';
+  const onSubmit = async () => {
+    const data = {
+      productItems: items,
+      address: "testaddress",
+      city: "stockholm",
+      postalcode: "12253",
+    };
+      var storageToken = sessionStorage.getItem('token');
     axios
       .post(url, data, { headers : { Authorization : `Bearer ${storageToken}`,
       'Content-Type': 'application/json'} })
