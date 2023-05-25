@@ -3,10 +3,13 @@ import InputSingel from "../individuals/InputSingel";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import { NavLink } from "react-router-dom";
 import LogInIcons from "../individuals/LogInIcons";
+import { useUserContext } from "../../context/profilecontext/UserContext";
+import Spinners from "../ErrorMessage/Spinners";
+import ErrorModal from "../ErrorMessage/ErrorModal";
 
 
-const SignUpForm = ({ apiRoute }) => {
-  const [responsData, setResponsData] = useState("");
+const SignUpForm = () => {
+  const { signUpResponse, errorMsg,setErrorMsg } = useUserContext();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,46 +17,23 @@ const SignUpForm = ({ apiRoute }) => {
   const phoneNummber = "0739448454"
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errorsApi, setErrorsApi] = useState([]);
   const [validPassword, setValidPassword] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validFirstName, setValidFirstName] = useState(false);
   const [validLastName, setValidLastName] = useState(false);
   const [showErrorOnSubmit, setShowErrorOnSubmit] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     if (validPassword && validEmail && validFirstName && validLastName && password === confirmPassword) {
-      const data = {
-        FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
-        Password: password, ConfirmPassword: confirmPassword, Email: email, CreatedBy: "MANERO"
+      await signUpResponse(firstName,lastName,phoneNummber,password,confirmPassword,email);
+      setIsLoading(false)
       }
-      //apiRoute = 'https://localhost:7285'
-      console.log(apiRoute);
-      try {
-        const response = await fetch('https://localhost:7285/api/auth/create', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-        console.log('Success:', response)
-        setResponsData(await response.json());
-        console.log('ok:', responsData)
-        console.log('ok1:', responsData.errors);
-        Object.keys(responsData.errors).forEach((key) => {
-          setErrorsApi([...errorsApi + " | " + key + ": " + responsData.errors[key]])
-          console.log(key + ": " + responsData.errors[key]);
-        });
-
-      }
-      catch (error) {
-        console.log(error);
-      }
-    }
     else {
       setShowErrorOnSubmit(true)
+      setIsLoading(false)
       if (password !== confirmPassword) {
         setValidPassword(false)
       }
@@ -125,10 +105,9 @@ const SignUpForm = ({ apiRoute }) => {
                   value={confirmPassword}
                   setValue={setConfirmPassword}
                 />
-                <div className="text-danger">{responsData.errorMessage}</div>
-                <button className="basebtn" type="submit" onClick={handleSubmit}>
-                  SIGN UP
-                </button>
+                {!isLoading ? (<button className="basebtn" type="submit" onClick={handleSubmit}>SIGN UP</button>) : (
+                <Spinners/>)}
+
               </div>
             </div>
           </form>
@@ -144,6 +123,7 @@ const SignUpForm = ({ apiRoute }) => {
           </div>
         </div>
       </div>
+      <ErrorModal headline="ERRORS:" content={errorMsg} setErrorMsg={setErrorMsg}/>
       </div>
   );
 };
