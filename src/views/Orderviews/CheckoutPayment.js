@@ -8,13 +8,13 @@ const CheckoutPayment = () => {
             <br />
             <div className='ilonasmedia2'>
                 <BackArrowMiddleHead content="Payment method" />
-                <div className='border' />
+                <div className='border'/>
                 <div className='one-order'>
                     <div className='flex-container'>
                         <div>Credit Cards</div>
                     </div>
                 </div>
-                <div className='border' />
+                <div className='border'/>
                 <div className='paymentmeth'>
                     <div className='flex-container'>
                         <div className='undertitle'>7741 **** **** 6644</div>
@@ -27,7 +27,7 @@ const CheckoutPayment = () => {
                         />
                     </label>
                 </div>
-                <div className='border' />
+                <div className='border'/>
                 <div className='paymentmeth'>
                     <div className='flex-container'>
                         <div className='undertitle'>7674 **** **** 1884</div>

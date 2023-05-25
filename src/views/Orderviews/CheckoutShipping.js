@@ -44,6 +44,7 @@ const CheckoutShipping = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='border'/>
 
                 <div className='one-order'>

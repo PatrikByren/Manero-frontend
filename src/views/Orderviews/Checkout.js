@@ -37,7 +37,7 @@ const Checkout = () => {
                     </div>
                 </div>
 
-                <div className='border' />
+                <div className='border'/>
 
                 <div className='one-order'>
                     <div className='flex-container'>
@@ -52,7 +52,9 @@ const Checkout = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className='border' />
+                
                 <div className='one-order'>
                     <div className='flex-container'>
                         <div>Payment Methods</div>
