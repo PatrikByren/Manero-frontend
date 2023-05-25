@@ -34,7 +34,7 @@ const CartView = () => {
     setIsLoading(true)
     var storageToken = sessionStorage.getItem('token');
     axios
-      .post(url, data)
+      .post(url, data, { headers : { Authorization : `Bearer ${storageToken}`} })
       .then((response) => {
         if (response.status === 201) { // skicka med infon till nya window
           const newData = response.data;
