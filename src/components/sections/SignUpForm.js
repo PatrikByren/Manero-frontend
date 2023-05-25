@@ -36,6 +36,8 @@ const SignUpForm = () => {
       setIsLoading(false)
       if (password !== confirmPassword) {
         setValidPassword(false)
+        setPassword("");
+        setConfirmPassword("");
       }
     }
   };

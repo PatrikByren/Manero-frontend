@@ -94,6 +94,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -120,7 +121,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
-            
+            setErrorMsg(error)
         }
     }
 
@@ -144,6 +145,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -167,6 +169,7 @@ export const UserProvider = ({children}) => {
             }
             }catch (error) {
                 console.log(error);
+                setErrorMsg(error)
                 return error;
             };
     }
@@ -208,7 +211,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
-            setErrorMsg("Problem with database")
+            setErrorMsg(error)
             return error;
         }
         }
