@@ -30,7 +30,7 @@ export const UserProvider = ({children}) => {
     const IsSignedIn = (url) => {
         var result = sessionStorage.getItem('token')
         console.log("IsSignedIn")
-        if(url != "/signin"){
+        if(url !== "/signin"){
             if(result === null)
                 {window.location.replace('/signin')}
             else{
@@ -44,8 +44,7 @@ export const UserProvider = ({children}) => {
         }
     }
 
-    const IsAdminSignedIn = () => {
-    }
+
 
     const SignOut = () => {
         sessionStorage.clear()
@@ -162,10 +161,10 @@ export const UserProvider = ({children}) => {
              const respnsData = await response.json();
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/')}
+                {window.location.replace('/accountcreated')}
             }
             if(response.status === 201){
-                {window.location.replace('/')}
+                {window.location.replace('/accountcreated')}
             }
             }catch (error) {
                 console.log(error);
@@ -190,10 +189,10 @@ export const UserProvider = ({children}) => {
             console.log(respnsData)
             setToken(await respnsData.token);
             if(response.status === 200){
-                {window.location.replace('/')}
+                {window.location.replace('/accountcreated')}
             }
             else if(response.status === 201){
-                {window.location.replace('/')}
+                {window.location.replace('/accountcreated')}
             }
             else if(response.status === 400){
                 setErrorMsg("")

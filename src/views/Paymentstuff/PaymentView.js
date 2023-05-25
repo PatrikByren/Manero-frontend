@@ -6,9 +6,9 @@ const PaymentMethods = () => {
 
     const [payment, setPayment] = useState('');
 
-    const handlePaymentChange = (event) => {
+    /*const handlePaymentChange = (event) => {
         setPayment(event.target.value);
-    };
+    };*/
 
 
     const handleSubmit = (event) => {

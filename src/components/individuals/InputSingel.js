@@ -17,10 +17,12 @@ function InputSingel({
   const [errorText, setErrorText] = useState("");
 
   useEffect(() => {
+    console.log("test")
     if (valid != null) {
       setValid(validateHandler());
+      
     }
-  }, [value]);
+  }, [value, valid, setValid]);
 
   const validateHandler = () => {
     if (nameid === "password") {
