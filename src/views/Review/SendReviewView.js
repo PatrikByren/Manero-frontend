@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { useHistory } from 'react-router-dom';
 import Review from '../../asset/images/review.png';
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead';

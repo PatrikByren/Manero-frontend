@@ -5,9 +5,9 @@ import card3 from "../../asset/images/card3.png";
 const AddNewCardView = () => {
     const [payment, setPayment] = useState('');
 
-    const handlePaymentChange = (event) => {
+   /* const handlePaymentChange = (event) => {
         setPayment(event.target.value);
-    };
+    };*/
 
 
     const handleSubmit = (event) => {
