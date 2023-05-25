@@ -1,14 +1,13 @@
-import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import { useUserContext } from '../../context/profilecontext/UserContext';
-const ProtectedRoute = ({ path, element }) => {
-  const { IsSignedIn } = useUserContext();
+const ProtectedRoute = () => {
+  const { IsSignedIn } = useUserContext()
+    const result = IsSignedIn()
+    console.log("JACOB", result)
 
-  return !IsSignedIn ? 
-  
-
-  <Route path={path} element={element} /> : <Navigate to="/signin" />;
-
+    return (
+        result ? <Outlet/> : <Navigate to="/signin" replace/>
+    )
 };
 
 export default ProtectedRoute;

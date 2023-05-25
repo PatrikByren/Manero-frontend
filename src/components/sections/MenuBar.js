@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const MenuBar = () => {
+  const { IsSignedIn } = useUserContext()
   return (
     <section className="menubarsection">
       <div className="container">
@@ -18,7 +20,7 @@ const MenuBar = () => {
           <NavLink to="/wishlist" className="menu-link">
             <i className="fa-light fa-heart fa-lg"></i>
           </NavLink>
-          <NavLink to="/signin" className="menu-link">
+          <NavLink to={ IsSignedIn ? "/myprofile" : "/signin"} className="menu-link">
             <i className="fa-light fa-circle-user fa-lg"></i>
           </NavLink>
         </div>
