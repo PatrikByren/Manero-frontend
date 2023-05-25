@@ -188,18 +188,14 @@ export const UserProvider = ({children}) => {
             setMyAddressList(await respnsData.addressList);
 
             if(response.status === 400){
-                setErrorMsg("")
                 console.log(respnsData.title)
-                setErrorMsg(respnsData.title);
                 if (respnsData.title === undefined){
                     console.log(respnsData.statusMessage)
-                    setErrorMsg(respnsData.statusMessage)
                 }
             }
             return myAddressList;
             }catch (error) {
                 console.log(error);
-                setErrorMsg(error)
                 return error;
             };
     }
