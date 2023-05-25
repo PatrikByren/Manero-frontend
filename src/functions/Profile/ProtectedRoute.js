@@ -1,12 +1,12 @@
 import { Outlet, Navigate } from 'react-router-dom';
 import { useUserContext } from '../../context/profilecontext/UserContext';
-const ProtectedRoute = () => {
+const ProtectedRoute = ({from}) => {
   const { IsSignedIn } = useUserContext()
     const result = IsSignedIn()
-    console.log("JACOB", result)
+    
 
     return (
-        result ? <Outlet/> : <Navigate to="/signin" replace/>
+        from ? result ? <Outlet/> : <Navigate to="/signin" replace/> : !result ? <Outlet/> : <Navigate to="/myprofile" replace/>
     )
 };
 

@@ -35,7 +35,6 @@ import WishlistView from "./views/WishlistView";
 import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
 import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
 import Checkout from "./views/Orderviews/Checkout";
-import { ProfileFetch } from "./functions/Profile/ProfileFetch";
 import ProtectedRoute from "./functions/Profile/ProtectedRoute";
 
 function App() {
@@ -47,7 +46,9 @@ function App() {
         <Route path="/search" element={<SearchView />} />
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
-        <Route path="/signin" element={<SignInView />} />
+        <Route element={<ProtectedRoute from={false}/>}>
+          <Route path="/signin" element={<SignInView />} />
+        </Route>
         <Route path="/signup" element={<SignUpView apiRoute={apiRoute} />} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
@@ -56,9 +57,10 @@ function App() {
           element={<ForgotPasswordSendEmailView />}
         />
         <Route path="/newpassword" element={<NewPasswordView />} />
-        <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute from={true}/>}>
           <Route path="/myprofile" element={<MyProfileView />} />
         </Route>
+        
         
         <Route path="/myaddress" element={<MyAddressView />} />
         <Route
