@@ -11,6 +11,7 @@ const EditProfile = () => {
     const [lastName, setLastName] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("+46 73 944 84 54")
     const [location, setLocation] = useState("Vega, SVERIGE")
+    const oneRendering = "";
     const UpdateProfileHandler = async (e) =>{
         e.preventDefault()
         await UpdateProfile(firstName, lastName,phoneNumber,location);
@@ -18,7 +19,7 @@ const EditProfile = () => {
     useEffect(() => {
         IsSignedIn()
         getProfile()
-      }, [])
+      }, [oneRendering])
     return (
         <div className='myprofile'>
             <form onSubmit={UpdateProfileHandler} noValidate>

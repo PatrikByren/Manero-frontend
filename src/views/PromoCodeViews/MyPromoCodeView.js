@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import BaseRoundePicture from "../../components/sections/BaseRoundePicture";
 import pictures from "../../asset/images/promocodepicture.png";
 
 const MyPromoCodeView = () => {
-  const [promoCode, setPromoCode] = useState("");
-  const [validPromoCode, setValidPromoCode] = useState("");
+  /*const [promoCode, setPromoCode] = useState("");
+  const [validPromoCode, setValidPromoCode] = useState("");*/
 
-  const handlePromoCodeChange = (event) => {
+  /*const handlePromoCodeChange = (event) => {
     setPromoCode(event.target.value);
   };
 
   const handleApplyPromoCode = () => {
     setValidPromoCode(promoCode);
-  };
-  console.log(promoCode);
+  };*/
+  
   return (
     <div>
       <BaseRoundePicture
@@ -22,8 +22,8 @@ const MyPromoCodeView = () => {
         submitname={"ENTER THE VOUCHER"}
         headline={"My promocode"}
         btntext={"SUBMIT"}
-        value={promoCode}
-        setvalue={setPromoCode}
+        //value={promoCode}
+        //setvalue={setPromoCode}
       ></BaseRoundePicture>
     </div>
   );

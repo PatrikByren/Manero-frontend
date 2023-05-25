@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect} from "react";
 import BackArrowMiddleHead from "../individuals/BackArrowMiddleHead";
 import Field from "../individuals/Field";
 import { NavLink } from "react-router-dom";
@@ -6,6 +6,7 @@ import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const MyAddress = () => {
   const {myAddressList,RemoveMyAddress, GetMyAddressesResponse} = useUserContext();
+  const renderone = "";
   const submithandler = (index) => {
     
     RemoveMyAddress(myAddressList[index], index);
@@ -14,7 +15,7 @@ const MyAddress = () => {
 
   useEffect(()  => {
     GetMyAddressesResponse();
-  }, []);
+  }, [renderone]);
 
 
   return (
