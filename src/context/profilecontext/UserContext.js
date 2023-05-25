@@ -30,18 +30,23 @@ export const UserProvider = ({children}) => {
     const IsSignedIn = (url) => {
         var result = sessionStorage.getItem('token')
         console.log("IsSignedIn")
-        if(url !== "/signin"){
-            if(result === null)
-                {window.location.replace('/signin')}
-            else{
-                getProfile()
-                return true
-            }
-        } else{
-            if(result != null){
-                {window.location.replace('/myprofile')}
-            }
+
+        if(result){
+            return true
         }
+        return false
+        // if(url !== "/signin"){
+        //     if(result === null)
+        //         {window.location.replace('/signin')}
+        //     else{
+        //         getProfile()
+        //         return true
+        //     }
+        // } else{
+        //     if(result != null){
+        //         {window.location.replace('/myprofile')}
+        //     }
+        // }
     }
 
 

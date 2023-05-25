@@ -35,8 +35,7 @@ import WishlistView from "./views/WishlistView";
 import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
 import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
 import Checkout from "./views/Orderviews/Checkout";
-
-
+import { ProfileFetch } from "./functions/Profile/ProfileFetch";
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -56,7 +55,10 @@ function App() {
           element={<ForgotPasswordSendEmailView />}
         />
         <Route path="/newpassword" element={<NewPasswordView />} />
-        <Route path="/myprofile" element={<MyProfileView />} />
+        <Route element={<ProfileFetch />}>
+          <Route path="/myprofile" element={<MyProfileView />} />
+        </Route>
+        
         <Route path="/myaddress" element={<MyAddressView />} />
         <Route
           path="/forgotpasswordemail"
