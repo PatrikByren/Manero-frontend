@@ -7,6 +7,7 @@ import axios from 'axios';
 const OrderHistoryView = () => {
   const[orders, setOrders] = useState([]);
   useEffect(() => {
+    var storageToken = sessionStorage.getItem('token');
     axios.get('https://manero.azurewebsites.net/api/Order/userId')
         .then(response => {
             console.log(response.data);  
