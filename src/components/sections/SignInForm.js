@@ -22,9 +22,7 @@ const SignInForm = () => {
     setIsLoading(true)
     if (validPassword && validEmail){
       await SignIn(email, password);
-      setEmail("")
       setIsLoading(false);
-      setPassword("")
     }
     else {
       setShowErrorOnSubmit(true)
