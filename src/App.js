@@ -32,6 +32,10 @@ import OrderHistoryView from "./views/Orderviews/OrderHistoryView";
 import NewAddressView from "./views/profileViews/NewAddressView";
 import CartView from "./views/Orderviews/CartView";
 import WishlistView from "./views/WishlistView";
+import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
+import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
+import Checkout from "./views/Orderviews/Checkout";
+
 
 function App() {
   const apiRoute = "https://manero.azurewebsites.net";
@@ -68,13 +72,16 @@ function App() {
         <Route path="/order" element={<ShoppingCartView />} />
         <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
         <Route path="/orderfail" element={<OrderFailedView />} />
+        <Route path="/orderhistory" element={<OrderHistoryView />} />
+        <Route path="/checkout/shipping" element={<CheckoutShipping/>}/>
+        <Route path="/checkout/payment" element={<CheckoutPayment/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/paymentmethod" element={<PaymentView />} />
         <Route path="/AddNewCard" element={<AddNewCardView />} />
         <Route path="/SpecificProduct" element={<SpecificProductView />} />
         <Route path="/sendreview" element={<SendReviewView />} />
         <Route path="/reviews" element={<ReviewsView />} />
         <Route path="/promocode" element={<MyPromoCodeView />} />
-        <Route path="/orderhistory" element={<OrderHistoryView />} />
         <Route path="/myaddress/new" element={<NewAddressView />} />
         <Route path="/Wishlist" element={<WishlistView />} />
 

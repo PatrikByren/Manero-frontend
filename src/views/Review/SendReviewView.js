@@ -19,7 +19,7 @@ const SendReview = () => {
     // };
 
     return (
-        <div className="text-center ecart">
+        <div className="text-center">
             <BackArrowMiddleHead content="Leave a review" />
             <div className='border-top ilonasmedia'>
                 <img src={Review} alt="review bild" className='cartimg' />
@@ -41,7 +41,7 @@ const SendReview = () => {
                 <br />
 
                 {/* <form onSubmit={handleSubmit}> */}
-                <div className='inputcontainer leave-comment'>
+                <div className='inputcontainer'>
                     <div className='text-center' >
                         <InputSingel
                             placeholder="Enter your comment"
@@ -60,6 +60,8 @@ const SendReview = () => {
                 </button>
                 {/* </form> */}
             </div>
+            <br/>
+
         </div>
     )
 }

@@ -94,6 +94,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -120,7 +121,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
-            
+            setErrorMsg(error)
         }
     }
 
@@ -144,6 +145,7 @@ export const UserProvider = ({children}) => {
         }
         catch (error) {
             console.log(error);
+            setErrorMsg(error)
             return error;
         }
     }
@@ -167,9 +169,53 @@ export const UserProvider = ({children}) => {
             }
             }catch (error) {
                 console.log(error);
+                setErrorMsg(error)
                 return error;
             };
     }
+
+    const signUpResponse = async (firstName,lastName,phoneNummber,password,confirmPassword,email) => {
+          const data = {
+            FirstName: firstName, LastName: lastName, PhoneNumber: phoneNummber,
+            Password: password, ConfirmPassword: confirmPassword, Email: email, CreatedBy: "MANERO"}
+          try {
+            const response = await fetch('https://localhost:7285/api/auth/create', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            const respnsData = await response.json();
+            console.log(respnsData)
+            setToken(await respnsData.token);
+            if(response.status === 200){
+                {window.location.replace('/')}
+            }
+            else if(response.status === 201){
+                {window.location.replace('/')}
+            }
+            else if(response.status === 400){
+                setErrorMsg("")
+                console.log(respnsData.title)
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined){
+                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
+            else{
+                console.log(respnsData.statusMessage)
+                setErrorMsg(respnsData.statusMessage)
+            }
+        }
+        catch (error) {
+            console.log(error);
+            setErrorMsg(error)
+            return error;
+        }
+        }
+
     //ADDRESSES
     const GetMyAddressesResponse = async () => {
         var storageToken = sessionStorage.getItem('token');
@@ -186,7 +232,7 @@ export const UserProvider = ({children}) => {
             const respnsData = await response.json();
             console.log(respnsData.addressList)
             setMyAddressList(await respnsData.addressList);
-
+            console.log(respnsData)
             if(response.status === 400){
                 console.log(respnsData.title)
                 if (respnsData.title === undefined){
@@ -265,7 +311,7 @@ export const UserProvider = ({children}) => {
             };
     }
 
-    return <UserContext.Provider value = {{CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
+    return <UserContext.Provider value = {{signUpResponse,CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg,setErrorMsg, IsSignedIn, 
     handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse  }}>
         {children}
     </UserContext.Provider>

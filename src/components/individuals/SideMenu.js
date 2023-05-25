@@ -5,9 +5,10 @@ const SideMenu = ({ icon }) => {
   let isSidebar = icon === "fa-sharp fa-light fa-bars";
   const [isOpen, setIsOpen] = useState(false);
   const [orderId, setOrderId] = useState("");
+  const [userId, setUserId] = useState("");
   
   const onSubmit = async() => {
-    await axios.get(`https://manero.azurewebsites.net/api/Order/id?id=${orderId}`)
+    await axios.get(`https://manero.azurewebsites.net/api/Order/orderid-userid?orderId=${orderId}&userId=usingtestidtotestorderhistory`)
         .then(response => {
             console.log(response.data);
         })
@@ -18,7 +19,6 @@ const SideMenu = ({ icon }) => {
 
   const openMenu = () => {
     setIsOpen(!isOpen);
-    console.log(isSidebar);
   };
   function goBack() {
     window.history.back();

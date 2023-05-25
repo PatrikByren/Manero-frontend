@@ -7,10 +7,11 @@ import EmptyCart from "../../asset/images/emptycart.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Row, Col, Button } from "react-bootstrap";
+import Spinners from "../../components/ErrorMessage/Spinners";
 
 const CartView = () => {
   const { items, totalPrice, plusOne, minusOne } = useCartContext();
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleIncrement = (product) => {
     plusOne(product.item);
   };
@@ -30,6 +31,8 @@ const CartView = () => {
     postalcode: "12253",
   };
   const onSubmit = () => {
+    setIsLoading(true)
+    var storageToken = sessionStorage.getItem('token');
     axios
       .post(url, data)
       .then((response) => {
@@ -37,23 +40,26 @@ const CartView = () => {
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData)); 
+          setIsLoading(false)
           window.location.replace(`/ordersuccessful?${params.toString()}`);
         } else {
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData)); 
+          setIsLoading(false)
           window.location.replace(`/orderfail${params.toString()}`);
         }
       })
       .catch((error) => {
         console.log(error);
+        setIsLoading(false)
       });
   };
 
   return (
     <div>
       {items.length === 0 ? (
-        <div className="text-center ecart">
+        <div className="text-center">
           <Header icon={"fa-sharp fa-light fa-bars"} title={"Cart"} />
           <div className=" border-top ilonasmedia">
             <img src={EmptyCart} alt="tom order" className="cartimg" />
@@ -129,9 +135,10 @@ const CartView = () => {
             </div>
           </div>
           <div className="d-flex justify-content-center align-items-center">
-            <button className="basebtn" onClick={onSubmit}>
+            {!isLoading ? (<button className="basebtn" onClick={onSubmit}>
               PROCEED TO CHECKOUT
-            </button>
+            </button>) : (
+                <Spinners/>)}
           </div>
         </div>
       )}

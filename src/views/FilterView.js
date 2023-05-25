@@ -10,7 +10,11 @@ const FilterView = () => {
       <Header title={"Filter"} icon={"fa-regular fa-chevron-left"} />
       <SizeAndColor />
       <PriceChecksTags />
+      <p className='mt-2'>Tags</p>
       <FilterComponent />
+      <div className='d-flex justify-content-center align-items-center'>
+        <button className='basebtn'>APPLY FILTERS</button>
+      </div>
     </div>
   )
 }

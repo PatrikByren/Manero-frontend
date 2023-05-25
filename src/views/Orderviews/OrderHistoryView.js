@@ -24,18 +24,18 @@ const OrderHistoryView = () => {
         <BackArrowMiddleHead content="Orderhistory" />
         {/* raden börjar här */}
         {orders.map((order) => {
-          return  <div className='one-order border-bottom'>
+          return  <div className='one-order border-bottom' key={order.id}>
           <div className='flex-container'>
-            <div className='oderinfo'>
+            <div>
               #{order.id}
             </div>
-            <div className='oderinfo shippinggul'>
+            <div className='shippinggul'>
               Shipping <i class="fa-regular fa-truck"></i>
             </div>
           </div>
 
           <div className='flex-container'>
-            <div className='oderinfo'>
+            <div>
               {order.orderDate.substring(0, 10)}
             </div>
             <div>
@@ -44,8 +44,8 @@ const OrderHistoryView = () => {
           </div>
         </div>
         })}
-       
         {/* slutar här */}
+
 
         {/* <div className='one-order border-bottom'>
           <div className='flex-container'>

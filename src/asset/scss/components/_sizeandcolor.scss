@@ -5,6 +5,7 @@
   p {
     margin-left: 18px;
   }
+
   .sizebuttons {
     display: flex;
     justify-content: center;
@@ -34,32 +35,31 @@
     position: relative;
     justify-content: center;
 
-    .colortext{
-        left: 0;
-        position: absolute;
-        color: #383838;
-        margin-top: 8px;
+    .colortext {
+      left: 0;
+      position: absolute;
+      color: #383838;
+      margin-top: 8px;
     }
+
     .colors {
       position: absolute;
       display: flex;
       justify-content: center;
 
-      .colorbtnwrapper{
+      .colorbtnwrapper {}
 
-      }
+      .color-selected {}
 
-      .color-selected{
-
-      }
       .colorbtn {
         margin: 0 5px;
         width: 2.2rem;
         height: 2.2rem;
         border-radius: 50%;
         border: none;
-        
+
       }
+
       .colorbtn-selected {
         border-radius: 50%;
         border: none;
@@ -67,7 +67,7 @@
         margin: 0 5px;
         width: 2.2em;
         height: 2.2rem;
-        
+
       }
     }
   }

@@ -40,6 +40,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     console.log(typeof items);
+    console.log(items)
     let cartItem = items.find((item) => item.id === product.id);
     if (cartItem) {
       setItems(
