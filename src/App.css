@@ -1426,7 +1426,7 @@ html, body {
   }
 }
 .checkbox {
-  margin-left: 40px;
+  margin: 15px 0px 0px 40px;
 }
 
 .checkboxinput {
@@ -1434,8 +1434,7 @@ html, body {
 }
 
 .one-order {
-  margin: 18px 35px 18px 35px;
-  border-bottom: #DBE3F5;
+  padding: 18px 35px 18px 35px;
 }
 .one-order .flex-container {
   display: flex;
@@ -1455,20 +1454,41 @@ html, body {
   font-weight: bold;
 }
 
+.paymentmeth {
+  padding: 18px 35px 18px 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(219, 227, 245, 0.6980392157);
+}
+
+.orderstuff {
+  background-color: rgba(219, 227, 245, 0.6980392157);
+}
+
 .undertitle {
   font-size: 14px;
+}
+
+.smallerletters {
+  font-size: 14px;
+  padding-bottom: 7px;
 }
 
 .FREE {
   color: green;
 }
 
-.paymentmeth {
-  padding: 18px 35px 18px 35px;
-  background-color: rgba(219, 227, 245, 0.6980392157);
+.arrow-icon {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.checkoutbtn {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 15px;
 }
 
 .error-message {

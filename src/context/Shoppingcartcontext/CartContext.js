@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { createContext, useContext, useState } from "react";
+// import useLocalStorage from "../../hooks/useLocalStorage";
+// import { useEffect } from 'react';
 
 const CartContext = createContext();
 export const useCartContext = () => {
@@ -14,21 +15,21 @@ export const useCartContext = () => {
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [firstRendering, setFirstRendering] = useState(false)
+ // const [firstRendering, setFirstRendering] = useState(false)
  
-  useEffect(() => {
-    if(firstRendering === true) {
-      localStorage.setItem("product", JSON.stringify(items))
-      console.log("SET", items)
-    } else {
-      setFirstRendering(true)
-    }
-  },[items])
+//   useEffect(() => {
+//     if(firstRendering === true) {
+//       localStorage.setItem("product", JSON.stringify(items))
+//       console.log("SET", items)
+//     } else {
+//       setFirstRendering(true)
+//     }
+//   },[items])
 
-  useEffect(() => {
-    setItems(JSON.parse(localStorage.getItem("product")))
-    console.log("ITEMS", items)
-  },[])
+//   useEffect(() => {
+//     setItems(JSON.parse(localStorage.getItem("product")))
+//     console.log("ITEMS", items)
+//   },[])
 
   const plusOne = (product) => {
     let updatedItems = items.map((item) =>
@@ -72,7 +73,7 @@ export const CartProvider = ({ children }) => {
         ...items,
         {
           id: product.id,
-          name: "testing",
+          name: product.name,
           quantity: 1,
           price: product.price,
           image: product.imageName,
@@ -100,6 +101,7 @@ export const CartProvider = ({ children }) => {
         totalPrice,
         plusOne,
         minusOne,
+        setItems
       }}
     >
       {children}
