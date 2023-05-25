@@ -35,7 +35,6 @@ import WishlistView from "./views/WishlistView";
 import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
 import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
 import Checkout from "./views/Orderviews/Checkout";
-import { ProfileFetch } from "./functions/Profile/ProfileFetch";
 import ProtectedRoute from "./functions/Profile/ProtectedRoute";
 
 function App() {
