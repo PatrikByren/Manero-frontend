@@ -1461,7 +1461,7 @@ html, body {
 }
 
 .one-order {
-  margin: 0px 35px 18px 35px;
+  margin: 18px 35px 18px 35px;
   border-bottom: #DBE3F5;
 }
 .one-order .flex-container {
@@ -1482,9 +1482,20 @@ html, body {
   font-weight: bold;
 }
 
-.payment {
-  margin: 0px 35px 18px 35px;
-  background-color: #DBE3F5;
+.undertitle {
+  font-size: 14px;
+}
+
+.FREE {
+  color: green;
+}
+
+.paymentmeth {
+  padding: 18px 35px 18px 35px;
+  background-color: rgba(219, 227, 245, 0.6980392157);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .error-message {

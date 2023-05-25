@@ -68,7 +68,7 @@
 }
 
 .one-order {
-    margin: 0px 35px 18px 35px;
+    margin: 18px 35px 18px 35px;
     border-bottom: #DBE3F5;
 
     .flex-container {
@@ -96,8 +96,18 @@
 
 
 }
+.undertitle{
+    font-size: 14px;
+}
 
-.payment {
-    margin: 0px 35px 18px 35px;
-    background-color: #DBE3F5;
+.FREE{
+    color: green;
+}
+
+.paymentmeth {
+    padding: 18px 35px 18px 35px;
+    background-color: #dbe3f5b2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
