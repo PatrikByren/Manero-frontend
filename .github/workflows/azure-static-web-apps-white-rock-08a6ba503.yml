@@ -1,3 +1,86 @@
+routes:
+  - route: /signin
+    rewrite:
+      to: /signin.html
+  - route: /signup
+    rewrite:
+      to: /signup.html
+  - route: /{**route}
+    rewrite:
+      to: /index.html
+
+rewrites:
+  - source: /signin.html
+    destination: /signin.html
+  - source: /signup.html
+    destination: /signup.html
+  - source: /index.html
+    destination: /index.html
+  - source: /search
+    destination: /search.html
+  - source: /getstarted
+    destination: /getstarted.html
+  - source: /getstartedwelcome
+    destination: /getstartedwelcome.html
+  - source: /accountcreated
+    destination: /accountcreated.html
+  - source: /forgotpassword
+    destination: /forgotpassword.html
+  - source: /forgotpasswordemail
+    destination: /forgotpasswordemail.html
+  - source: /newpassword
+    destination: /newpassword.html
+  - source: /myprofile
+    destination: /myprofile.html
+  - source: /myaddress
+    destination: /myaddress.html
+  - source: /confirmnumber
+    destination: /confirmnumber.html
+  - source: /verifynumber
+    destination: /verifynumber.html
+  - source: /shop
+    destination: /shop.html
+  - source: /product
+    destination: /product.html
+  - source: /shop/filter
+    destination: /shop/filter.html
+  - source: /editprofile
+    destination: /editprofile.html
+  - source: /emptycart
+    destination: /emptycart.html
+  - source: /cart
+    destination: /cart.html
+  - source: /order
+    destination: /order.html
+  - source: /ordersuccessful
+    destination: /ordersuccessful.html
+  - source: /orderfail
+    destination: /orderfail.html
+  - source: /orderhistory
+    destination: /orderhistory.html
+  - source: /checkout/shipping
+    destination: /checkout/shipping.html
+  - source: /checkout/payment
+    destination: /checkout/payment.html
+  - source: /checkout
+    destination: /checkout.html
+  - source: /paymentmethod
+    destination: /paymentmethod.html
+  - source: /AddNewCard
+    destination: /AddNewCard.html
+  - source: /SpecificProduct
+    destination: /SpecificProduct.html
+  - source: /sendreview
+    destination: /sendreview.html
+  - source: /reviews
+    destination: /reviews.html
+  - source: /promocode
+    destination: /promocode.html
+  - source: /myaddress/new
+    destination: /myaddress/new.html
+  - source: /Wishlist
+    destination: /Wishlist.html
+
 name: Azure Static Web Apps CI/CD
 
 on:
