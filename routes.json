@@ -1,24 +1,9 @@
 {
     "routes": [
       {
-        "route": "/signin",
-        "serve": "/signin.html",
+        "route": "/*",
+        "serve": "/index.html",
         "statusCode": 200
-      },
-      {
-        "route": "/signup",
-        "serve": "/signup.html",
-        "statusCode": 200
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/signin.html",
-        "destination": "/signin.html"
-      },
-      {
-        "source": "/signup.html",
-        "destination": "/signup.html"
       }
     ]
-  }
+}
