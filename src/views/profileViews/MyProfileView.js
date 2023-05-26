@@ -30,7 +30,7 @@ const MyProfileView = () => {
             <Field linkTo="/orderhistory" icon={<i className="fa-light fa-calendar"></i>} text="Order history" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
             <Field linkTo="/payments" icon={<i className="fa-regular fa-credit-card"></i>} text="Payment method" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
             <Field linkTo="/myaddress" icon={<i className="fa-light fa-location-dot"></i>} text="My address" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
-            <Field linkTo="/mypromocodes" icon={<i className="fa-light fa-gift"></i>} text="My promocodes" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
+            <Field linkTo="/promocode" icon={<i className="fa-light fa-gift"></i>} text="My promocodes" submitbutton={<i className="fa-solid fa-chevron-right"></i>} />
             <button type="button" className="signoutfield" data-bs-toggle="modal" data-bs-target="#signoutmodal">
               <Field icon={<i className="fa-regular fa-arrow-right-from-bracket"></i>} text="Sign out" />
             </button>
