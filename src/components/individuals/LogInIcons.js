@@ -24,7 +24,7 @@ const LogInIcons = ({value}) => {
                 </FacebookLoginButton>
             </LoginSocialFacebook>
             <LoginSocialGoogle className='socialbtn' client_id="937557523429-tpter1cdj5utnvmsnfmet2t52c9j9q4d.apps.googleusercontent.com"
-                scope="openid profile"
+                scope="openid profile email"
                 onResolve={(response) => {
                     console.log(response)
                     if (value === "signin") {
