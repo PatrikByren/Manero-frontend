@@ -562,6 +562,16 @@ html, body {
   justify-content: center;
 }
 
+.marked-button {
+  background-color: lightblue;
+  color: black;
+  padding: 5px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 5px;
+  border: none;
+}
+
 .proddes {
   display: flex;
   justify-content: space-between;
