@@ -61,7 +61,7 @@ const Checkout = () => {
       })
       .then((response) => {
         if (response.status === 201) {
-          // skicka med infon till nya window
+          setItems([]);
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData));
