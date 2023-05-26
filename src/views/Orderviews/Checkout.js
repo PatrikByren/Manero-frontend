@@ -9,7 +9,7 @@ import { useCartContext } from "../../context/Shoppingcartcontext/CartContext";
 
 const Checkout = () => {
   const { myAddressList, GetMyAddressesResponse } = useUserContext();
-  const { items, setItems } = useCartContext();
+  const { items, setItems, setTotalPrice } = useCartContext();
   //const [isLoading, setIsLoading] = useState(false);
   const [shippingStreet, setShippingStreet] = useState("");
   const [shippingPostal, setShippingPostal] = useState("");
@@ -62,6 +62,7 @@ const Checkout = () => {
       .then((response) => {
         if (response.status === 201) {
           setItems([]);
+          setTotalPrice(0);
           const newData = response.data;
           const params = new URLSearchParams();
           params.append("data", JSON.stringify(newData));

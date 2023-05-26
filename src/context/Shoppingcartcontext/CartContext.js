@@ -107,7 +107,8 @@ export const CartProvider = ({ children }) => {
         totalPrice,
         plusOne,
         minusOne,
-        setItems
+        setItems,
+        setTotalPrice
       }}
     >
       {children}
