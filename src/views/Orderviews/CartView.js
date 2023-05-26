@@ -56,7 +56,7 @@ const CartView = () => {
             />
           </div>
           <div className="flex-grow-1 border-top border-2"></div>
-          <div className="d-flex justify-content-center align-items-center m-4">
+          <div className="d-flex flex-column justify-content-center align-items-center m-4">
             {items.map((item) => {
               return (
                 <Row key={item.id}>

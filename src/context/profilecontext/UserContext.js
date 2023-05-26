@@ -142,6 +142,7 @@ export const UserProvider = ({children}) => {
             })
             console.log(response)
             const respnsData = await response.json();
+            console.log(respnsData)
             setToken(await respnsData.token);
             if(response.status === 200){
                 window.location.replace('/')
