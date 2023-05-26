@@ -14,6 +14,7 @@ export const UserProvider = ({children}) => {
     const [errorMsg, setErrorMsg] = useState("")
     const [token, setToken] = useState("");
     const [myAddressList, setMyAddressList] = useState([]);
+    
     useEffect(() => {
         TokenDecoder()
     },[token]);
