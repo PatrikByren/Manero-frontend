@@ -17,10 +17,9 @@ function InputSingel({
   const [errorText, setErrorText] = useState("");
 
   useEffect(() => {
-    console.log("test")
     if (valid != null) {
       setValid(validateHandler());
-      
+
     }
   }, [value, valid, setValid]);
 
@@ -37,7 +36,7 @@ function InputSingel({
         /^(?=.*[a-zA-Z])[^\d!@#$%^&*()_+=[\]{};':"\\|,.<>?]*$/;
       return regexNoSpecialSignNoNumber.test(value);
     }
-    else if (nameid ==="typename") {
+    else if (nameid === "typename") {
       setErrorText("Enter Type Name!");
       console.log("type name")
       const regexNoSpecialSignNoNumber =
@@ -55,12 +54,12 @@ function InputSingel({
       const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
       return emailRegex.test(value);
     }
-    else if(nameid === "postalCode"){
+    else if (nameid === "postalCode") {
       setErrorText("A postalcode is 5 digits only numbers!");
       const postalCodeRegex = /^\d{5}$/;
       return postalCodeRegex.test(value);
-    }    
-    else if(nameid === "streetAddress"){
+    }
+    else if (nameid === "streetAddress") {
       setErrorText("Enter a streetaddress");
       const streetaddressRegex = /^[a-zA-Z0-9åäöÅÄÖ\s]+$/;
       return streetaddressRegex.test(value);

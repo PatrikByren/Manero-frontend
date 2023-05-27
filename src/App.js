@@ -38,7 +38,6 @@ import Checkout from "./views/Orderviews/Checkout";
 import ProtectedRoute from "./functions/Profile/ProtectedRoute";
 
 function App() {
-  const apiRoute = "https://manero.azurewebsites.net";
   return (
     <BrowserRouter>
       <Routes>
@@ -46,10 +45,10 @@ function App() {
         <Route path="/search" element={<SearchView />} />
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
-        <Route element={<ProtectedRoute from={false}/>}>
+        <Route element={<ProtectedRoute from={false} />}>
           <Route path="/signin" element={<SignInView />} />
         </Route>
-        <Route path="/signup" element={<SignUpView apiRoute={apiRoute} />} />
+        <Route path="/signup" element={<SignUpView />} />
         <Route path="/accountcreated" element={<AccountCreatedView />} />
         <Route path="/forgotpassword" element={<ForgotPasswordView />} />
         <Route
@@ -57,11 +56,11 @@ function App() {
           element={<ForgotPasswordSendEmailView />}
         />
         <Route path="/newpassword" element={<NewPasswordView />} />
-        <Route element={<ProtectedRoute from={true}/>}>
+        <Route element={<ProtectedRoute from={true} />}>
           <Route path="/myprofile" element={<MyProfileView />} />
         </Route>
-        
-        
+
+
         <Route path="/myaddress" element={<MyAddressView />} />
         <Route
           path="/forgotpasswordemail"
@@ -79,9 +78,9 @@ function App() {
         <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
         <Route path="/orderfail" element={<OrderFailedView />} />
         <Route path="/orderhistory" element={<OrderHistoryView />} />
-        <Route path="/checkout/shipping" element={<CheckoutShipping/>}/>
-        <Route path="/checkout/payment" element={<CheckoutPayment/>}/>
-        <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/checkout/shipping" element={<CheckoutShipping />} />
+        <Route path="/checkout/payment" element={<CheckoutPayment />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/paymentmethod" element={<PaymentView />} />
         <Route path="/AddNewCard" element={<AddNewCardView />} />
         <Route path="/SpecificProduct" element={<SpecificProductView />} />
