@@ -93,7 +93,7 @@ const Products = () => {
       filtersToSend.MaxPrice = Number(filter.MaxPrice);
     }
 
-    axios.get('https://localhost:7285/api/Filter/tags')
+    axios.get('https://manero.azurewebsites.net/api/Filter/tags')
       .then(response => {
         console.log("Tags data: ", response.data.data.map(tag => tag.name));
         setTagsList(response.data.data.map(tag => tag.name));
@@ -103,7 +103,7 @@ const Products = () => {
       });
 
  
-      axios.get('https://localhost:7285/api/Filter/color')
+      axios.get('https://manero.azurewebsites.net/api/Filter/color')
       .then(response => {
         setColorList(response.data.data.map(color => color.name));
       })
@@ -111,28 +111,28 @@ const Products = () => {
         console.error('There was an error!', error);
       });
 
-      axios.get('https://localhost:7285/api/Filter/brand')
+      axios.get('https://manero.azurewebsites.net/api/Filter/brand')
       .then(response => {
         setBrandList(response.data.data.map(brand => brand.name));
       })
       .catch(error => {
         console.error('There was an error!', error);
       });
-      axios.get('https://localhost:7285/api/Filter/Size')
+      axios.get('https://manero.azurewebsites.net/api/Filter/Size')
       .then(response => {
         setSizeList(response.data.data.map(size => size.name));
       })
       .catch(error => {
         console.error('There was an error!', error);
       });
-      axios.get('https://localhost:7285/api/Filter/Type')
+      axios.get('https://manero.azurewebsites.net/api/Filter/Type')
       .then(response => {
         setTypesList(response.data.data.map(type => type.name));
       })
       .catch(error => {
         console.error('There was an error!', error);
       });
-      axios.get('https://localhost:7285/api/Filter/Category')
+      axios.get('https://manero.azurewebsites.net/api/Filter/Category')
       .then(response => {
         setCategoryList(response.data.data.map(type => type.name));
       })
@@ -141,7 +141,7 @@ const Products = () => {
       });
 
 
-    axios.post('https://localhost:7285/api/Product/search', filtersToSend)
+    axios.post('https://manero.azurewebsites.net/api/Product/search', filtersToSend)
       .then(response => {
         console.log(response.data);  // för att se vad response.data innehåller
         setProducts(response.data.data);
