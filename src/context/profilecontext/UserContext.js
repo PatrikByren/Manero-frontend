@@ -68,7 +68,6 @@ export const UserProvider = ({ children }) => {
 
 
     const SignIn = async (email, password) => {
-        console.log(apiRoute + '/api/auth/login')
         try {
             const response = await fetch(apiRoute + '/api/auth/login', {
                 method: 'POST',
@@ -78,35 +77,28 @@ export const UserProvider = ({ children }) => {
                 body: JSON.stringify({ Email: email, Password: password })
             })
             const respnsData = await response.json();
-            console.log(respnsData)
             setToken(await respnsData.token);
             if (response.status === 200) {
                 window.location.replace('/')
             }
             else if (response.status === 400) {
                 setErrorMsg("")
-                console.log(respnsData.title)
                 setErrorMsg(respnsData.title);
                 if (respnsData.title === undefined) {
-                    console.log(respnsData.statusMessage)
+                    setErrorMsg(respnsData.statusMessage)
+                }
+                else {
                     setErrorMsg(respnsData.statusMessage)
                 }
             }
-            else {
-                console.log(respnsData.statusMessage)
-                setErrorMsg(respnsData.statusMessage)
-            }
         }
         catch (error) {
-            console.log(error);
             return error;
         }
     }
 
     const UpdateProfile = async (firstName, lastName, phoneNumber, location) => {
         var storageToken = sessionStorage.getItem('token');
-        console.log(storageToken)
-        //console.log(storageToken)
         try {
             const responses = await fetch(apiRoute + '/api/user/update', {
                 method: 'PUT',
@@ -116,22 +108,29 @@ export const UserProvider = ({ children }) => {
                 },
                 body: JSON.stringify({ FirstName: firstName, LastName: lastName, PhoneNumber: phoneNumber, Location: location })
             })
-
-            console.log(responses)
+            const respnsData = await responses.json();
             setToken(await responses.text());
             if (responses.status === 200) {
                 window.location.replace('/myprofile')
             }
+            else if (responses.status === 400) {
+                setErrorMsg("")
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined) {
+                    setErrorMsg(respnsData.statusMessage)
+                }
+                else {
+                    setErrorMsg(respnsData.statusMessage)
+                }
+            }
         }
         catch (error) {
-            console.log(error);
             setErrorMsg(error)
         }
     }
 
     //EXTERNAL 
     const externalSignInResponse = async (request) => {
-        console.log(request)
         try {
             const response = await fetch(apiRoute + '/api/auth/login/external', {
                 method: 'POST',
@@ -140,16 +139,23 @@ export const UserProvider = ({ children }) => {
                 },
                 body: JSON.stringify({ Email: request.data.email, CreatedBy: request.provider })
             })
-            console.log(response)
             const respnsData = await response.json();
-            console.log(respnsData)
             setToken(await respnsData.token);
             if (response.status === 200) {
                 window.location.replace('/')
             }
+
+            else {
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined) {
+                    setErrorMsg(respnsData.statusMessage)
+                    if (respnsData.statusMessage === undefined) {
+                        setErrorMsg("Something went wrong")
+                    }
+                }
+            }
         }
         catch (error) {
-            console.log(error);
             setErrorMsg(error)
             return error;
         }
@@ -163,17 +169,24 @@ export const UserProvider = ({ children }) => {
                 },
                 body: JSON.stringify({ Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, CreatedBy: request.provider, ImageUrl: request.data.picture.data.url })
             })
-            console.log('Success:', response)
             const respnsData = await response.json();
             setToken(await respnsData.token);
             if (response.status === 200) {
                 window.location.replace('/accountcreated')
             }
-            if (response.status === 201) {
+            else if (response.status === 201) {
                 window.location.replace('/accountcreated')
             }
+            else {
+                setErrorMsg(respnsData.title);
+                if (respnsData.title === undefined) {
+                    setErrorMsg(respnsData.statusMessage)
+                    if (respnsData.statusMessage === undefined) {
+                        setErrorMsg("Something went wrong")
+                    }
+                }
+            }
         } catch (error) {
-            console.log(error);
             setErrorMsg(error)
             return error;
         };
@@ -193,7 +206,6 @@ export const UserProvider = ({ children }) => {
                 body: JSON.stringify(data)
             })
             const respnsData = await response.json();
-            console.log(respnsData)
             setToken(await respnsData.token);
             if (response.status === 200) {
                 window.location.replace('/accountcreated')
@@ -203,20 +215,16 @@ export const UserProvider = ({ children }) => {
             }
             else if (response.status === 400) {
                 setErrorMsg("")
-                console.log(respnsData.title)
                 setErrorMsg(respnsData.title);
                 if (respnsData.title === undefined) {
-                    console.log(respnsData.statusMessage)
                     setErrorMsg(respnsData.statusMessage)
                 }
             }
             else {
-                console.log(respnsData.statusMessage)
                 setErrorMsg(respnsData.statusMessage)
             }
         }
         catch (error) {
-            console.log(error);
             setErrorMsg(error)
             return error;
         }
@@ -234,9 +242,7 @@ export const UserProvider = ({ children }) => {
                 },
                 //body: JSON.stringify({})
             })
-            console.log('respons:', response)
             const respnsData = await response.json();
-            console.log(respnsData.addressList)
             setMyAddressList(await respnsData.addressList);
             if (response.status === 400) {
                 setMyAddressList([]);
@@ -246,7 +252,6 @@ export const UserProvider = ({ children }) => {
             }
             return myAddressList;
         } catch (error) {
-            console.log(error);
             return error;
         };
     }
@@ -262,23 +267,19 @@ export const UserProvider = ({ children }) => {
                 },
                 body: JSON.stringify({ TagName: item.tagName, StreetName: item.streetName, PostalCode: item.postalCode, City: item.city })
             })
-            console.log('respons:', response)
             const respnsData = await response.json();
             if (response.status === 200) {
                 setMyAddressList(myAddressList.filter((_, i) => i !== index));
             }
             if (response.status === 400) {
                 setErrorMsg("")
-                console.log(respnsData.title)
                 setErrorMsg(respnsData.title);
                 if (respnsData.title === undefined) {
-                    console.log(respnsData.statusMessage)
                     setErrorMsg(respnsData.statusMessage)
                 }
             }
             //return myAddressList;
         } catch (error) {
-            console.log(error);
             setErrorMsg(error)
             return error;
         };
@@ -301,16 +302,13 @@ export const UserProvider = ({ children }) => {
             }
             if (response.status === 400) {
                 setErrorMsg("")
-                console.log(respnsData.title)
                 setErrorMsg(respnsData.title);
                 if (respnsData.title === undefined) {
-                    console.log(respnsData.statusMessage)
                     setErrorMsg(respnsData.statusMessage)
                 }
             }
             //return myAddressList;
         } catch (error) {
-            console.log(error);
             setErrorMsg(error)
             return error;
         };
