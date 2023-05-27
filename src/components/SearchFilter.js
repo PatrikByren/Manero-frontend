@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Select from 'react-select'; 
 import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 
 
