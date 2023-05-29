@@ -45,7 +45,7 @@ function App() {
         <Route path="/search" element={<SearchView />} />
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
-        <Route element={<ProtectedRoute from={false} />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/signin" element={<SignInView />} />
         </Route>
         <Route path="/signup" element={<SignUpView />} />
@@ -56,7 +56,7 @@ function App() {
           element={<ForgotPasswordSendEmailView />}
         />
         <Route path="/newpassword" element={<NewPasswordView />} />
-        <Route element={<ProtectedRoute from={true} />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/myprofile" element={<MyProfileView />} />
         </Route>
 
