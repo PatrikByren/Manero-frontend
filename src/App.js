@@ -36,6 +36,7 @@ import CheckoutShipping from "./views/Orderviews/CheckoutShipping";
 import CheckoutPayment from "./views/Orderviews/CheckoutPayment";
 import Checkout from "./views/Orderviews/Checkout";
 import ProtectedRoute from "./functions/Profile/ProtectedRoute";
+import ProtectedIsSignedInRoute from "./functions/Profile/ProtectedIsSignedInRoute";
 
 function App() {
   return (
@@ -45,27 +46,37 @@ function App() {
         <Route path="/search" element={<SearchView />} />
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
-        <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedIsSignedInRoute />}>
           <Route path="/signin" element={<SignInView />} />
         </Route>
-        <Route path="/signup" element={<SignUpView />} />
-        <Route path="/accountcreated" element={<AccountCreatedView />} />
-        <Route path="/forgotpassword" element={<ForgotPasswordView />} />
-        <Route
-          path="/forgotpasswordemail"
-          element={<ForgotPasswordSendEmailView />}
-        />
-        <Route path="/newpassword" element={<NewPasswordView />} />
+        <Route element={<ProtectedIsSignedInRoute />}>
+          <Route path="/signup" element={<SignUpView />} />
+        </Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/accountcreated" element={<AccountCreatedView />} />
+        </Route>
+        <Route element={<ProtectedIsSignedInRoute />}>
+          <Route
+            path="/forgotpasswordemail"
+            element={<ForgotPasswordSendEmailView />}
+          />
+        </Route>
+        <Route element={<ProtectedIsSignedInRoute />}>
+          <Route path="/forgotpassword" element={<ForgotPasswordView />} />
+        </Route>
+        <Route element={<ProtectedIsSignedInRoute />}>
+          <Route path="/newpassword" element={<NewPasswordView />} />
+        </Route>
         <Route element={<ProtectedRoute />}>
           <Route path="/myprofile" element={<MyProfileView />} />
         </Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/myaddress" element={<MyAddressView />} />
+        </Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/myaddress/new" element={<NewAddressView />} />
+        </Route>
 
-
-        <Route path="/myaddress" element={<MyAddressView />} />
-        <Route
-          path="/forgotpasswordemail"
-          element={<ForgotPasswordSendEmailView />}
-        />
         <Route path="/confirmnumber" element={<ConfirmNumberView />} />
         <Route path="/verifynumber" element={<VerifyNumberView />} />
         <Route path="/shop" element={<ShopView />} />
@@ -87,7 +98,6 @@ function App() {
         <Route path="/sendreview" element={<SendReviewView />} />
         <Route path="/reviews" element={<ReviewsView />} />
         <Route path="/promocode" element={<MyPromoCodeView />} />
-        <Route path="/myaddress/new" element={<NewAddressView />} />
         <Route path="/Wishlist" element={<WishlistView />} />
 
       </Routes>
