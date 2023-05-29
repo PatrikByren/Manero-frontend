@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import jwtDecode from "jwt-decode";
+import Cookies from "js-cookie";
 
 //profile = given_name, family_name, email, role, DisplayName, nbf, exp, iaf, iss, aud.
 
@@ -28,7 +29,7 @@ export const UserProvider = ({ children }) => {
         setProfile(decoded)
     }
 
-    const IsSignedIn = (url) => {
+    const IsSignedIn = () => {
         var result = sessionStorage.getItem('token')
 
 
@@ -351,9 +352,28 @@ export const UserProvider = ({ children }) => {
         };
     }
 
+    //COOKIES
+    const GetCookie = () => {
+        return Cookies.get('cookie')
+    }
+
+    const SetCookie = ({value}) => {
+        Cookies.set('cookie', {value}, {expires: 90})
+        console.log("COOKIE SET")
+    }
+
+    const FirstTime = () => {
+        const cookie = GetCookie()
+        if(cookie === undefined){
+            SetCookie("first time")
+            return true
+        } else {
+            return false
+        }
+    }
     return <UserContext.Provider value={{
         signUpResponse, CreateNewAddress, RemoveMyAddress, GetMyAddressesResponse, myAddressList, errorMsg, setErrorMsg, IsSignedIn,
-        handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse
+        handleResponse, getProfile, SignIn, profile, SignOut, UpdateProfile, externalSignInResponse, externalSignUpResponse, GetCookie, SetCookie, FirstTime
     }}>
         {children}
     </UserContext.Provider>
