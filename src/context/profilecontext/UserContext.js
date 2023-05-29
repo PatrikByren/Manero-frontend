@@ -161,35 +161,72 @@ export const UserProvider = ({ children }) => {
         }
     }
     const externalSignUpResponse = async (request) => {
-        try {
-            const response = await fetch(apiRoute + '/api/auth/create/external', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, CreatedBy: request.provider, ImageUrl: request.data.picture.data.url })
-            })
-            const respnsData = await response.json();
-            setToken(await respnsData.token);
-            if (response.status === 200) {
-                window.location.replace('/accountcreated')
-            }
-            else if (response.status === 201) {
-                window.location.replace('/accountcreated')
-            }
-            else {
-                setErrorMsg(respnsData.title);
-                if (respnsData.title === undefined) {
-                    setErrorMsg(respnsData.statusMessage)
-                    if (respnsData.statusMessage === undefined) {
-                        setErrorMsg("Something went wrong")
+        console.log(request)
+        if (request.provider === "google") {
+            var dataRequest = { Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.given_name, LastName: request.data.family_name, CreatedBy: request.provider, ImageUrl: request.data.picture }
+            try {
+                const response = await fetch(apiRoute + '/api/auth/create/external', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataRequest)
+                })
+                const respnsData = await response.json();
+                setToken(await respnsData.token);
+                if (response.status === 200) {
+                    window.location.replace('/accountcreated')
+                }
+                else if (response.status === 201) {
+                    window.location.replace('/accountcreated')
+                }
+                else {
+                    setErrorMsg("Ur consent with Google Aint good enough");
+                    if (respnsData.title === undefined) {
+                        setErrorMsg(respnsData.statusMessage)
+                        if (respnsData.statusMessage === undefined) {
+                            setErrorMsg("Something went wrong")
+                        }
                     }
                 }
-            }
-        } catch (error) {
-            setErrorMsg(error)
-            return error;
-        };
+            } catch (error) {
+                setErrorMsg(error)
+                return error;
+            };
+
+        }
+        if (request.provider === "facebook") {
+
+            try {
+                const response = await fetch(apiRoute + '/api/auth/create/external', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ Email: request.data.email, Password: "external", ConfirmPassword: "external", FirstName: request.data.first_name, LastName: request.data.last_name, CreatedBy: request.provider, ImageUrl: request.data.picture.data.url })
+                })
+                const respnsData = await response.json();
+                setToken(await respnsData.token);
+                if (response.status === 200) {
+                    window.location.replace('/accountcreated')
+                }
+                else if (response.status === 201) {
+                    window.location.replace('/accountcreated')
+                }
+                else {
+                    setErrorMsg(respnsData.title);
+                    if (respnsData.title === undefined) {
+                        setErrorMsg(respnsData.statusMessage)
+                        if (respnsData.statusMessage === undefined) {
+                            setErrorMsg("Something went wrong")
+                        }
+                    }
+                }
+            } catch (error) {
+                setErrorMsg(error)
+                return error;
+            };
+        }
     }
 
     const signUpResponse = async (firstName, lastName, phoneNummber, password, confirmPassword, email) => {
