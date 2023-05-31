@@ -1,53 +1,49 @@
 import React from "react";
-import { useState } from "react";
 
-const SizeAndColor = () => {
-  const [selectedSize, setSelectedSize] = useState("");
-  const [selectedColor, setSelectedColor] = useState("");
-
+const SizeAndColor = ({selectedSize, setSelectedSize, selectedColor, setSelectedColor}) => {
 
   return (
     <section className="sizeandcolorsection">
       <p>Size</p>
       <div className="sizebuttons">
         <button
-          className={selectedSize === "xs" ? "sizebtn-selected" : "sizebtn"}
-          value="xs"
+          className={selectedSize === "XS" ? "sizebtn-selected" : "sizebtn"}
+          value="XS"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           XS
         </button>
         <button
-          className={selectedSize === "s" ? "sizebtn-selected" : "sizebtn"}
-          value="s"
+          className={selectedSize === "S" ? "sizebtn-selected" : "sizebtn"}
+          value="S"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           S
         </button>
         <button
-          className={selectedSize === "m" ? "sizebtn-selected" : "sizebtn"}
-          value="m"
+          className={selectedSize === "M" ? "sizebtn-selected" : "sizebtn"}
+          value="M"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           M
         </button>
         <button
-          className={selectedSize === "l" ? "sizebtn-selected" : "sizebtn"}
-          value="l"
+          className={selectedSize === "L" ? "sizebtn-selected" : "sizebtn"}
+          value="L"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           L
         </button>
         <button
-          className={selectedSize === "xl" ? "sizebtn-selected" : "sizebtn"}
-          value="xl"
+          className={selectedSize === "XL" ? "sizebtn-selected" : "sizebtn"}
+          value="XL"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           XL
         </button>
         <button
-          className={selectedSize === "xxl" ? "sizebtn-selected" : "sizebtn"}
-          value="xxl"
+          className={selectedSize === "XXL" ? "sizebtn-selected" : "sizebtn"}
+          value="XXL"
           onClick={(e) => setSelectedSize(e.target.value)}
         >
           XXL
@@ -58,9 +54,9 @@ const SizeAndColor = () => {
         <div className="colors">
           <button
             className={
-              selectedColor === "red" ? "colorbtn-selected" : "colorbtn"
+              selectedColor === "Röd" ? "colorbtn-selected" : "colorbtn"
             }
-            value="red"
+            value="Röd"
             style={{backgroundColor: "red"}}
             onClick={(e) => setSelectedColor(e.target.value)}
           >
@@ -68,9 +64,9 @@ const SizeAndColor = () => {
           </button>
           <button
             className={
-              selectedColor === "blue" ? "colorbtn-selected" : "colorbtn"
+              selectedColor === "Blå" ? "colorbtn-selected" : "colorbtn"
             }
-            value="blue"
+            value="Blå"
             style={{backgroundColor: "blue"}}
             onClick={(e) => setSelectedColor(e.target.value)}
 
@@ -79,9 +75,9 @@ const SizeAndColor = () => {
           </button>
           <button
             className={
-              selectedColor === "beige" ? "colorbtn-selected" : "colorbtn"
+              selectedColor === "Vit" ? "colorbtn-selected" : "colorbtn"
             }
-            value="beige"
+            value="Vit"
             style={{backgroundColor: "beige"}}
             onClick={(e) => setSelectedColor(e.target.value)}
           >
@@ -99,9 +95,9 @@ const SizeAndColor = () => {
           </button>
           <button
             className={
-              selectedColor === "black" ? "colorbtn-selected" : "colorbtn"
+              selectedColor === "Svart" ? "colorbtn-selected" : "colorbtn"
             }
-            value="black"
+            value="Svart"
             style={{backgroundColor: "black"}}
             onClick={(e) => setSelectedColor(e.target.value)}
           >
