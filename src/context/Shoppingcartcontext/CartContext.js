@@ -118,7 +118,8 @@ export const CartProvider = ({ children }) => {
         minusOne,
         setItems,
         setTotalPrice,
-        totalQuantity
+        totalQuantity,
+        setTotalQuantity
       }}
     >
       {children}
