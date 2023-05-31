@@ -22,6 +22,7 @@ export const CartProvider = ({ children }) => {
  useEffect(() => {
    setItems(JSON.parse(localStorage.getItem("product")))
    setTotalPrice(JSON.parse(localStorage.getItem("price")))
+   setTotalQuantity(JSON.parse(localStorage.getItem("quantity")))
    console.log("ITEMS", items)
  },[])
  
