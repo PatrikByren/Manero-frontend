@@ -15,7 +15,7 @@ const SideMenu = ({ icon }) => {
         })
         .catch(error => {
             console.error('There was an error!', error);
-        });;
+        });
   }
 
   const openMenu = () => {
