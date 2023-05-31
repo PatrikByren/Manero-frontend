@@ -3,16 +3,36 @@ import Header from '../components/sections/Header';
 import Showcase from '../components/sections/Showcase';
 import SizeAndColor from '../components/sections/SizeAndColor'
 import profilimg from "../asset/images/profilimg.png";
+import { useEffect, useState } from 'react';
 
 const SpecificProductView = () => {
+    const [product, setProduct] = useState("");
+    const [price, setPrice] = useState();
+    const [image, setImage] = useState("");
+
+    
+    useEffect(() => {
+        // ta emot info från product
+        const urlParams = new URLSearchParams(window.location.search);
+        const data = urlParams.get("data");
+        if (data) {
+          const parsedData = JSON.parse(data);
+          console.log(parsedData);
+          setProduct(parsedData);
+          setPrice(parsedData.variants[0].price);
+          setImage(parsedData.variants[0].imageName)
+          console.log(price);
+        }
+      }, [price]);
+      
     return (
         <div className='container'>
             <div>
                 <Header icon={"fa-solid fa-chevron-left"} title={"MANERO"} righticon={"fal fa-shopping-bag"} />
-                <Showcase />
+                <img src={image} className="productimage" alt="the product"></img>
             </div>
             <div className='proddes'>
-                <p>Knitted summer top</p>
+                <p>{product.name}</p>
                 <i class="fa-thin fa-heart"></i>
             </div>
             <div className='highlvlstyling'>
@@ -22,14 +42,14 @@ const SpecificProductView = () => {
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <span>(23)</span>
-                <p>$37.88</p>
+                <p>${price}</p>
             </div>
             <div>
                 <SizeAndColor />
             </div>
             <div className='proddescrip'>
                 Description
-                <p className='insideproddescrip'>Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.</p>
+                <p className='insideproddescrip'>{product.description}</p>
             </div>
             <div className="d-flex justify-content-center align-items-center">
                 <button className='basebtn'>+ ADD TO CART</button>
