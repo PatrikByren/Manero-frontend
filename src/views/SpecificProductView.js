@@ -60,11 +60,11 @@ const SpecificProductView = () => {
         <i class="fa-thin fa-heart"></i>
       </div>
       <div className="highlvlstyling">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
+        <span className="fa fa-star checked"></span>
+        <span className="fa fa-star checked"></span>
+        <span className="fa fa-star checked"></span>
+        <span className="fa fa-star checked"></span>
+        <span className="fa fa-star"></span>
         <span>(23)</span>
         <p>${price}</p>
       </div>

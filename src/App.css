@@ -281,6 +281,9 @@ html, body {
 .headersection .shoppingicon {
   margin-right: 15px;
 }
+.headersection .shoppingicon .cartlink {
+  color: black;
+}
 .headersection .title-container {
   position: relative;
 }
