@@ -108,7 +108,7 @@ const Checkout = () => {
           <div className="flex-container">
             <div className="smallerletters">Discount</div>{" "}
             {/*om de finns promocode */}
-            <div className="smallerletters">-pris</div>
+            <div className="smallerletters">none</div>
           </div>
           <div className="flex-container">
             <div className="smallerletters">Delivery</div>
