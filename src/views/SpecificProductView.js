@@ -57,7 +57,7 @@ const SpecificProductView = () => {
       </div>
       <div className="proddes">
         <p>{product.name}</p>
-        <i class="fa-thin fa-heart"></i>
+        <i className="fa-thin fa-heart"></i>
       </div>
       <div className="highlvlstyling">
         <span className="fa fa-star checked"></span>
@@ -99,11 +99,11 @@ const SpecificProductView = () => {
               <p>Anette Black</p>
             </div>
             <div className="col-6">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star"></span>
             </div>
             <div className="col">
               <p>
@@ -121,11 +121,11 @@ const SpecificProductView = () => {
               <p>Anette Black</p>
             </div>
             <div className="col-3">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star"></span>
             </div>
             <div className="col">
               <p>
@@ -143,11 +143,11 @@ const SpecificProductView = () => {
               <p>Anette Black</p>
             </div>
             <div className="col-3">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star"></span>
             </div>
             <div className="col">
               <p>
