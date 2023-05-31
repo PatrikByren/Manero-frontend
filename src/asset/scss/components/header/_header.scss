@@ -17,7 +17,13 @@
     margin-right: 15px;
     .cartlink{
       color: black;
+      display: flex;
+
+      i{
+        margin-left: 3px;
+      }
     }
+
   }
   .title-container {
     position: relative;

@@ -16,6 +16,7 @@ export const useCartContext = () => {
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
  const [firstRendering, setFirstRendering] = useState(false)
  
  useEffect(() => {
@@ -28,6 +29,7 @@ export const CartProvider = ({ children }) => {
     if(firstRendering === true) {
       localStorage.setItem("product", JSON.stringify(items))
       localStorage.setItem("price", JSON.stringify(totalPrice))
+      localStorage.setItem("quantity", JSON.stringify(totalQuantity))
       console.log("SET", items)
     } else {
       setFirstRendering(true)
@@ -44,6 +46,7 @@ export const CartProvider = ({ children }) => {
     setItems(updatedItems);
     
     setTotalPrice(totalPrice + product.price);
+    setTotalQuantity(totalQuantity + 1);
     
   };
 
@@ -55,9 +58,11 @@ export const CartProvider = ({ children }) => {
       );
       setItems(updatedItems);
       setTotalPrice(totalPrice - product.price);
+      setTotalQuantity(totalQuantity - 1);
     } else if (cartItem) {
       setItems(items.filter((item) => item.id !== cartItem.id));
       setTotalPrice(totalPrice - product.price);
+      setTotalQuantity(totalQuantity - 1);
     }
   };
 
@@ -74,6 +79,7 @@ export const CartProvider = ({ children }) => {
         )
       );
       setTotalPrice(totalPrice + product.price);
+      setTotalQuantity(totalQuantity + 1);
     } else {
       setItems([
         ...items,
@@ -86,6 +92,7 @@ export const CartProvider = ({ children }) => {
         },
       ]);
       setTotalPrice(totalPrice + product.price);
+      setTotalQuantity(totalQuantity + 1);
     }
     console.log(items);
   };
@@ -95,6 +102,7 @@ export const CartProvider = ({ children }) => {
     if (cartItem) {
       setItems(items.filter((item) => item.id !== cartItem.id));
       setTotalPrice(totalPrice - product.price);
+      setTotalQuantity(totalQuantity - 1);
     }
   };
 
@@ -108,7 +116,8 @@ export const CartProvider = ({ children }) => {
         plusOne,
         minusOne,
         setItems,
-        setTotalPrice
+        setTotalPrice,
+        totalQuantity
       }}
     >
       {children}
