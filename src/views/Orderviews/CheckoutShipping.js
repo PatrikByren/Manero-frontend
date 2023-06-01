@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import BackArrowMiddleHead from '../../components/individuals/BackArrowMiddleHead'
+import { useUserContext } from '../../context/profilecontext/UserContext';
 
 
 const CheckoutShipping = () => {
-
+    const { myAddressList, GetMyAddressesResponse } = useUserContext();
     const [selectedOption, setSelectedOption] = useState(null);
+    const renderone = "";
+
+    useEffect(()  => {
+        GetMyAddressesResponse();
+      }, [renderone]);
 
     const handleRadioChange = (event) => {
         const value = event.target.value;

@@ -270,6 +270,7 @@ html, body {
   justify-content: space-between;
   margin-top: 5px;
   margin-bottom: 10px;
+  align-items: center;
 }
 .headersection .contactus {
   margin-left: 40px;
@@ -277,19 +278,28 @@ html, body {
 .headersection .iconcontainer {
   z-index: 6;
   margin-left: 15px;
+  display: flex;
+  align-items: center;
 }
 .headersection .shoppingicon {
+  margin-bottom: 15px;
   margin-right: 15px;
 }
 .headersection .shoppingicon .cartlink {
   color: black;
   display: flex;
+  position: absolute;
+  right: 15px;
 }
 .headersection .shoppingicon .cartlink i {
   margin-left: 3px;
 }
 .headersection .title-container {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  z-index: 1;
 }
 .headersection .title-container h3 {
   font-size: 20px;
