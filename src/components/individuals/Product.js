@@ -29,6 +29,13 @@ const Product = ({cardClass, product, discountPrice}) => {
         console.log(item.product.variants[0]);
     }
 
+    const onClick = (item) => {
+        const newData = item.product;
+          const params = new URLSearchParams();
+          params.append("data", JSON.stringify(newData)); 
+          window.location.href = `/SpecificProduct?${params.toString()}`;
+    }
+
     return (
 
         //Ska ligga i en Navlink?
@@ -46,7 +53,7 @@ const Product = ({cardClass, product, discountPrice}) => {
             </div>
             <div className="d-flex flex-column align-items-between">
                 {/* <p className="rating mb-1">{product.rating}</p> */}
-                <p className="productName mb-1">{product.name}</p>
+                <p className="productName mb-1" onClick={() => onClick({product})}>{product.name}</p>
                 <p className="price mb-1">${product.variants[0].price}</p>
                 {/* {discountPrice && (
                     <div className="d-flex">

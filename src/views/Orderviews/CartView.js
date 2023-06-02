@@ -68,7 +68,7 @@ const CartView = () => {
                     />
                   </Col>
                   <Col m={6} className="text-center">
-                    <p>{item.name}</p>
+                    <p>{item.name} ${item.price}</p>
                   </Col>
                   <Col m={3} className="text-right">
                     <Button
