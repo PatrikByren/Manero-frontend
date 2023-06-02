@@ -20,7 +20,7 @@ const SignInForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true)
-    if (validPassword && validEmail){
+    if (validPassword && validEmail) {
       await SignIn(email, password);
       setIsLoading(false);
     }
@@ -33,7 +33,7 @@ const SignInForm = () => {
 
   return (
     <div className="container sign-in-form">
-      
+
       <div>
         <BackArrowMiddleHead content="Sign in" />
         <div className="d-flex justify-content-center mt-3">
@@ -86,7 +86,7 @@ const SignInForm = () => {
                 {!isLoading ? (<button className="basebtn" type="submit">
                   SIGN IN
                 </button>) : (
-                <Spinners/>)}
+                  <Spinners />)}
               </div>
             </div>
           </form>
@@ -96,15 +96,11 @@ const SignInForm = () => {
               Sign up.
             </NavLink>
           </div>
-          <div className="d-flex justify-content-center">
-            <NavLink to="/" className="guest">
-              Or explore as guest
-            </NavLink>
-          </div>
-          <LogInIcons value="signin"/>
+
+          <LogInIcons value="signin" />
         </div>
       </div>
-      <ErrorModal headline="ERRORS:" content={errorMsg} setErrorMsg={setErrorMsg}/>
+      <ErrorModal headline="ERRORS:" content={errorMsg} setErrorMsg={setErrorMsg} />
     </div>
   );
 };
