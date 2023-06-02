@@ -109,8 +109,8 @@ export const UserProvider = ({ children }) => {
                 },
                 body: JSON.stringify({ FirstName: firstName, LastName: lastName, PhoneNumber: phoneNumber, Location: location })
             })
-            const respnsData = await responses.json();
-            setToken(await responses.text());
+            const respnsData = await responses.text();
+            setToken(respnsData);
             if (responses.status === 200) {
                 window.location.replace('/myprofile')
             }
@@ -126,6 +126,7 @@ export const UserProvider = ({ children }) => {
             }
         }
         catch (error) {
+            console.log(error)
             setErrorMsg(error)
         }
     }
