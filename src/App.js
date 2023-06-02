@@ -45,18 +45,13 @@ function App() {
       <Routes>
         <Route path="/getstarted" element={<GetStartedHomeView />} />
         <Route path="/getstartedwelcome" element={<GetStartedWelcome />} />
-        <Route element={<FirstVisitRoute />}>
 
-          <Route path="/" element={<HomeView />} />
-          <Route path="/search" element={<SearchView />} />
+        <Route element={<FirstVisitRoute />}>
           <Route element={<ProtectedIsSignedInRoute />}>
             <Route path="/signin" element={<SignInView />} />
           </Route>
           <Route element={<ProtectedIsSignedInRoute />}>
             <Route path="/signup" element={<SignUpView />} />
-          </Route>
-          <Route element={<ProtectedRoute />}>
-            <Route path="/accountcreated" element={<AccountCreatedView />} />
           </Route>
           <Route element={<ProtectedIsSignedInRoute />}>
             <Route
@@ -70,6 +65,16 @@ function App() {
           <Route element={<ProtectedIsSignedInRoute />}>
             <Route path="/newpassword" element={<NewPasswordView />} />
           </Route>
+
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" element={<HomeView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+           <Route path="/search" element={<SearchView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/accountcreated" element={<AccountCreatedView />} />
+          </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/myprofile" element={<MyProfileView />} />
           </Route>
@@ -82,26 +87,67 @@ function App() {
 
           <Route path="/confirmnumber" element={<ConfirmNumberView />} />
           <Route path="/verifynumber" element={<VerifyNumberView />} />
-          <Route path="/shop" element={<ShopView />} />
-          <Route path="/product" element={<ProductView />} />
-          <Route path="/shop/filter" element={<FilterView />} />
-          <Route path="/editprofile" element={<EditProfile />} />
-          <Route path="/emptycart" element={<EmptyCartView />} />
-          <Route path="/cart" element={<CartView />} />
-          <Route path="/order" element={<ShoppingCartView />} />
-          <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
-          <Route path="/orderfail" element={<OrderFailedView />} />
-          <Route path="/orderhistory" element={<OrderHistoryView />} />
-          <Route path="/checkout/shipping" element={<CheckoutShipping />} />
-          <Route path="/checkout/payment" element={<CheckoutPayment />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/paymentmethod" element={<PaymentView />} />
-          <Route path="/AddNewCard" element={<AddNewCardView />} />
-          <Route path="/SpecificProduct" element={<SpecificProductView />} />
-          <Route path="/sendreview" element={<SendReviewView />} />
-          <Route path="/reviews" element={<ReviewsView />} />
-          <Route path="/promocode" element={<MyPromoCodeView />} />
-          <Route path="/Wishlist" element={<WishlistView />} />
+
+          <Route element={<ProtectedRoute />}>
+            <Route path="/shop" element={<ShopView />}  />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/product" element={<ProductView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/shop/filter" element={<FilterView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/editprofile" element={<EditProfile />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/emptycart" element={<EmptyCartView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/cart" element={<CartView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/order" element={<ShoppingCartView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/ordersuccessful" element={<OrderSuccessfulView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/orderfail" element={<OrderFailedView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/orderhistory" element={<OrderHistoryView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/checkout/shipping" element={<CheckoutShipping />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/checkout/payment" element={<CheckoutPayment />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/checkout" element={<Checkout />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/paymentmethod" element={<PaymentView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/AddNewCard" element={<AddNewCardView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/SpecificProduct" element={<SpecificProductView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/sendreview" element={<SendReviewView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/reviews" element={<ReviewsView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/promocode" element={<MyPromoCodeView />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/Wishlist" element={<WishlistView />} />
+          </Route>
         </Route>
 
       </Routes>
