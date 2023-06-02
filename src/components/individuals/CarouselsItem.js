@@ -14,7 +14,7 @@ const CarouselsItem = ({ headline1, headline2, content, content2 }) => {
           {content2}
         </div>
         <div className="d-flex justify-content-center">
-          <NavLink to="/signin">
+          <NavLink to="/signup">
             <button className="basebtn">GET STARTED</button>
           </NavLink>
         </div>
