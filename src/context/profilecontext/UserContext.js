@@ -325,6 +325,7 @@ export const UserProvider = ({ children }) => {
 
     const CreateNewAddress = async (typeName, streetAddress, postalCode, city, invoiceAddress) => {
         var storageToken = sessionStorage.getItem('token');
+        console.log(typeName, streetAddress, postalCode, city, invoiceAddress)
         try {
             const response = await fetch(apiRoute + '/api/Address', {
                 method: 'POST',
@@ -335,6 +336,7 @@ export const UserProvider = ({ children }) => {
                 body: JSON.stringify({ TagName: typeName, StreetName: streetAddress, PostalCode: postalCode, City: city, BillingAddress: invoiceAddress })
             })
             const respnsData = await response.json();
+            console.log(respnsData)
             if (response.status === 200 || response.status === 201) {
 
             }
@@ -357,14 +359,14 @@ export const UserProvider = ({ children }) => {
         return Cookies.get('cookie')
     }
 
-    const SetCookie = ({value}) => {
-        Cookies.set('cookie', {value}, {expires: 90})
+    const SetCookie = ({ value }) => {
+        Cookies.set('cookie', { value }, { expires: 90 })
         console.log("COOKIE SET")
     }
 
     const FirstTime = () => {
         const cookie = GetCookie()
-        if(cookie === undefined){
+        if (cookie === undefined) {
             SetCookie("first time")
             return true
         } else {

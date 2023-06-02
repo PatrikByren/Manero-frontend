@@ -3,7 +3,7 @@ import BackArrowMiddleHead from "../../components/individuals/BackArrowMiddleHea
 import { useUserContext } from "../../context/profilecontext/UserContext";
 
 const CheckoutShipping = () => {
-  const { myAddressList, GetMyAddressesResponse } = useUserContext();
+  const { CreateNewAddress, myAddressList, GetMyAddressesResponse } = useUserContext();
   const [selectedOption, setSelectedOption] = useState(null);
   const renderone = "";
 
@@ -11,7 +11,15 @@ const CheckoutShipping = () => {
     GetMyAddressesResponse();
   }, [renderone]);
 
-  const handleRadioChange = (event) => {
+  //e.preventDefault();
+  const handleSubmit = async (address) => {
+    const alwaysTrue = true;
+    await CreateNewAddress(address.tagName, address.streetName, address.postalCode, address.city, alwaysTrue)
+    window.location.replace('/checkout')
+  }
+
+
+  /*const handleRadioChange = (event) => {
     const value = event.target.value;
     setSelectedOption((prevSelectedOption) => {
       if (prevSelectedOption === value) {
@@ -20,7 +28,7 @@ const CheckoutShipping = () => {
         return value; // Markera den klickade knappen
       }
     });
-  };
+  };*/
 
   return (
     <div>
@@ -38,8 +46,8 @@ const CheckoutShipping = () => {
                     type="radio"
                     name="option"
                     value="option1"
-                    checked={selectedOption === "option1"}
-                    onChange={handleRadioChange}
+                    checked={address.billingAddress}
+                    onChange={(e) => handleSubmit(address)}
                   />
                 </label>
               </div>
@@ -51,7 +59,7 @@ const CheckoutShipping = () => {
         })}
 
         <div className="border" />
-{/* 
+        {/* 
         <div className="one-order">
           <div className="flex-container">
             <div>Kontoret</div>
@@ -77,8 +85,8 @@ const CheckoutShipping = () => {
             type="checkbox"
             name="location"
             value="checkbox"
-            checked={selectedOption === "checkbox"}
-            onChange={handleRadioChange}
+          //checked={selectedOption === "checkbox"}
+          //onChange={handleRadioChange}
           />
           Use current Location
         </label>
